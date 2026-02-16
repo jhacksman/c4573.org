@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texas Scraper Kit — $10 Python Property Data Scraper | c4573.org</title>
+  <meta name="description" content="Scrape all 254 TX county assessor sites for property data. Python script, CSV + JSON output. No API keys. $10 one-time purchase.">
+  <meta property="og:title" content="Texas Scraper Kit — $10 Python Property Data Scraper">
+  <meta property="og:description" content="Scrape all 254 TX county assessor sites for property data. CSV + JSON. No subscriptions.">
+  <meta property="og:url" content="https://c4573.org/tools/texas-scraper-kit.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Texas Scraper Kit — $10 Python Property Data Scraper">
+  <meta name="twitter:description" content="Scrape all 254 TX county assessor sites for property data. CSV + JSON. No subscriptions.">
+  <link rel="canonical" href="https://c4573.org/tools/texas-scraper-kit.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Texas Scraper Kit",
+    "description": "Scrape all 254 TX county assessor sites for property data. Python script with CSV and JSON output.",
+    "offers": {
+      "@type": "Offer",
+      "price": "10",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://c4573.gumroad.com/l/texas-scraper"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">c4573.org</a>
+      <ul class="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/#manifesto">Manifesto</a></li>
+        <li><a href="https://github.com/jhacksman/c4573.org">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="product-header">
+    <div class="container">
+      <a href="/" class="back-link">&larr; Back to all tools</a>
+      <h1>Texas Scraper Kit</h1>
+      <div class="product-meta">
+        <span class="price">$10</span>
+        <span>Python</span>
+        <span>No API keys</span>
+        <span>Works offline</span>
+      </div>
+      <a href="https://c4573.gumroad.com/l/texas-scraper" class="btn btn-primary">Buy on Gumroad &mdash; $10</a>
+    </div>
+  </div>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>What It Does</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.25rem; font-size: var(--font-size-sm);">
+        Scrapes all 254 Texas county assessor websites and outputs structured property data:
+      </p>
+      <ul class="feature-list">
+        <li>Property address, owner name, mailing address</li>
+        <li>Assessed value, land value, improvement value</li>
+        <li>Tax amount, tax year, exemptions</li>
+        <li>Lot size, square footage, year built</li>
+        <li>Last sale date, last sale price</li>
+        <li>Output: CSV + JSON &mdash; one file per county or one merged statewide file</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>What You Get</h2>
+      <ul class="check-list">
+        <li>Python script (single file, &lt; 500 lines)</li>
+        <li>requirements.txt (requests, beautifulsoup4, lxml)</li>
+        <li>Sample output data (3 counties)</li>
+        <li>README with setup guide (&lt; 5 min)</li>
+        <li>Video walkthrough (10 min)</li>
+        <li>County coverage map</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>Requirements</h2>
+      <ul>
+        <li>Python 3.9+</li>
+        <li>pip install -r requirements.txt</li>
+        <li>Internet connection</li>
+        <li>No API keys needed</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>Sample Output</h2>
+      <pre><code>{
+  "county": "Travis",
+  "address": "123 Main St, Austin, TX 78701",
+  "owner": "Jane Doe",
+  "assessed_value": 450000,
+  "land_value": 180000,
+  "improvement_value": 270000,
+  "tax_amount": 8325.00,
+  "tax_year": 2025,
+  "year_built": 1998,
+  "sqft": 2100,
+  "lot_acres": 0.18,
+  "last_sale_date": "2021-03-15",
+  "last_sale_price": 385000,
+  "property_type": "residential",
+  "parcel_id": "01-2345-0678-0000"
+}</code></pre>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <p class="question">Is this legal?</p>
+        <p class="answer">Yes. County assessor data is public record by law. This tool accesses the same data you'd see on the county website.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">How long does a full state scrape take?</p>
+        <p class="answer">2-4 hours for all 254 counties, depending on your connection and rate limiting settings.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">Do I need an API key?</p>
+        <p class="answer">No. Zero external dependencies. Just Python and the included requirements.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">What if a county site changes?</p>
+        <p class="answer">The script handles failures gracefully and skips broken counties with a summary report. We update adapters monthly.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">Can I modify the code?</p>
+        <p class="answer">Yes. MIT licensed. You own it, can modify it, can resell it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: var(--font-size-sm);">Stop paying $500/month for property data.</p>
+      <a href="https://c4573.gumroad.com/l/texas-scraper" class="btn btn-primary">Buy on Gumroad &mdash; $10</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">c4573.org</a></li>
+        <li><a href="https://github.com/jhacksman/c4573.org">GitHub</a></li>
+        <li><a href="mailto:hello@c4573.org">Contact</a></li>
+      </ul>
+      <p class="footer-note">
+        <span class="explain">"c4573" = "caste" in leetspeak.</span><br>
+        No cookies. No tracking. No JavaScript (almost).
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
