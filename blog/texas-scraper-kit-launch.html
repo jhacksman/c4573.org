@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>764 Texas Public Data Sources for $13.37 — Texas Scraper Kit Launch | c4573.org</title>
+  <meta name="description" content="We built a single Docker container that scrapes 764 Texas government data sources — business filings, property records, well data, campaign finance, professional licenses. $13.37, no subscription.">
+  <meta property="og:title" content="764 Texas Public Data Sources for $13.37">
+  <meta property="og:description" content="One Docker container. 764 Texas government data sources. $13.37 one-time purchase.">
+  <meta property="og:url" content="https://c4573.org/blog/texas-scraper-kit-launch.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="764 Texas Public Data Sources for $13.37">
+  <meta name="twitter:description" content="One Docker container. 764 Texas government data sources. No subscription.">
+  <link rel="canonical" href="https://c4573.org/blog/texas-scraper-kit-launch.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">c4573.org</a>
+      <ul class="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/jhacksman/c4573.org">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="section" style="padding-top: 3rem;">
+    <div class="container" style="max-width: 780px;">
+
+      <p class="section-label">February 16, 2026</p>
+      <h1 style="margin-bottom: 0.5rem;">764 Texas Public Data Sources. One Docker Container. $13.37.</h1>
+      <p class="subtitle" style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.7;">Announcing the Texas Scraper Kit — the first tool from c4573.org.</p>
+
+      <div class="manifesto">
+
+        <h2>The Problem</h2>
+        <p>Texas has some of the richest public data in the country. Business filings, property records, oil well permits, campaign finance disclosures, professional licenses, environmental violations, unclaimed property — hundreds of government agencies publishing data the public has a legal right to access.</p>
+        <p>But "public" doesn't mean "accessible."</p>
+        <p>Each agency has its own website, its own search interface, its own quirks. Some use ColdFusion apps from 2004. Some require custom SSL cipher suites. Some run on Blazor and SignalR. Some return Jasper Reports that take 25 seconds to generate.</p>
+        <p>If you're a journalist, researcher, real estate investor, or data analyst who needs this data at scale, your options are:</p>
+        <ol>
+          <li><strong>Click through government websites manually.</strong> Death by a thousand tabs.</li>
+          <li><strong>Pay a data vendor $200–$500/month.</strong> They scraped the same public data and marked it up 100x.</li>
+          <li><strong>Build your own scrapers.</strong> Weeks of reverse-engineering per agency, plus ongoing maintenance when they change their HTML.</li>
+        </ol>
+        <p>We chose option 4: build it once, sell it cheap, and let everyone run it themselves.</p>
+
+        <h2>What You Get</h2>
+        <p>The <strong>Texas Scraper Kit</strong> is a Docker container with a REST API and CLI. You deploy it on your machine — laptop, server, VPS, whatever — and it scrapes Texas government data sources on demand.</p>
+
+        <ul>
+          <li><strong>764 data sources</strong> across dozens of state agencies</li>
+          <li><strong>REST API</strong> — <code>POST /run</code> with source codes, poll for results</li>
+          <li><strong>CLI</strong> — run individual scrapers from the command line</li>
+          <li><strong>Multiple output formats</strong> — CSV, JSON, or PostgreSQL</li>
+          <li><strong>Docker Compose</strong> — one command to deploy the full stack</li>
+          <li><strong>12 months of updates</strong> — when agencies change their sites, we update the scrapers</li>
+        </ul>
+
+        <h3>Verified Working Sources (v1.0)</h3>
+        <p>Every scraper is tested against live government sites. Here's what's confirmed working in the initial release:</p>
+
+        <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--accent, #00ff88);">
+              <th style="text-align: left; padding: 0.5rem;">Source</th>
+              <th style="text-align: left; padding: 0.5rem;">Agency</th>
+              <th style="text-align: left; padding: 0.5rem;">Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.5rem;"><code>sos_business</code></td>
+              <td style="padding: 0.5rem;">Secretary of State</td>
+              <td style="padding: 0.5rem;">Business filings, entity search</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.5rem;"><code>tcad_property</code></td>
+              <td style="padding: 0.5rem;">Travis County Appraisal</td>
+              <td style="padding: 0.5rem;">Property records, valuations</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.5rem;"><code>tdlr_license</code></td>
+              <td style="padding: 0.5rem;">TDLR</td>
+              <td style="padding: 0.5rem;">Professional license verification</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.5rem;"><code>rrc_wells</code></td>
+              <td style="padding: 0.5rem;">Railroad Commission</td>
+              <td style="padding: 0.5rem;">Oil/gas well data</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.5rem;"><code>ethics_campaign</code></td>
+              <td style="padding: 0.5rem;">Ethics Commission</td>
+              <td style="padding: 0.5rem;">Campaign finance disclosures</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.5rem;"><code>tceq_violations</code></td>
+              <td style="padding: 0.5rem;">TCEQ</td>
+              <td style="padding: 0.5rem;">Environmental violations</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.5rem;"><code>rrc_gis</code></td>
+              <td style="padding: 0.5rem;">Railroad Commission</td>
+              <td style="padding: 0.5rem;">GIS pipeline/well mapping</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.5rem;"><code>rrc_bulk</code></td>
+              <td style="padding: 0.5rem;">Railroad Commission</td>
+              <td style="padding: 0.5rem;">Bulk production data</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.5rem;"><code>comptroller_franchise</code></td>
+              <td style="padding: 0.5rem;">Comptroller</td>
+              <td style="padding: 0.5rem;">Franchise tax filings</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.5rem;"><code>tec_campaign</code></td>
+              <td style="padding: 0.5rem;">Ethics Commission</td>
+              <td style="padding: 0.5rem;">Campaign finance (TEC API)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>More modules ship weekly. Each update adds new agencies and fixes for site changes.</p>
+
+        <h2>Who This Is For</h2>
+        <ul>
+          <li><strong>Real estate investors</strong> — property records, tax data, business entity lookups at scale</li>
+          <li><strong>Journalists</strong> — campaign finance, environmental violations, license verifications</li>
+          <li><strong>Data analysts</strong> — structured, queryable data from sources that only offer clunky search forms</li>
+          <li><strong>Researchers</strong> — bulk access to public records without manual clicking</li>
+          <li><strong>Developers</strong> — a REST API you can integrate into your own pipelines</li>
+        </ul>
+
+        <h2>Why $13.37</h2>
+        <p>Because data vendors charging $200/month for public records is rent-seeking. The data is public. The scraping is the hard part. We did the hard part and we're charging what a good lunch costs.</p>
+        <p>No subscriptions. No API keys to manage. No usage limits. It runs on your hardware, scrapes at your pace, stores data where you want it.</p>
+        <p>Twelve months of updates included. After that, your copy still works — you just stop getting new modules and site-change fixes.</p>
+
+        <h2>Get It</h2>
+        <p style="margin: 2rem 0;">
+          <a href="https://c4573.gumroad.com/l/texas-scraper" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Buy Texas Scraper Kit — $13.37</a>
+        </p>
+        <p>Questions? <a href="mailto:hello@c4573.org">hello@c4573.org</a></p>
+
+      </div>
+
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 c4573.org — tools to break the caste system</p>
+    </div>
+  </footer>
+
+</body>
+</html>
