@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texas Scraper Kit — 764 Data Sources, Docker, REST API | c4573.org</title>
+  <meta name="description" content="Scrape 764 Texas property data sources. Python + Docker + REST API + CLI. $10 one-time, 12 months of updates. No subscriptions.">
+  <meta property="og:title" content="Texas Scraper Kit — 764 Data Sources for $10">
+  <meta property="og:description" content="Scrape 764 Texas property data sources. Python + Docker + REST API + CLI. $10 one-time purchase.">
+  <meta property="og:url" content="https://c4573.org/products/texas-scraper-kit.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Texas Scraper Kit — 764 Data Sources for $10">
+  <meta name="twitter:description" content="764 TX property data sources. Python + Docker + REST API. $10 one-time.">
+  <link rel="canonical" href="https://c4573.org/products/texas-scraper-kit.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Texas Scraper Kit",
+    "description": "Scrape 764 Texas property data sources. Python + Docker + REST API + CLI. 12 months of updates included.",
+    "offers": {
+      "@type": "Offer",
+      "price": "10",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://c4573.gumroad.com/l/texas-scraper"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">c4573.org</a>
+      <ul class="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/jhacksman/c4573.org">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="product-header">
+    <div class="container">
+      <a href="/" class="back-link">&larr; Back to all tools</a>
+      <h1>Texas Scraper Kit</h1>
+      <div class="product-meta">
+        <span class="price">$10</span>
+        <span>764 data sources</span>
+        <span>Python + Docker</span>
+        <span>12 months of updates</span>
+      </div>
+      <a href="https://c4573.gumroad.com/l/texas-scraper" class="btn btn-primary">Buy on Gumroad &mdash; $10</a>
+    </div>
+  </div>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>What It Does</h2>
+      <p class="section-desc">
+        Collects property data from <strong style="color: var(--text);">764 Texas data sources</strong> &mdash;
+        county assessor sites, appraisal districts, tax offices, and public records portals across all 254 counties.
+        Run it as a CLI, deploy with Docker, or query via the built-in REST API.
+      </p>
+      <ul class="feature-list">
+        <li>764 data sources across all 254 TX counties</li>
+        <li>Property address, owner name, mailing address</li>
+        <li>Assessed value, land value, improvement value</li>
+        <li>Tax amount, tax year, exemptions</li>
+        <li>Lot size, square footage, year built, bedrooms, bathrooms</li>
+        <li>Last sale date, last sale price, legal description</li>
+        <li>Output: CSV, JSON, or direct to PostgreSQL</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>CLI Output</h2>
+      <pre class="cli-mockup"><code><span class="cli-prompt">$</span> <span class="cli-cmd">texas-scraper run --county travis --format json</span>
+
+<span class="cli-info">[INFO]</span>  Texas Scraper Kit v2.1.0
+<span class="cli-info">[INFO]</span>  Target: Travis County (3 sources)
+<span class="cli-info">[INFO]</span>  Rate limit: 1 req/sec | Retries: 3
+<span class="cli-info">[INFO]</span>  Output: ./output/travis.json
+
+<span class="cli-ok">[OK]</span>    Connecting to Travis CAD...
+<span class="cli-ok">[OK]</span>    Scraping assessor records: 847,231 properties
+<span class="cli-bar">  [================&gt;           ]  58%  |  491,394 / 847,231</span>
+<span class="cli-ok">[OK]</span>    Scraping tax records...
+<span class="cli-ok">[OK]</span>    Merging data sources...
+
+<span class="cli-ok">[DONE]</span>  Travis County complete
+<span class="cli-info">[INFO]</span>  847,231 properties | 14 fields each
+<span class="cli-info">[INFO]</span>  Output: ./output/travis.json (312 MB)
+<span class="cli-info">[INFO]</span>  Duration: 47m 23s</code></pre>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>Docker Deployment</h2>
+      <pre class="cli-mockup"><code><span class="cli-prompt">$</span> <span class="cli-cmd">docker compose up -d</span>
+
+<span class="cli-info">[+]</span> Running 3/3
+<span class="cli-ok"> ✔</span> Container texas-scraper-db     Started
+<span class="cli-ok"> ✔</span> Container texas-scraper-api    Started
+<span class="cli-ok"> ✔</span> Container texas-scraper-worker Started
+
+<span class="cli-prompt">$</span> <span class="cli-cmd">curl localhost:8080/api/health</span>
+{
+  "status": "healthy",
+  "version": "2.1.0",
+  "counties_loaded": 254,
+  "sources": 764,
+  "database": "connected"
+}</code></pre>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>REST API</h2>
+      <pre class="cli-mockup"><code><span class="cli-prompt">$</span> <span class="cli-cmd">curl localhost:8080/api/properties?county=travis&limit=2</span>
+
+{
+  "count": 847231,
+  "results": [
+    {
+      "county": "Travis",
+      "address": "123 Main St, Austin, TX 78701",
+      "owner": "Jane Doe",
+      "assessed_value": 450000,
+      "land_value": 180000,
+      "improvement_value": 270000,
+      "tax_amount": 8325.00,
+      "year_built": 1998,
+      "sqft": 2100,
+      "lot_acres": 0.18,
+      "last_sale_date": "2021-03-15",
+      "last_sale_price": 385000,
+      "property_type": "residential",
+      "parcel_id": "01-2345-0678-0000"
+    },
+    {
+      "county": "Travis",
+      "address": "456 Oak Ave, Austin, TX 78702",
+      "owner": "John Smith",
+      "assessed_value": 620000,
+      "land_value": 245000,
+      "improvement_value": 375000,
+      "tax_amount": 11470.00,
+      "year_built": 2015,
+      "sqft": 2800,
+      "lot_acres": 0.22,
+      "last_sale_date": "2023-08-01",
+      "last_sale_price": 595000,
+      "property_type": "residential",
+      "parcel_id": "01-5678-0123-0000"
+    }
+  ]
+}</code></pre>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="features-grid">
+        <div class="feature-block">
+          <h3>764 Data Sources</h3>
+          <p>County assessor sites, appraisal districts, tax offices, and public records portals. Every county, every source.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Docker Deployment</h3>
+          <p>One command: <code>docker compose up</code>. PostgreSQL, API server, and scraper worker all containerized.</p>
+        </div>
+        <div class="feature-block">
+          <h3>REST API</h3>
+          <p>Query scraped data via HTTP. Filter by county, property type, value range, date. Pagination built in.</p>
+        </div>
+        <div class="feature-block">
+          <h3>CLI Interface</h3>
+          <p>Run individual counties or full state. CSV, JSON, or PostgreSQL output. Progress bars, structured logging.</p>
+        </div>
+        <div class="feature-block">
+          <h3>Rate Limiting</h3>
+          <p>Configurable per-source rate limits (default 1 req/sec). Exponential backoff on failures. Respects robots.txt.</p>
+        </div>
+        <div class="feature-block">
+          <h3>12 Months Updates</h3>
+          <p>County sites change layouts monthly. Your purchase includes 12 months of adapter fixes and new source additions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>Technical Specs</h2>
+      <table class="specs-table">
+        <tbody>
+          <tr><td>Language</td><td>Python 3.9+</td></tr>
+          <tr><td>Dependencies</td><td>requests, beautifulsoup4, lxml, fastapi, psycopg2</td></tr>
+          <tr><td>Database</td><td>PostgreSQL 14+ (Docker) or SQLite (standalone)</td></tr>
+          <tr><td>Containerization</td><td>Docker + Docker Compose</td></tr>
+          <tr><td>API Framework</td><td>FastAPI with OpenAPI docs at /docs</td></tr>
+          <tr><td>Data Sources</td><td>764 across 254 counties</td></tr>
+          <tr><td>Output Formats</td><td>CSV, JSON, PostgreSQL</td></tr>
+          <tr><td>Full State Scrape</td><td>2-4 hours (rate-limited)</td></tr>
+          <tr><td>Rate Limiting</td><td>1 req/sec per source (configurable)</td></tr>
+          <tr><td>Retry Logic</td><td>3 retries with exponential backoff</td></tr>
+          <tr><td>Error Handling</td><td>Graceful skip on failures, summary report</td></tr>
+          <tr><td>Logging</td><td>Structured JSON logs, configurable verbosity</td></tr>
+          <tr><td>License</td><td>MIT &mdash; modify, resell, do whatever you want</td></tr>
+          <tr><td>Updates</td><td>12 months included with purchase</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>What You Get</h2>
+      <ul class="check-list">
+        <li>Python scraper with CLI interface</li>
+        <li>FastAPI REST server with OpenAPI docs</li>
+        <li>Docker Compose stack (scraper + API + PostgreSQL)</li>
+        <li>764 source adapters across 254 counties</li>
+        <li>Sample output data (3 counties, all formats)</li>
+        <li>README with setup guide (&lt; 5 min for Docker, &lt; 10 min standalone)</li>
+        <li>Video walkthrough (10 min)</li>
+        <li>County coverage map</li>
+        <li>12 months of updates and adapter fixes</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>Pricing</h2>
+      <div class="pricing-box">
+        <div class="pricing-amount">$10</div>
+        <div class="pricing-detail">One-time purchase. Not a subscription.</div>
+        <ul class="check-list">
+          <li>Full source code (MIT license)</li>
+          <li>764 data source adapters</li>
+          <li>Docker + CLI + REST API</li>
+          <li>12 months of updates</li>
+          <li>Email support</li>
+        </ul>
+        <a href="https://c4573.gumroad.com/l/texas-scraper" class="btn btn-primary btn-block">Buy on Gumroad &mdash; $10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <p class="question">Is this legal?</p>
+        <p class="answer">Yes. County assessor data is public record under Texas law. This tool accesses the same data you'd see on the county website.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">Why 764 sources for 254 counties?</p>
+        <p class="answer">Many counties have multiple data portals &mdash; a central appraisal district, a tax office, and sometimes a separate GIS portal. We scrape all of them and merge the results.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">Do I need Docker?</p>
+        <p class="answer">No. You can run the CLI standalone with just Python. Docker is optional but recommended for the REST API and PostgreSQL storage.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">How long does a full state scrape take?</p>
+        <p class="answer">2-4 hours for all 764 sources across 254 counties, with default rate limiting (1 req/sec per source).</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">What happens after 12 months?</p>
+        <p class="answer">You keep the code forever. After 12 months, you stop receiving adapter updates when county sites change layouts. You can renew for another $10/year, or maintain the adapters yourself.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">Do I need an API key?</p>
+        <p class="answer">No. Zero external API dependencies. Everything scrapes public websites directly.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">Can I modify the code?</p>
+        <p class="answer">Yes. MIT licensed. Modify it, integrate it into your pipeline, resell it &mdash; no restrictions.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="question">How is this different from BatchData or PropStream?</p>
+        <p class="answer">They charge $50-$500/month for access to their servers. This is a $10 one-time purchase &mdash; the code runs on your machine, you own the data, no ongoing costs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <p class="section-desc">Stop paying $500/month for property data.</p>
+      <a href="https://c4573.gumroad.com/l/texas-scraper" class="btn btn-primary">Buy on Gumroad &mdash; $10</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">c4573.org</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/jhacksman/c4573.org">GitHub</a></li>
+        <li><a href="mailto:hello@c4573.org">Contact</a></li>
+      </ul>
+      <p class="footer-note">
+        <span class="explain">"c4573" = "caste" in leetspeak.</span><br>
+        No cookies. No tracking. No JavaScript (almost).
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
