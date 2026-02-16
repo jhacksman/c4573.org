@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Texas Scraper Kit — 764 Data Sources, Docker, REST API | c4573.org</title>
-  <meta name="description" content="Scrape 764 Texas property data sources. Python + Docker + REST API + CLI. $13.37 one-time, 12 months of updates. No subscriptions.">
+  <meta name="description" content="Scrape 764 Texas property data sources. Docker + REST API + CLI + web UI. $13.37 one-time, 12 months of updates. No subscriptions.">
   <meta property="og:title" content="Texas Scraper Kit — 764 Data Sources for $13.37">
-  <meta property="og:description" content="Scrape 764 Texas property data sources. Python + Docker + REST API + CLI. $13.37 one-time purchase.">
+  <meta property="og:description" content="Scrape 764 Texas property data sources. Docker + REST API + CLI + web UI. $13.37 one-time purchase.">
   <meta property="og:url" content="https://c4573.org/products/texas-scraper-kit.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Texas Scraper Kit — 764 Data Sources for $13.37">
-  <meta name="twitter:description" content="764 TX property data sources. Python + Docker + REST API. $13.37 one-time.">
+  <meta name="twitter:description" content="764 TX property data sources. Docker + REST API + CLI. $13.37 one-time.">
   <link rel="canonical" href="https://c4573.org/products/texas-scraper-kit.html">
   <link rel="stylesheet" href="../css/style.css">
   <script type="application/ld+json">
@@ -19,7 +19,7 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Texas Scraper Kit",
-    "description": "Scrape 764 Texas property data sources. Python + Docker + REST API + CLI. 12 months of updates included.",
+    "description": "Scrape 764 Texas property data sources. Docker + REST API + CLI + web UI. 12 months of updates included.",
     "offers": {
       "@type": "Offer",
       "price": "10",
@@ -51,7 +51,7 @@
       <div class="product-meta">
         <span class="price">$13.37</span>
         <span>764 data sources</span>
-        <span>Python + Docker</span>
+        <span>Docker + TypeScript</span>
         <span>12 months of updates</span>
       </div>
       <a href="https://c4573.gumroad.com/l/texas-scraper" class="btn btn-primary">Buy on Gumroad &mdash; $13.37</a>
@@ -204,7 +204,7 @@
       <h2>Technical Specs</h2>
       <table class="specs-table">
         <tbody>
-          <tr><td>Language</td><td>Python 3.9+</td></tr>
+          <tr><td>Language</td><td>TypeScript (FeedEater)</td></tr>
           <tr><td>Dependencies</td><td>requests, beautifulsoup4, lxml, fastapi, psycopg2</td></tr>
           <tr><td>Database</td><td>PostgreSQL 14+ (Docker) or SQLite (standalone)</td></tr>
           <tr><td>Containerization</td><td>Docker + Docker Compose</td></tr>
@@ -227,7 +227,7 @@
     <div class="container">
       <h2>What You Get</h2>
       <ul class="check-list">
-        <li>Python scraper with CLI interface</li>
+        <li>FeedEater data engine with CLI + web UI</li></li>
         <li>FastAPI REST server with OpenAPI docs</li>
         <li>Docker Compose stack (scraper + API + PostgreSQL)</li>
         <li>764 source adapters across 254 counties</li>
@@ -274,7 +274,7 @@
 
       <div class="faq-item">
         <p class="question">Do I need Docker?</p>
-        <p class="answer">No. You can run the CLI standalone with just Python. Docker is optional but recommended for the REST API and PostgreSQL storage.</p>
+        <p class="answer">No. Just Docker. One command: <code>docker compose up</code> brings up the engine, database, and web UI.</p>
       </div>
 
       <div class="faq-item">
