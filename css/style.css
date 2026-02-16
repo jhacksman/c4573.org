@@ -457,6 +457,204 @@ code {
   font-style: italic;
 }
 
+/* ── CLI MOCKUP ── */
+
+.cli-mockup {
+  background: #0a0e14;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+}
+
+.cli-prompt {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.cli-cmd {
+  color: var(--text);
+}
+
+.cli-info {
+  color: var(--blue);
+}
+
+.cli-ok {
+  color: var(--green);
+}
+
+.cli-bar {
+  color: var(--orange);
+}
+
+/* ── FEATURES GRID ── */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.feature-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.feature-block h3 {
+  font-size: var(--font-size-base);
+  margin-bottom: 0.5rem;
+  color: var(--green);
+}
+
+.feature-block p {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── SPECS TABLE ── */
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table td {
+  padding: 0.6rem 0;
+  font-size: var(--font-size-sm);
+  border-bottom: 1px solid var(--border);
+}
+
+.specs-table td:first-child {
+  color: var(--text-muted);
+  width: 40%;
+  padding-right: 1rem;
+}
+
+.specs-table td:last-child {
+  color: var(--text);
+}
+
+.specs-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── PRICING BOX ── */
+
+.pricing-box {
+  background: var(--surface);
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 480px;
+}
+
+.pricing-amount {
+  font-size: clamp(36px, 6vw, 48px);
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 0.25rem;
+}
+
+.pricing-detail {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.pricing-box .check-list {
+  margin-bottom: 1.5rem;
+}
+
+/* ── SECTION DESC ── */
+
+.section-desc {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  margin-bottom: 1.25rem;
+  max-width: 720px;
+}
+
+/* ── ABOUT PAGE ── */
+
+.about-hero {
+  padding: 5rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-hero h1 {
+  font-size: var(--font-size-hero);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.about-hero .accent {
+  color: var(--green);
+}
+
+.about-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-muted);
+  max-width: 680px;
+  line-height: 1.5;
+}
+
+.about-section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-content {
+  max-width: 720px;
+}
+
+.about-content h2 {
+  font-size: var(--font-size-lg);
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+.about-content h2::before {
+  content: "// ";
+  color: var(--green);
+}
+
+.about-content p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.about-principles {
+  list-style: none;
+  padding: 0;
+}
+
+.about-principles li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.about-principles li:last-child {
+  border-bottom: none;
+}
+
+.about-principles li strong {
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: var(--font-size-base);
+}
+
 /* ── RESPONSIVE ── */
 
 @media (max-width: 768px) {
@@ -488,6 +686,22 @@ code {
   .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-table td:first-child {
+    width: 45%;
+  }
+
+  .about-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .about-section {
+    padding: 2rem 0;
   }
 
   .footer-links {
