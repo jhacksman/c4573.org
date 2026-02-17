@@ -24,6 +24,13 @@
     .blog-title { font-size: clamp(24px, 4vw, 38px); line-height: 1.2; margin-bottom: 0.5rem; }
 
     /* Audio Player */
+    .audio-player-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      margin: 0 -1.25rem;
+      padding: 0 1.25rem;
+    }
     .audio-player {
       background: var(--surface, #1a1a2e);
       border: 1px solid var(--border, #333);
@@ -34,6 +41,12 @@
       align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
+      transition: border-radius 0.2s, border-color 0.2s;
+    }
+    .audio-player-wrapper.stuck .audio-player {
+      border-radius: 0 0 8px 8px;
+      border-color: var(--green, #00ff41);
+      box-shadow: 0 2px 12px rgba(0, 255, 65, 0.1);
     }
     .audio-player audio {
       flex: 1;
@@ -101,17 +114,19 @@
       <p class="blog-meta">February 17, 2026 · c4573.org</p>
 
       <!-- Audio Player -->
-      <div class="audio-player">
-        <div class="audio-label">🔊 Listen to this post</div>
-        <audio id="blogAudio" src="../audio/cant-ban-math.mp3" preload="metadata" controls></audio>
-        <div class="speed-controls">
-          <span>Speed:</span>
-          <button class="speed-btn active" onclick="setSpeed(1)">1×</button>
-          <button class="speed-btn" onclick="setSpeed(1.25)">1.25×</button>
-          <button class="speed-btn" onclick="setSpeed(1.5)">1.5×</button>
-          <button class="speed-btn" onclick="setSpeed(2)">2×</button>
-          <button class="speed-btn" onclick="setSpeed(2.5)">2.5×</button>
-          <button class="speed-btn" onclick="setSpeed(3)">3×</button>
+      <div class="audio-player-wrapper" id="audioWrapper">
+        <div class="audio-player">
+          <div class="audio-label">🔊 Listen to this post</div>
+          <audio id="blogAudio" src="../audio/cant-ban-math.mp3" preload="metadata" controls></audio>
+          <div class="speed-controls">
+            <span>Speed:</span>
+            <button class="speed-btn active" onclick="setSpeed(1)">1×</button>
+            <button class="speed-btn" onclick="setSpeed(1.25)">1.25×</button>
+            <button class="speed-btn" onclick="setSpeed(1.5)">1.5×</button>
+            <button class="speed-btn" onclick="setSpeed(2)">2×</button>
+            <button class="speed-btn" onclick="setSpeed(2.5)">2.5×</button>
+            <button class="speed-btn" onclick="setSpeed(3)">3×</button>
+          </div>
         </div>
       </div>
 
@@ -231,6 +246,14 @@
       document.querySelectorAll('.speed-btn').forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
     }
+
+    // Sticky player detection
+    const wrapper = document.getElementById('audioWrapper');
+    const observer = new IntersectionObserver(
+      ([e]) => wrapper.classList.toggle('stuck', e.intersectionRatio < 1),
+      { threshold: [1], rootMargin: '-1px 0px 0px 0px' }
+    );
+    observer.observe(wrapper);
   </script>
 
 </body>
