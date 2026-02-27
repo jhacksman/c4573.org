@@ -1,8 +1,12 @@
-The Helicopter and the Hike. The Atlantic published an interview this week with Terence Tao — the UCLA professor widely considered the greatest living mathematician. The news hook was hard to resist: AI tools have been solving previously unsolved math problems. OpenAI's president went on X and declared victory. The tech press treated it as confirmation of the biggest promise in AI — that these systems are now doing real intellectual work at the frontier of human knowledge.
+The Helicopter and the Hike.
+
+The Atlantic published an interview this week with Terence Tao — the UCLA professor widely considered the greatest living mathematician. The news hook was hard to resist: AI tools have been solving previously unsolved math problems. OpenAI's president went on X and declared victory. The tech press treated it as confirmation of the biggest promise in AI — that these systems are now doing real intellectual work at the frontier of human knowledge.
 
 Tao's actual position, if you read the interview carefully instead of the headline, is more complicated. More interesting. And the gap between what he said and what the press reported tells you something important about how this technology is actually developing — and how badly incentivized people are to misread it.
 
-What Happened. The Erdős Problems are a collection of more than 1,000 open mathematical questions left behind by Paul Erdős, a prolific and eccentric Hungarian mathematician who died in 1996. Erdős spent decades proposing problems he couldn't solve and attaching small cash prizes to the ones he thought were hardest. The collection ranges from questions so obscure that most mathematicians have never heard of them, to problems that have resisted serious attack for decades.
+What Happened.
+
+The Erdős Problems are a collection of more than 1,000 open mathematical questions left behind by Paul Erdős, a prolific and eccentric Hungarian mathematician who died in 1996. Erdős spent decades proposing problems he couldn't solve and attaching small cash prizes to the ones he thought were hardest. The collection ranges from questions so obscure that most mathematicians have never heard of them, to problems that have resisted serious attack for decades.
 
 AI tools — primarily models from OpenAI — recently solved some of them. Researchers used generative AI to produce proofs that checked out. Tao reviewed several of these and confirmed they were correct.
 
@@ -14,7 +18,11 @@ The Erdős collection has a long tail of very obscure, very easy problems — qu
 
 That's not nothing. But it's also not what the headline implied. No AI cracked a famous unsolved problem. No AI found a novel approach that surprised anyone. The bots found the low-hanging fruit that humans had left on the tree because there were more interesting trees to climb.
 
-The Journey vs. The Destination. Here's the part of the interview that most coverage missed entirely, because it requires actually thinking about what mathematics is for.
+This pattern — AI excelling at tasks humans haven't prioritized rather than tasks humans have failed at — is worth filing away. It comes up again.
+
+The Journey vs. The Destination.
+
+Here's the part of the interview that most coverage missed entirely, because it requires actually thinking about what mathematics is for.
 
 When Tao was asked why AI-generated proofs don't carry the same value as human proofs — even when they're mathematically correct — he gave an analogy that's worth sitting with.
 
@@ -26,7 +34,11 @@ An AI proof is a helicopter drop. The answer lands fully formed. There's no trai
 
 Tao acknowledges he's learned things from some AI-generated proofs — a trick from a 1960 paper he hadn't been aware of, a connection he'd dismissed as irrelevant. So it's not worthless. But the value is incidental, not structural. The AI isn't building the map. It's occasionally landing in an interesting spot.
 
-What's Actually Useful. Strip away the hype and Tao is reasonably bullish on AI — just not for the reasons the headlines suggest.
+The broader implication: we're going to accumulate a lot of true results we don't understand. Statements that have been verified correct by AI systems but that no human has developed intuition around. Mathematics has always been a conversation across time — one generation leaves maps for the next. AI proofs don't add to those maps. They add to a pile of destinations with no paths between them.
+
+What's Actually Useful.
+
+Strip away the hype and Tao is reasonably bullish on AI — just not for the reasons the headlines suggest.
 
 His most useful framing is the difference between case studies and population studies. Mathematics has always worked like medicine in the 18th century: take one problem, study it to death, write a paper, move on. Intensive, handcrafted, slow. AI makes something different possible — the mathematical equivalent of a clinical trial. Instead of one problem examined deeply, you examine a thousand problems at moderate depth and look for patterns.
 
@@ -36,7 +48,11 @@ The other thing AI is good for, Tao says, is the parts of mathematics nobody wan
 
 In 2023, Tao predicted that by 2026, AI would be functioning as a trusted co-author — contributing at the level of a junior collaborator. He now says the timeline was basically right. Not ahead, not behind. The models are doing roughly what he expected a junior co-author would do: grunt work, tedious cases, systematic exploration, reliable execution of known techniques. Not inspiration. Not creativity. Not the thing that makes a great mathematician great.
 
-The Confidence Problem. There's a specific failure mode Tao calls out that's important to understand if you're going to use these tools for anything serious.
+Notice what's missing from the bullish case: nothing about AI solving the hard problems. Everything about AI doing the work that surrounds hard problems. The execution layer, not the insight layer. This distinction matters, and we'll come back to it.
+
+The Confidence Problem.
+
+There's a specific failure mode Tao calls out that's important to understand if you're going to use these tools for anything serious.
 
 AI systems don't know when they're uncertain. Or rather — they don't communicate uncertainty accurately. A human mathematician will say "I think this is probably true, but I haven't verified the third case." An AI will say the same thing whether it's completely certain or completely guessing. The confidence signal is broken.
 
@@ -44,7 +60,13 @@ In mathematics, this is particularly dangerous because a single error in a proof
 
 Tao is direct about what he wants from AI companies: more honest systems. Systems that acknowledge when they're uncertain, that flag tentative conclusions as tentative. This sounds obvious. It is apparently very difficult to build, or very unattractive to sell.
 
-The Button Problem. The other thing Tao flags — and this one extends well beyond mathematics — is the mismatch between what AI companies want to build and what actually produces good results.
+The unattractive-to-sell explanation is probably more accurate than the difficult-to-build one. A system that frequently says "I'm not sure about this" is harder to demo than a system that sounds confident about everything. Confidence sells. Calibration doesn't. So the products are overconfident by design, and the people who rely on them are underprotected as a result.
+
+This is not a small problem. Every domain where AI is being deployed for serious work — medicine, law, engineering, finance — shares the same failure mode. The confident wrong answer is more dangerous than the hedged uncertain one. And the incentive structure of AI products systematically produces confident wrong answers.
+
+The Button Problem.
+
+The other thing Tao flags — and this one extends well beyond mathematics — is the mismatch between what AI companies want to build and what actually produces good results.
 
 AI companies want push-button workflows. You describe a problem, you go get coffee, you come back to a solved problem. This is the vision. Fully automated, hands-off, just give the machine a task and wait.
 
@@ -54,7 +76,23 @@ Push-button automation is easier to sell. "Give our AI your hard problem and wal
 
 This dynamic — build what sells, not what works — is not unique to AI. But it's worth naming when you see it, because the gap between the two eventually becomes expensive.
 
-The Actual State of Play. After the hype is stripped away, here's what Tao is describing.
+The practical consequence is that most people are using these tools wrong. They're treating them as oracles — ask a question, get an answer, move on. What Tao is describing is more like a power tool: effective in trained hands operating in a tight feedback loop, dangerous when handed to someone who expects it to do the thinking for them. The marketing says oracle. The reality says power tool. The gap between those two mental models produces a lot of expensive mistakes.
+
+The Credentialing Problem Nobody Talks About.
+
+There's something else embedded in the Tao interview that didn't make the headlines, because it's slow-moving and doesn't have a good hook.
+
+Mathematics has a problem with verification at scale. Proofs are getting longer. The Four Color Theorem was first proved in 1976 using a computer-assisted check of nearly 2,000 cases — and mathematicians argued for years about whether a computer-assisted proof counted. The Classification of Finite Simple Groups fills thousands of journal pages across hundreds of papers written over decades. Nobody alive has read the whole thing. We believe it's correct because we trust the process, not because anyone has checked every step.
+
+AI makes this problem worse and potentially better simultaneously. Worse, because AI-generated proofs can be extraordinarily long — hundreds of pages of formal verification that no human will read. Better, because AI can potentially check proofs that are too long for humans to check manually. We might end up in a world where AI-generated results are verified by AI verifiers, and human mathematicians participate in neither the generation nor the verification.
+
+Tao thinks formal verification — where proofs are written in machine-checkable languages that eliminate ambiguity — is going to become essential. Not optional. The combination of AI-generated proofs and AI verifiers creates a loop that can, in principle, produce reliable results without human review of individual steps. Whether mathematicians will accept this is a social question as much as a technical one.
+
+The deeper issue: if the generation and verification both move to AI, what is the human mathematician's role? Tao's answer is that the interesting work remains human — framing the right questions, deciding which problems matter, developing the intuitions that point toward productive approaches. The machine does the calculation. The human does the meaning-making. That division of labor has historical precedent. It doesn't obviously lead anywhere terrible. But it represents a fundamental change in what it means to do mathematics, and it's happening faster than the field has processed.
+
+The Actual State of Play.
+
+After the hype is stripped away, here's what Tao is describing.
 
 AI can now do math. Specifically, it can do the tedious, mechanical, low-creativity parts of math — systematic exploration, case-checking, applying known techniques to new instances. It cannot do the parts that matter most: generating new ideas, noticing unexpected connections, producing the kind of insight that makes a proof valuable beyond its conclusion.
 
@@ -63,3 +101,35 @@ The right mental model is not "AI is solving math." The right mental model is "A
 Tao predicted this in 2023. He's watching it happen on schedule. He's not alarmed. He's not triumphant. He's curious about what comes next, appropriately skeptical of the hype, and genuinely interested in integrating these tools into mathematical practice in ways that are actually productive.
 
 That's the story. It's less exciting than "AI solves unsolvable math." It's more useful.
+
+Why This Matters Outside Mathematics.
+
+Tao is talking about mathematics, but the dynamics he describes generalize cleanly. Replace "mathematical proof" with "legal brief," "medical diagnosis," "engineering specification," or "financial model," and almost everything he says still holds.
+
+Every field that involves hard intellectual work has an execution layer and an insight layer. The execution layer is tedious, time-consuming, error-prone, and fundamentally mechanical — even when it requires expertise to do correctly. The insight layer is where breakthroughs happen: the reframing of a problem, the connection to an unrelated domain, the intuition that a particular approach is worth pursuing. AI is eating the execution layer. The insight layer is where humans still live.
+
+The mistake — in mathematics and everywhere else — is treating AI performance on the execution layer as evidence of capability on the insight layer. Erdős problems solved. Contracts reviewed. X-rays analyzed. Code written. These are execution-layer achievements. They are real. They are valuable. They do not imply that the insight layer has been reached.
+
+The press coverage of AI routinely makes this error. A model that writes a convincing legal brief is not a model that understands the law. A model that generates a working proof is not a model that understands mathematics. The output looks like insight. The process is sophisticated pattern-matching on the execution layer. The distinction matters enormously when you're deciding how much to trust the output.
+
+The Incentive Structure Is the Story.
+
+The most important thing Tao says — and the thing most likely to age well — isn't about mathematics at all. It's about incentives.
+
+AI companies are optimizing for demos, not for outcomes. Confident answers demo better than uncertain ones. Push-button automation demos better than iterative collaboration. Headline-grabbing results — "AI solves math problems!" — demo better than honest characterizations — "AI handles the boring parts of math." Every product decision flows downstream from what impresses investors and closes enterprise deals.
+
+The result is a systematic gap between what the products are marketed as and what they actually do. Tao — one of the world's most sophisticated users of these tools — is describing a careful, iterative, human-in-the-loop workflow that looks nothing like the marketing. The people running the companies know this. The people buying the products often don't.
+
+This isn't a scandal. It's just how markets work. The product that sells is not always the product that performs. The gap eventually gets closed — either by competitors who build honest systems, or by customers who learn from expensive mistakes, or by regulators who mandate disclosure. In the meantime, the gap exists, and it's widest in the highest-stakes domains.
+
+Mathematics is relatively forgiving. Wrong answers get caught eventually because proofs get checked. Medicine, law, and infrastructure are less forgiving. AI products built on the same incentive structure — confident, push-button, optimized for demos — are being deployed in those domains right now. The failure modes will be more expensive than a wrong answer on a math competition problem.
+
+The Honest Summary.
+
+Terence Tao is the best mathematician alive. He has been using AI tools seriously for years. He thinks they're useful. He thinks the coverage of them is systematically misleading. He has a clear-eyed view of what they can and can't do, which is almost the inverse of the view that most coverage promotes.
+
+AI tools are good at: systematic search across large problem spaces, executing known techniques reliably at scale, handling tedious computation, and identifying low-hanging fruit that humans haven't prioritized. AI tools are bad at: generating new ideas, knowing when they're wrong, flagging uncertainty accurately, and producing results that illuminate rather than merely conclude.
+
+The tools are real. The hype is not. Both things are true simultaneously, and the gap between them is where expensive mistakes happen.
+
+Tao's advice, implicit throughout the interview, is the same advice you'd give to anyone picking up a powerful tool: understand what it actually does before you stake anything important on your assumptions about what it does. The helicopter gets you to the destination. It doesn't teach you the terrain. If you need to know the terrain, you still have to walk.
