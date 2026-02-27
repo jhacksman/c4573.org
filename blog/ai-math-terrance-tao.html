@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Helicopter and the Hike — c4573.org</title>
+  <meta name="description" content="Terence Tao — the world's greatest living mathematician — says AI is doing math now. Here's what he actually means, and why the tech press got it wrong.">
+  <meta property="og:title" content="The Helicopter and the Hike">
+  <meta property="og:description" content="Terence Tao — the world's greatest living mathematician — says AI is doing math now. Here's what he actually means.">
+  <meta property="og:url" content="https://c4573.org/blog/ai-math-terrance-tao.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://c4573.org/blog/ai-math-terrance-tao.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-body { max-width: 720px; margin: 0 auto; }
+    .blog-body h2 { margin-top: 2.5rem; margin-bottom: 1rem; color: var(--green); font-size: var(--font-size-xl); }
+    .blog-body h3 { margin-top: 2rem; margin-bottom: 0.75rem; color: var(--orange); }
+    .blog-body p { margin-bottom: 1.25rem; color: var(--text); }
+    .blog-body blockquote { border-left: 3px solid var(--green); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
+    .blog-body ul, .blog-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .blog-body li { margin-bottom: 0.5rem; }
+    .blog-meta { color: var(--text-muted); margin-bottom: 0.5rem; }
+    .blog-title { font-size: clamp(24px, 4vw, 38px); line-height: 1.2; margin-bottom: 0.5rem; }
+
+    /* Audio Player */
+    .audio-player-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      margin: 0 -1.25rem;
+      padding: 0 1.25rem;
+    }
+    .audio-player {
+      background: var(--surface, #1a1a2e);
+      border: 1px solid var(--border, #333);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      transition: border-radius 0.2s, border-color 0.2s;
+    }
+    .audio-player-wrapper.stuck .audio-player {
+      border-radius: 0 0 8px 8px;
+      border-color: var(--green, #00ff41);
+      box-shadow: 0 2px 12px rgba(0, 255, 65, 0.1);
+    }
+    .audio-player audio { flex: 1; min-width: 200px; height: 36px; }
+    .speed-controls { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; flex-wrap: wrap; }
+    .speed-btn {
+      background: transparent;
+      border: 1px solid var(--border, #333);
+      color: var(--text-muted, #888);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.75rem;
+      transition: all 0.15s;
+    }
+    .speed-btn:hover { border-color: var(--green, #00ff41); color: var(--green, #00ff41); }
+    .speed-btn.active { background: var(--green, #00ff41); color: var(--bg, #0d0d1a); border-color: var(--green, #00ff41); font-weight: 700; }
+    .audio-label { font-size: 0.8rem; width: 100%; margin-bottom: -0.5rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">c4573.org</a>
+      <ul class="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/jhacksman/c4573.org">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 3rem;">
+    <div class="container blog-body">
+
+      <h1 class="blog-title">The Helicopter and the Hike</h1>
+      <p class="blog-meta">February 26, 2026 · c4573.org</p>
+
+      <!-- Audio Player -->
+      <div class="audio-player-wrapper" id="audioWrapper">
+        <div class="audio-player">
+          <div class="audio-label">🔊 Listen to this post</div>
+          <audio id="blogAudio" src="../audio/ai-math-terrance-tao.mp3" preload="metadata" controls></audio>
+          <div class="speed-controls">
+            <span>Speed:</span>
+            <button class="speed-btn active" onclick="setSpeed(1)">1×</button>
+            <button class="speed-btn" onclick="setSpeed(1.25)">1.25×</button>
+            <button class="speed-btn" onclick="setSpeed(1.5)">1.5×</button>
+            <button class="speed-btn" onclick="setSpeed(2)">2×</button>
+            <button class="speed-btn" onclick="setSpeed(2.5)">2.5×</button>
+            <button class="speed-btn" onclick="setSpeed(3)">3×</button>
+          </div>
+        </div>
+      </div>
+
+      <p>The Atlantic published <a href="https://www.theatlantic.com/technology/2026/02/ai-math-terrance-tao/686107/" target="_blank">an interview this week</a> with Terence Tao — the UCLA professor widely considered the greatest living mathematician. The news hook was hard to resist: AI tools have been solving previously unsolved math problems. OpenAI's president went on X and declared victory. The tech press treated it as confirmation of the biggest promise in AI — that these systems are now doing real intellectual work at the frontier of human knowledge.</p>
+
+      <p>Tao's actual position, if you read the interview carefully instead of the headline, is more complicated. More interesting. And the gap between what he said and what the press reported tells you something important about how this technology is actually developing — and how badly incentivized people are to misread it.</p>
+
+      <h2>What Happened</h2>
+
+      <p>The Erdős Problems are a collection of more than 1,000 open mathematical questions left behind by Paul Erdős, a prolific and eccentric Hungarian mathematician who died in 1996. Erdős spent decades proposing problems he couldn't solve and attaching small cash prizes to the ones he thought were hardest. The collection ranges from questions so obscure that most mathematicians have never heard of them, to problems that have resisted serious attack for decades.</p>
+
+      <p>AI tools — primarily models from OpenAI — recently solved some of them. Researchers used generative AI to produce proofs that checked out. Tao reviewed several of these and confirmed they were correct.</p>
+
+      <p>OpenAI's president called it a win. Tech Twitter agreed.</p>
+
+      <p>Tao's word for it was "cheap wins."</p>
+
+      <p>The Erdős collection has a long tail of very obscure, very easy problems — questions that an expert mathematician, given half a day, would probably work out using standard techniques. Nobody had bothered with them because they weren't interesting enough to be worth the time. AI systems systematically went through all thousand-plus problems, identified the twelve or so easiest, and solved those.</p>
+
+      <p>That's not nothing. But it's also not what the headline implied. No AI cracked a famous unsolved problem. No AI found a novel approach that surprised anyone. The bots found the low-hanging fruit that humans had left on the tree because there were more interesting trees to climb.</p>
+
+      <h2>The Journey vs. The Destination</h2>
+
+      <p>Here's the part of the interview that most coverage missed entirely, because it requires actually thinking about what mathematics is for.</p>
+
+      <p>When Tao was asked why AI-generated proofs don't carry the same value as human proofs — even when they're mathematically correct — he gave an analogy that's worth sitting with.</p>
+
+      <blockquote>"These problems are like distant locations that you would hike to. And in the past, you would have to go on a journey. You can lay down trail markers that other people could follow, and you could make maps. AI tools are like taking a helicopter to drop you off at the site. You miss all the benefits of the journey itself. You just get right to the destination, which actually was only just a part of the value of solving these problems."</blockquote>
+
+      <p>This is not a minor point. Mathematics is not primarily a collection of true statements. It's a way of building understanding — of developing intuitions, discovering connections between ideas, generating tools and techniques that extend to other problems. A proof, when done well, doesn't just establish that something is true. It explains <em>why</em> it's true in a way that illuminates the surrounding territory.</p>
+
+      <p>An AI proof is a helicopter drop. The answer lands fully formed. There's no trail. No map. No "oh, on the way there, we noticed this interesting feature of the landscape that turns out to be relevant to a completely different problem." The destination appears, and nothing else does.</p>
+
+      <p>Tao acknowledges he's learned things from some AI-generated proofs — a trick from a 1960 paper he hadn't been aware of, a connection he'd dismissed as irrelevant. So it's not worthless. But the value is incidental, not structural. The AI isn't building the map. It's occasionally landing in an interesting spot.</p>
+
+      <h2>What's Actually Useful</h2>
+
+      <p>Strip away the hype and Tao is reasonably bullish on AI — just not for the reasons the headlines suggest.</p>
+
+      <p>His most useful framing is the difference between case studies and population studies. Mathematics has always worked like medicine in the 18th century: take one problem, study it to death, write a paper, move on. Intensive, handcrafted, slow. AI makes something different possible — the mathematical equivalent of a clinical trial. Instead of one problem examined deeply, you examine a thousand problems at moderate depth and look for patterns.</p>
+
+      <p>This is genuinely new. And it's genuinely valuable. Not because AI is smarter than mathematicians, but because it can do something mathematicians literally cannot do: hold a thousand problems in mind simultaneously, apply techniques systematically across all of them, and surface regularities that would be invisible to a human working one problem at a time.</p>
+
+      <p>The other thing AI is good for, Tao says, is the parts of mathematics nobody wants to do. There is a lot of tedious computation in math — cases to check, calculations to verify, bookkeeping that is correct but boring. Human mathematicians look for clever ways to avoid this work. AI will just do it. Happily. Indefinitely. This frees human mathematicians to work on the parts that require judgment, creativity, and insight.</p>
+
+      <p>In 2023, Tao predicted that by 2026, AI would be functioning as a trusted co-author — contributing at the level of a junior collaborator. He now says the timeline was basically right. Not ahead, not behind. The models are doing roughly what he expected a junior co-author would do: grunt work, tedious cases, systematic exploration, reliable execution of known techniques. Not inspiration. Not creativity. Not the thing that makes a great mathematician great.</p>
+
+      <h2>The Confidence Problem</h2>
+
+      <p>There's a specific failure mode Tao calls out that's important to understand if you're going to use these tools for anything serious.</p>
+
+      <p>AI systems don't know when they're uncertain. Or rather — they don't communicate uncertainty accurately. A human mathematician will say "I think this is probably true, but I haven't verified the third case." An AI will say the same thing whether it's completely certain or completely guessing. The confidence signal is broken.</p>
+
+      <p>In mathematics, this is particularly dangerous because a single error in a proof invalidates the entire argument. You can have a hundred correct steps and one wrong one, and the proof is worthless. The ability to flag uncertainty — to say "this step I'm confident in, this step I'm less sure about" — is critical for collaborative verification. AI can't do this reliably.</p>
+
+      <p>Tao is direct about what he wants from AI companies: more honest systems. Systems that acknowledge when they're uncertain, that flag tentative conclusions as tentative. This sounds obvious. It is apparently very difficult to build, or very unattractive to sell.</p>
+
+      <h2>The Button Problem</h2>
+
+      <p>The other thing Tao flags — and this one extends well beyond mathematics — is the mismatch between what AI companies want to build and what actually produces good results.</p>
+
+      <p>AI companies want push-button workflows. You describe a problem, you go get coffee, you come back to a solved problem. This is the vision. Fully automated, hands-off, just give the machine a task and wait.</p>
+
+      <p>Tao says this is exactly wrong for hard problems. What actually works is conversation — iterative back-and-forth, where the human guides, the AI executes and proposes, the human evaluates and redirects. Not a button. A partnership. The human isn't out of the loop; the human is the loop. The AI makes the human much more effective by handling the execution layer, but the judgment layer stays human.</p>
+
+      <p>Push-button automation is easier to sell. "Give our AI your hard problem and walk away" is a better marketing message than "develop an interactive workflow where you remain closely engaged." But the second thing is what actually works, and the companies are building the first thing because it's what closes deals.</p>
+
+      <p>This dynamic — build what sells, not what works — is not unique to AI. But it's worth naming when you see it, because the gap between the two eventually becomes expensive.</p>
+
+      <h2>The Actual State of Play</h2>
+
+      <p>After the hype is stripped away, here's what Tao is describing:</p>
+
+      <p>AI can now do math. Specifically, it can do the tedious, mechanical, low-creativity parts of math — systematic exploration, case-checking, applying known techniques to new instances. It cannot do the parts that matter most: generating new ideas, noticing unexpected connections, producing the kind of insight that makes a proof valuable beyond its conclusion.</p>
+
+      <p>The right mental model is not "AI is solving math." The right mental model is "AI has become a very capable, very tireless, very uncreative research assistant." It does what it's told, faster and at greater scale than any human assistant could. It doesn't understand what it's doing in any meaningful sense. It doesn't get bored. It doesn't get distracted. It doesn't have good days and bad days. And it cannot tell you when it's made a mistake.</p>
+
+      <p>Tao predicted this in 2023. He's watching it happen on schedule. He's not alarmed. He's not triumphant. He's curious about what comes next, appropriately skeptical of the hype, and genuinely interested in integrating these tools into mathematical practice in ways that are actually productive.</p>
+
+      <p>That's the story. It's less exciting than "AI solves unsolvable math." It's more useful.</p>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 c4573.org — tools to break the caste system</p>
+    </div>
+  </footer>
+
+  <script>
+    function setSpeed(rate) {
+      const audio = document.getElementById('blogAudio');
+      audio.playbackRate = rate;
+      document.querySelectorAll('.speed-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    const wrapper = document.getElementById('audioWrapper');
+    const observer = new IntersectionObserver(([e]) => {
+      wrapper.classList.toggle('stuck', e.intersectionRatio < 1);
+    }, { threshold: [1] });
+    observer.observe(wrapper);
+  </script>
+
+</body>
+</html>
