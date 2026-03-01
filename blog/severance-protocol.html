@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Severance Protocol — c4573.org</title>
+  <meta name="description" content="The same AI that fired them makes rebuilding trivially cheap. The institutions that profit by standing between people and the things they need are about to learn what happens when the engineers they discarded pick up the same tools.">
+  <meta property="og:title" content="The Severance Protocol">
+  <meta property="og:description" content="Laid-off engineers, AI coding tools, and the end of the extraction economy.">
+  <meta property="og:url" content="https://c4573.org/blog/severance-protocol.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://c4573.org/blog/severance-protocol.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-body { max-width: 720px; margin: 0 auto; }
+    .blog-body h2 { margin-top: 2.5rem; margin-bottom: 1rem; color: var(--green); font-size: var(--font-size-xl); }
+    .blog-body h3 { margin-top: 2rem; margin-bottom: 0.75rem; color: var(--orange); }
+    .blog-body p { margin-bottom: 1.25rem; color: var(--text); }
+    .blog-body blockquote { border-left: 3px solid var(--green); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
+    .blog-body ul, .blog-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .blog-body li { margin-bottom: 0.5rem; }
+    .blog-meta { color: var(--text-muted); margin-bottom: 0.5rem; }
+    .blog-title { font-size: clamp(24px, 4vw, 38px); line-height: 1.2; margin-bottom: 0.5rem; }
+    .take-rate-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    .take-rate-table th, .take-rate-table td { text-align: left; padding: 0.6rem 1rem; border-bottom: 1px solid var(--border); }
+    .take-rate-table th { color: var(--green); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .take-rate-table td { color: var(--text); }
+    .take-rate-table tr:last-child td { border-bottom: none; }
+
+    /* Audio Player */
+    .audio-player-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      margin: 0 -1.25rem;
+      padding: 0 1.25rem;
+    }
+    .audio-player {
+      background: var(--surface, #1a1a2e);
+      border: 1px solid var(--border, #333);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      transition: border-radius 0.2s, border-color 0.2s;
+    }
+    .audio-player-wrapper.stuck .audio-player {
+      border-radius: 0 0 8px 8px;
+      border-color: var(--green, #00ff41);
+      box-shadow: 0 2px 12px rgba(0, 255, 65, 0.1);
+    }
+    .audio-player audio { flex: 1; min-width: 200px; height: 36px; }
+    .speed-controls { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; flex-wrap: wrap; }
+    .speed-btn {
+      background: transparent;
+      border: 1px solid var(--border, #333);
+      color: var(--text-muted, #888);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.75rem;
+      transition: all 0.15s;
+    }
+    .speed-btn:hover {
+      border-color: var(--green, #00ff41);
+      color: var(--green, #00ff41);
+    }
+    .speed-btn.active {
+      background: var(--green, #00ff41);
+      color: var(--bg, #0d0d1a);
+      border-color: var(--green, #00ff41);
+      font-weight: 700;
+    }
+    .audio-label {
+      font-size: 0.8rem;
+      width: 100%;
+      margin-bottom: -0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">c4573.org</a>
+      <ul class="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/jhacksman/c4573.org">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 3rem;">
+    <div class="container blog-body">
+
+      <h1 class="blog-title">The Severance Protocol</h1>
+      <p class="blog-meta">March 1, 2026 · c4573.org</p>
+
+      <!-- Audio Player -->
+      <div class="audio-player-wrapper" id="audioWrapper">
+        <div class="audio-player">
+          <div class="audio-label">🔊 Listen to this post</div>
+          <audio id="blogAudio" src="../audio/severance-protocol.mp3" preload="metadata" controls></audio>
+          <div class="speed-controls">
+            <span>Speed:</span>
+            <button class="speed-btn active" onclick="setSpeed(1)">1×</button>
+            <button class="speed-btn" onclick="setSpeed(1.25)">1.25×</button>
+            <button class="speed-btn" onclick="setSpeed(1.5)">1.5×</button>
+            <button class="speed-btn" onclick="setSpeed(2)">2×</button>
+            <button class="speed-btn" onclick="setSpeed(2.5)">2.5×</button>
+            <button class="speed-btn" onclick="setSpeed(3)">3×</button>
+          </div>
+        </div>
+      </div>
+
+      <p>Six hundred and forty-five. That's how many tech workers were laid off per day in 2025, according to industry trackers. Over 184,000 for the year. One in four of those layoffs were explicitly tied to "AI-driven restructuring" — the polite term for replacing people with the software they built.</p>
+
+      <p>The hardest-hit sectors were SaaS, fintech, logistics tech, and HR tech. Microsoft cut 9,000, focused on product and engineering. Meta cut 8,000. Google, 6,200. Startups — which now account for 60% of all tech layoffs, reversing the pattern from prior years — are cutting faster than anyone.</p>
+
+      <p>These are not abstractions. These are people who understood their employer's systems intimately. Who knew the architecture, the edge cases, the hacks that held things together, the decisions that were made at 2 AM during an outage. They walked out the door with all of it.</p>
+
+      <p>And now they have the same AI tools that replaced them.</p>
+
+      <h2>The Irony</h2>
+
+      <p>Here is the thing that should keep executives awake at night.</p>
+
+      <p>The AI that justified your layoffs is the same AI that makes rebuilding your product trivially cheap. A single engineer with Cursor, Claude Code, or any of the current generation of AI coding tools can build in weeks what used to take a team of ten six months. The bottleneck is no longer writing code — it's knowing <em>what</em> to build. And you just fired the people who know exactly what to build.</p>
+
+      <p>This isn't speculation about the future. Right now, in early 2026, solo developers are shipping complete SaaS products using AI-assisted development. Cursor hit $200 million in revenue before hiring a single enterprise sales rep. The "one-person startup" is no longer an aspiration — it's a category.</p>
+
+      <p>The cost of building software is collapsing toward zero. The cost of product knowledge is not. You can't download institutional memory from a model. It walks out the door in the heads of the people you laid off, along with a severance check and a motive.</p>
+
+      <h2>The Precedent</h2>
+
+      <p>Some of the most successful open-source projects in history were built by insiders who left and took their knowledge with them.</p>
+
+      <p>When Oracle acquired Sun Microsystems, the creators of MySQL forked their own database and built MariaDB. It now ships as the default on most Linux distributions. MySQL, the commercial product, became the afterthought.</p>
+
+      <p>When Oracle turned hostile toward the OpenOffice.org community, the core developers forked the project and created LibreOffice. It became the standard open-source office suite worldwide. OpenOffice effectively died.</p>
+
+      <p>When Frank Karlitschek left ownCloud — the company he founded — over disagreements about direction, he forked it into Nextcloud. Nextcloud is now the dominant self-hosted cloud platform. ownCloud is a footnote.</p>
+
+      <p>When Oracle disputed the Hudson project's naming and governance, the developers forked it into Jenkins. Jenkins became the most widely used CI/CD server in the world. Hudson was abandoned.</p>
+
+      <p>The pattern is consistent: the people who built the thing know its weaknesses better than anyone. When they leave and build the open alternative, the open alternative tends to win. Not always. But often enough to notice.</p>
+
+      <p>The difference now is speed. Those projects took years to build and years to gain traction. With AI-assisted development, the rebuild timeline compresses from years to weeks. The traction timeline compresses because the product is free and the incumbents are extracting 15-30% from every transaction.</p>
+
+      <h2>The SaaS Moat Is Dead</h2>
+
+      <p>The venture capital world is already saying this out loud.</p>
+
+      <p>a16z published a piece declaring "SaaS is dead" — arguing that AI applications' moats come from data, not code. Bessemer Venture Partners said "memory and context are the new moats" — explicitly not code complexity. TechCrunch reported that VCs now see most software products as replicable by a tech giant or an LLM company, and only companies with proprietary data and products that "can't easily be replicated" are considered defensible.</p>
+
+      <p>If code is not a moat, then what is a SaaS company actually selling? Customer relationships and data lock-in. That's it. The product itself — the thing engineers built — is reproducible. And the people most qualified to reproduce it are the ones who just got their walking papers.</p>
+
+      <p>The game theory is stark. Fire 50 engineers to save $10 million a year. Five of them spend three months building an open-source alternative. The alternative, being free, begins eroding your $100 million ARR. The net loss dwarfs the savings. Individually rational, collectively catastrophic — the same dynamic we described in <a href="ghost-gdp.html">Ghost GDP</a>.</p>
+
+      <h2>But SaaS Is the Small Story</h2>
+
+      <p>Software companies replacing software companies is interesting but narrow. The real targets are bigger. Much bigger.</p>
+
+      <p>The institutions most vulnerable are not the ones that build software. They're the ones that <em>stand between people and the things they need</em> and charge a toll for the privilege. The platforms. The intermediaries. The rent-seekers whose entire value proposition is "we got here first, and now you have to go through us."</p>
+
+      <table class="take-rate-table">
+        <thead>
+          <tr><th>Institution</th><th>Take Rate</th><th>What They Actually Do</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Uber Eats / DoorDash</td><td>15–30%</td><td>Match a restaurant to a driver to a customer</td></tr>
+          <tr><td>Airbnb</td><td>14–16%</td><td>Show photos of apartments to travelers</td></tr>
+          <tr><td>Upwork / Fiverr</td><td>10–20%</td><td>Match freelancers to clients</td></tr>
+          <tr><td>Salesforce</td><td>$300/seat/mo</td><td>A database with a user interface</td></tr>
+          <tr><td>Insurance companies</td><td>20–35%</td><td>Pool premiums, then fight you on claims</td></tr>
+          <tr><td>Credit bureaus</td><td>Opaque</td><td>Sell your financial behavior back to you</td></tr>
+          <tr><td>Retail banks</td><td>Spread + fees</td><td>Hold your money, lend it at 10× what they pay you</td></tr>
+        </tbody>
+      </table>
+
+      <p>None of these institutions are technology companies. They are toll booths. Their moat is not innovation — it's inertia. Network effects. Regulatory capture. The friction of switching. And the one thing they all provide that actually matters: trust.</p>
+
+      <h2>The Trust Problem</h2>
+
+      <p>Strip away the branding, the apps, the marketing — and what does Uber Eats actually provide?</p>
+
+      <p>The answer to one question: "Is this person real, and will they do what they said they'd do?"</p>
+
+      <p>Will the restaurant actually make the food? Will the driver actually deliver it? Will the customer actually pay? That's the entire product. Everything else — the matching algorithm, the payment processing, the pretty UI — is commodity software. A weekend project for a competent developer with AI tools.</p>
+
+      <p>The same is true for every institution on that list. Airbnb's value is trust: the host won't trash the place, the guest will pay, there's recourse if something goes wrong. Insurance is trust: the pool will pay out when you need it. Banks are trust: your money will be there when you want it. Credit scores are trust: this person will pay their debts.</p>
+
+      <p>Trust has always required a centralized intermediary — someone who vouches for both sides and takes a cut for the service. That was the only way to do it.</p>
+
+      <p>It's not anymore.</p>
+
+      <h2>Proving Without Revealing</h2>
+
+      <p>There is a concept in cryptography that is genuinely counterintuitive. It's been around since 1985, when Shafi Goldwasser, Silvio Micali, and Charles Rackoff published the foundational paper, but it's only recently become practical for real-world use. It's called a zero-knowledge proof.</p>
+
+      <p>Imagine someone asks you to prove you're over 21. Today, you hand over your driver's license. In doing so, you reveal your full name, your date of birth, your address, your license number, your organ donor status — everything printed on the card. You wanted to prove one fact. You disclosed twenty.</p>
+
+      <p>A zero-knowledge proof lets you prove "I am over 21" without revealing <em>anything else</em>. Not your name. Not your birthday. Not your address. Not even which form of ID you used. The verifier learns exactly one thing: the statement is true. Nothing more.</p>
+
+      <p>This breaks a deeply held intuition — that verification requires disclosure. That to prove something about yourself, you have to show something about yourself. You don't. The math makes it possible to prove a fact is true while revealing zero information about <em>why</em> it's true.</p>
+
+      <p>The specific implementation that matters here is called zk-SNARKs — zero-knowledge succinct non-interactive arguments of knowledge. The name is a mouthful. What it means in practice: the proof is tiny, it's fast to verify, and the prover and verifier don't need to go back and forth. You generate the proof once, hand it over, done. The verifier checks it in milliseconds.</p>
+
+      <p>This is not theoretical. This is deployed, audited, open-source cryptography running on public blockchains right now.</p>
+
+      <h2>Proof of Human</h2>
+
+      <p>World — formerly Worldcoin, founded by Sam Altman and Alex Blania — has built the most ambitious implementation of zero-knowledge proofs for identity verification.</p>
+
+      <p>The system works like this:</p>
+
+      <ol>
+        <li>You visit a verification device called an Orb, which scans your iris.</li>
+        <li>The Orb processes the image <strong>locally, in its own memory</strong>, and generates a one-way mathematical hash — an IrisCode.</li>
+        <li>The iris image is deleted on the device. It is not uploaded. It is not stored on a server. It is not retained by anyone, anywhere.</li>
+        <li>The hash is checked against all existing hashes to confirm you haven't registered before — deduplication without identification.</li>
+        <li>You receive a World ID: a cryptographic credential that proves "I am a unique human being."</li>
+      </ol>
+
+      <p>When you use your World ID — to sign into an app, to verify yourself on a marketplace, to prove you're a real person and not a bot — a zero-knowledge proof is generated. The proof confirms one fact: this credential belongs to a verified, unique human. It does not reveal your World ID public key. It does not reveal your IrisCode. It does not reveal any biometric data. Different uses cannot be linked — using your World ID on a food delivery protocol and a freelance marketplace generates separate, unlinkable proofs. No one can connect them.</p>
+
+      <p>This is built on Semaphore, an open-source privacy layer for Ethereum using zk-SNARKs. The protocol has been independently audited. The cryptography is public and verifiable.</p>
+
+      <p>A common misconception conflates this with biometric surveillance. The distinction is fundamental: your iris images are deleted on the device after processing. The only artifact is a one-way mathematical hash — and you cannot reconstruct an iris from a hash any more than you can reconstruct an egg from a cake. When you use your World ID, even the hash isn't revealed. The zero-knowledge proof demonstrates membership in the set of verified humans without exposing which member you are.</p>
+
+      <p>This is not biometric data collection. It is the architectural opposite: biometric verification designed so that no biometric data persists.</p>
+
+      <p>World is deploying the Orb Mini — a smartphone-sized verification device — in 2026, targeting over 100 million users. The SDK is available for developers today.</p>
+
+      <h2>The Stack</h2>
+
+      <p>With proof-of-human solved, the rest of the stack to replace any extractive platform is straightforward:</p>
+
+      <p><strong>Identity and trust:</strong> World ID. You're verified as a unique human. No company holds your data. No platform tracks you across services.</p>
+
+      <p><strong>Payments:</strong> Stablecoins on Layer 2 networks — Base, Optimism, Arbitrum. Settlement in seconds. Transaction fees under a cent. No payment processor taking 2.9% plus 30 cents.</p>
+
+      <p><strong>Reputation:</strong> On-chain transaction history. Verifiable, portable, owned by you — not locked inside a platform that holds your rating hostage.</p>
+
+      <p><strong>The application:</strong> A progressive web app. Matching algorithm, search, messaging, dispute resolution via escrow. A competent developer with AI tools builds this in weeks.</p>
+
+      <p><strong>Total platform fee:</strong> Gas costs. Effectively zero.</p>
+
+      <p>Restaurant keeps 100%. Driver keeps 100%. Host keeps 100%. Freelancer keeps 100%. The "platform" is a smart contract and a frontend. No CEO taking a $50 million salary. No shareholders demanding margin expansion. No 30% extraction on every transaction.</p>
+
+      <h2>The Delivery Platforms</h2>
+
+      <p>DoorDash takes up to 30% from restaurants. The restaurant — which buys the ingredients, pays the cooks, does the actual work of making food — gives nearly a third of the order value to a company that runs a matching algorithm. The driver, who provides their own car, their own gas, their own insurance, gets whatever's left after the platform takes its cut.</p>
+
+      <p>The technology required to match a customer to a nearby restaurant to a nearby driver is not complex. It's a proximity query, an availability check, and a routing calculation. It's a CRUD app with a map. The hard part was always trust — knowing the restaurant is real, the driver will show up, the customer will pay. World ID solves that.</p>
+
+      <p>An open protocol that does everything DoorDash does, minus the extraction, is not a theoretical exercise. It's an engineering project measured in weeks, not years. And the people most qualified to build it — the ones who know the dispatch logic, the edge cases, the payment flows — are sitting at home with severance checks.</p>
+
+      <h2>The Lodging Platforms</h2>
+
+      <p>Airbnb charges hosts a 3% service fee and guests up to 14.2% — sometimes more. For showing photos of a property to people who want to rent it. The matching is a search query. The payment is an escrow. The trust layer — "this host is real, this property exists, there's recourse if something goes wrong" — is the only non-trivial component.</p>
+
+      <p>Proof-of-human plus on-chain escrow plus a verified property registry replaces the entire value chain. The host lists directly. The guest books directly. The smart contract holds the payment until check-in is confirmed. The platform fee is the cost of a blockchain transaction: fractions of a cent.</p>
+
+      <h2>The Enterprise Gatekeepers</h2>
+
+      <p>Salesforce charges $300 per user per month for what is, at its core, a database with a user interface. Customer relationship management — storing contacts, tracking interactions, managing a sales pipeline — is not technically complex software. It was complex to <em>build well</em> twenty years ago. It is not complex to build well today, when AI can generate a full-stack CRM application from a description of the desired functionality.</p>
+
+      <p>The moat is switching costs and data lock-in. Your CRM data is inside Salesforce, and migrating it is painful enough that most companies don't bother. That's not a technology advantage. That's a hostage situation.</p>
+
+      <h2>The Insurance Industry</h2>
+
+      <p>Insurance is conceptually simple: a group of people pool money, and when one of them has a loss, the pool pays out. That's it. The insurance company's role is to manage the pool, assess risk, and process claims.</p>
+
+      <p>For this, they take 20-35% of every premium dollar as "administrative expenses." And when you file a claim, they deploy teams of adjusters and lawyers whose institutional incentive is to pay you as little as possible.</p>
+
+      <p>A smart contract pool with programmatic payouts replaces the entire value chain. Risk assessment can be parametric — weather data triggers a crop insurance payout automatically, without a claims adjuster. Health expenses above a deductible trigger reimbursement from the pool, without a human deciding whether your MRI was "medically necessary." The rules are in the code. The code is auditable. The pool's solvency is transparent on-chain.</p>
+
+      <p>DeFi insurance protocols already exist — Nexus Mutual, Etherisc, InsurAce. They're early, they're imperfect, and they're proof that the model works.</p>
+
+      <h2>The Credit Industry</h2>
+
+      <p>Your credit score is calculated by three companies — Equifax, Experian, and TransUnion — using proprietary algorithms that you cannot inspect, based on your own financial behavior that they collected without meaningfully asking. They sell this score to lenders, landlords, employers, and insurers. They charge <em>you</em> to see your own data. When they get breached — as Equifax did in 2017, exposing 147 million people's Social Security numbers — the consequences to them are negligible.</p>
+
+      <p>A decentralized reputation system built on verifiable transaction history — where you own your data, control who sees it, and can generate zero-knowledge proofs that demonstrate creditworthiness without revealing the underlying transactions — makes the credit bureau model obsolete. You prove "I have a history of repaying debts on time" without showing every transaction, every balance, every account. The lender gets the signal they need. You keep your privacy.</p>
+
+      <h2>The Banks</h2>
+
+      <p>A retail bank performs four functions: it holds your money, it processes payments, it lends money, and it pays you interest. For holding your money, it charges fees. For processing payments, it charges fees. For lending money, it charges borrowers 10-20× what it pays depositors. For paying you interest, it pays as little as it possibly can.</p>
+
+      <p>Stablecoins replace the holding function — your money is in your wallet, not on someone else's balance sheet. Layer 2 networks replace the payment function — instant settlement, sub-cent fees. DeFi lending protocols replace the lending function — transparent rates, no loan officer deciding whether you "qualify." Self-custody wallets replace the entire relationship.</p>
+
+      <p>Banks know this. It's why they've lobbied aggressively against cryptocurrency regulation that would make self-custody easy. The threat is not that crypto is a scam. The threat is that crypto works.</p>
+
+      <h2>The Game Theory</h2>
+
+      <p>Return to the layoffs.</p>
+
+      <p>These institutions — the platforms, the intermediaries, the financial gatekeepers — are firing the engineers who built and maintained their systems. They're handing these engineers severance, a deep understanding of the institution's architecture, and access to AI tools that make rebuilding cheap.</p>
+
+      <p>The game theory is straightforward. Fire 50 engineers to save $10 million. The savings are linear and predictable. The risk is that any small group of them builds an open protocol that does what you do, for free. If the protocol gains traction, it doesn't erode your revenue — it zeroes it. You cannot compete with free when free is also better, because it doesn't extract 15-30% from every transaction.</p>
+
+      <p>This is not a symmetric risk. The savings from the layoffs are finite and known. The potential loss from a successful open-source replacement is your entire business model.</p>
+
+      <h2>The Domino Theory</h2>
+
+      <p>It only takes one.</p>
+
+      <p>One successful open protocol replacing one extractive platform, and the template is proven. The code is open. The architecture is documented. The smart contracts are auditable. Anyone can fork it, adapt it, deploy it for a different industry.</p>
+
+      <p>An open food delivery protocol that works becomes the template for an open rideshare protocol. Which becomes the template for an open lodging protocol. Which demonstrates that open insurance pools work. Which proves that decentralized credit scoring is viable. Each success lowers the barrier to the next one, because the trust layer — proof-of-human — is shared infrastructure.</p>
+
+      <p>The extraction economy is a set of dominoes. They don't all need to be pushed. Just the first one.</p>
+
+      <h2>What We're Saying and What We're Not</h2>
+
+      <p>We are not saying this will happen tomorrow. Open protocols face real challenges: cold-start network effects, regulatory friction, user experience gaps, and the sheer inertia of habit. People use DoorDash because it's already on their phone. Overcoming that requires not just a better product but a reason to switch that's compelling enough to justify the effort.</p>
+
+      <p>We are not saying every platform is doomed. Some will adapt, cut their take rates, and compete. Some will find genuine value-adds that justify their fees. Competition is healthy regardless.</p>
+
+      <p>What we are saying is this: the ingredients are all in place. The engineers with the knowledge. The AI tools that compress build timelines. The cryptographic primitives that solve trust without intermediaries. The financial infrastructure that enables near-zero-cost payments. The anger — 184,000 people laid off in a single year, many of them by the very institutions they could now replace.</p>
+
+      <p>We take no position on whether this <em>should</em> happen. We observe that it <em>can</em> happen, that the conditions are present, and that the only thing missing is the first successful example.</p>
+
+      <p>What we do believe: institutions built on extraction — whose value proposition is standing between people and the things they need, charging a toll because they got there first — do not survive indefinite contact with abundant, inexpensive intelligence and open protocols. The moats erode. The tolls become optional. The middlemen become unnecessary.</p>
+
+      <p>And the people they're firing are the ones who'll build what comes next.</p>
+
+      <br>
+      <hr style="border-color: var(--border, #333);">
+      <p style="color: var(--text-muted); font-size: 0.9rem;">
+        c4573.org builds tools to break the digital caste system. Browse our <a href="/#tools">tools</a> or read more <a href="/about.html">about us</a>.
+      </p>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 c4573.org — tools to break the caste system</p>
+    </div>
+  </footer>
+
+  <script>
+    function setSpeed(speed) {
+      const audio = document.getElementById('blogAudio');
+      audio.playbackRate = speed;
+      document.querySelectorAll('.speed-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    // Sticky player detection
+    const wrapper = document.getElementById('audioWrapper');
+    const observer = new IntersectionObserver(
+      ([e]) => wrapper.classList.toggle('stuck', e.intersectionRatio < 1),
+      { threshold: [1], rootMargin: '-1px 0px 0px 0px' }
+    );
+    observer.observe(wrapper);
+  </script>
+
+</body>
+</html>
