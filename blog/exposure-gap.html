@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Exposure Gap — c4573.org</title>
+  <meta name="description" content="Anthropic just measured how far AI has come in replacing human work. The distance between what is possible and what is happening is not a comfort. It is a timeline.">
+  <meta property="og:title" content="The Exposure Gap">
+  <meta property="og:description" content="Anthropic just measured how far AI has come in replacing human work. The distance between what is possible and what is happening is not a comfort. It is a timeline.">
+  <meta property="og:url" content="https://c4573.org/blog/exposure-gap.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://c4573.org/blog/exposure-gap.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-body { max-width: 720px; margin: 0 auto; }
+    .blog-body h2 { margin-top: 2.5rem; margin-bottom: 1rem; color: var(--green); font-size: var(--font-size-xl); }
+    .blog-body h3 { margin-top: 2rem; margin-bottom: 0.75rem; color: var(--orange); }
+    .blog-body p { margin-bottom: 1.25rem; color: var(--text); }
+    .blog-body blockquote { border-left: 3px solid var(--green); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
+    .blog-body ul, .blog-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .blog-body li { margin-bottom: 0.5rem; }
+    .blog-meta { color: var(--text-muted); margin-bottom: 0.5rem; }
+    .blog-title { font-size: clamp(24px, 4vw, 38px); line-height: 1.2; margin-bottom: 0.5rem; }
+
+    /* Audio Player */
+    .audio-player-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      margin: 0 -1.25rem;
+      padding: 0 1.25rem;
+    }
+    .audio-player {
+      background: var(--surface, #1a1a2e);
+      border: 1px solid var(--border, #333);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      transition: border-radius 0.2s, border-color 0.2s;
+    }
+    .audio-player-wrapper.stuck .audio-player {
+      border-radius: 0 0 8px 8px;
+      border-color: var(--green, #00ff41);
+      box-shadow: 0 2px 12px rgba(0, 255, 65, 0.1);
+    }
+    .audio-player audio {
+      flex: 1;
+      min-width: 200px;
+      height: 36px;
+    }
+    .speed-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .speed-controls span {
+      color: var(--text-muted, #888);
+      font-size: 0.8rem;
+      margin-right: 0.25rem;
+    }
+    .speed-btn {
+      background: var(--bg, #0d0d1a);
+      color: var(--text-muted, #888);
+      border: 1px solid var(--border, #333);
+      border-radius: 4px;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: var(--font-mono, monospace);
+    }
+    .speed-btn:hover {
+      border-color: var(--green, #00ff41);
+      color: var(--green, #00ff41);
+    }
+    .speed-btn.active {
+      background: var(--green, #00ff41);
+      color: var(--bg, #0d0d1a);
+      border-color: var(--green, #00ff41);
+      font-weight: 700;
+    }
+    .audio-label {
+      font-size: 0.8rem;
+      width: 100%;
+      margin-bottom: -0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">c4573.org</a>
+      <ul class="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/jhacksman/c4573.org">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 3rem;">
+    <div class="container blog-body">
+
+      <h1 class="blog-title">The Exposure Gap</h1>
+      <p class="blog-meta">March 6, 2026 · c4573.org</p>
+
+      <!-- Audio Player -->
+      <div class="audio-player-wrapper" id="audioWrapper">
+        <div class="audio-player">
+          <div class="audio-label">🔊 Listen to this post</div>
+          <audio id="blogAudio" src="../audio/exposure-gap.mp3" preload="metadata" controls></audio>
+          <div class="speed-controls">
+            <span>Speed:</span>
+            <button class="speed-btn active" onclick="setSpeed(1)">1×</button>
+            <button class="speed-btn" onclick="setSpeed(1.25)">1.25×</button>
+            <button class="speed-btn" onclick="setSpeed(1.5)">1.5×</button>
+            <button class="speed-btn" onclick="setSpeed(2)">2×</button>
+            <button class="speed-btn" onclick="setSpeed(2.5)">2.5×</button>
+            <button class="speed-btn" onclick="setSpeed(3)">3×</button>
+          </div>
+        </div>
+      </div>
+
+      <p>AI is theoretically capable of replacing 94% of tasks in Computer & Math occupations. It is actually covering 33% of them today. That 61-point gap is not reassurance — it is a countdown.</p>
+
+      <p>Anthropic published the most rigorous study of its own product's labor market effects on March 5, 2026. The methodology is serious. The conflict of interest is also real. Both things are worth holding at once.</p>
+
+      <h2>The Measure</h2>
+
+      <p>The paper introduces a new metric called "observed exposure" — Anthropic's attempt to move beyond what AI <em>could</em> do and measure what it's <em>actually doing</em> in the workplace. The methodology combines theoretical capability with real-world usage data from Claude traffic, weighted toward automated and work-related patterns.</p>
+
+      <p>Theoretical capability asks: could an LLM make this task 50% faster? That's the Eloundou et al. beta metric from 2023, the one that sparked the first wave of exposure analyses. Observed exposure asks a harder question: is it actually happening in professional settings?</p>
+
+      <p>The gap between those two questions is massive. Computer & Math occupations score 94% on theoretical capability — meaning nearly every task in the occupation could theoretically be made at least twice as fast with AI. But observed exposure sits at 33%. The AI is capable, the infrastructure is available, and companies are still only deploying it across a third of the tasks.</p>
+
+      <p>Office & Admin roles show a similar pattern: 90% theoretical capability, but the observed number is lower. The gap exists because of legal constraints that require human sign-off, human-in-the-loop requirements that slow API deployment, software integration debt that keeps legacy workflows running alongside AI tools, and organizational inertia that resists change even when the business case is clear.</p>
+
+      <p>The gap is not permanent. It is a backlog. Every constraint in that list is temporary. Agentic systems are being built specifically to route around verification requirements. Integration costs fall every product cycle. Regulatory clarity eventually arrives — usually in the direction that favors incumbents who've already deployed. Legal friction gets smoothed by precedent, or lobbying, or both.</p>
+
+      <h2>Who Gets Hit</h2>
+
+      <p>The demographic profile surprises people who still think of AI displacement as an entry-level problem. It is not.</p>
+
+      <p>The most exposed workers are 16 percentage points more likely to be female than the national average. They are 11 percentage points more likely to be white. They are almost twice as likely to be Asian. They earn 47% more than the median worker. They are nearly 4.5 times more likely to hold a graduate degree.</p>
+
+      <p>These are the people in the middle of the workforce — the ones with mortgages, families, careers built over a decade or more. This is not the bottom rung of the labor market. These are professionals who went to good schools, followed the advice, built the skills, and are now discovering that the skills are being priced at zero faster than they can pivot.</p>
+
+      <p>The disruption, when it arrives, does not hit the bottom first. It hits the people who thought they had made it.</p>
+
+      <h2>The Door Closes Before You Get In</h2>
+
+      <p>This is the finding that should concern recent graduates more than any layoff headline they see in the news.</p>
+
+      <p>Hiring of workers aged 22-25 into exposed occupations is down approximately 14% compared to pre-ChatGPT baseline. The confidence interval is wide enough that the effect is barely statistically significant on its own. But then you look at the Stanford paper from <a href="https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/" target="_blank">Brynjolfsson, Chandar, and Chen</a>, which used ADP payroll data — a completely independent dataset and methodology — and found a 6-16% employment drop for this exact age group in exposed jobs.</p>
+
+      <p>Two separate research teams. Different data sources. Different analytic approaches. Same signal.</p>
+
+      <p>The exits from these careers are still open. The people currently employed in exposed roles are relatively insulated — companies need them to keep operations running while the AI tools are integrated. But the entrances are closing. This is not displacement in the conventional sense — getting fired. It is the career ladder being removed before the first rung.</p>
+
+      <p>The people trying to enter Computer & Math occupations today are canaries. And the canaries are falling.</p>
+
+      <h2>The Source Problem</h2>
+
+      <p>Anthropic studied its own product. That is not disqualifying, but it is worth naming.</p>
+
+      <p>The methodology is genuinely rigorous. Task-level analysis mapped to Current Population Survey data. Difference-in-differences framework to isolate effects. Careful decomposition of theoretical capability versus observed deployment. The paper is well-constructed and worth reading in full at the <a href="https://www.anthropic.com/research/labor-market-impacts" target="_blank">labor market paper</a> link.</p>
+
+      <p>It is also produced by a company with strong institutional incentives to find "no meaningful aggregate impact yet" — and that finding is, conveniently, consistent with their interests. The paper promises to update the analysis as more data accumulates. That caveat does considerable work.</p>
+
+      <p>None of this invalidates the findings. It does mean the findings deserve to be read with both eyes open. Independent replication matters. Cross-validation with other datasets matters. The Stanford paper using ADP payroll data is one such validation. The ICLE literature review is another. Both point in the same direction.</p>
+
+      <h2>What the Gap Tells You</h2>
+
+      <p>The Bureau of Labor Statistics already sees it coming. For every 10 percentage point increase in observed AI exposure, the BLS employment growth projection drops 0.6 percentage points through 2034. The analysts who forecast employment for a living are already pricing in the gap closing.</p>
+
+      <p>They are not alarmed yet. The numbers are modest. The projections still show growth in most categories. But the direction is clear, and the BLS does not typically move its forecasts unless the signal is strong enough to survive their review process.</p>
+
+      <p>The <a href="https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/" target="_blank">ICLE review</a> of the empirical literature, published in February 2026 by Hartley, Jolevski, and colleagues, found that 35.9% of U.S. workers were using generative AI by December 2025. That is a pace of diffusion that exceeded personal computers and the internet at comparable stages of adoption.</p>
+
+      <p>The same review found small positive wage effects for workers using AI. No aggregate job loss yet. Effects concentrated at entry level, with senior employment remaining stable. Task reallocation, not displacement. So far.</p>
+
+      <p>That "so far" is doing serious work in a sentence about a technology that went from zero to 36% workforce adoption in roughly 36 months.</p>
+
+      <h2>What Closes the Gap</h2>
+
+      <p>Walk through the friction keeping that 61-point gap open, and you see how temporary each barrier actually is.</p>
+
+      <p>Legal sign-off requirements keep humans in loops that could be automated. Human verification steps slow API deployment and prevent full task handoff. Software integration debt means organizations run legacy workflows alongside AI tools rather than replacing them outright — doubling costs in the short term and delaying the efficiency gains everyone knows are coming.</p>
+
+      <p>Organizational change management is slow by design. Retraining takes time. Resistance is real. Middle managers protect their teams because that is their job and their identity. Executives move cautiously because they have liability exposure and reputational risk. Every individual decision to slow deployment is rational.</p>
+
+      <p>None of it is permanent.</p>
+
+      <p>Agentic AI systems are being built specifically to route around verification bottlenecks — systems that can escalate edge cases to humans but handle the 80% case autonomously. Integration costs fall every product cycle as APIs standardize and middleware tooling improves. Regulatory uncertainty resolves eventually, and it usually resolves in favor of the companies that deployed early and shaped the conversation.</p>
+
+      <p>The gap is not stable at 61 points. It is closing. The only question is how fast.</p>
+
+      <h2>The Only Move</h2>
+
+      <p>The gap tells you what is coming and roughly when. It does not tell you to panic. It tells you to read the map.</p>
+
+      <p>If you are in Computer & Math, 33% of your tasks are already covered by AI in production settings. The remaining 61 points are friction, not protection. Legal requirements get rewritten. Human-in-the-loop steps get optimized away. Integration debt gets paid down because the cost of maintaining it eventually exceeds the cost of replacement.</p>
+
+      <p>Plan accordingly.</p>
+
+      <p>The same tools closing the gap are available to you right now. Use them to move into the uncovered territory — the work that requires judgment, relationships, institutional context that does not live in a training dataset. Use rented intelligence to build owned capability. Learn to wield the tools that are replacing your tasks so you can do the work that the tools cannot reach yet.</p>
+
+      <p>Own the stack before the stack owns you.</p>
+
+      <p>This is not a motivational poster. This is not a productivity hack. This is the only game-theoretically sound move when the capability curve is this steep and this fast. The gap is closing whether you use the tools or not. The only choice you get is whether you are using them to climb higher or watching them rise beneath you.</p>
+
+      <p>The exposure gap is a timeline. The question is what you do with it.</p>
+
+      <br>
+      <hr style="border-color: var(--border, #333);">
+      <p style="color: var(--text-muted); font-size: 0.9rem;">
+        c4573.org builds tools to break the digital caste system. Browse our <a href="/#tools">tools</a> or read more <a href="/about.html">about us</a>.
+      </p>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 c4573.org — tools to break the caste system</p>
+    </div>
+  </footer>
+
+  <script>
+    function setSpeed(speed) {
+      const audio = document.getElementById('blogAudio');
+      audio.playbackRate = speed;
+      document.querySelectorAll('.speed-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    // Sticky player detection
+    const wrapper = document.getElementById('audioWrapper');
+    const observer = new IntersectionObserver(
+      ([e]) => wrapper.classList.toggle('stuck', e.intersectionRatio < 1),
+      { threshold: [1], rootMargin: '-1px 0px 0px 0px' }
+    );
+    observer.observe(wrapper);
+  </script>
+
+</body>
+</html>
