@@ -1,0 +1,139 @@
+Software Was Never the Endpoint
+
+March 18, 2026. c4573.org.
+
+AI has made one thing obvious: intelligence is becoming cheaper.
+
+Reasoning, writing, coding, summarizing, planning, translating. Work that used to require hours of trained human attention can now be done in seconds. This is important. It changes the economics of knowledge work. It changes who can build. It changes the pace of everything built on symbols.
+
+But symbols are not the whole economy.
+
+People do not ultimately need more text. They need food, shelter, transport, energy, medicine, security, maintenance, manufacturing, construction, and care. Software can help coordinate those things. It can help design them. It can help optimize them. But software alone does not move atoms.
+
+That is why software was never the endpoint.
+
+The endpoint, or something closer to it, is embodied intelligence: intelligence that can perceive the physical world, reason about it, and act in it. Once you see that, it becomes hard to unsee. If intelligence keeps getting cheaper, the next obvious step is to apply it where scarcity still lives.
+
+We've Seen This Pattern Before.
+
+The broad pattern of civilization is simple: each major technological leap lets humanity satisfy more human needs at larger scale.
+
+Fire scaled warmth, safety, and cooked calories.
+
+Agriculture scaled food production and settlement.
+
+Industry scaled force, motion, and manufacturing.
+
+Software scaled information, communication, and coordination.
+
+Each stage did not eliminate the previous one. It reorganized it. Fire did not make food irrelevant. It made food easier to turn into usable energy. Industry did not make agriculture irrelevant. It mechanized it. Software did not make the physical world irrelevant. It made physical systems easier to organize.
+
+The same logic applies here.
+
+AI in its current form is mostly disembodied cognition. It is very useful disembodied cognition. But if the arc continues, the value does not stop at better answers. It moves into better execution.
+
+What Software Can Do, and What It Can't.
+
+A model can explain how to build a house. It cannot lift a beam.
+
+It can optimize a warehouse layout. It cannot unload a truck.
+
+It can identify a failing component from sensor data. It cannot replace the component.
+
+It can propose a surgical plan. It cannot make an incision.
+
+For a while, this distinction allowed people to think of AI as something that only threatened knowledge workers. That was always too narrow. Once intelligence gets cheap enough, the question is no longer whether it can think. The question becomes whether it can do useful work in the world.
+
+That is a hardware question.
+
+Not hardware in the old sense of static machines doing one repetitive motion, but hardware joined to perception, control, adaptation, and planning. A machine that can handle variability starts to matter in the same way software mattered: as general infrastructure.
+
+The Bottleneck Moves.
+
+When cognition is scarce, the scarce thing is expertise.
+
+When cognition becomes abundant, the scarce thing becomes reliable action.
+
+This changes where the economic value sits.
+
+In software, a company could build a moat around an API, a model, a distribution surface, or a hosted workflow. In embodied intelligence, those things matter less by themselves. The hard part shifts to sensors, actuators, batteries, materials, calibration, safety, maintenance, supply chains, and deployment in messy environments.
+
+The problem is no longer "can it reason?"
+
+The problem is: Can it operate safely around humans? Can it recover from edge cases? Can it function when dust, heat, vibration, bad lighting, or degraded connectivity show up? Can it be repaired? Can it be manufactured cheaply? Can it run long enough to be economically useful?
+
+This is why embodied intelligence is not just "AI, but in a robot." It is the collision of intelligence with reality, and reality is full of friction.
+
+Why This Matters Politically.
+
+The danger of technofeudalism is not only that a few firms control software intelligence.
+
+It is that the same control structure could extend into the physical systems that satisfy basic needs.
+
+If three companies control the models, that is already a problem.
+
+If a small number of companies control the machines that move goods, inspect infrastructure, cultivate food, provide domestic assistance, patrol spaces, build housing, or maintain energy systems, the problem becomes much larger. At that point, dependency is no longer just cognitive. It becomes material.
+
+You are not merely renting intelligence.
+
+You are renting the machinery that mediates access to the physical world.
+
+That is a dangerous place to build civilization.
+
+The central problem does not change when intelligence becomes embodied. The same issue remains: trust concentration. Who owns the stack? Who can inspect it? Who can modify it? Who can repair it? Who can continue operating when the vendor changes terms, raises prices, adds restrictions, or disappears?
+
+These are not side questions. They are the whole question.
+
+The Future Will Still Need Open Infrastructure.
+
+If embodied intelligence is where the world is going, then the requirements for freedom become stricter, not looser.
+
+Open weights matter, but are not enough.
+
+Open interfaces matter, but are not enough.
+
+You also need repairable hardware, auditable control systems, local operation, graceful degradation, commodity components where possible, and the ability to run useful systems without constant permission from a remote gatekeeper.
+
+The lesson from software carries over cleanly: infrastructure you cannot inspect is infrastructure you must trust. Infrastructure you cannot run yourself is infrastructure you rent. Infrastructure that mediates essential needs should not be organized as a permanent dependency relationship.
+
+People will still pay for convenience. They always do. Hosted services, managed deployments, support contracts, specialized operators, integration layers, and reliability guarantees are all legitimate businesses. There is nothing wrong with that.
+
+The problem begins when convenience hardens into control.
+
+What Changes for Builders.
+
+If this thesis is right, then a lot of current AI discourse is too narrow.
+
+The question is not only who has the best model.
+
+The question is who can turn cheap intelligence into reliable physical capability.
+
+That probably means the long-term winners are not pure model companies. It means hardware-software-service stacks built around real human needs. Systems that can do useful work at a cost low enough and a reliability high enough to become infrastructure.
+
+The market for that is much larger than the market for chat.
+
+The need is also more durable. People can postpone buying software. They cannot indefinitely postpone eating, moving, building, maintaining, or caring for one another.
+
+That is why embodied intelligence is so hard to unsee once seen. It is not a feature category. It is a civilizational layer.
+
+The Question.
+
+The important question is not whether this happens.
+
+Barring catastrophe, it probably does.
+
+The important question is whether embodied intelligence arrives as open infrastructure or as rented feudal machinery.
+
+Whether it expands autonomy or narrows it.
+
+Whether it helps people meet their own needs more directly, or simply inserts a new toll collector between humans and the physical systems they depend on.
+
+Software taught machines to work on symbols.
+
+The next stage teaches them to work on the world.
+
+That is where this goes.
+
+The only real choice is who owns it when it gets there.
+
+c4573.org builds tools for people who want to own more of their stack and depend less on digital landlords. That principle will matter even more when intelligence gets a body.
