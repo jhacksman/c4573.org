@@ -1,0 +1,155 @@
+Schmidt Was Right
+
+May 18, 2026. c4573.org.
+
+On Friday, May 16, 2026, Eric Schmidt walked onto a stage at the University of Arizona's commencement ceremony and got booed for fifteen minutes. The booing wasn't general. It tracked specific words. Every time he said AI the volume spiked. Every time he said technology it spiked harder. By the time he got to the line about a rocket ship — a line Sheryl Sandberg used in 2008 to general applause — the noise was loud enough that the cameras struggled to pick up his voice.
+
+The clip went viral. Within hours there were two parallel threads on Reddit dissecting it. One on r/singularity. One on r/accelerate. They were ostensibly about the same event. They weren't. They weren't even close.
+
+The gap between those two threads is the entire story of where the AI conversation has gone since 2023. It is also a working diagnosis of why the displacement that's actually coming is going to be worse than it had to be.
+
+What He Actually Said.
+
+Strip the rocket ship line. Strip the borrowed Sandberg metaphor. Look at the actual content of the speech.
+
+Schmidt opened by acknowledging the fear in the room directly. He said: there is a fear in your generation that the future has already been written, that the machines are coming, that the jobs are evaporating, that the climate is breaking, that politics are fractured, and that you are inheriting a mess that you did not create. He called those fears rational. He did not minimize them. He did not lecture the graduates about their attitude. He named the thing in the room before he tried to say anything else about it.
+
+The argument he was trying to make underneath — the one the booing prevented him from finishing — was specific. It was this: fatalism is a choice. The future being shaped by AI is a fact. The future being shaped by AI without input from the people in those seats is a choice the people in those seats can refuse to make. The technology is going to be built. The only variable is whether they are operating it or being operated on. Opting out of the conversation does not pause the conversation. It just removes them from it.
+
+This is not a controversial argument. It is the argument Schmidt has been making in every venue available to him for two years. It is the same argument Terence Tao made in the Atlantic this February, translated from mathematician to investor: the tools are real, the marketing is not, learn to use them as power tools instead of treating them as oracles. It is the argument we have made on this site since the first post in February. It is the only game-theoretically sound position available to anyone who is not an owner of frontier compute.
+
+The booing crowd did not let Schmidt finish saying it. They booed harder when he tried. By the time he got to the rocket ship, he was speaking into noise.
+
+What Happened on r/singularity.
+
+The top comment on r/singularity, at the time we sampled it, sat at 277 points. It read, in essence, did he come to deliver a commencement speech or make a sales pitch. The second-highest, at 265, was a variant of the same idea. The third was a one-liner about how the kids are taking a stand. Below that, a sequence of comments observing that Schmidt failed to read the room, that he was tone deaf, that the speech was like an i'm-good-fuck-you-guys speech at commencement.
+
+Count what is being argued with. It is not the content of what Schmidt said. It is the fact that Schmidt said it. The grievance is with the speaker, the venue, the timing, the tone. The argument underneath — that fatalism is a choice and that the graduates have agency over how the technology gets shaped — receives almost no engagement. The handful of comments that engage with it sit in the 2-16 point range. They are not downvoted into oblivion. They are simply not the conversation. The conversation is catharsis.
+
+This is a sub that used to be different.
+
+r/singularity in 2018 was a Kurzweil sub. It was hardware nerds and exponential-curve true believers and the kind of people who read Vernor Vinge essays for fun. The median user sought out the idea of the singularity, which meant they had already pre-selected for the population willing to think hard about acceleration as a thing that was actually happening to them. The conversation reflected that selection. When AI displacement came up, the framing was what does this mean for what we should build, not who deserves to be punished for what is already happening.
+
+Something broke between 2022 and 2024. The sub crossed the million-subscriber line during the ChatGPT boom. Reddit's recommendation algorithm started pushing it to users who had never sought out the singularity as an idea but who had posted about AI in adjacent contexts. The selection function inverted. The sub no longer attracted people who were curious about acceleration. It attracted people Reddit's algorithm thought should be interested in AI, which is a much larger population, a much more median population, and a population whose dominant relationship to technology is suspicion of capital.
+
+The new median user is not anti-technology in any principled way. They are anti-Schmidt, anti-Altman, anti-billionaire, anti-the-class-that-owns-the-thing-that-is-displacing-them. AI is the current vehicle for that suspicion because AI is the current technology being deployed against them. If the next decade's dominant figures were union organizers, the same users would be cheering. The technology is not the object. The class signal is.
+
+This is not a stupid sub. The grievances on it are accurate. One commenter wrote a long, structured comment about the seven legitimate concerns animating AI skepticism, every one of them defensible. Another wrote a sharp piece about the disconnect between billionaires telling graduates to adapt and an economy that is filtering graduates out via AI before they can submit a resume. These are people doing real analysis. They are not idiots.
+
+But the dominant form of the high-voted comments is not analysis. It is catharsis. Maximum level oof. Bellend. Boooooo. The world is healing. The catharsis comments score. The analytical comments don't. That's a sub optimized for affect, not argument, and the optimization happened because Reddit's growth model rewards affect and the sub's selection function eroded around that gradient.
+
+The pro-AI voices that remain on r/singularity are speaking r/accelerate's language into a room that no longer cares to hear it. Luddites. Pandora's box. Tale as old as time. These are the memes of a sub that no longer exists in that name. They get a handful of upvotes and disappear under the catharsis.
+
+What Happened on r/accelerate.
+
+The top comment on r/accelerate, at 162 points, was boo, we want to be slaves, booo. Sneering. But sneering at the position, not the person. The second-highest cluster was a comment arguing the booing was the equivalent of scribes booing the printing press — an actual argument about technological inevitability, with the structural form of an argument rather than a dunk. Another high-scoring comment ran with listen to the guy more successful than any of you will ever be — pure status defense, but defending the speaker's claim, not attacking the booers' character.
+
+That's the inverse move from r/singularity. r/singularity attacks the speaker and ignores the argument. r/accelerate defends the argument and dismisses the speaker's enemies. The first move is ad hominem. The second move is, at minimum, on topic.
+
+But the more interesting thing about r/accelerate is the internal dissent. Half a dozen different commenters wrote long, careful, structurally similar comments that all say some version of yes the technology is inevitable, and also these graduates have legitimate economic grievances, and the sub is being too dismissive of them. They get upvoted into positive double digits. A blistering response to them — many people are legitimately delusional about the potential of AI, 99% of anti-AI people are completely clueless about the facts — also gets engagement, somewhere between -1 and 38 depending on the fork.
+
+That is a sub having an actual internal argument. r/singularity is not. r/singularity has a consensus and a few minority voices getting flattened by silence. r/accelerate has competing positions, the competition is visible, and the median commenter is willing to disagree with the post they're commenting under. That's a healthier epistemic environment, full stop. It's not because the people are smarter. It's because the selection function still works. r/accelerate is small enough and pointed enough that you have to opt into its thesis to bother posting there, which means the conversation is still about the thesis rather than about the affective response to whoever brought it up.
+
+The mod is enforcing this in real time, with banhammers. There are six visible mod-locked threads in the Schmidt comments — users banned for crossing what the sub explicitly calls out as decel / luddite / depopulationist territory. We can quibble with where the line is drawn. We cannot quibble with the fact that the line exists and is enforced. The sub is doing the thing r/singularity stopped doing five years ago, which is curating for a thesis instead of letting growth determine the median.
+
+The structure of the conversation on r/accelerate around this event is what a sub looks like when it still has a function: argue with the claim, defend the engagement, ban the worst actors. The thesis holds because someone is willing to hold it.
+
+The Stallman Pattern.
+
+Richard Stallman was right about software freedom for forty years. He was right early. He was right in detail. He named the trajectory before anyone else saw it, and he built the licensing infrastructure that made the open source ecosystem possible. We owe him an enormous debt that almost nobody alive today bothers to acknowledge.
+
+He also could not win. He could not win because he could not stop being correct in a way that alienated the people who needed to be persuaded. He demanded ideological purity from anyone in his vicinity, and when Linux ate the operating system market under a license he did not write, built by people who refused to use his terminology, he watched it happen and called them sellouts. He was right. He lost.
+
+This is not a story about Stallman the person. This is the structural shape of a movement that is right about the diagnosis and wrong about the response. The diagnosis-versus-response gap is not a character flaw of the people involved. It is a failure mode that movements fall into when the experience of being correct becomes more important than the project of winning.
+
+r/singularity is in the Stallman pattern on AI displacement. The diagnosis is correct. Wealth is concentrating. The platforms are extracting. The graduates are getting filtered out. None of that is in dispute. We have written variations of all of it on this site.
+
+But the response — booing the messenger, sneering at the argument, treating every constructive proposal as billionaire propaganda — produces no useful outcome. It does not constrain a single lord. It does not shift one ownership stake from rented capability to owned capability. It does not put one tool in the hands of one displaced worker. What it does is make the messengers more cautious next time, which means the argument gets harder to make in public, which means the only people willing to make it are the ones with nothing to lose, which means the public face of accelerationism becomes more extreme and less compromising, which means the median graduate's read of the technology becomes more negative, which means the worst version of the transition becomes more likely.
+
+The booing crowd is, mechanically, working to produce the outcome they fear. They are not stupid for fearing it. They are not stupid in any general sense. They are correctly diagnosing a problem and incorrectly identifying the lever that would address it. The lever they are pulling makes Schmidt and his class more cautious about the public conversation, which makes the argument harder to make at all, which leaves the field to the lords. The lever they are not pulling is the one that actually matters — building owned capability, running local inference, forking the institutions that are firing them, refusing the rentier position by exiting it. That lever lives in the open-source ecosystem, in the hardware they can buy and the weights they can download and the protocols they can fork. It does not live in Congress. It does not live in commencement boos. It lives in the hands of anyone willing to pick up a tool and use it.
+
+We made this argument at length in the Moratorium post. Sanders and AOC are doing the same thing the booers are doing, with more institutional power and slightly better aim. Correct diagnosis, wrong prescription, still malpractice. The Moratorium Act doesn't redistribute power. The booing doesn't redistribute power. Both are catharsis dressed up as resistance.
+
+The China Counterfactual.
+
+There is one comparison the booing crowd will not look at directly, because looking at it forces a conclusion they don't want.
+
+Stanford HAI's 2026 AI Index has the cleanest cross-national data on this. The gap between US and Chinese AI sentiment is roughly 44 points. 83% of Chinese respondents see AI products and services as more beneficial than harmful. Only 39% of Americans do. The same pattern shows up across the rest of Asia — Indonesia at 80%, Thailand at 77% — and inverts in most of the West. This is not a propaganda artifact. Pew's separate 25-country survey didn't include China, but found the US tied with Italy at the top of the concerned list at 50%, with the global median nowhere close.
+
+The reflexive American read is that Chinese citizens are propagandized into approval, which they cannot publicly contradict. This is partially true and not nearly sufficient to explain the gap. The fuller explanation is that the Chinese working-age population has spent forty years watching technology arrive and lift them out of poverty in real time. They have lived experience of technology arriving means my life gets better. The American working-age population has spent forty years watching technology arrive and lift the people who own the technology while wages stagnated and housing got priced into orbit. They have lived experience of technology arriving means somebody else's life gets better.
+
+Both experiences are accurate readings of recent history in each country. The Chinese 22-year-old looks at AI and sees the next rung of the ladder his parents climbed. The American 22-year-old looks at AI and sees the latest in a series of things that were supposed to help him and helped someone else instead. Both prophecies are partially self-fulfilling. The Chinese kid's optimism makes him engage with the technology, build with it, end up on the upside of the curve. The American kid's pessimism makes him opt out, refuse to build, end up exactly where he predicted he would.
+
+This is the cultural problem in mechanical form. It is downstream of a political problem the booing crowd is not actually addressing. The American kid has more reasons to be cynical than the Chinese kid does, and some of those reasons are correct readings of the local political economy. The US doesn't have a credible UBI conversation. It doesn't have a credible labor-side AI policy. It has an administration explicitly hostile to safety nets and a legislative branch incapable of passing a coherent response to anything on the timescale that matters. So when the American graduate hears rocket ship, he's also doing a mental calculation about whether the political infrastructure exists to make the rocket ship benefit him, and the answer is correctly no.
+
+The Chinese graduate isn't smarter. He's gambling on a state that has, for whatever else you want to say about it, demonstrated willingness to redistribute the gains of industrialization at scale, repeatedly, within living memory. The American graduate is gambling on the same not happening here. He's correct about the gamble. He is incorrect that booing Schmidt does anything about it.
+
+What UBI Was.
+
+We should be direct about something the entire AI debate has been dancing around for five years.
+
+UBI was never happening.
+
+The accelerationist position from roughly 2017 to 2024 was that productivity gains from AI would eventually be redistributed through some form of universal basic income, dividend, or sovereign wealth distribution. Sam Altman wrote papers about it. Andrew Yang ran a primary campaign on it. Stockton ran a pilot. The conversation was treated as serious because the people writing about acceleration were people who needed UBI to be possible — without it, the deployment they were arguing for produces social rupture at a scale that destroys the deploying class along with everyone else.
+
+It is not happening. It was never going to happen. The American political machinery is built around means-tested scarcity, work requirements, and the moral framing that unearned income is degenerate. Yang got 3% in a primary. The Stockton pilot affected 125 families. The federal conversation has not moved in five years. The current administration is hostile to the existing safety net and would dismantle it given the legislative opportunity. The Democratic Party has not put a UBI bill on the floor of either chamber. The political coalition does not exist. It has not existed. It is not coming into existence on the timescale that matters.
+
+This changes the structure of the argument considerably. The booing graduates are correct that the safety net is not coming. They are wrong about what to do with that correctness. The technology is going to be deployed against them either way. The only variable they actually control is whether they are operating it or being operated on. Schmidt's actual point, stripped of the rocket ship: get on the thing or get run over by it. That is not optimism. It is triage. It is the same triage we have been writing on this site for three months.
+
+The booing crowd hears triage as endorsement. They cannot distinguish describing the gradient from defending the gradient. This is the same confusion that makes them treat Schmidt's the rich will get richer and the poor will do the best they can as a statement of values rather than a description of the political economy. He is not saying it is good. He is saying it is the terrain. The terrain does not care whether you boo it.
+
+The Technofeudalism Frame.
+
+The frame that resolves this — the one we have been building toward across ten posts on this site — is that UBI was a category error from the start.
+
+You cannot tax a feudal lord into funding a welfare state. The whole point of feudalism is that the political architecture does not permit it. The lords own the means of production. The lords own the political process. The lords own the regulatory apparatus that is theoretically supposed to constrain them. The lords own the media through which any constraint would have to be argued for. Asking the lords to fund UBI is asking the lords to fund the dissolution of the conditions that make them lords. They will not do it. They have never done it. It is not the kind of thing that gets done by the people who would have to do it.
+
+Varoufakis's argument, which we lean on heavily, is that we already left capitalism behind. The cloud lords extract rent rather than profit. The structural position of a 2026 Google or Microsoft or Anthropic is closer to a medieval lord than to a 1960s industrial firm. The exits available to the 2026 worker are not the exits available to the 1960s worker. There is no Wagner Act coming. There is no New Deal. There is no labor mobilization at the scale that would produce one. The political coalition does not exist and the conditions for assembling it do not exist.
+
+The Only Way Is Through.
+
+Nobody is coming for the booing graduates. Not Congress. Not the courts. Not the labor movement that does not exist on the scale this would require. Not UBI. Not a moratorium that pauses American compute while the rest of the world keeps shipping. Not the billionaires who would have to fund their own dissolution to make any redistribution scheme work. We have walked through each of these in turn across ten posts on this site, and every one of them dead-ends in the same place. The political conditions for a soft landing do not exist. The institutions that would build one are captured. The timeline is not on our side.
+
+What is left is a Hail Mary. Use the state of the art while it is the state of the art. Run the rented frontier against the work of building something you own. Every API call to a lord's model right now should be spent moving you toward a stack that does not need the lord's model tomorrow. Self-host what you can. Contribute to the open repos. Push on distillation. Push on quantization. Push on the architectural research that compresses what required a megawatt last year into something that runs on a phone next year. The trajectory is real and it is current. Epoch AI measures the open-weight lag behind closed frontier at roughly three months and shrinking. Chinese open-weight providers now move over 45% of all OpenRouter traffic. Xiaomi's MiMo V2 Pro alone moves 4.79 trillion tokens per week — the number one model on the platform by a 3x margin over anything else. The coding gap has effectively closed; MiMo V2 Pro and Qwen 3.6 combined are running about half of all coding tokens through OpenRouter, six times Anthropic's share. DeepSeek V4 dropped last month at near-parity with GPT-5.4 on math and Q&A, at $1.74 per million tokens, fully open. V5 is expected in September. The gap that remains is on reasoning and agentic evaluation — three to eight points on the hardest benchmarks. That is the gap to close. The Hail Mary is closing it faster than the lords can extend it.
+
+The bet underneath is the singularity itself. Acceleration is the only thing fast enough to outrun the capture. If the curve keeps bending — if intelligence keeps getting cheaper and the efficient architectures keep arriving and the open ecosystem keeps eating the closed one — the monoliths fall under their own weight. The valuations built on permanent intelligence monopoly become science fiction. The capability the lords were renting becomes a thing you run locally for the cost of electricity, or rent from an inference provider for the cost of electricity plus margin.
+
+The data centers do not become stranded assets. They stay full. Two weeks ago SpaceXAI signed Colossus 1 over to Anthropic — 300 megawatts, 220,000 GPUs, built to train Grok, now running Claude. The bricks needed a tenant. The bricks did not care which one. That is the shape of the collapse. The lords' business model dies — the premise that any single firm owns the intelligence layer and charges rent for it — while the infrastructure they built gets repriced as commodity hardware, rented to whoever is running SOTA that week, including open-weight inference providers. That is the win condition. It is not guaranteed. It is the only path with a positive expected value on the timescale that matters, because every other path has been tried and every other path has produced the world we are currently living in.
+
+The booing crowd hears this and calls it cope. It is not cope. It is arithmetic. The lords have capital and we have numbers. The lords have data centers and we have the math, the weights, and the leaks. The lords have a head start measured in months and a moat made of money. We have the trajectory. The trajectory is everything.
+
+The only choice the booing crowd actually has is whether to pick up the tools and push, or to stand at the back of the auditorium and yell at the man who told them the tools exist. The man got back on his rocket ship. The trajectory did not slow down for the booing. It never does.
+
+What the Speech Was.
+
+The speech was correct. The argument under the rocket ship line was correct. The frame about fatalism being a choice was correct. The observation that the technology is going to be deployed regardless of whether the graduates engage with it was correct. Schmidt has been making this argument in every venue available to him for two years, with consistency, and the argument has not gotten less correct as the displacement has accelerated.
+
+The argument compressed: the technology is real, the displacement is real, the political response is not coming on the timescale that matters, the only thing you actually control is whether you build with it or get built around. The people who build with it will be the people who shape what it becomes. The people who refuse will be the people it happens to.
+
+Schmidt is willing to make this argument in public, at a podium, in front of a crowd that has been trained by social media to react to it as hostile propaganda. He absorbed the booing and finished the speech. Most of the people who agree with him in private will not say it in public, because the cost of saying it in public is the booing, and they have not figured out what we have figured out, which is that the booing is the price of saying the true thing in a room that does not want to hear it. The cost of speaking the argument out loud is going up. The booers are the reason it is going up. Their disinterest in distinguishing the speaker from the claim is the mechanism by which the claim gets harder to deliver, and the people willing to deliver it anyway become more valuable as that cost climbs.
+
+We are not in the business of defending Eric Schmidt. We are in the business of defending the argument. The argument needs defenders right now and the supply of public defenders is thin. He is one. We are one. The booing is the cost of being one. So be it.
+
+The Subreddit Question.
+
+This is not really a post about Reddit. It is a post about what happens to a movement when its growth outpaces its selection function.
+
+r/singularity was the original accelerationist sub. It is now something else. It is something else not because the people running it became stupid, and not because the new users are stupid, but because the population at the median grew until the median represented a different set of priors than the founding population had. This is not avoidable in any open community. It is the cost of growth. r/accelerate is the response — a smaller, more curated, more thesis-driven community that explicitly enforces the original selection function with banhammers and a manifesto. It will be subject to the same pressure if it grows. The question is whether the moderators can keep curating fast enough to maintain the thesis against the pressure of population drift.
+
+This pattern is older than Reddit. The Free Software Foundation watched it happen to the open-source movement in the 2000s. The cypherpunks watched it happen to crypto in the 2010s. The early effective altruists watched it happen to EA between roughly 2014 and 2022. In every case, the original thesis-holders had to choose between maintaining the thesis at smaller scale or accepting that the thesis would dilute as the population grew. There is no third option. There has never been a third option. The thesis cannot be maintained at scale without active curation, and active curation looks, from the outside, like gatekeeping.
+
+We are not telling anyone how to moderate their subreddit. We are pointing out that the difference between r/singularity and r/accelerate in 2026 is the difference between a sub that stopped curating and one that didn't. The booing crowd has its rooms. The thinking crowd has its rooms. They no longer share rooms. The two threads on Schmidt are not a debate. They are two separate monologues, conducted in parallel, by populations that have stopped being able to talk to each other.
+
+The displacement is going to happen in the room that includes both populations. That room is the country. There is no banhammer for the country. The thinking that gets the displacement handled well requires both populations to be in the same conversation, and the conditions for that conversation no longer exist in any venue we know of. This is a problem larger than Reddit. Reddit just happens to be where we can see it most clearly.
+
+What the Booing Costs.
+
+We are not asking the booing graduates to like Schmidt. We are not asking them to thank him. We are asking them to understand what their booing accomplishes and what it costs. It is a Stallman. It accomplishes catharsis. It costs the room. The next Schmidt-level figure who shows up to make the argument will be more guarded, more polished, harder to dunk on, and less useful to engage with as a result. The booing trains the speakers. The speakers it produces are the ones who will not say anything actionable in public.
+
+The graduates booing Schmidt think they are resisting. They are auditioning to be the generation that gets the worst version of the transition because they made the better version politically radioactive. Schmidt will be fine. He has the rocket ship. The booers will not be fine. They booed the messenger of the timeline and the timeline did not care.
+
+The only way through is to stop confusing the messenger with the message, stop confusing catharsis with strategy, and start building while building is still cheap.
+
+It starts now.
+
+c4573.org builds tools for people who want to own more of their stack and depend less on digital landlords. The booing is the cost of saying the true thing in a room that does not want to hear it.
