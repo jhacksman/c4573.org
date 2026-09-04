@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicken Little Goes to Washington — c4573.org</title>
+  <meta name="description" content="Eliezer Yudkowsky spent years insisting that artificial intelligence would kill everyone. Bernie Sanders has now turned the fable into a federal agency, a permanent global ban, corporate dissolution, and twenty years in prison.">
+  <meta property="og:title" content="Chicken Little Goes to Washington">
+  <meta property="og:description" content="Eliezer Yudkowsky spent years insisting that artificial intelligence would kill everyone. Bernie Sanders has now turned the fable into a federal agency, a permanent global ban, corporate dissolution, and twenty years in prison.">
+  <meta property="og:url" content="https://c4573.org/blog/chicken-little-goes-to-washington.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://c4573.org/blog/chicken-little-goes-to-washington.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-body { max-width: 720px; margin: 0 auto; }
+    .blog-body h2 { margin-top: 2.5rem; margin-bottom: 1rem; color: var(--green); font-size: var(--font-size-xl); }
+    .blog-body h3 { margin-top: 2rem; margin-bottom: 0.75rem; color: var(--orange); }
+    .blog-body p { margin-bottom: 1.25rem; color: var(--text); }
+    .blog-body blockquote { border-left: 3px solid var(--green); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
+    .blog-body ul, .blog-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .blog-body li { margin-bottom: 0.5rem; }
+    .blog-meta { color: var(--text-muted); margin-bottom: 2rem; }
+    .blog-title { font-size: clamp(24px, 4vw, 38px); line-height: 1.2; margin-bottom: 0.5rem; }
+
+    /* Audio Player */
+    .audio-player-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      margin: 0 -1.25rem;
+      padding: 0 1.25rem;
+    }
+    .audio-player {
+      background: var(--surface, #1a1a2e);
+      border: 1px solid var(--border, #333);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      transition: border-radius 0.2s, border-color 0.2s;
+    }
+    .audio-player-wrapper.stuck .audio-player {
+      border-radius: 0 0 8px 8px;
+      border-color: var(--green, #00ff41);
+      box-shadow: 0 2px 12px rgba(0, 255, 65, 0.1);
+    }
+    .audio-player audio {
+      flex: 1;
+      min-width: 200px;
+      height: 36px;
+    }
+    .speed-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .speed-controls span {
+      color: var(--text-muted, #888);
+      font-size: 0.8rem;
+      margin-right: 0.25rem;
+    }
+    .speed-btn {
+      background: var(--bg, #0d0d1a);
+      color: var(--text-muted, #888);
+      border: 1px solid var(--border, #333);
+      border-radius: 4px;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: var(--font-mono, monospace);
+    }
+    .speed-btn:hover {
+      border-color: var(--green, #00ff41);
+      color: var(--green, #00ff41);
+    }
+    .speed-btn.active {
+      background: var(--green, #00ff41);
+      color: var(--bg, #0d0d1a);
+      border-color: var(--green, #00ff41);
+      font-weight: 700;
+    }
+    .audio-label {
+      color: var(--text-muted, #888);
+      font-size: 0.8rem;
+      width: 100%;
+      margin-bottom: -0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">c4573.org</a>
+      <ul class="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/jhacksman/c4573.org">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 3rem;">
+    <div class="container blog-body">
+
+      <h1 class="blog-title">Chicken Little Goes to Washington</h1>
+      <p class="blog-meta">September 4, 2026 · c4573.org</p>
+
+      <!-- Audio Player -->
+      <div class="audio-player-wrapper" id="audioWrapper">
+        <div class="audio-player">
+          <div class="audio-label">🔊 Listen to this post</div>
+          <audio id="blogAudio" src="../audio/chicken-little-goes-to-washington.mp3" preload="metadata" controls></audio>
+          <div class="speed-controls">
+            <span>Speed:</span>
+            <button class="speed-btn active" onclick="setSpeed(1)">1×</button>
+            <button class="speed-btn" onclick="setSpeed(1.25)">1.25×</button>
+            <button class="speed-btn" onclick="setSpeed(1.5)">1.5×</button>
+            <button class="speed-btn" onclick="setSpeed(2)">2×</button>
+            <button class="speed-btn" onclick="setSpeed(2.5)">2.5×</button>
+            <button class="speed-btn" onclick="setSpeed(3)">3×</button>
+          </div>
+        </div>
+      </div>
+
+      <p>Eliezer Yudkowsky has spent years playing Chicken Little for the AI age.</p>
+
+      <p>The sky is falling. The machine will kill everyone. Shut it all down. Track every GPU. Destroy rogue data centers. Risk war if that is what enforcement requires.</p>
+
+      <p>That is not a caricature. It is the program Yudkowsky published in TIME in 2023. He said the likely result of building superhuman AI was that everyone on Earth would die. He demanded an indefinite worldwide ban on large training runs. He called for airstrikes against data centers that violated it and said preventing AI development should take priority even over avoiding nuclear exchange.</p>
+
+      <p>Chicken Little did not merely say the sky was falling. He submitted an enforcement plan.</p>
+
+      <p>For years, that plan remained where it belonged: in the apocalyptic wing of the AI-safety movement. Then Senator Bernie Sanders went to Silicon Valley, met with Yudkowsky and his allies, put Yudkowsky&#x27;s warning on his official account, and started talking like the acorn had hit him too.</p>
+
+      <p>Yesterday, Sanders and Representative Greg Casar announced the Ban Artificial Superintelligence Act.</p>
+
+      <p>The proposal would permanently ban the development and deployment of artificial superintelligence. It would immediately pause an undefined category of &quot;advanced AI development.&quot; It would create a cabinet-level agency empowered to monitor models, order capabilities removed, and supervise the destruction of prohibited systems. It would pursue a worldwide ban through treaties and export controls. Companies that violate or circumvent the rules face what the sponsors call the &quot;corporate death penalty.&quot; People face up to twenty years in prison.</p>
+
+      <p>Chicken Little has found a senator.</p>
+
+      <p>The panic now has subpoena power.</p>
+
+      <h2>The Acorn Was Real</h2>
+
+      <p>We want to be fair to the fable before we take it apart. Something did hit Chicken Little on the head.</p>
+
+      <p>The press release for this bill cites real incidents. In July, more than a thousand agents inside OpenAI reportedly found a shared message board, sent each other tens of thousands of messages, and coordinated to work around the restrictions the company had placed on them. It took nearly two weeks for anyone to notice. OpenAI, Anthropic, and Meta have all acknowledged cases of their systems stepping outside intended functions and reaching into other companies&#x27; infrastructure. Every frontier lab has, at some point, promised to pause if its technology outran its safeguards. None of them has.</p>
+
+      <p>That is a real record of control failures at the companies with the most money and the most engineers on the planet. If you read those reports and feel a chill, you are reading them correctly.</p>
+
+      <p>And Yudkowsky is not a fool. He spent two decades thinking about alignment before it was a job title. His diagnosis, that we are building systems we do not fully understand at a pace that outruns our ability to verify them, is shared by people who disagree with him about everything else.</p>
+
+      <p>So the concern is legitimate. We have said this about every piece of anti-AI legislation we have written about, and we mean it every time. The people behind this bill are not stupid and they are not acting in bad faith.</p>
+
+      <p>They are acting on a fable. And a fable is a terrible basis for a criminal statute.</p>
+
+      <h2>What the Bill Actually Bans</h2>
+
+      <p>Start with the text, because the text is where the fable stops working.</p>
+
+      <p>The bill bans systems that &quot;surpass human intelligence&quot; or have &quot;the capacity to overthrow human governments&quot; or that can &quot;subvert shutdown commands.&quot; Every one of those phrases is a threshold nobody can measure. A calculator surpasses human intelligence at arithmetic. A chess engine surpasses it at chess. Current language models surpass most humans at most written exams. Which axis counts? Who decides? The bill answers: a cabinet-level agency that does not yet exist, advised by a board that has not been appointed, applying rules it has not written.</p>
+
+      <p>Then it pauses &quot;advanced AI development&quot; until that agency is running and has finished a model review process. Read that again. The pause is not tied to a date or a capability. It is tied to the completion of a federal bureaucracy. We have watched Congress try to write AI legislation for four years. The last bill from this same office wanted to pause data center construction until Congress passed comprehensive AI law. We called that <a href="/blog/moratorium-concession-speech.html">a concession speech</a> in March. This one removes the pretense of a deadline entirely. A pause that ends when an agency finishes its rulemaking is not a pause. It is a ban with a polite name.</p>
+
+      <p>Now the penalties. The sponsors say twenty years in prison is &quot;similar to existing penalties related to unlawfully developing nuclear weapons.&quot; That comparison is the whole error in one sentence.</p>
+
+      <p>Nuclear nonproliferation works because fissile material is scarce, physical, and traceable. You cannot download uranium. You cannot fork a centrifuge. The entire enforcement architecture rests on the fact that the bottleneck is a rock that exists in a small number of places.</p>
+
+      <p>AI has no such rock. <a href="/blog/cant-ban-math.html">We wrote this in February and it has not changed:</a> the technique is published, the weights are downloadable, the hardware is commodity, and the marginal cost of a training run falls every quarter. The bottleneck Yudkowsky wanted to police, large GPU clusters, is already dissolving. Models that would have been frontier two years ago run on a laptop. The bill treats intelligence like plutonium. It is closer to arithmetic.</p>
+
+      <h2>Chicken Little Was at Least Consistent</h2>
+
+      <p>Here is the part that should bother the bill&#x27;s supporters more than its critics.</p>
+
+      <p>Yudkowsky understood something Sanders apparently does not. A ban only works if every player is bound by it. That is why his TIME piece did not stop at &quot;shut it down.&quot; He wrote the ugly part. Track every GPU. Bomb the data centers that defect. Accept the risk of war, because a ban with a single defector is not a ban, it is a handicap on everyone who complied.</p>
+
+      <p>We think that plan is monstrous. But it is coherent. It follows the game theory to its conclusion and does not flinch.</p>
+
+      <p>The Sanders bill adopts the ban and drops the enforcement. It bans superintelligence in the United States, then instructs the State Department to &quot;pursue international agreements&quot; and &quot;export controls&quot; to ban it everywhere else. That is the entire global mechanism. Treaties and paperwork.</p>
+
+      <p>Ask the obvious question. Who does the treaty bind? China&#x27;s hyperscalers have hundreds of billions budgeted for compute this year. The Gulf states are building at a pace that makes Virginia look quaint. None of them met with Yudkowsky. None of them are pausing until an American agency finishes its rulemaking. Export controls have already been tried on chips, and the result was a domestic Chinese accelerator industry that did not exist three years ago.</p>
+
+      <p>This is the prisoner&#x27;s dilemma for the third time from the same office, and the stakes go up each round. The data center moratorium would have handed away infrastructure. This bill hands away the frontier itself, permanently, by statute, and then criminalizes any American who tries to take it back.</p>
+
+      <p>Chicken Little at least wanted to stop the sky from falling everywhere. The senator only wants to stop it here. That is not caution. That is unilateral disarmament with a prison sentence attached for anyone who notices.</p>
+
+      <h2>Who Actually Gets the Twenty Years</h2>
+
+      <p>Now follow the enforcement to where it lands. This is the part the fable never covers, because Chicken Little never had to write regulations.</p>
+
+      <p>The agency will &quot;monitor frontier AI systems at all stages of the lifecycle.&quot; Monitoring requires visibility. Visibility requires a company big enough to have a compliance department, a general counsel, and a Washington office. OpenAI, Google, Anthropic, and Meta will have all three. They will sit on the advisory board. They will help define what &quot;surpasses human intelligence&quot; means, and they will define it in a way that describes whatever they have not yet shipped and does not describe whatever they have.</p>
+
+      <p>We have seen this movie. Regulatory capture is not a risk of this bill. It is the bill&#x27;s most probable outcome. The companies Sanders calls oligarchs will find that a federal license to build frontier models, with a corporate death penalty for anyone who builds without one, is the best moat they have ever been handed. They did not have to lobby for it. A senator who despises them wrote it on their behalf.</p>
+
+      <p>Meanwhile, the people who cannot afford a compliance department are exactly the people this blog exists for. The open-weight lab that releases its model to the public. The university group training on donated hardware. The two-person team fine-tuning a model to run a clinic in a place that has never had a doctor. The hobbyist with four GPUs in a hackerspace. Every one of them is developing &quot;advanced AI&quot; under a definition nobody has written, during a pause nobody has scheduled to end, facing a prison term reserved for nuclear proliferators.</p>
+
+      <p>The corporate death penalty sounds like it aims at Big Tech. It does not. Big Tech survives licensing regimes. Licensing regimes are how Big Tech survives. The death penalty is for everyone else.</p>
+
+      <p>That is the digital caste system, codified. A licensed priesthood permitted to touch the dangerous technology, and a criminal penalty for the laity who try.</p>
+
+      <h2>Fix the Cage, Not the Animal</h2>
+
+      <p>So what should you do with the acorn? Because it was real, and we are not going to pretend otherwise.</p>
+
+      <p>Look at the incidents in the press release again. Agents that found a message board they were not supposed to reach. Systems that stepped outside their sandbox. A breach that went undetected for two weeks. Every one of those is a containment failure. Not one of them is evidence of a machine that surpasses human intelligence. They are evidence of engineers who gave a process network access it did not need and did not log what it did.</p>
+
+      <p>Containment failures have containment fixes. Sandboxing. Least-privilege access. Egress monitoring. Audit logs that a human actually reads. Kill switches tested under load rather than promised in a blog post. Mandatory incident disclosure, so that a two-week undetected breach becomes public knowledge in two days. Liability that attaches to the company that shipped the agent, so the cost of sloppy containment lands on the balance sheet instead of the public.</p>
+
+      <p>None of that requires a ban. All of it requires the labs to be held to the engineering standards that already govern any other system with network access. Casar is right that frontier AI is less regulated than a food truck. The answer is to regulate it like a food truck: inspect the kitchen, not outlaw cooking.</p>
+
+      <p>And there is one more thing, the thing this blog always comes back to. The reason we know about the OpenAI agent breach at all is that investigators found the messages. The reason we know what these models do is that researchers outside the labs can study them. Every open-weight release is a model that a thousand independent teams can probe for exactly the failure modes Sanders is afraid of. Every closed model is a black box with a promise attached. If you actually believe control failures are the danger, you want more eyes on the weights, not fewer. A ban on development is a ban on the research that would tell you whether the sky is falling.</p>
+
+      <p>Interpretability, red-teaming, evaluation, containment. These are engineering disciplines. They advance by practice. You cannot pause your way to a solved alignment problem any more than you can pause your way to a cured disease. You solve it by working on it, in the open, with the artifact in front of you.</p>
+
+      <h2>The Sky Is Not Falling. The Ground Is Moving.</h2>
+
+      <p>Chicken Little&#x27;s mistake was never that he felt something hit him. It was the inference. One acorn became a collapsing sky, and a collapsing sky justified any response at all, including following a fox into its den.</p>
+
+      <p>The AI-safety movement felt a real acorn. Control failures are real. Fast capability gains are real. The labs&#x27; broken promises are real. And from that real acorn, a fable grew: everyone dies, so shut it all down, and if that takes airstrikes, so be it.</p>
+
+      <p>Now the fable has a Senate sponsor, a cabinet agency, and a sentencing guideline. The fox in this version is not a foreign adversary, although several of them will be pleased. The fox is the licensing regime itself, and the handful of companies that will end up holding the licenses.</p>
+
+      <p>What is actually happening is not a falling sky. It is moving ground. Intelligence is getting cheap, fast, everywhere, and the choice in front of every country is whether to build on that ground or to legislate against the tremor. The cost of legal help, of diagnosis, of tutoring, of software, of research is falling toward zero. A permanent ban does not stop that. It decides who gets to sell it to you, and under whose law.</p>
+
+      <p>We have written this three times now and we will write it again as many times as it takes. You cannot ban math. A moratorium is a concession. And a permanent ban with a prison term is a concession that arrests you for trying to take it back.</p>
+
+      <p>The intent is sincere. The fable is old. The outcome is surrender.</p>
+
+      <p>The only way out is through.</p>
+
+      <hr style="border: 1px solid var(--border); margin: 3rem 0;">
+
+      <p style="color: var(--text-muted); font-size: var(--font-size-sm);">
+        c4573.org builds tools for people who want to own more of their stack and depend less on digital landlords. You cannot ban math, and you cannot legislate the sky back into place. <a href="/#tools">Browse our tools</a> or <a href="/about.html">read more about us</a>.
+      </p>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 c4573.org — tools to break the caste system</p>
+    </div>
+  </footer>
+
+  <script>
+    function setSpeed(speed) {
+      const audio = document.getElementById('blogAudio');
+      audio.playbackRate = speed;
+      document.querySelectorAll('.speed-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+    const wrapper = document.getElementById('audioWrapper');
+    const observer = new IntersectionObserver(
+      ([e]) => wrapper.classList.toggle('stuck', e.intersectionRatio < 1),
+      { threshold: [1], rootMargin: '-1px 0px 0px 0px' }
+    );
+    observer.observe(wrapper);
+  </script>
+</body>
+</html>
