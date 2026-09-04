@@ -41,3 +41,32 @@ Run long renders under `screen -dmS c4573-fry ...` and read the log; don't poll.
   linear two-pass stops at -17.0 because the -1.5 dBTP ceiling caps the gain. The script
   therefore adds the residual gain into `alimiter` at -1.5 dBTP after the two-pass.
   Existing posts measure between -16.5 and -19.2 LUFS.
+
+### Full-length render lessons (2026-09-04, Chicken Little, 54 segments / 2,241 words)
+
+- Segmentation: `<h1>` title and each `<h2>` heading are their own short segment (period
+  appended if missing) with a 1.0 s gap before and 0.8 s after a heading; paragraphs get
+  0.6 s. Em-dashes inside a paragraph split into sub-segments with a 0.35 s gap. Each
+  clip is trimmed to 0.15 s of edge silence before concat so the gaps are exactly what
+  the constants say. Result: no silence >= 1.5 s anywhere in a 14.7 min join.
+- Abbreviation substitutions (`GPU` -> `G.P.U.`) leave `G.P.U..` at a sentence end;
+  collapse `..` after substituting.
+- Fry's pace is not 2.3 words/sec. Batch median was 2.61 w/s; 13–52 word segments ran
+  20–33% fast, 80–120 word segments ran near 2.3, and 5–6 word segments ran slow from
+  the em-dash padding. A fixed-reference +/-15% pace check flags most of the piece and
+  triples the render (the first run burned 10 min doing exactly that). The script now
+  renders everything once, takes the median pace of segments >= 12 words, and only
+  re-renders outliers vs. that median, keeping the attempt closest to it. Runaway
+  detection still uses the fixed 2.3 w/s reference.
+- Pace outliers are mostly stable: 7 of 13 flagged segments came back within 1–3 points
+  of the same deviation on all three attempts. That is the voice's delivery of that
+  text, not a defect. Re-rendering fixed 6.
+- Per-attempt WAVs are kept as `seg_NN.tryK.wav` and reused on restart, so killing a run
+  costs nothing already rendered. If you do kill a run, also clear the server queue:
+  `DELETE /gpu/{0,1}/queue` (check `GET /jobs` first; cancelled ids are returned).
+- quato had 2 GPUs in service (0 and 1), not 3. With 54 requests queued at once, each
+  request's wall time grew to 400–800 s; phase 1 took ~38 min for 14.7 min of audio
+  (~2.6x realtime aggregate) with no cold start. Budget 45–60 min end to end for a
+  2,000+ word post including the outlier passes.
+- Spot-check narration with `whisper <mp3> --model base.en --output_format txt` (the
+  `/opt/homebrew/bin/whisper` CLI) and diff against `/tmp/<slug>-fry/segments.txt`.
