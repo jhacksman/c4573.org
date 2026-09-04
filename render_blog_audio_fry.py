@@ -156,10 +156,13 @@ def speak(text: str, out: Path) -> tuple[bool, str]:
     return (True, "")
 
 
-def judge(words: int, dur: float, gaps: list) -> tuple[list[str], float]:
-    """Return (problems, pace deviation ratio)."""
-    expected = words / WORDS_PER_SEC
-    limit = max(expected * RUNAWAY_FACTOR, expected + RUNAWAY_FLOOR_SEC)
+def judge(words: int, dur: float, gaps: list, pace: float) -> tuple[list[str], float]:
+    """Return (problems, pace deviation ratio). Runaway is judged against the
+    fixed 2.3 w/s reference; pace deviation against `pace` (the batch median
+    of the voice, measured after the first pass)."""
+    ref = words / WORDS_PER_SEC
+    limit = max(ref * RUNAWAY_FACTOR, ref + RUNAWAY_FLOOR_SEC)
+    expected = words / pace
     problems = []
     if dur >= limit:
         problems.append("RUNAWAY")
@@ -171,43 +174,85 @@ def judge(words: int, dur: float, gaps: list) -> tuple[list[str], float]:
     return problems, dev
 
 
-def render_segment(idx: int, text: str, out: Path) -> dict:
+def render_attempt(idx: int, text: str, out: Path, attempt: int, pace: float) -> dict:
+    """Render one attempt (reusing a cached WAV from an earlier run if present)."""
     words = len(text.split())
-    expected = words / WORDS_PER_SEC
-    attempts = []
-    for attempt in range(RUNAWAY_RETRIES + 1):
-        cand = out.with_name(f"{out.stem}.try{attempt}.wav")
-        t0 = time.time()
+    cand = out.with_name(f"{out.stem}.try{attempt}.wav")
+    cached = cand.exists() and validate_wav_bytes(cand.read_bytes())[0]
+    t0 = time.time()
+    if cached:
+        ok, err = True, ""
+    else:
         ok, err = speak(text, cand)
-        wall = time.time() - t0
-        if not ok:
-            attempts.append({"attempt": attempt, "error": err, "wall": round(wall, 1)})
-            print(f"[{idx:02d}] attempt {attempt} FAILED: {err}", flush=True)
-            time.sleep(5)
-            continue
-        dur = wav_duration(cand)
-        gaps = silence_gaps(cand)
-        problems, dev = judge(words, dur, gaps)
-        attempts.append({"attempt": attempt, "dur": round(dur, 2), "wall": round(wall, 1),
-                         "dev": round(dev, 3), "problems": problems, "file": cand.name})
-        print(f"[{idx:02d}] attempt {attempt} {' '.join(problems) or 'ok'}: {words}w "
-              f"expected {expected:.1f}s got {dur:.1f}s ({dev:+.0%}) in {wall:.0f}s wall",
-              flush=True)
-        if not problems:
+    wall = time.time() - t0
+    if not ok:
+        print(f"[{idx:02d}] attempt {attempt} FAILED: {err}", flush=True)
+        return {"attempt": attempt, "error": err, "wall": round(wall, 1)}
+    dur = wav_duration(cand)
+    gaps = silence_gaps(cand)
+    problems, dev = judge(words, dur, gaps, pace)
+    print(f"[{idx:02d}] attempt {attempt}{' (cached)' if cached else ''} "
+          f"{' '.join(problems) or 'ok'}: {words}w expected {words/pace:.1f}s got {dur:.1f}s "
+          f"({dev:+.0%}) in {wall:.0f}s wall", flush=True)
+    return {"attempt": attempt, "dur": round(dur, 2), "wall": round(wall, 1),
+            "dev": round(dev, 3), "problems": problems, "file": cand.name, "cached": cached}
+
+
+def hard_fail(a: dict) -> bool:
+    return "dur" not in a or any(p.startswith(("RUNAWAY", "SILENCE")) for p in a["problems"])
+
+
+def render_all(segs: list[dict], work: Path) -> tuple[dict, float]:
+    """Phase 1: one attempt per segment, all fired at once. Measure the voice's
+    median pace. Phase 2: re-render flagged segments (runaway, silence, pace
+    outliers vs the median) up to RUNAWAY_RETRIES more times; keep the best."""
+    texts = [s["text"] for s in segs]
+    outs = [work / f"seg_{i:02d}.wav" for i in range(len(segs))]
+    attempts = {i: [] for i in range(len(segs))}
+
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
+        futs = {ex.submit(render_attempt, i, texts[i], outs[i], 0, WORDS_PER_SEC): i
+                for i in range(len(segs))}
+        for f in as_completed(futs):
+            attempts[futs[f]].append(f.result())
+
+    paces = sorted(len(texts[i].split()) / a["dur"]
+                   for i, al in attempts.items() for a in al
+                   if "dur" in a and len(texts[i].split()) >= PACE_MIN_WORDS and a["dur"] > 0)
+    pace = paces[len(paces) // 2] if paces else WORDS_PER_SEC
+    print(f"batch median pace: {pace:.2f} words/sec over {len(paces)} segments "
+          f"(reference {WORDS_PER_SEC})", flush=True)
+    # Re-judge every first attempt against the median pace.
+    for i, al in attempts.items():
+        for a in al:
+            if "dur" in a:
+                a["problems"], a["dev"] = judge(len(texts[i].split()), a["dur"],
+                                                silence_gaps(work / a["file"]), pace)
+                a["dev"] = round(a["dev"], 3)
+
+    for attempt in range(1, RUNAWAY_RETRIES + 1):
+        todo = [i for i, al in attempts.items() if not al or hard_fail(al[-1]) or al[-1]["problems"]]
+        if not todo:
             break
-    good = [a for a in attempts if "dur" in a]
-    if not good:
-        return {"idx": idx, "words": words, "dur": 0, "ok": False, "attempts": attempts}
-    # Best: no runaway/silence first, then smallest pace deviation.
-    def rank(a):
-        hard = any(p.startswith(("RUNAWAY", "SILENCE")) for p in a["problems"])
-        return (hard, abs(a["dev"]))
-    best = min(good, key=rank)
-    shutil.copyfile(out.with_name(best["file"]), out)
-    hard_fail = any(p.startswith(("RUNAWAY", "SILENCE")) for p in best["problems"])
-    return {"idx": idx, "words": words, "dur": best["dur"], "ok": not hard_fail,
-            "kept": best["attempt"], "problems": best["problems"],
-            "rerendered": len(attempts) > 1, "attempts": attempts}
+        print(f"pass {attempt}: re-rendering {len(todo)} segments {todo}", flush=True)
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
+            futs = {ex.submit(render_attempt, i, texts[i], outs[i], attempt, pace): i for i in todo}
+            for f in as_completed(futs):
+                attempts[futs[f]].append(f.result())
+
+    results = {}
+    for i, al in attempts.items():
+        good = [a for a in al if "dur" in a]
+        words = len(texts[i].split())
+        if not good:
+            results[i] = {"idx": i, "words": words, "dur": 0, "ok": False, "attempts": al}
+            continue
+        best = min(good, key=lambda a: (hard_fail(a), abs(a["dev"])))
+        shutil.copyfile(work / best["file"], outs[i])
+        results[i] = {"idx": i, "words": words, "dur": best["dur"], "ok": not hard_fail(best),
+                      "kept": best["attempt"], "problems": best["problems"],
+                      "rerendered": len(al) > 1, "attempts": al}
+    return results, pace
 
 
 def main():
@@ -222,14 +267,8 @@ def main():
           flush=True)
 
     # Fire everything at once; the server queues and dispatches least-queued.
-    results = {}
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
-        futs = {ex.submit(render_segment, i, s["text"], work / f"seg_{i:02d}.wav"): i
-                for i, s in enumerate(segs)}
-        for f in as_completed(futs):
-            r = f.result()
-            results[r["idx"]] = r
-    (work / "results.json").write_text(json.dumps(results, indent=2, sort_keys=True))
+    results, pace = render_all(segs, work)
+    (work / "results.json").write_text(json.dumps({"pace": pace, "segments": results}, indent=2, sort_keys=True))
 
     failed = [i for i, r in results.items() if not r["ok"]]
     rerendered = sorted(i for i, r in results.items() if r.get("rerendered"))
