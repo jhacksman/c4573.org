@@ -1,0 +1,14 @@
+{
+  "recorded_date": "2026-09-04",
+  "kit_version": "1.0.1",
+  "release_zip_sha256": "0804cabda54f697234cf727953f1f3c690d99845a91710364ae908d6c4d262df",
+  "terminal": "Actual PTY recording; video timing edited for narration. Original timing retained in terminal-recording.cast.",
+  "browser": "Actual UI screenshots captured while navigating the official county parcel, GIS and clerk search pages; assembled in sequence, not continuous screen video.",
+  "narration": "Noel voice via user-provided Quato Qwen3-TTS API.",
+  "limits": [
+    "2026 appraisal information is work in progress per source disclaimer.",
+    "Exported land_acres is zero although official detail table lists 0.0800 acres; verify fields against source.",
+    "Clerk company-name index search returned 525 results; no deed matched to parcel 460312.",
+    "No purchase price, purchase date, or construction claim established."
+  ]
+}

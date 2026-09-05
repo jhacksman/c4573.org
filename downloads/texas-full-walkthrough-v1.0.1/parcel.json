@@ -1,0 +1,33 @@
+[
+  {
+    "source": "Cameron County Appraisal District",
+    "account_number": "460312",
+    "street_address": " ESPERSON ST ",
+    "city": "",
+    "zip_code": "",
+    "county": "Cameron",
+    "legal_description": "LOT 1 BLOCK 1 SOLAR SYSTEM MAST RE-PLAT SUBDIVISION LOT 1 (2026 RE-PLAT C1-5249 CCMR FILED 11/10/2025)(2018 C1-3584 CCMR FILED 03/10/2017)",
+    "subdivision": null,
+    "owner_name": "SPACE EXPLORATION TECHNOLOGIES CORP ",
+    "owner_mailing_address": null,
+    "ownership_percentage": null,
+    "property_type": "Residential",
+    "land_acres": 0.0,
+    "land_sqft": null,
+    "improvement_sqft": null,
+    "year_built": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "tax_year": 2026,
+    "land_value": 32234.0,
+    "improvement_value": 150162.0,
+    "market_value": 182396.0,
+    "appraised_value": 182396.0,
+    "taxable_value": null,
+    "exemptions": [],
+    "last_sale_date": null,
+    "last_sale_price": null,
+    "prior_year_taxes": null,
+    "raw_html_url": "https://cameron.prodigycad.com/property-detail/460312/2026"
+  }
+]

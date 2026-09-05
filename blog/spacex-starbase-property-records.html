@@ -27,6 +27,47 @@
 <h1>Research property near SpaceX’s Starbase with Texas public records</h1>
 <p class="section-desc">Start with a documented SpaceX land project, search company names with Python, then follow the records into Cameron County’s official parcel and deed portals. This guide separates a lead from a verified purchase.</p>
 <p><a class="btn btn-primary" href="/downloads/texas-business-demo.zip" download>Download the free demo</a> <a class="btn" href="/downloads/texas-business-demo/texas_business_demo.py">Read the Python source</a></p>
+<section id="full-walkthrough">
+<h2>Full walkthrough: install, search, export, verify</h2>
+<p>6:49 with Noel narration and captions. Follow a fresh v1.0.1 ZIP installation, real Cameron County owner and account queries, the exported records, the county map, and a live clerk index search.</p>
+<video id="full-walkthrough-video" controls preload="metadata" style="width:100%; border-radius:12px;" aria-label="Full Texas Scraper Kit v1.0.1 Cameron County walkthrough" poster="/downloads/texas-full-walkthrough-v1.0.1/poster.png">
+<source src="/downloads/texas-full-walkthrough-v1.0.1/full-walkthrough-v1.0.1.mp4" type="video/mp4">
+<track kind="captions" src="/downloads/texas-full-walkthrough-v1.0.1/captions.vtt" srclang="en" label="English">
+<track kind="chapters" src="/downloads/texas-full-walkthrough-v1.0.1/chapters.vtt" srclang="en" label="Chapters">
+<a href="/downloads/texas-full-walkthrough-v1.0.1/full-walkthrough-v1.0.1.mp4">Download the full walkthrough</a>
+</video>
+<p><a href="/downloads/texas-full-walkthrough-v1.0.1/commands-and-transcript.txt">Copy the commands and read the transcript</a> · <a href="/downloads/texas-full-walkthrough-v1.0.1/full-walkthrough-v1.0.1.mp4" download>Download video</a> · <a href="/downloads/texas-full-walkthrough-v1.0.1/terminal-recording.cast" download>Original terminal recording</a></p>
+<details><summary>Jump to a chapter</summary><ol>
+<li><a href="#full-walkthrough-video" data-video-time="0.000">0:00 — Start from the release ZIP</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="24.875">0:24 — Extract and check Python</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="53.167">0:53 — Install in a virtual environment</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="81.542">1:21 — Check the version and command help</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="106.083">1:46 — Run a live owner search</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="133.833">2:13 — Read the exported records</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="160.625">2:40 — Compare the returned parcels</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="187.875">3:07 — Look up one exact account</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="215.542">3:35 — Follow the exported source link</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="238.792">3:58 — Verify against the county detail page</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="266.750">4:26 — Locate the parcel on the county map</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="294.000">4:54 — Search the official deed index</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="322.792">5:22 — Review actual indexed instruments</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="351.333">5:51 — Repeat with an address query</a></li>
+<li><a href="#full-walkthrough-video" data-video-time="379.083">6:19 — Keep the exports and recognize input errors</a></li>
+</ol></details>
+<p>The terminal footage replays actual commands and output, with timing edited for narration. Browser sections use actual captures from the official pages. The original terminal download retains its recorded timing.</p>
+<p>The exact-account export leaves acreage at zero although the county detail page lists 0.0800 acres. Verify incomplete fields at the source. The clerk query returned 525 indexed results on September 4, 2026; this broad search does not establish a deed match to parcel 460312 or a recent purchase.</p>
+<p>Recorded exports: <a href="/downloads/texas-full-walkthrough-v1.0.1/cameron.json">owner search</a> · <a href="/downloads/texas-full-walkthrough-v1.0.1/parcel.json">exact account</a> · <a href="/downloads/texas-full-walkthrough-v1.0.1/esperson.json">address search</a> · <a href="/downloads/texas-full-walkthrough-v1.0.1/provenance.json">provenance and limits</a>.</p>
+<p>This walkthrough uses the full v1.0.1 kit. The free business sampler below covers company-name lookup and does not include Cameron property search.</p>
+</section>
+<script>
+document.querySelectorAll('[data-video-time]').forEach(function(link) {
+  link.addEventListener('click', function() {
+    var video = document.getElementById('full-walkthrough-video');
+    video.currentTime = Number(link.dataset.videoTime);
+    video.play().catch(function() {});
+  });
+});
+</script>
 <div class="manifesto">
 <h2>1. Start with a documented location</h2>
 <p>The FAA identifies SpaceX’s Boca Chica launch site in Cameron County, Texas. That puts this example around Starbase in South Texas, not Travis County. <a href="https://www.faa.gov/space/stakeholder_engagement/spacex_starship">FAA project page</a>.</p>
@@ -76,11 +117,11 @@ Search snapshot only; not a certificate or complete filing record.
 <video controls preload="metadata" style="width:100%; border-radius:12px;" aria-label="Texas Scraper Kit 1.0.1 Cameron County demo with Noel narration" poster="/downloads/texas-business-demo/walkthrough-poster.png?v=3-cameron-v101">
 <source src="/downloads/texas-business-demo/walkthrough.mp4?v=3-cameron-v101" type="video/mp4">
 <track kind="captions" src="/downloads/texas-business-demo/walkthrough.vtt?v=3-cameron-v101" srclang="en" label="English">
-<a href="/downloads/texas-business-demo/walkthrough.mp4?v=3-cameron-v101">Download the walkthrough</a>
+<a href="/downloads/texas-business-demo/walkthrough.mp4?v=3-cameron-v101">Download the promo</a>
 </video>
 <p>This promo shows a real v1.0.1 Cameron search, the three-record JSON export, an exact-account lookup, and a capture of the official county page. Noel narration and timed captions explain the results. Terminal timing is edited for reading and narration; the downloadable recording retains the original event timing.</p>
 <p><a href="/downloads/texas-business-demo/kit-cli-session.cast" download>Download the original terminal recording (.cast)</a> · <a href="/downloads/texas-business-demo/kit-cli-recording.txt">Exact commands and narration transcript</a></p>
-<p>Use the v1.0.1 kit, installed according to its README, plus <code>jq</code> to inspect JSON. These are the recorded commands:</p>
+<p>The short promo uses <code>jq</code> to inspect JSON. The full walkthrough above uses Python’s built-in JSON tools. These are the promo’s recorded commands:</p>
 <pre class="cli-mockup"><code>texas-scrape --version
 texas-scrape property search --county cameron --owner "SPACE EXPLORATION" --limit 3 --output cameron.json
 jq '.[] | {account_number, owner_name, street_address, market_value}' cameron.json
@@ -91,7 +132,7 @@ jq '.[0] | {account_number, owner_name, legal_description, tax_year, raw_html_ur
 <p>A broad query may return HTTP 413: use a more specific name. No matches produces an empty export with a CSV header. Network errors and unexpected source responses exit with an error instead of inventing results. The source may change after this demonstration.</p>
 <h2>Need more than this lookup?</h2>
 <p>The <a href="/products/texas-scraper-kit.html">Texas Scraper Kit</a> adds 10 verified Python scrapers, a CLI and REST API, storage with deduplication and provenance, 261 beta TypeScript modules, and a catalog of 764+ sources. Module validation and requirements vary; the catalog is not a count of working integrations.</p>
-<p>The free demo is MIT licensed. The $13.37 kit is a separate source-available product whose license converts to MIT after 12 months. You do not need to buy it to use this example.</p>
+<p>The free demo is MIT licensed. The $13.37 kit is a separate source-available product whose license converts to MIT after 12 months. You do not need to buy it to run the free business sampler.</p>
 <p><a class="btn btn-primary" href="https://c4573.gumroad.com/l/texas-scraper">Get Texas Scraper Kit — $13.37 once</a></p>
 <p>Built from the kit’s business-lookup workflow. This tutorial and standalone sample were prepared with AI assistance and checked against a live response.</p>
 </div></div></article>  <footer class="footer">
