@@ -67,15 +67,22 @@ Search snapshot only; not a certificate or complete filing record.
 <li>Keep “near the site,” “listed appraisal owner,” “proposed transfer,” and “recorded deed” as separate findings. A nearby parcel does not establish a SpaceX connection or future purchase.</li>
 </ol>
 <p><a href="/downloads/texas-business-demo/parcel-research-worksheet.csv" download>Download a blank parcel-research worksheet</a>. No parcel rows have been prefilled: this walkthrough does not claim to have verified individual Cameron County parcels or recent purchases.</p>
-<h2>Watch the one-minute walkthrough</h2>
-<video controls preload="metadata" style="width:100%; border-radius:12px;" aria-label="One-minute SpaceX-area public-record research walkthrough" poster="/downloads/texas-business-demo/walkthrough-poster.png">
-<source src="/downloads/texas-business-demo/walkthrough.mp4" type="video/mp4">
-<track kind="captions" src="/downloads/texas-business-demo/walkthrough.vtt" srclang="en" label="English" default>
-<a href="/downloads/texas-business-demo/walkthrough.mp4">Download the walkthrough</a>
+<h2>Watch the actual kit run</h2>
+<video controls preload="metadata" style="width:100%; border-radius:12px;" aria-label="Texas Scraper Kit terminal recording with Noel narration" poster="/downloads/texas-business-demo/walkthrough-poster.png?v=2-noel-cli">
+<source src="/downloads/texas-business-demo/walkthrough.mp4?v=2-noel-cli" type="video/mp4">
+<track kind="captions" src="/downloads/texas-business-demo/walkthrough.vtt?v=2-noel-cli" srclang="en" label="English">
+<a href="/downloads/texas-business-demo/walkthrough.mp4?v=2-noel-cli">Download the walkthrough</a>
 </video>
-<p>The silent walkthrough replays the captured company-search output and explains the next property-research steps. It is edited for reading time, not a real-time screen capture or performance benchmark. All steps and results are also written above.</p>
-<h2>What this example does—and where it stops</h2>
-<p>It makes one name-search request and exports the returned business names, taxpayer numbers, and ZIP codes. It does not retrieve officers, account-status details, certified records, or full filing histories. Check important details in the <a href="https://comptroller.texas.gov/taxes/franchise/account-status/search">official Comptroller search</a>; a name match alone does not establish identity or current status.</p>
+<p>This narrated terminal recording runs the installed Texas Scraper Kit 1.0.0 against the live Comptroller source, exports five results, opens the first record, and shows the property command’s county options. Noel provides the synthesized narration. Recorded terminal events are replayed with idle time adjusted to fit the explanation.</p>
+<p><a href="/downloads/texas-business-demo/kit-cli-session.cast" download>Download the original terminal recording (.cast)</a> · <a href="/downloads/texas-business-demo/kit-cli-recording.txt">Exact commands and narration transcript</a> · <a href="/downloads/texas-business-demo/sample/kit-cli-first-record.json">Inspect the first exported record</a></p>
+<p>The video uses the purchased kit, installed according to its README, plus <code>jq</code> to display JSON. The free sampler above is a separate, dependency-free script. To repeat the video with the kit installed:</p>
+<pre class="cli-mockup"><code>texas-scrape --version
+texas-scrape business search --name "Space Exploration" --limit 5 --output businesses.json
+jq '.[0]' businesses.json
+texas-scrape property search --help</code></pre>
+<p>The business CLI uses <code>SOSBusinessScraper</code> and fetches from the Comptroller API; its model labels the source “Texas Secretary of State.” The property help lists Harris and Travis. Showing those options does not verify that both scrapers work, and this command does not support Cameron County.</p>
+<h2>What the free sampler does—and where it stops</h2>
+<p>The free sampler makes one name-search request and exports the returned business names, taxpayer numbers, and ZIP codes. It does not retrieve officers, account-status details, certified records, or full filing histories. Check important details in the <a href="https://comptroller.texas.gov/taxes/franchise/account-status/search">official Comptroller search</a>; a name match alone does not establish identity or current status.</p>
 <p>A broad query may return HTTP 413: use a more specific name. No matches produces an empty export with a CSV header. Network errors and unexpected source responses exit with an error instead of inventing results. The source may change after this demonstration.</p>
 <h2>Need more than this lookup?</h2>
 <p>The <a href="/products/texas-scraper-kit.html">Texas Scraper Kit</a> adds 10 verified Python scrapers, a CLI and REST API, storage with deduplication and provenance, 261 beta TypeScript modules, and a catalog of 764+ sources. Module validation and requirements vary; the catalog is not a count of working integrations.</p>

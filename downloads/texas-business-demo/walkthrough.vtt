@@ -1,17 +1,61 @@
 WEBVTT
 
-00:00.000 --> 00:15.000
-Start with the official FWS land-exchange assessment and maps.
-The documented area is in Cameron County. A proposal is not a completed purchase.
+00:00:00.000 --> 00:00:02.000
+Let's run the actual Texas scraper kit.
 
-00:15.000 --> 00:30.000
-Run the free Python company-name lookup for Space Exploration.
-It exports CSV and JSON with retrieval time and source information.
+00:00:02.340 --> 00:00:03.980
+This is a recorded terminal session
 
-00:30.000 --> 00:45.000
-The live query returned eight name matches; five were exported.
-Not all similarly named businesses are affiliates. Mailing ZIP is not parcel location.
+00:00:03.980 --> 00:00:05.300
+using the installed product.
 
-00:45.000 --> 01:00.000
-Continue manually in Cameron Appraisal District and County Clerk records.
-Download the free demo and worksheet at c4573.org. The full kit costs $13.37 once.
+00:00:05.940 --> 00:00:08.060
+First, the version command confirms what we're running.
+
+00:00:08.300 --> 00:00:09.800
+The environment is already set up.
+
+00:00:10.833 --> 00:00:15.353
+Now we search for space exploration, limit the response to five records and save the
+
+00:00:15.353 --> 00:00:16.253
+results to a file.
+
+00:00:17.173 --> 00:00:21.313
+This command contacts the Texas Comptroller, a name match is a research lead.
+
+00:00:21.673 --> 00:00:23.913
+It does not prove that every result belongs to SpaceX.
+
+00:00:25.167 --> 00:00:28.547
+Next, we open the first record from the exported file.
+
+00:00:29.187 --> 00:00:33.647
+These are fields returned by the product, not example data typed into a slide.
+
+00:00:34.247 --> 00:00:37.927
+Company registration and mailing information can help your research,
+
+00:00:38.227 --> 00:00:41.007
+but they don't establish ownership of a parcel near Starbase.
+
+00:00:42.083 --> 00:00:44.783
+Here's the property search help from the same installed kit.
+
+00:00:45.363 --> 00:00:46.923
+The county options are Harris and Travis.
+
+00:00:47.483 --> 00:00:49.723
+Cameron County is not supported by this command.
+
+00:00:50.423 --> 00:00:53.343
+For Starbase parcels, continue with Cameron appraisal records
+
+00:00:53.343 --> 00:00:54.403
+and county deeds.
+
+00:00:55.043 --> 00:00:56.943
+Download the free business sampler below
+
+00:00:56.943 --> 00:00:58.623
+or explore the full kit.

@@ -1,0 +1,28 @@
+Texas Scraper Kit 1.0.0: actual CLI recording
+Recorded 2026-09-05T01:16:20.368776+00:00
+Product commit: 0b163cb35ddfafdeccfb9b0f33677251ffe93e56
+
+Setup: install the purchased kit using its README; jq is used only to inspect JSON.
+Commands executed in bash with a real pseudoterminal:
+
+texas-scrape --version
+texas-scrape business search --name "Space Exploration" --limit 5 --output businesses.json
+jq '.[0]' businesses.json
+texas-scrape property search --help
+
+The business search returned five records. Only the first corporate record is shown in the video.
+The command uses SOSBusinessScraper, which contacts the Comptroller API. Its output model labels source as Texas Secretary of State.
+The video replays recorded terminal events. Idle time is adjusted to fit narration.
+The accompanying asciinema v2 cast retains original terminal timing.
+No property query was executed. County coverage shown is CLI help, not a successful county scraper test.
+No Cameron parcel or purchase was verified.
+
+NARRATION (Noel via Qwen3-TTS)
+
+Let's run the actual Texas Scraper Kit. This is a recorded terminal session using the installed product. First, the version command confirms what we're running. The environment is already set up.
+
+Now we search for Space Exploration, limit the response to five records, and save the results to a file. This command contacts the Texas Comptroller. A name match is a research lead; it does not prove that every result belongs to Space X.
+
+Next, we open the first record from the exported file. These are fields returned by the product, not example data typed into a slide. Company registration and mailing information can help your research, but they don't establish ownership of a parcel near Starbase.
+
+Here's the property search help from the same installed kit. The county options are Harris and Travis. Cameron County is not supported by this command. For Starbase parcels, continue with Cameron appraisal records and county deeds. Download the free business sampler below, or explore the full kit.
