@@ -1,61 +1,64 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:02.000
-Let's run the actual Texas scraper kit.
+00:00:00.000 --> 00:00:03.260
+Search Cameron County property records from your terminal.
 
-00:00:02.340 --> 00:00:03.980
-This is a recorded terminal session
+00:00:03.640 --> 00:00:09.160
+This is Texas scraper kit version 1.0.1 installed from the release package.
 
-00:00:03.980 --> 00:00:05.300
-using the installed product.
+00:00:10.250 --> 00:00:12.290
+Enter the county and the owner name here.
 
-00:00:05.940 --> 00:00:08.060
-First, the version command confirms what we're running.
+00:00:12.950 --> 00:00:14.650
+We're searching for space exploration,
 
-00:00:08.300 --> 00:00:09.800
-The environment is already set up.
+00:00:15.390 --> 00:00:17.570
+limiting the export to three records
 
-00:00:10.833 --> 00:00:15.353
-Now we search for space exploration, limit the response to five records and save the
+00:00:17.570 --> 00:00:19.550
+and saving the results to a file.
 
-00:00:15.353 --> 00:00:16.253
-results to a file.
+00:00:20.170 --> 00:00:22.390
+The command queries the live appraisal source.
 
-00:00:17.173 --> 00:00:21.313
-This command contacts the Texas Comptroller, a name match is a research lead.
+00:00:23.458 --> 00:00:25.698
+open that file and inspect what came back,
 
-00:00:21.673 --> 00:00:23.913
-It does not prove that every result belongs to SpaceX.
+00:00:25.878 --> 00:00:29.478
+parcel numbers, listed owners, street addresses and market values.
 
-00:00:25.167 --> 00:00:28.547
-Next, we open the first record from the exported file.
+00:00:30.378 --> 00:00:33.598
+These are appraisal records. The values shown are not purchase prices
 
-00:00:29.187 --> 00:00:33.647
-These are fields returned by the product, not example data typed into a slide.
+00:00:33.598 --> 00:00:35.778
+and a broad search still needs review.
 
-00:00:34.247 --> 00:00:37.927
-Company registration and mailing information can help your research,
+00:00:36.917 --> 00:00:41.137
+take the first parcel number and run an exact account look-up. Now we're
 
-00:00:38.227 --> 00:00:41.007
-but they don't establish ownership of a parcel near Starbase.
+00:00:41.137 --> 00:00:45.897
+checking one specific record with its legal description, tax year and a link
 
-00:00:42.083 --> 00:00:44.783
-Here's the property search help from the same installed kit.
+00:00:45.897 --> 00:00:47.697
+back to the county's property page.
 
-00:00:45.363 --> 00:00:46.923
-The county options are Harris and Travis.
+00:00:48.667 --> 00:00:51.027
+follow that link to the official Cameron Portal.
 
-00:00:47.483 --> 00:00:49.723
-Cameron County is not supported by this command.
+00:00:51.867 --> 00:00:54.467
+Compare the parcel number and owner against the export
 
-00:00:50.423 --> 00:00:53.343
-For Starbase parcels, continue with Cameron appraisal records
+00:00:55.187 --> 00:00:57.527
+for a purchase history continue to recorded deeds.
 
-00:00:53.343 --> 00:00:54.403
-and county deeds.
+00:00:58.187 --> 00:00:59.967
+Appraisal data alone doesn't establish
 
-00:00:55.043 --> 00:00:56.943
-Download the free business sampler below
+00:00:59.967 --> 00:01:00.947
+when a sale happened.
 
-00:00:56.943 --> 00:00:58.623
-or explore the full kit.
+00:01:01.958 --> 00:01:07.138
+That's the workflow, query, real public records, export the data and follow the source, get
+
+00:01:07.138 --> 00:01:11.938
+the commands, the full walkthrough and a free business lookup sampler from the linked tutorial.

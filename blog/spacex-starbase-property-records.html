@@ -59,28 +59,33 @@ Search snapshot only; not a certificate or complete filing record.
 <h2>4. Use the exports</h2>
 <p><code>texas-business-output/businesses.csv</code> contains the entity name, Texas taxpayer number, and mailing ZIP. Import identifier and ZIP columns as text in your spreadsheet. The JSON also records the query, retrieval time, source URL, and returned/exported counts.</p>
 <p>Re-running replaces those two output files. To preserve another lookup, add <code>--output another-folder</code>. You can run the sample as often as needed for individual lookups; avoid repeated requests in a tight loop.</p>
-<h2>5. Follow the lead into parcel and deed records</h2>
-<p>The kit’s verified property scraper covers Travis County. These Cameron County steps use official websites manually; they are not an automated feature of the free demo or a claim of verified Cameron County support.</p>
+<h2>5. Query Cameron County with the kit</h2>
+<p>Texas Scraper Kit v1.0.1 adds Cameron County to the property CLI. The recording below runs the installed release package against the county’s live True Prodigy appraisal source. This command belongs to the kit; the free business sampler above does not include property searches.</p>
+<pre class="cli-mockup"><code>texas-scrape property search --county cameron --owner "SPACE EXPLORATION" --limit 3 --output cameron.json</code></pre>
+<p>The captured run exported parcels <code>460312</code>, <code>460313</code>, and <code>460314</code>, each listing <code>SPACE EXPLORATION TECHNOLOGIES CORP</code> as owner and Esperson Street as the address. An exact-account lookup for <code>460312</code> matched the owner and parcel ID on the <a href="https://cameron.prodigycad.com/property-detail/460312/2026">official county page</a>. That page shows a 2026 market value of $182,396; an appraisal value is not a purchase price. Its disclaimer says 2026 information is a work in progress.</p>
+<p><a href="/downloads/texas-business-demo/sample/cameron-properties.json">Three-record export</a> · <a href="/downloads/texas-business-demo/sample/cameron-parcel.json">Exact-account export</a> · <a href="/downloads/texas-business-demo/sample/cameron-recording.json">Recording date and provenance</a></p>
+<h2>6. Check the source and follow the deeds</h2>
+<p>The owner option performs a full-text search. Review each result and follow its source link before drawing conclusions about ownership or location. The appraisal query does not establish a purchase date.</p>
 <ol>
 <li>Open <a href="https://www.cameroncad.org/Pages/PropertySearch">Cameron Appraisal District’s property search</a> and its map search. Start with the named company and the project area in the FWS maps. Record the parcel ID, appraisal year, owner as shown, acreage, and source link. Check neighboring parcels from the map rather than guessing from mailing addresses.</li>
 <li>Follow the <a href="https://www.cameroncountytx.gov/county-clerk/cameron-county-clerk-real-property-land-records/">County Clerk’s official property-record search</a> for recorded instruments. Record the instrument number, recording date, parties, and legal description. Match the parcel description and documents before calling a transaction a purchase.</li>
 <li>Keep “near the site,” “listed appraisal owner,” “proposed transfer,” and “recorded deed” as separate findings. A nearby parcel does not establish a SpaceX connection or future purchase.</li>
 </ol>
-<p><a href="/downloads/texas-business-demo/parcel-research-worksheet.csv" download>Download a blank parcel-research worksheet</a>. No parcel rows have been prefilled: this walkthrough does not claim to have verified individual Cameron County parcels or recent purchases.</p>
-<h2>Watch the actual kit run</h2>
-<video controls preload="metadata" style="width:100%; border-radius:12px;" aria-label="Texas Scraper Kit terminal recording with Noel narration" poster="/downloads/texas-business-demo/walkthrough-poster.png?v=2-noel-cli">
-<source src="/downloads/texas-business-demo/walkthrough.mp4?v=2-noel-cli" type="video/mp4">
-<track kind="captions" src="/downloads/texas-business-demo/walkthrough.vtt?v=2-noel-cli" srclang="en" label="English">
-<a href="/downloads/texas-business-demo/walkthrough.mp4?v=2-noel-cli">Download the walkthrough</a>
+<p><a href="/downloads/texas-business-demo/parcel-research-worksheet.csv" download>Download a blank parcel-research worksheet</a>. The worksheet is blank for your own research. The recording checks one returned appraisal record against the county portal; it does not verify a recent purchase or a recorded deed.</p>
+<h2>Watch the Cameron County promo</h2>
+<video controls preload="metadata" style="width:100%; border-radius:12px;" aria-label="Texas Scraper Kit 1.0.1 Cameron County demo with Noel narration" poster="/downloads/texas-business-demo/walkthrough-poster.png?v=3-cameron-v101">
+<source src="/downloads/texas-business-demo/walkthrough.mp4?v=3-cameron-v101" type="video/mp4">
+<track kind="captions" src="/downloads/texas-business-demo/walkthrough.vtt?v=3-cameron-v101" srclang="en" label="English">
+<a href="/downloads/texas-business-demo/walkthrough.mp4?v=3-cameron-v101">Download the walkthrough</a>
 </video>
-<p>This narrated terminal recording runs the installed Texas Scraper Kit 1.0.0 against the live Comptroller source, exports five results, opens the first record, and shows the property command’s county options. Noel provides the synthesized narration. Recorded terminal events are replayed with idle time adjusted to fit the explanation.</p>
-<p><a href="/downloads/texas-business-demo/kit-cli-session.cast" download>Download the original terminal recording (.cast)</a> · <a href="/downloads/texas-business-demo/kit-cli-recording.txt">Exact commands and narration transcript</a> · <a href="/downloads/texas-business-demo/sample/kit-cli-first-record.json">Inspect the first exported record</a></p>
-<p>The video uses the purchased kit, installed according to its README, plus <code>jq</code> to display JSON. The free sampler above is a separate, dependency-free script. To repeat the video with the kit installed:</p>
+<p>This promo shows a real v1.0.1 Cameron search, the three-record JSON export, an exact-account lookup, and a capture of the official county page. Noel narration and timed captions explain the results. Terminal timing is edited for reading and narration; the downloadable recording retains the original event timing.</p>
+<p><a href="/downloads/texas-business-demo/kit-cli-session.cast" download>Download the original terminal recording (.cast)</a> · <a href="/downloads/texas-business-demo/kit-cli-recording.txt">Exact commands and narration transcript</a></p>
+<p>Use the v1.0.1 kit, installed according to its README, plus <code>jq</code> to inspect JSON. These are the recorded commands:</p>
 <pre class="cli-mockup"><code>texas-scrape --version
-texas-scrape business search --name "Space Exploration" --limit 5 --output businesses.json
-jq '.[0]' businesses.json
-texas-scrape property search --help</code></pre>
-<p>The business CLI uses <code>SOSBusinessScraper</code> and fetches from the Comptroller API; its model labels the source “Texas Secretary of State.” The property help lists Harris and Travis. Showing those options does not verify that both scrapers work, and this command does not support Cameron County.</p>
+texas-scrape property search --county cameron --owner "SPACE EXPLORATION" --limit 3 --output cameron.json
+jq '.[] | {account_number, owner_name, street_address, market_value}' cameron.json
+texas-scrape property search --county cameron --account 460312 --limit 1 --output parcel.json
+jq '.[0] | {account_number, owner_name, legal_description, tax_year, raw_html_url}' parcel.json</code></pre>
 <h2>What the free sampler does—and where it stops</h2>
 <p>The free sampler makes one name-search request and exports the returned business names, taxpayer numbers, and ZIP codes. It does not retrieve officers, account-status details, certified records, or full filing histories. Check important details in the <a href="https://comptroller.texas.gov/taxes/franchise/account-status/search">official Comptroller search</a>; a name match alone does not establish identity or current status.</p>
 <p>A broad query may return HTTP 413: use a more specific name. No matches produces an empty export with a CSV header. Network errors and unexpected source responses exit with an error instead of inventing results. The source may change after this demonstration.</p>

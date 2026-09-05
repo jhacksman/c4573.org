@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-09-05T03:04:10+00:00",
+  "kit_version": "1.0.1",
+  "release_commit": "91b0df976bb8198b9a81ed6ff3b5450249c32693",
+  "release_sha256": "0804cabda54f697234cf727953f1f3c690d99845a91710364ae908d6c4d262df",
+  "query": {
+    "county": "cameron",
+    "owner": "SPACE EXPLORATION",
+    "limit": 3
+  },
+  "exported_records": 3,
+  "exact_account": "460312",
+  "county_page": "https://cameron.prodigycad.com/property-detail/460312/2026",
+  "county_page_checked_fields": [
+    "property ID",
+    "owner name",
+    "legal description",
+    "tax year",
+    "market value"
+  ],
+  "scope": "Appraisal records, not a verified recent purchase; county page says 2026 information is a work in progress."
+}

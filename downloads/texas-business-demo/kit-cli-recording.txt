@@ -1,28 +1,30 @@
-Texas Scraper Kit 1.0.0: actual CLI recording
-Recorded 2026-09-05T01:16:20.368776+00:00
-Product commit: 0b163cb35ddfafdeccfb9b0f33677251ffe93e56
+Texas Scraper Kit 1.0.1 — actual Cameron County CLI recording
+Recorded 2026-09-05T03:04:10+00:00
+Installed from the verified release ZIP.
 
-Setup: install the purchased kit using its README; jq is used only to inspect JSON.
-Commands executed in bash with a real pseudoterminal:
+COMMANDS
 
 texas-scrape --version
-texas-scrape business search --name "Space Exploration" --limit 5 --output businesses.json
-jq '.[0]' businesses.json
-texas-scrape property search --help
+texas-scrape property search --county cameron --owner "SPACE EXPLORATION" --limit 3 --output cameron.json
+jq '.[] | {account_number, owner_name, street_address, market_value}' cameron.json
+texas-scrape property search --county cameron --account 460312 --limit 1 --output parcel.json
+jq '.[0] | {account_number, owner_name, legal_description, tax_year, raw_html_url}' parcel.json
 
-The business search returned five records. Only the first corporate record is shown in the video.
-The command uses SOSBusinessScraper, which contacts the Comptroller API. Its output model labels source as Texas Secretary of State.
-The video replays recorded terminal events. Idle time is adjusted to fit narration.
-The accompanying asciinema v2 cast retains original terminal timing.
-No property query was executed. County coverage shown is CLI help, not a successful county scraper test.
-No Cameron parcel or purchase was verified.
+OFFICIAL PAGE
+https://cameron.prodigycad.com/property-detail/460312/2026
 
-NARRATION (Noel via Qwen3-TTS)
+The video replays actual terminal events and includes a capture of the official county page. Timing is edited for narration and reading. The .cast file retains original terminal timing. No recent purchase or recorded deed was verified. The free business sampler does not include Cameron property search.
 
-Let's run the actual Texas Scraper Kit. This is a recorded terminal session using the installed product. First, the version command confirms what we're running. The environment is already set up.
+NOEL NARRATION
 
-Now we search for Space Exploration, limit the response to five records, and save the results to a file. This command contacts the Texas Comptroller. A name match is a research lead; it does not prove that every result belongs to Space X.
+Search Cameron County property records from your terminal. This is Texas Scraper Kit, version one point zero point one, installed from the release package.
 
-Next, we open the first record from the exported file. These are fields returned by the product, not example data typed into a slide. Company registration and mailing information can help your research, but they don't establish ownership of a parcel near Starbase.
+Enter the county and the owner name. Here, we're searching for Space Exploration, limiting the export to three records, and saving the results to a file. The command queries the live appraisal source.
 
-Here's the property search help from the same installed kit. The county options are Harris and Travis. Cameron County is not supported by this command. For Starbase parcels, continue with Cameron appraisal records and county deeds. Download the free business sampler below, or explore the full kit.
+Open that file and inspect what came back: parcel numbers, listed owners, street addresses, and market values. These are appraisal records. The values shown are not purchase prices, and a broad search still needs review.
+
+Take the first parcel number and run an exact account lookup. Now we're checking one specific record, with its legal description, tax year, and a link back to the county's property page.
+
+Follow that link to the official Cameron portal. Compare the parcel number and owner against the export. For a purchase history, continue to recorded deeds; appraisal data alone doesn't establish when a sale happened.
+
+That's the workflow: query real public records, export the data, and follow the source. Get the commands, the full walkthrough, and a free business lookup sampler from the linked tutorial.
