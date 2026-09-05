@@ -1,0 +1,35 @@
+{
+  "retrieved_at_utc": "2026-09-05T00:57:08.176484+00:00",
+  "source_url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Space+Exploration",
+  "query": "Space Exploration",
+  "returned_by_source": 8,
+  "exported": 5,
+  "limit": 5,
+  "records": [
+    {
+      "entity_name": "SPACE EXPLORATION TECHNOLOGIES CORP.",
+      "taxpayer_number": "10106276719",
+      "mailing_zip": "90250"
+    },
+    {
+      "entity_name": "SPACE EXPLORATION RESEARCH GROUP",
+      "taxpayer_number": "32002278730",
+      "mailing_zip": "75752"
+    },
+    {
+      "entity_name": "SPACE EXPLORATION TECHNOLOGIES",
+      "taxpayer_number": "32018585318",
+      "mailing_zip": ""
+    },
+    {
+      "entity_name": "SPACE EXPLORATION TECHNOLOGIES CORPORATION",
+      "taxpayer_number": "32062151348",
+      "mailing_zip": ""
+    },
+    {
+      "entity_name": "SPACE EXPLORATION TECHNOLOGIES CORPORATION",
+      "taxpayer_number": "32062151413",
+      "mailing_zip": ""
+    }
+  ]
+}
