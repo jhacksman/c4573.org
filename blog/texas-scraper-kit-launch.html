@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>764 Texas Public Data Sources for $13.37 — Texas Scraper Kit Launch | c4573.org</title>
-  <meta name="description" content="We built a single Docker container that scrapes 764 Texas government data sources — business filings, property records, well data, campaign finance, professional licenses. $13.37, no subscription.">
-  <meta property="og:title" content="764 Texas Public Data Sources for $13.37">
-  <meta property="og:description" content="One Docker container. 764 Texas government data sources. $13.37 one-time purchase.">
+  <title>Texas Scraper Kit: Verified Scrapers + Source Catalog for $13.37 — Texas Scraper Kit Launch | c4573.org</title>
+  <meta name="description" content="Texas Scraper Kit includes 10 verified Python scrapers, 261 beta modules, and a catalog of 764+ Texas public data sources. $13.37, no subscription.">
+  <meta property="og:title" content="Texas Scraper Kit: Verified Scrapers + Source Catalog for $13.37">
+  <meta property="og:description" content="10 verified scrapers, 261 beta modules, and a 764+ source catalog. $13.37 one-time purchase.">
   <meta property="og:url" content="https://c4573.org/blog/texas-scraper-kit-launch.html">
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="764 Texas Public Data Sources for $13.37">
-  <meta name="twitter:description" content="One Docker container. 764 Texas government data sources. No subscription.">
+  <meta name="twitter:title" content="Texas Scraper Kit: Verified Scrapers + Source Catalog for $13.37">
+  <meta name="twitter:description" content="10 verified scrapers, 261 beta modules, and a 764+ source catalog. No subscription.">
   <link rel="canonical" href="https://c4573.org/blog/texas-scraper-kit-launch.html">
   <link rel="stylesheet" href="../css/style.css">
 <style>
@@ -107,7 +107,7 @@
       <!-- Audio Player -->
       <div class="audio-player-wrapper" id="audioWrapper">
         <div class="audio-player">
-          <div class="audio-label">🔊 Listen to this post</div>
+          <div class="audio-label">🔊 Original launch narration — predates the coverage correction below</div>
           <audio id="blogAudio" src="../audio/texas-scraper-kit-launch.mp3" preload="metadata" controls></audio>
           <div class="speed-controls">
             <span>Speed:</span>
@@ -121,10 +121,12 @@
         </div>
       </div>
 
-      <h1 style="margin-bottom: 0.5rem;">764 Texas Public Data Sources. One Docker Container. $13.37.</h1>
+      <h1 style="margin-bottom: 0.5rem;">Texas Scraper Kit: 10 Verified Scrapers, 261 Beta Modules, $13.37.</h1>
       <p class="subtitle" style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.7;">Announcing the Texas Scraper Kit — the first tool from c4573.org.</p>
 
       <div class="manifesto">
+
+        <p><strong>Coverage correction — September 4, 2026:</strong> The 764+ figure counts inventoried catalog sources, not working scrapers. The current kit includes 10 verified Python scrapers and 261 beta TypeScript modules. The original audio predates this correction; use the updated text and product page for current coverage.</p>
 
         <h2>The Problem</h2>
         <p>Texas has some of the richest public data in the country. Business filings, property records, oil well permits, campaign finance disclosures, professional licenses, environmental violations, unclaimed property — hundreds of government agencies publishing data the public has a legal right to access.</p>
@@ -139,10 +141,12 @@
         <p>We chose option 4: build it once, sell it cheap, and let everyone run it themselves.</p>
 
         <h2>What You Get</h2>
-        <p>The <strong>Texas Scraper Kit</strong> is a Docker container with a REST API and CLI. You deploy it on your machine — laptop, server, VPS, whatever — and it scrapes Texas government data sources on demand.</p>
+        <p>The <strong>Texas Scraper Kit</strong> includes a Python toolkit with a REST API and CLI, plus an optional Docker Compose runtime for its beta TypeScript modules. You run it on your own machine and query supported sources.</p>
 
         <ul>
-          <li><strong>764 data sources</strong> across dozens of state agencies</li>
+          <li><strong>10 verified Python scrapers</strong> with recorded live-validation evidence</li>
+          <li><strong>261 beta TypeScript modules</strong> with rolling validation and source-specific requirements</li>
+          <li><strong>764+ cataloged sources</strong> documenting the wider Texas public-data landscape; not 764 working integrations</li>
           <li><strong>REST API</strong> — <code>POST /run</code> with source codes, poll for results</li>
           <li><strong>CLI</strong> — run individual scrapers from the command line</li>
           <li><strong>Multiple output formats</strong> — CSV, JSON, or PostgreSQL</li>
@@ -151,7 +155,7 @@
         </ul>
 
         <h3>Verified Working Sources (v1.0)</h3>
-        <p>Every scraper is tested against live government sites. Here's what's confirmed working in the initial release:</p>
+        <p>The release trust manifest records live-validation dates, queries, and results for these 10 Python scrapers. That verification does not extend to every beta module or catalog entry, and government sites can change after validation:</p>
 
         <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
           <thead>
@@ -208,14 +212,14 @@
               <td style="padding: 0.5rem;">Franchise tax filings</td>
             </tr>
             <tr>
-              <td style="padding: 0.5rem;"><code>tec_campaign</code></td>
+              <td style="padding: 0.5rem;"><code>tec_campaign_finance</code></td>
               <td style="padding: 0.5rem;">Ethics Commission</td>
-              <td style="padding: 0.5rem;">Campaign finance (TEC API)</td>
+              <td style="padding: 0.5rem;">Filer registry (candidates and committees)</td>
             </tr>
           </tbody>
         </table>
 
-        <p>More modules ship weekly. Each update adds new agencies and fixes for site changes.</p>
+        <p>Module validation and fixes are released through updates. Check the included trust manifest and per-module documentation for current status.</p>
 
         <h2>Who This Is For</h2>
         <ul>

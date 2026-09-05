@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Texas Scraper Kit — 764 Data Sources, Docker + FeedEater | c4573.org</title>
-  <meta name="description" content="764 Texas public data sources. Docker + FeedEater data engine + modular scrapers. $13.37 one-time, all v1.x updates included.">
-  <meta property="og:title" content="Texas Scraper Kit — 764 Data Sources for $13.37">
-  <meta property="og:description" content="764 Texas public data sources. Docker + FeedEater data engine. $13.37 one-time purchase.">
+  <title>Texas Scraper Kit — 10 Verified Scrapers + Source Catalog | c4573.org</title>
+  <meta name="description" content="10 verified Python scrapers, 261 beta TypeScript modules, and a 764+ source catalog. $13.37 one-time, all v1.x updates included.">
+  <meta property="og:title" content="Texas Scraper Kit — 10 Verified Scrapers for $13.37">
+  <meta property="og:description" content="10 verified scrapers, 261 beta modules, and 764+ cataloged Texas data sources. $13.37 one-time purchase.">
   <meta property="og:url" content="https://c4573.org/products/texas-scraper-kit.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Texas Scraper Kit — 764 Data Sources for $13.37">
-  <meta name="twitter:description" content="764 TX public data sources. Docker + FeedEater engine. $13.37 one-time.">
+  <meta name="twitter:title" content="Texas Scraper Kit — 10 Verified Scrapers for $13.37">
+  <meta name="twitter:description" content="10 verified scrapers, 261 beta modules, and a 764+ source catalog. $13.37 one-time.">
   <link rel="canonical" href="https://c4573.org/products/texas-scraper-kit.html">
   <link rel="stylesheet" href="../css/style.css">
   <script type="application/ld+json">
@@ -19,7 +19,7 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Texas Scraper Kit",
-    "description": "764 Texas public data sources. Docker + FeedEater data engine with modular scrapers, NATS messaging, PostgreSQL storage, REST API, and web UI.",
+    "description": "10 verified Python scrapers, 261 beta TypeScript modules with a FeedEater runtime, and a catalog of 764+ Texas public data sources. CLI, REST API, and optional Docker module runtime.",
     "offers": {
       "@type": "Offer",
       "price": "13.37",
@@ -50,7 +50,9 @@
       <h1>Texas Scraper Kit</h1>
       <div class="product-meta">
         <span class="price">$13.37</span>
-        <span>764 data sources</span>
+        <span>10 verified scrapers</span>
+        <span>261 beta modules</span>
+        <span>764+ catalog entries</span>
         <span>Docker + FeedEater</span>
         <span>All v1.x updates</span>
       </div>
@@ -62,13 +64,12 @@
     <div class="container">
       <h2>What It Does</h2>
       <p class="section-desc">
-        A self-hosted data engine that collects from <strong style="color: var(--text);">764 Texas public data sources</strong> &mdash;
-        Secretary of State, Comptroller, county appraisal districts, Ethics Commission, Railroad Commission, TCEQ, TDLR, DPS, and more.
-        Business filings, property records, campaign finance, environmental permits, licensing data, tax records.
+        A self-hosted toolkit with <strong style="color: var(--text);">10 verified Python scrapers</strong> for business records, Travis County property records, professional licenses, campaign finance, oil and gas data, and environmental violations.
+        The included trust manifest records each supported scraper's validation date, query, and result.
       </p>
       <p class="section-desc">
-        Built on <strong style="color: var(--text);">FeedEater</strong> &mdash; a modular TypeScript data engine with NATS messaging and PostgreSQL storage.
-        Each data source is a module you can toggle on or off. Deploy with <code>docker compose up</code>. Manage via web UI, CLI, or REST API.
+        The kit also includes <strong style="color: var(--text);">261 beta TypeScript modules</strong> on the bundled FeedEater runtime and a <strong style="color: var(--text);">764+ source catalog</strong> of inventoried government data sources.
+        Catalog entries document sources; they do not represent 764 working scrapers. Beta modules are validated on a rolling basis. Check each source's status and requirements before relying on it.
       </p>
     </div>
   </section>
@@ -76,28 +77,15 @@
   <section class="product-section">
     <div class="container">
       <h2>Architecture</h2>
-      <pre class="cli-mockup"><code><span class="cli-prompt">$</span> <span class="cli-cmd">docker compose up -d</span>
+      <pre class="cli-mockup"><code><span class="cli-comment"># Start the optional module runtime</span>
+<span class="cli-prompt">$</span> <span class="cli-cmd">docker compose --profile modules up -d</span>
 
-<span class="cli-info">[+]</span> Running 5/5
-<span class="cli-ok"> ✔</span> Container feedeater-nats       Started
-<span class="cli-ok"> ✔</span> Container feedeater-postgres   Started
-<span class="cli-ok"> ✔</span> Container feedeater-engine     Started
-<span class="cli-ok"> ✔</span> Container feedeater-api        Started
-<span class="cli-ok"> ✔</span> Container feedeater-ui         Started
-
-<span class="cli-prompt">$</span> <span class="cli-cmd">curl localhost:3000/api/health</span>
-{
-  "status": "healthy",
-  "engine": "feedeater",
-  "modules_loaded": 47,
-  "sources_available": 764,
-  "sources_enabled": 0,
-  "database": "connected",
-  "nats": "connected"
-}</code></pre>
+<span class="cli-comment"># Open the module web UI at http://localhost:3000</span>
+<span class="cli-comment"># Check the module API</span>
+<span class="cli-prompt">$</span> <span class="cli-cmd">curl localhost:4000/api/health</span></code></pre>
       <p class="section-desc" style="margin-top: 1rem;">
-        Five containers: <strong>NATS</strong> (message bus), <strong>PostgreSQL</strong> (storage), <strong>FeedEater engine</strong> (module runner),
-        <strong>REST API</strong> (query + control), <strong>Web UI</strong> (dashboard). Everything talks over NATS. Modules publish data, the engine stores it, you query it.
+        The optional module runtime includes a web UI, API, job worker, PostgreSQL, Redis, and NATS. The Python scrapers also work independently of this runtime.
+        Modules start disabled; enable only the sources you need. Browser-dependent beta modules require additional setup and are not supported in the stock container.
       </p>
     </div>
   </section>
@@ -108,15 +96,15 @@
       <div class="features-grid">
         <div class="feature-block">
           <h3>Bulk</h3>
-          <p>Sources with downloadable datasets. Toggle on, the module downloads the full dataset, stores it in Postgres. Comptroller Open Data (1,360 datasets), SOS bulk filings, and more.</p>
+          <p>For supported download sources, retrieve published datasets. The verified RRC bulk scraper provides a catalog of 22 downloadable datasets; availability and file sizes vary.</p>
         </div>
         <div class="feature-block">
           <h3>Crawl</h3>
-          <p>Sources with enumerable key spaces. The module iterates through ID ranges &mdash; entity numbers, license numbers, permit IDs &mdash; collecting everything. Rate-limited, resumable, runs in background.</p>
+          <p>Some beta modules collect records across multiple pages or identifiers. Coverage, rate limits, and resume support depend on the module; check its documentation and validation status.</p>
         </div>
         <div class="feature-block">
           <h3>Query</h3>
-          <p>Sources that require search parameters. Each query module has its own page in the web UI with the right input fields. Search on demand, save results to your local database.</p>
+          <p>Search supported sources with parameters such as a business name, address, or well API number. Accepted queries and result limits are documented per source.</p>
         </div>
       </div>
     </div>
@@ -126,9 +114,8 @@
     <div class="container">
       <h2>Web UI</h2>
       <p class="section-desc">
-        Open <code>localhost:3000</code> in your browser. See every runnable module. Toggle them on or off. Trigger manual scrapes.
-        Search your collected data. Each query source has a dedicated page with the right input fields for that source.
-        Monitor collection status, see what's running, what's completed, what's failed.
+        With the module runtime running, open <code>localhost:3000</code> to browse modules, edit settings, trigger jobs, and watch logs.
+        The module UI is separate from the Python CLI and REST API. A module appearing in the UI does not mean its source has been live-validated.
       </p>
     </div>
   </section>
@@ -136,53 +123,47 @@
   <section class="product-section">
     <div class="container">
       <h2>REST API</h2>
-      <pre class="cli-mockup"><code><span class="cli-comment"># List available sources</span>
-<span class="cli-prompt">$</span> <span class="cli-cmd">curl localhost:3000/api/sources</span>
+      <pre class="cli-mockup"><code><span class="cli-comment"># List sources in the Python toolkit</span>
+<span class="cli-prompt">$</span> <span class="cli-cmd">curl localhost:8000/sources</span>
 
-<span class="cli-comment"># Enable a source</span>
-<span class="cli-prompt">$</span> <span class="cli-cmd">curl -X POST localhost:3000/api/sources/texas-sos-business/enable</span>
+<span class="cli-comment"># Check collection status</span>
+<span class="cli-prompt">$</span> <span class="cli-cmd">curl localhost:8000/status</span>
 
-<span class="cli-comment"># Trigger an on-demand scrape</span>
-<span class="cli-prompt">$</span> <span class="cli-cmd">curl -X POST localhost:3000/api/sources/texas-hcad/scrape</span>
-
-<span class="cli-comment"># Query collected data</span>
-<span class="cli-prompt">$</span> <span class="cli-cmd">curl "localhost:3000/api/data/texas-hcad?search=austin&limit=10"</span>
-
-<span class="cli-comment"># Export to JSON</span>
-<span class="cli-prompt">$</span> <span class="cli-cmd">curl "localhost:3000/api/data/texas-sos-business?format=json" > export.json</span></code></pre>
+<span class="cli-comment"># Read stored records</span>
+<span class="cli-prompt">$</span> <span class="cli-cmd">curl localhost:8000/records</span></code></pre>
       <p class="section-desc" style="margin-top: 1rem;">
-        The same API that powers the web UI. Point your AI agent, your RAG pipeline, or your scripts at it. No authentication required on localhost.
+        These examples use the Python API on port 8000. The optional FeedEater module API runs separately on port 4000, with its web UI on port 3000. Consult the included documentation for each runtime.
       </p>
     </div>
   </section>
 
   <section class="product-section">
     <div class="container">
-      <h2>Data Sources</h2>
+      <h2>Verified Scraper Coverage</h2>
       <div class="features-grid">
         <div class="feature-block">
           <h3>Secretary of State</h3>
-          <p>Business filings, entity search, assumed names, UCC filings, notary records.</p>
+          <p>Business entity lookup through the Comptroller API, including available officers, registered agents, and filing information.</p>
         </div>
         <div class="feature-block">
           <h3>Comptroller</h3>
-          <p>1,360 datasets on the Open Data Portal. Tax records, franchise tax, sales tax permits, state expenditures.</p>
+          <p>Franchise tax account status and right-to-transact information. Broader Comptroller sources are documented separately in the catalog and beta modules.</p>
         </div>
         <div class="feature-block">
           <h3>County Appraisal Districts</h3>
-          <p>Property records across 254 counties. Assessed values, ownership, tax amounts, legal descriptions.</p>
+          <p>The verified property scraper covers Travis County (Austin metro). The broader county catalog is not a claim of verified coverage across all 254 Texas counties.</p>
         </div>
         <div class="feature-block">
           <h3>Ethics Commission</h3>
-          <p>Campaign finance reports, lobbyist registrations, personal financial statements, political committee filings.</p>
+          <p>Campaign contributions and expenditures, plus the filer registry for candidates and committees.</p>
         </div>
         <div class="feature-block">
           <h3>Railroad Commission</h3>
-          <p>Oil and gas well data, pipeline permits, operator records, production reports.</p>
+          <p>Well search, GIS well and pipeline layers, and a bulk-download catalog. Coverage and query limits are documented for each scraper.</p>
         </div>
         <div class="feature-block">
-          <h3>TCEQ, TDLR, DPS &amp; More</h3>
-          <p>Environmental permits, professional licenses, criminal records, vehicle registrations, and dozens more state agencies.</p>
+          <h3>TCEQ &amp; TDLR</h3>
+          <p>Environmental violations and enforcement records, plus professional license searches. Other agency sources in the catalog are not part of this verified set.</p>
         </div>
       </div>
     </div>
@@ -193,18 +174,20 @@
       <h2>Technical Specs</h2>
       <table class="specs-table">
         <tbody>
-          <tr><td>Engine</td><td>FeedEater (TypeScript)</td></tr>
+          <tr><td>Runtimes</td><td>Python scrapers; optional FeedEater TypeScript modules</td></tr>
           <tr><td>Messaging</td><td>NATS</td></tr>
-          <tr><td>Database</td><td>PostgreSQL 14+</td></tr>
+          <tr><td>Database</td><td>Python: SQLite or PostgreSQL; module runtime: PostgreSQL</td></tr>
           <tr><td>Containerization</td><td>Docker + Docker Compose</td></tr>
-          <tr><td>API</td><td>REST with OpenAPI docs at /api/docs</td></tr>
+          <tr><td>API</td><td>Python REST API on port 8000; module API on port 4000</td></tr>
           <tr><td>Web UI</td><td>Lightweight dashboard at localhost:3000</td></tr>
-          <tr><td>Data Sources</td><td>764 across state, county, and municipal levels</td></tr>
+          <tr><td>Verified scrapers</td><td>10 Python scrapers with recorded live-validation evidence</td></tr>
+          <tr><td>Beta modules</td><td>261 TypeScript modules; validation and requirements vary</td></tr>
+          <tr><td>Source catalog</td><td>764+ inventoried sources; not a count of working integrations</td></tr>
           <tr><td>Collection Modes</td><td>Bulk, Crawl, Query</td></tr>
           <tr><td>Output Formats</td><td>JSON, CSV, PostgreSQL</td></tr>
-          <tr><td>Rate Limiting</td><td>Configurable per module (default 1 req/sec)</td></tr>
+          <tr><td>Rate Limiting</td><td>Source-specific; consult each scraper or module</td></tr>
           <tr><td>Retry Logic</td><td>Exponential backoff with configurable retries</td></tr>
-          <tr><td>Resume</td><td>Crawl jobs resume from last checkpoint</td></tr>
+          <tr><td>Resume</td><td>Module-specific; consult the included documentation</td></tr>
           <tr><td>Logging</td><td>Structured JSON logs, configurable verbosity</td></tr>
           <tr><td>License</td><td>Source-available &mdash; unrestricted use and modification; converts to MIT 12 months after purchase</td></tr>
           <tr><td>Updates</td><td>All v1.x updates included</td></tr>
@@ -218,12 +201,14 @@
       <h2>What You Get</h2>
       <ul class="check-list">
         <li>FeedEater data engine (TypeScript, fully open source)</li>
-        <li>261 Texas data modules (mapping a 764+ source catalog)</li>
-        <li>Docker Compose stack (engine + NATS + PostgreSQL + API + web UI)</li>
+        <li>10 verified Python scrapers with a machine-readable trust manifest</li>
+        <li>261 beta TypeScript modules with source-specific requirements</li>
+        <li>A catalog of 764+ inventoried Texas public data sources</li>
+        <li>Docker Compose module runtime (worker + Redis + NATS + PostgreSQL + API + web UI)</li>
         <li>Web UI for source management, search, and monitoring</li>
         <li>REST API for programmatic access and AI agent integration</li>
         <li>CLI for scripting and automation</li>
-        <li>README with setup guide (&lt; 5 min with Docker)</li>
+        <li>README with Python and Docker setup guides</li>
         <li>All v1.x updates and adapter fixes</li>
       </ul>
     </div>
@@ -237,7 +222,7 @@
         <div class="pricing-detail">One-time purchase. Not a subscription.</div>
         <ul class="check-list">
           <li>Full source code (source-available license &mdash; converts to MIT after 12 months)</li>
-          <li>764+ mapped data sources &mdash; 10 verified scrapers, 261 runnable modules, full source catalog</li>
+          <li>10 verified scrapers, 261 beta modules, and a 764+ source catalog</li>
           <li>Docker + FeedEater + NATS + PostgreSQL</li>
           <li>Web UI + REST API + CLI</li>
           <li>All v1.x updates included</li>
@@ -257,18 +242,18 @@
       </div>
 
       <div class="faq-item">
-        <p class="question">Why 764 sources?</p>
-        <p class="answer">Texas has data spread across dozens of state agencies, 254 counties, and hundreds of municipalities. Many agencies have multiple portals. We map and module every accessible source.</p>
+        <p class="question">What do the three counts mean?</p>
+        <p class="answer">10 Python scrapers have recorded live-validation evidence. The 261 TypeScript modules are a broader beta collection, validated on a rolling basis. The 764+ catalog entries document inventoried sources, including sources outside the supported scrapers and beta modules. These counts are not interchangeable.</p>
       </div>
 
       <div class="faq-item">
         <p class="question">What do I need to run it?</p>
-        <p class="answer">Docker. That's it. <code>docker compose up</code> brings up the entire stack &mdash; engine, database, message bus, API, and web UI.</p>
+        <p class="answer">Python 3.11+ for the Python toolkit. The optional module runtime can be started with <code>docker compose --profile modules up -d</code>. Running modules without Docker requires Node 20+ and the documented backing services. Some beta modules also require a browser.</p>
       </div>
 
       <div class="faq-item">
         <p class="question">Can AI agents use this?</p>
-        <p class="answer">Yes. The REST API is designed for programmatic access. Point your agent at <code>localhost:3000/api</code> &mdash; enable sources, trigger scrapes, query data. No authentication on localhost.</p>
+        <p class="answer">Yes. The Python CLI and REST API expose source information, queries, and results. Agents can use the trust manifest to distinguish verified, experimental, and unsupported sources. The optional FeedEater runtime has a separate module API.</p>
       </div>
 
       <div class="faq-item">
@@ -278,7 +263,7 @@
 
       <div class="faq-item">
         <p class="question">Do I need an API key?</p>
-        <p class="answer">No. Zero external API dependencies. All modules scrape public websites directly.</p>
+        <p class="answer">The 10 verified Python scrapers do not require paid data-provider API keys. They use government websites and public APIs directly. Check individual beta modules for additional requirements.</p>
       </div>
 
       <div class="faq-item">
@@ -288,7 +273,7 @@
 
       <div class="faq-item">
         <p class="question">How is this different from BatchData or PropStream?</p>
-        <p class="answer">They charge $50-$500/month for access to their servers and limit you to property data. This is $13.37 one-time for the entire Texas public data landscape &mdash; property, business, environmental, licensing, campaign finance, and more. Runs on your machine. You own everything.</p>
+        <p class="answer">This is a $13.37 one-time purchase of tools you run on your own machine. You get 10 verified scrapers, 261 beta modules, and a 764+ source catalog across several public-record categories. It is not a hosted database or a guarantee of comprehensive Texas coverage.</p>
       </div>
 
       <div class="faq-item">
@@ -300,7 +285,7 @@
 
   <section class="section" style="text-align: center;">
     <div class="container">
-      <p class="section-desc">764 Texas public data sources. One command.</p>
+      <p class="section-desc">10 verified scrapers. 261 beta modules. 764+ cataloged sources.</p>
       <a href="https://c4573.gumroad.com/l/texas-scraper" class="btn btn-primary">Buy on Gumroad &mdash; $13.37</a>
     </div>
   </section>
