@@ -1,0 +1,136 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.940
+Here is how you use Texas Scraper Kit with an agent.
+
+00:00:02.940 --> 00:00:06.760
+Download version one point zero point two, unzip it, and open that folder
+
+00:00:06.760 --> 00:00:11.860
+as your agent's project. Your agent needs permission to read files, run commands,
+
+00:00:11.860 --> 00:00:15.840
+and reach the internet. Python three point eleven or newer must be installed.
+
+00:00:15.840 --> 00:00:18.340
+This example uses Codex in the terminal.
+
+00:00:18.340 --> 00:00:22.040
+The interaction shown here comes from an actual run, with selected output and
+
+00:00:22.040 --> 00:00:23.033
+shorter pauses.
+
+00:00:23.833 --> 00:00:25.813
+Start with the question you want answered.
+
+00:00:25.813 --> 00:00:29.293
+Tell the agent to read AGENTS dot M D, install the kit, and
+
+00:00:29.293 --> 00:00:32.993
+find three appraisal records matching Space Exploration.
+
+00:00:32.993 --> 00:00:35.873
+Ask for a saved summary and official source links.
+
+00:00:35.873 --> 00:00:39.093
+You can copy this exact prompt from the page below the video.
+
+00:00:39.093 --> 00:00:42.793
+The human supplies the question. The agent works out the commands from the
+
+00:00:42.793 --> 00:00:44.533
+instructions included in the folder.
+
+00:00:45.333 --> 00:00:49.353
+The agent reads the guide and installs the purchased source in a virtual
+
+00:00:49.353 --> 00:00:53.573
+environment. Then it checks the version and runs the owner search.
+
+00:00:53.573 --> 00:00:55.733
+These are commands from that agent session.
+
+00:00:55.733 --> 00:00:59.593
+The search reaches the county's live appraisal service and saves three records.
+
+00:00:59.593 --> 00:01:02.073
+You do not have to type these commands yourself when your agent can
+
+00:01:02.073 --> 00:01:05.408
+run them. The command line is how the agent uses the kit.
+
+00:01:06.208 --> 00:01:08.988
+Now the agent reads the saved records.
+
+00:01:08.988 --> 00:01:13.628
+These three accounts list Space Exploration Technologies Corp as the owner, with addresses
+
+00:01:13.628 --> 00:01:17.848
+on Esperson Street. Each record includes its county source link.
+
+00:01:17.848 --> 00:01:21.328
+Three matches are a starting point for research, not an inventory of everything
+
+00:01:21.328 --> 00:01:24.968
+the company owns. The useful output is a file you can keep, plus
+
+00:01:24.968 --> 00:01:27.742
+an explanation you can read without knowing the command line.
+
+00:01:28.542 --> 00:01:31.442
+The agent also reports what it could not check.
+
+00:01:31.442 --> 00:01:35.322
+In this run, the browser permission was declined, so the agent could not
+
+00:01:35.322 --> 00:01:38.702
+independently verify the first parcel on the detail page.
+
+00:01:38.702 --> 00:01:42.702
+The scraper query itself succeeded. The report distinguishes those two things.
+
+00:01:42.702 --> 00:01:46.162
+It flags empty fields and unverified acreage, and it does not turn an
+
+00:01:46.162 --> 00:01:49.682
+appraisal value into a purchase price. You can follow the saved official links
+
+00:01:49.682 --> 00:01:50.617
+for that next check.
+
+00:01:51.417 --> 00:01:56.497
+Here is the finished answer from the agent, with all three parcel links.
+
+00:01:56.497 --> 00:02:00.617
+It also saved a summary document alongside the raw records.
+
+00:02:00.617 --> 00:02:04.237
+That is the workflow: give your agent the folder, ask a question, and
+
+00:02:04.237 --> 00:02:06.937
+have it return findings with sources and files.
+
+00:02:06.937 --> 00:02:09.897
+You can then ask a follow-up question, narrow the search, or take the
+
+00:02:09.897 --> 00:02:11.492
+saved records into your next task.
+
+00:02:12.292 --> 00:02:17.412
+We started with Texas because development projects raise questions about land and businesses,
+
+00:02:17.412 --> 00:02:21.392
+from data centers and energy infrastructure to Starbase.
+
+00:02:21.392 --> 00:02:25.332
+The kit gives your agent commands for supported public-record sources.
+
+00:02:25.332 --> 00:02:29.352
+Download Texas Scraper Kit from c four five seven three dot org, open
+
+00:02:29.352 --> 00:02:33.672
+the extracted folder, and ask your agent to read AGENTS dot M D.
+
+00:02:33.672 --> 00:02:36.908
+The page includes the prompt and the actual results from this session.
