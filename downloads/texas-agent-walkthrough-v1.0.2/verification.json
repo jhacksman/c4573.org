@@ -1,0 +1,15 @@
+{
+  "duration_seconds": 157.8,
+  "video": "1920x1080 H.264",
+  "audio": "AAC; Noel via Qwen3-TTS",
+  "integrated_lufs": "-16.10",
+  "true_peak_dbtp": "-1.23",
+  "decode": "passed",
+  "caption_and_chapter_timing": "passed",
+  "cue_counts": {
+    "captions.vtt": 45,
+    "chapters.vtt": 7
+  },
+  "records": 3,
+  "website_media_links": "passed"
+}

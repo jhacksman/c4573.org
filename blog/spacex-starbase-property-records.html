@@ -34,50 +34,16 @@
 <h2>Give your agent a research task</h2>
 <p>Unzip the kit and open the extracted folder as your agent’s project folder. Use an agent that can read local files and run terminal commands. Attaching the ZIP to a chat that cannot run code will not run the kit.</p>
 <p>For this example, ask:</p>
-<blockquote><p>Read AGENTS.md and check the installed kit version. Set up the Python environment from this folder. Find three Cameron County appraisal records matching “SPACE EXPLORATION.” Save the results and give me a short summary with parcel numbers, listed owners, and official source links. Check the first parcel against the county website if you have browser access. Explain any missing fields or access problems.</p></blockquote>
-<p>The video uses v1.0.1, which supports the Cameron command. The v1.0.2 package adds START_HERE.md for buyers, AGENTS.md for agents, and a complete CLI reference. If you have an older ZIP without those guides, use its README.</p>
+<blockquote><p>Read AGENTS.md in this folder. Install the kit from this folder and confirm its version. Find three Cameron County appraisal records matching &quot;SPACE EXPLORATION&quot;. Save them in a new results folder and give me a short summary with parcel numbers, listed owners, and official source links. Check the first parcel against the county website if you can browse. Explain any missing fields or access problems. Do not infer a purchase date or price from appraisal values. Save your findings as results/summary.md as well as answering here. Work only inside this extracted project folder.</p></blockquote>
+<p>This walkthrough uses the released v1.0.2 ZIP, including AGENTS.md, START_HERE.md, and the CLI reference.</p>
 <p>Your agent should return a readable summary and the saved records. If it cannot proceed, ask it to name the problem: a missing dependency, a login requirement, an unavailable source, or a source the kit does not support.</p>
-<section id="full-walkthrough">
-<h2>Watch the kit run</h2>
-<p>This 6:49 recording shows the terminal work: installing v1.0.1, searching Cameron County, reading the export, and opening the county map and deed index. It has narration and captions. The prompt above is for you to try with your own agent; the video demonstrates the underlying commands.</p>
-<video id="full-walkthrough-video" controls preload="metadata" style="width:100%; border-radius:12px;" aria-label="Full Texas Scraper Kit v1.0.1 Cameron County walkthrough" poster="/downloads/texas-full-walkthrough-v1.0.1/poster.png">
-<source src="/downloads/texas-full-walkthrough-v1.0.1/full-walkthrough-v1.0.1.mp4" type="video/mp4">
-<track kind="captions" src="/downloads/texas-full-walkthrough-v1.0.1/captions.vtt" srclang="en" label="English">
-<track kind="chapters" src="/downloads/texas-full-walkthrough-v1.0.1/chapters.vtt" srclang="en" label="Chapters">
-<a href="/downloads/texas-full-walkthrough-v1.0.1/full-walkthrough-v1.0.1.mp4">Download the full walkthrough</a>
-</video>
-<p><a href="/downloads/texas-full-walkthrough-v1.0.1/commands-and-transcript.txt">Copy the commands and read the transcript</a> · <a href="/downloads/texas-full-walkthrough-v1.0.1/full-walkthrough-v1.0.1.mp4" download>Download video</a> · <a href="/downloads/texas-full-walkthrough-v1.0.1/terminal-recording.cast" download>Original terminal recording</a></p>
-<details><summary>Jump to a chapter</summary><ol>
-<li><a href="#full-walkthrough-video" data-video-time="0.000">0:00: Start from the release ZIP</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="24.875">0:24: Extract and check Python</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="53.167">0:53: Install in a virtual environment</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="81.542">1:21: Check the version and command help</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="106.083">1:46: Run a live owner search</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="133.833">2:13: Read the exported records</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="160.625">2:40: Compare the returned parcels</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="187.875">3:07: Look up one exact account</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="215.542">3:35: Follow the exported source link</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="238.792">3:58: Verify against the county detail page</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="266.750">4:26: Locate the parcel on the county map</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="294.000">4:54: Search the official deed index</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="322.792">5:22: Review actual indexed instruments</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="351.333">5:51: Repeat with an address query</a></li>
-<li><a href="#full-walkthrough-video" data-video-time="379.083">6:19: Keep the exports and recognize input errors</a></li>
-</ol></details>
-<p>The terminal recording uses the commands and results from this run, with timing adjusted for narration. The browser sections use captures of the county pages.</p>
-<p>The exact-account export leaves acreage at zero although the county detail page lists 0.0800 acres. Verify incomplete fields at the source. The clerk query returned 525 indexed results on September 4, 2026; this broad search does not establish a deed match to parcel 460312 or a recent purchase.</p>
-<p>Recorded exports: <a href="/downloads/texas-full-walkthrough-v1.0.1/cameron.json">owner search</a> · <a href="/downloads/texas-full-walkthrough-v1.0.1/parcel.json">exact account</a> · <a href="/downloads/texas-full-walkthrough-v1.0.1/esperson.json">address search</a> · <a href="/downloads/texas-full-walkthrough-v1.0.1/provenance.json">provenance and limits</a>.</p>
-<p>This walkthrough uses the full v1.0.1 kit. The free business sampler below covers company-name lookup and does not include Cameron property search.</p>
-</section>
-<script>
-document.querySelectorAll('[data-video-time]').forEach(function(link) {
-  link.addEventListener('click', function() {
-    var video = document.getElementById('full-walkthrough-video');
-    video.currentTime = Number(link.dataset.videoTime);
-    video.play().catch(function() {});
-  });
-});
-</script>
+<section id="full-walkthrough"><h2>Watch an agent use the kit</h2><p>Open the v1.0.2 folder, point your agent to AGENTS.md, and ask a question. This video follows an actual Codex CLI session: the agent installs the kit, queries the live county source, and saves records and a readable report. Session excerpts are reformatted for readability and pauses are shortened.</p><video id="full-walkthrough-video" controls preload="metadata" style="width:100%; border-radius:12px;" aria-label="Texas Scraper Kit v1.0.2 actual AI agent walkthrough" poster="/downloads/texas-agent-walkthrough-v1.0.2/poster.png">
+<source src="/downloads/texas-agent-walkthrough-v1.0.2/agent-walkthrough-v1.0.2.mp4" type="video/mp4">
+<track kind="captions" src="/downloads/texas-agent-walkthrough-v1.0.2/captions.vtt" srclang="en" label="English">
+<track kind="chapters" src="/downloads/texas-agent-walkthrough-v1.0.2/chapters.vtt" srclang="en" label="Chapters">
+<a href="/downloads/texas-agent-walkthrough-v1.0.2/agent-walkthrough-v1.0.2.mp4">Download the walkthrough</a>
+</video><p><a href="/downloads/texas-agent-walkthrough-v1.0.2/prompt.txt">Copy the prompt</a> · <a href="/downloads/texas-agent-walkthrough-v1.0.2/summary.md">Read the agent’s report</a> · <a href="/downloads/texas-agent-walkthrough-v1.0.2/cameron.json">Download the records</a> · <a href="/downloads/texas-agent-walkthrough-v1.0.2/session-transcript.txt">Read the actual session transcript</a></p><p>The scraper returned three records. The agent’s separate browser check was blocked because site permission had been declined. Its report explains what remains unverified.</p><p>This uses the purchased kit. The free business sampler below does not include property search.</p></section>
+
 <div class="manifesto">
 <h2>1. Start with a documented location</h2>
 <p>The FAA identifies SpaceX’s Boca Chica launch site in Cameron County, Texas. Use that location to choose the county records you need. <a href="https://www.faa.gov/space/stakeholder_engagement/spacex_starship">FAA project page</a>.</p>
@@ -111,9 +77,9 @@ Search snapshot only; not a certificate or complete filing record.
 <p><code>texas-business-output/businesses.csv</code> contains the entity name, Texas taxpayer number, and mailing ZIP. Import identifier and ZIP columns as text in your spreadsheet. The JSON also records the query, retrieval time, source URL, and returned/exported counts.</p>
 <p>Re-running replaces those two output files. To preserve another lookup, add <code>--output another-folder</code>. You can run the sample as often as needed for individual lookups; avoid repeated requests in a tight loop.</p>
 <h2>5. Query Cameron County with the kit</h2>
-<p>Texas Scraper Kit v1.0.1 adds Cameron County to the property CLI. The recordings on this page use the county’s True Prodigy appraisal source. This command belongs to the kit; the free business sampler above does not include property searches.</p>
+<p>Texas Scraper Kit v1.0.2 includes Cameron County in the property CLI. The agent session above uses the county’s True Prodigy appraisal source. This command belongs to the kit; the free business sampler above does not include property searches.</p>
 <pre class="cli-mockup"><code>texas-scrape property search --county cameron --owner "SPACE EXPLORATION" --limit 3 --output cameron.json</code></pre>
-<p>The captured run exported parcels <code>460312</code>, <code>460313</code>, and <code>460314</code>, each listing <code>SPACE EXPLORATION TECHNOLOGIES CORP</code> as owner and Esperson Street as the address. An exact-account lookup for <code>460312</code> matched the owner and parcel ID on the <a href="https://cameron.prodigycad.com/property-detail/460312/2026">official county page</a>. That page shows a 2026 market value of $182,396; an appraisal value is not a purchase price. Its disclaimer says 2026 information is a work in progress.</p>
+<p>The September 4, 2026 run exported parcels <code>460312</code>, <code>460313</code>, and <code>460314</code>, each listing <code>SPACE EXPLORATION TECHNOLOGIES CORP</code> as owner and Esperson Street as the address. In that earlier check, an exact-account lookup for <code>460312</code> matched the owner and parcel ID on the <a href="https://cameron.prodigycad.com/property-detail/460312/2026">official county page</a>. That page shows a 2026 market value of $182,396; an appraisal value is not a purchase price. Its disclaimer says 2026 information is a work in progress.</p>
 <p><a href="/downloads/texas-business-demo/sample/cameron-properties.json">Three-record export</a> · <a href="/downloads/texas-business-demo/sample/cameron-parcel.json">Exact-account export</a> · <a href="/downloads/texas-business-demo/sample/cameron-recording.json">Recording date and provenance</a></p>
 <h2>6. Check the source and follow the deeds</h2>
 <p>The owner option performs a full-text search. Review each result and follow its source link before drawing conclusions about ownership or location. The appraisal query does not establish a purchase date.</p>
@@ -123,20 +89,6 @@ Search snapshot only; not a certificate or complete filing record.
 <li>In your summary, say which record supports each finding. For example, an appraisal owner and a deed recording date come from different sources.</li>
 </ol>
 <p><a href="/downloads/texas-business-demo/parcel-research-worksheet.csv" download>Download a blank parcel-research worksheet</a>. Use it to keep parcel IDs, source links, and your notes together.</p>
-<h2>Watch the Cameron County promo</h2>
-<video controls preload="metadata" style="width:100%; border-radius:12px;" aria-label="Texas Scraper Kit 1.0.1 Cameron County demo with Noel narration" poster="/downloads/texas-business-demo/walkthrough-poster.png?v=3-cameron-v101">
-<source src="/downloads/texas-business-demo/walkthrough.mp4?v=3-cameron-v101" type="video/mp4">
-<track kind="captions" src="/downloads/texas-business-demo/walkthrough.vtt?v=3-cameron-v101" srclang="en" label="English">
-<a href="/downloads/texas-business-demo/walkthrough.mp4?v=3-cameron-v101">Download the promo</a>
-</video>
-<p>The short version shows the Cameron search, its export, and the county property page.</p>
-<p><a href="/downloads/texas-business-demo/kit-cli-session.cast" download>Download the original terminal recording (.cast)</a> · <a href="/downloads/texas-business-demo/kit-cli-recording.txt">Exact commands and narration transcript</a></p>
-<p>The short promo uses <code>jq</code> to inspect JSON. The full walkthrough above uses Python’s built-in JSON tools. These are the promo’s recorded commands:</p>
-<pre class="cli-mockup"><code>texas-scrape --version
-texas-scrape property search --county cameron --owner "SPACE EXPLORATION" --limit 3 --output cameron.json
-jq '.[] | {account_number, owner_name, street_address, market_value}' cameron.json
-texas-scrape property search --county cameron --account 460312 --limit 1 --output parcel.json
-jq '.[0] | {account_number, owner_name, legal_description, tax_year, raw_html_url}' parcel.json</code></pre>
 <h2>What is included in the free sample?</h2>
 <p>The free sampler makes one name-search request and exports the returned business names, taxpayer numbers, and ZIP codes. It does not retrieve officers, account-status details, certified records, or full filing histories. Check important details in the <a href="https://comptroller.texas.gov/taxes/franchise/account-status/search">official Comptroller search</a>; a name match alone does not establish identity or current status.</p>
 <p>A broad query may return HTTP 413: use a more specific name. No matches produces an empty export with a CSV header. Network errors and unexpected source responses exit with an error instead of inventing results. The source may change after this demonstration.</p>

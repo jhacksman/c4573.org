@@ -1,0 +1,20 @@
+{
+  "release": "1.0.2",
+  "release_zip_sha256": "c822cc98b17d6e70282df775ded8b08368df63bda9991f7e659efce258befe6b",
+  "agent": "Codex CLI 0.153.1",
+  "recorded": "2026-09-05",
+  "raw_event_log_sha256": "4bf6bb05e6e3cbe7cf4661bc0fa4cdf042c0d19c93eb2a59830dbf97d9813ad6",
+  "raw_results_sha256": "8be25c5e28370144a65d80dbfb12d4ee9178e96cfdb5cfc2e60a7dba7c69917c",
+  "presentation": "Actual user prompt, command output and agent-message excerpts reformatted for video. Pauses shortened. Setup and final call-to-action are editorial cards.",
+  "narration_status": "Noel cloned voice rendered through Qwen3-TTS on Quato.",
+  "source_verification": "Live scraper query succeeded. Independent browser verification blocked by site permission rejection. See agent report.",
+  "voice_wav_sha256": {
+    "0": "9aa91630a344827ba0dc82419e74a2a31930c7c0069efd1d9df56717663daf39",
+    "1": "57394a183ccf533b657cdb235fbbbc71ee2713c9c8767a1fda78cc22de87a5e0",
+    "2": "ecaff66b82304f9f99d531eba945139cda9e0fa0e0c30591fa1b4f46a7abe98d",
+    "3": "7be8afcfe80ccc0975266ff9c8ae574014d8ec43d479f540fb677112d88ec157",
+    "4": "52b7755de728deeacbf295c192d2de8b447a60c0ced208a35da96199815c7e22",
+    "5": "2097a9bdc6648c5deb58e408b6d57509c7568866f5c0b835d27459165121873f",
+    "6": "92f86616e6d6ce68fa8b84786b54e4cfdaf0d44ac830ef444cea95be5ca9ac02"
+  }
+}
