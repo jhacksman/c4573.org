@@ -59,6 +59,7 @@ PRONOUNCE = {
     r'\bOpenAI\b': 'Open A.I.', r'\bUBI\b': 'U.B.I.',
     r'\bFTL\b': 'F.T.L.', r'\bGPU\b': 'G.P.U.', r'\bGPUs\b': 'G.P.U.s',
     r'\bAGI\b': 'A.G.I.', r'\bBCE\b': 'B.C.E.', r'\bID\b': 'I.D.',
+    r'\bEA\b': 'E.A.',
     # Slashed faction names: read as the community says them, not as "d slash acc".
     r'\bd/acc\b': 'dee-ack', r'\be/acc\b': 'ee-ack',
     r'\boffense/defense\b': 'offense-defense',
