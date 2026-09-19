@@ -96,3 +96,13 @@ Run long renders under `screen -dmS c4573-fry ...` and read the log; don't poll.
   53 min total for 22.8 min of audio. 14 segments re-rendered, 7 kept with residual pace flags
   — the same "that is just the voice's delivery of that text" pattern as before.
 - Output measured -16.4 LUFS integrated, true peak -1.6 dBFS, no internal silence >= 1.5 s.
+- **The WAV cache is keyed by segment index only, not by text.** Editing the post and re-running
+  will happily splice old audio into new positions. `rm -rf /tmp/<slug>-fry` before any re-render
+  that follows a text change; only use the cache to resume an interrupted run of identical text.
+- **Two full renders of this post put the pace at 2.376 and 2.357 w/s** (3,255 words / 1,370 s
+  and 3,311 words / 1,405 s). Treat ~2.36 w/s as the planning figure for this kind of essay.
+- Parentheticals like `(!!)` inside a quotation are dropped silently rather than garbled — safe
+  to leave in the prose.
+- **Spot-check with `--model small.en`, not `base.en`.** base.en mangled "aggression" into
+  "Jian" and "weighted" into "waited" on clean audio; small.en transcribed both correctly.
+  Do not re-render a segment on the strength of a base.en diff alone.
