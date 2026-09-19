@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>d/acc Has a Build Order — c4573.org</title>
+  <meta name="description" content="Every faction in the acceleration argument has an answer to how fast. Only one has an answer to what first. Where d/acc came from, what actually backs it, and why a build order beats a mood.">
+  <meta property="og:title" content="d/acc Has a Build Order">
+  <meta property="og:description" content="Every faction in the acceleration argument has an answer to how fast. Only one has an answer to what first. Where d/acc came from, what actually backs it, and why a build order beats a mood.">
+  <meta property="og:url" content="https://c4573.org/blog/dacc-has-a-build-order.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://c4573.org/blog/dacc-has-a-build-order.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-body { max-width: 720px; margin: 0 auto; }
+    .blog-body h2 { margin-top: 2.5rem; margin-bottom: 1rem; color: var(--green); font-size: var(--font-size-xl); }
+    .blog-body h3 { margin-top: 2rem; margin-bottom: 0.75rem; color: var(--orange); }
+    .blog-body p { margin-bottom: 1.25rem; color: var(--text); }
+    .blog-body blockquote { border-left: 3px solid var(--green); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-muted); font-style: italic; }
+    .blog-body ul, .blog-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .blog-body li { margin-bottom: 0.5rem; }
+    .blog-meta { color: var(--text-muted); margin-bottom: 2rem; }
+    .blog-title { font-size: clamp(24px, 4vw, 38px); line-height: 1.2; margin-bottom: 0.5rem; }
+
+    /* Audio Player */
+    .audio-player-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      margin: 0 -1.25rem;
+      padding: 0 1.25rem;
+    }
+    .audio-player {
+      background: var(--surface, #1a1a2e);
+      border: 1px solid var(--border, #333);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      transition: border-radius 0.2s, border-color 0.2s;
+    }
+    .audio-player-wrapper.stuck .audio-player {
+      border-radius: 0 0 8px 8px;
+      border-color: var(--green, #00ff41);
+      box-shadow: 0 2px 12px rgba(0, 255, 65, 0.1);
+    }
+    .audio-player audio {
+      flex: 1;
+      min-width: 200px;
+      height: 36px;
+    }
+    .speed-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .speed-controls span {
+      color: var(--text-muted, #888);
+      font-size: 0.8rem;
+      margin-right: 0.25rem;
+    }
+    .speed-btn {
+      background: var(--bg, #0d0d1a);
+      color: var(--text-muted, #888);
+      border: 1px solid var(--border, #333);
+      border-radius: 4px;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: var(--font-mono, monospace);
+    }
+    .speed-btn:hover {
+      border-color: var(--green, #00ff41);
+      color: var(--green, #00ff41);
+    }
+    .speed-btn.active {
+      background: var(--green, #00ff41);
+      color: var(--bg, #0d0d1a);
+      border-color: var(--green, #00ff41);
+      font-weight: 700;
+    }
+    .audio-label {
+      color: var(--text-muted, #888);
+      font-size: 0.8rem;
+      width: 100%;
+      margin-bottom: -0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">c4573.org</a>
+      <ul class="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://github.com/jhacksman/c4573.org">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 3rem;">
+    <div class="container blog-body">
+
+      <h1 class="blog-title">d/acc Has a Build Order</h1>
+      <p class="blog-meta">September 18, 2026 · c4573.org</p>
+
+      <!-- Audio Player -->
+      <div class="audio-player-wrapper" id="audioWrapper">
+        <div class="audio-player">
+          <div class="audio-label">🔊 Listen to this post</div>
+          <audio id="blogAudio" src="../audio/dacc-has-a-build-order.mp3" preload="metadata" controls></audio>
+          <div class="speed-controls">
+            <span>Speed:</span>
+            <button class="speed-btn active" onclick="setSpeed(1)">1×</button>
+            <button class="speed-btn" onclick="setSpeed(1.25)">1.25×</button>
+            <button class="speed-btn" onclick="setSpeed(1.5)">1.5×</button>
+            <button class="speed-btn" onclick="setSpeed(2)">2×</button>
+            <button class="speed-btn" onclick="setSpeed(2.5)">2.5×</button>
+            <button class="speed-btn" onclick="setSpeed(3)">3×</button>
+          </div>
+        </div>
+      </div>
+
+      <p>Four camps are arguing about the future of technology and all four of them are answering the wrong question.</p>
+
+      <p>The effective accelerationists say build everything, as fast as possible, because the universe is on our side. The AI-safety camp says stop, or at least slow down, because the machine may kill everyone. Effective altruism says follow the expected value, which lately means treating frontier AI as the dominant risk to the species. The degrowth left says the project itself is the problem and the honest move is to build less.</p>
+
+      <p>Every one of those is an answer to &quot;how fast.&quot; Only one framework in this argument answers the question that actually determines outcomes: what do we build first, and why that.</p>
+
+      <p>That framework is d/acc. It is not quite three years old, it came out of a blog post rather than an institute, and it is the only position here that hands a working engineer a ranked list. We are going to do this with citations, because two of the claims usually attached to it do not survive checking, and we will say where we think its author is wrong.</p>
+
+      <h2>Where the Term Came From</h2>
+
+      <p>On November 27, 2023, Vitalik Buterin published an essay called &quot;My techno-optimism.&quot; It landed in a specific moment: Andreessen had put out the techno-optimist manifesto the month before, and the OpenAI board had just tried and failed to fire Sam Altman. One side was arguing that markets plus technology equals utopia. The other was arguing that five people on a nonprofit board should hold the emergency brake for the species. Neither side was discussing what to build.</p>
+
+      <p>Buterin rejected the axis itself. The anti-technology view, in his summary, is &quot;safety behind, dystopia ahead.&quot; The accelerationist view is &quot;dangers behind, utopia ahead.&quot; His own: &quot;dangers behind, but multiple paths forward ahead: some good, some bad.&quot; And the sentence that does the work: &quot;I think that not just magnitude but also direction matters.&quot;</p>
+
+      <p>Then he named the direction. &quot;The &#x27;d&#x27; here can stand for many things; particularly, defense, decentralization, democracy and differential. First, think of it about defense, and then we can see how this ties into the other interpretations.&quot;</p>
+
+      <p>Thirteen months later, on January 5, 2025, he published &quot;d/acc: one year later&quot; and compressed it to one line: &quot;decentralized and democratic differential defensive acceleration. Build technologies that shift the offense/defense balance toward defense, and do so in a way that does not rely on handing over more power to centralized authorities.&quot;</p>
+
+      <p>Both halves are load-bearing, and he says why: &quot;any kind of decentralized, democratic or liberal political structure thrives best when defense is easy, and suffers the most challenge when defense is hard.&quot; When defending yourself is cheap, you get to be free. When it is expensive, you rent protection from whoever is strongest, and that arrangement has a name and a thousand years of history. His gloss: defense &quot;like in democratic Switzerland and historically quasi-anarchist Zomia, not like the lords and castles of medieval feudalism.&quot;</p>
+
+      <p>Note which of the four d&#x27;s he puts up front, and which one is doing the labor. He leads with defense because defense is legible. The machinery underneath is differential: defense is the criterion, differential development is the method.</p>
+
+      <h2>Decentralize, Encrypt, Accelerate</h2>
+
+      <p>There is a second formulation in circulation, usually recited as three verbs: decentralize, encrypt, accelerate. If you met these ideas through crypto rather than through Buterin&#x27;s essays, that is probably the version you carry.</p>
+
+      <p>It is not the same thing. It is not Buterin&#x27;s four d&#x27;s, and we went looking for a named origin and did not find one — no manifesto, no canonical post, no author to credit. So we will describe it accurately: it is the cypherpunk distillation, a folk compression of a much older tradition, and it predates the d/acc label by decades.</p>
+
+      <p>That tradition has documents. Eric Hughes published &quot;A Cypherpunk&#x27;s Manifesto&quot; on March 9, 1993. &quot;We must defend our own privacy if we expect to have any.&quot; &quot;Cypherpunks write code.&quot; And the line that is pure offense-defense reasoning thirty years early: &quot;We know that software can&#x27;t be destroyed and that a widely dispersed system can&#x27;t be shut down.&quot;</p>
+
+      <p>Read that way it is compatible with d/acc rather than in tension with it. Encryption is the cleanest defense-favoring technology anyone has ever shipped — milliseconds to encrypt, geological time to break — and Buterin files cryptography under cyber defense and info defense himself.</p>
+
+      <p>The difference is scope. The cypherpunk version already knows what it is building: crypto, anonymity, code. d/acc generalizes the criterion to domains that have nothing to do with keys — indoor air, vaccine platforms, resilient supply chains, formal verification, the epistemics of a shared public square. Decentralize, encrypt, accelerate is the opening move, not the whole theory.</p>
+
+      <h2>&quot;Math-Backed&quot; Is the Wrong Compliment</h2>
+
+      <p>People who like d/acc sometimes call it math-backed. Be precise about what the structure actually is, because this audience checks.</p>
+
+      <p>The first pillar is differential technology development, and it is not Buterin&#x27;s idea. It is Nick Bostrom&#x27;s, from his 2002 paper on existential risks: &quot;Our focus should be on what I want to call differential technological development: trying to retard the implementation of dangerous technologies and accelerate implementation of beneficial technologies, especially those that ameliorate the hazards posed by other technologies.&quot; His worked example was nanotech, and it is the thesis in miniature: &quot;the desirable sequence would be that defense systems are deployed before offensive capabilities become available to many independent powers.&quot; Buterin cites that lineage himself, and says flatly that for an effective altruist, d/acc &quot;is a re-branding of the effective-altruist idea of differential technology development, though with a greater emphasis on liberal and democratic values.&quot;</p>
+
+      <p>The second pillar is from international relations: Robert Jervis, &quot;Cooperation Under the Security Dilemma,&quot; World Politics, volume 30, number 2, January 1978. Jervis argued that two variables decide whether rivals can cooperate without a hegemon — whether offense or defense holds the advantage, and whether an offensive posture can be told apart from a defensive one. The habitable world is the one where defense is cheap and defensive preparations are visibly not threats.</p>
+
+      <p>That is a real intellectual spine, and it is not a theorem. There is no proof, and the offense-defense balance is contested inside the field that invented it. Buterin concedes the classification problem himself: nuclear weapons are offense-favoring, nuclear power is neutral, and some technologies sit on both sides depending on the time horizon. Ambiguity at the edges, he argues, is an invitation to sharpen the principle rather than an argument against it. Correct, and still not math.</p>
+
+      <p>So here is the stronger version of the compliment, which happens to be entirely true. d/acc is the only framework in this argument that specifies what to build first and why. Everything else supplies a throttle setting. This supplies a sequence — and a sequence can be argued with, tested against outcomes, and handed to somebody with a soldering iron.</p>
+
+      <h2>Mozi Was Running This Play 2,400 Years Ago</h2>
+
+      <p>The Warring States period in China was what the name suggests: a few centuries of states trying to eat each other. Into that, in roughly the middle to late fifth century BCE, walks Mozi — Mo Di, Master Mo. The Stanford Encyclopedia of Philosophy notes that early texts depict him as a master craftsman and military engineer, and that he was probably an artisan and very likely a carpenter. A tradesman with a doctrine.</p>
+
+      <p>One of his school&#x27;s ten core doctrines is usually translated &quot;Condemning Aggression&quot;: military aggression is wrong for precisely the reasons theft and murder are wrong. But they were not pacifists. &quot;Far from being pacifists,&quot; the encyclopedia notes, &quot;they saw a strong defense force as crucial to state survival.&quot; What they did with that should stop you. &quot;Some Mohists became specialists in defensive warfare, rushing to the aid of cities and states under threat of attack.&quot; And the last quarter of the surviving Mozi is not philosophy at all. It is engineering documentation: defense tactics and siege fortification.</p>
+
+      <p>Engineers with an ethic, who would help you hold a wall and would not help you breach one. That is differential technological development, executed with hand tools, twenty-four centuries before it had a name.</p>
+
+      <p>Now the honest part, because this is where a good argument gets ruined by a bad citation. We searched both d/acc essays. Neither mentions Mozi, the Mohists, or any Chinese philosopher. Not once. The parallel above is ours, drawn because we think it is illuminating, not because anyone in this literature claimed it as an influence. If someone tells you d/acc descends from Mohism, they are making that up.</p>
+
+      <p>What is true is stranger. Buterin has publicly connected Mozi to a different movement entirely: effective altruism. In remarks we could only locate through crypto-press paraphrase rather than the original post, he suggested Mozi came close to being an original effective altruist — the global-health wing, not the AI-risk wing — on two commitments: universal love, and the efficient use of limited resources. Others have made the Mohists-as-early-EAs comparison independently. Discount it slightly for the sourcing.</p>
+
+      <p>And the parallel has a hard limit we are not going to hide. Mohist political doctrine was centralized: &quot;Identifying Upward,&quot; a bureaucratic state under a virtuous monarch, everyone aligning their judgments to their superiors. Mozi is an ancestor of the defensive half of this framework and the impartial-benefit half. He is not an ancestor of the decentralized half.</p>
+
+      <h2>The Case for e/acc, Made Properly</h2>
+
+      <p>Effective accelerationism was formalized in mid-2022: the original post came from the account known as Swarthy, and the notes that gave the movement its physics came from Beff Jezos, with bayeslord and creatine_cycle credited as coauthors. In December 2023, Forbes identified the Jezos persona as Guillaume Verdon, a former Google quantum computing researcher who founded the hardware startup Extropic. He has since appeared publicly under both names, so that much is settled.</p>
+
+      <p>The argument deserves better than the caricature, because it is a physics argument. Life, Jezos writes, emerged from dissipative adaptation — matter reconfiguring itself to extract free energy from its environment, which he traces to the Jarzynski-Crooks fluctuation theorem. The universe therefore &quot;exponentially favors&quot; futures where matter captures more free energy and produces more entropy. Evolution is a special case, intelligence is a faster-timescale specialization of the same principle, and &quot;capitalism is hence a form of intelligence.&quot; Then Fisher&#x27;s fundamental theorem of natural selection carries the politics: improvement in fitness scales with variance in fitness, so suppressing variance through regulation makes civilization less able to respond to anything.</p>
+
+      <p>And then the strongest line in the document, which we agree with: &quot;top-down control is not fault-tolerant in its operation to corruption of root nodes in the hierarchy.&quot; Central planning is not primarily a moral failure. It is an information failure, and it degrades exactly where you cannot afford it.</p>
+
+      <p>Here is where it collapses. Thermodynamics does not rank. A vaccine platform and an engineered pathogen both dissipate free energy; both are configurations of matter doing what the second law likes. The will of the universe has no opinion about which one you build on Tuesday morning. &quot;Stop fighting the thermodynamic will of the universe. You cannot stop the acceleration. You might as well embrace it. Accelerate.&quot; That is the document&#x27;s actual conclusion, and as a build order it is empty. It ranks nothing and forbids nothing.</p>
+
+      <p>The second problem is a stated commitment rather than an oversight: &quot;e/acc has no particular allegiance to the biological substrate for intelligence and life.&quot; As metaphysics that is a position a person can hold. As an engineering priority it is disqualifying, because a framework indifferent to whether humans are still here cannot tell you which failure modes to spend Tuesday preventing. And the third is Buterin&#x27;s cleanest hit, aimed at the movement&#x27;s enthusiasm for military technology: treating frontier weapons development as a force for good &quot;seems to require believing that the dominant technological power will reliably be one of the good guys in most conflicts, now and in the future.&quot; That is a bet on one government&#x27;s permanent virtue, not a strategy.</p>
+
+      <h2>The Case for the Safety Camp, Made Properly</h2>
+
+      <p>Effective altruism and the AI-safety movement have a stronger claim here than their critics admit, starting with the fact that they supplied the spine. Differential technology development is their concept, and Buterin says so himself.</p>
+
+      <p>They also produced the best objection to d/acc, which Buterin published against himself. In his summary: &quot;it&#x27;s looking likely we have three year timelines until AGI, and another three years until superintelligence,&quot; so &quot;we can&#x27;t just accelerate the good, we also have to slow down the bad, and this means passing powerful regulations that may make powerful people upset.&quot; He concedes his first essay had no answer, then offers two: liability placed as close to end use as possible, and a global soft-pause capability able to cut worldwide compute by ninety to ninety-nine percent for a year or two, via trusted hardware that stops running unless it collects three signatures a week from international bodies.</p>
+
+      <p>The failure is structural, and it appears every time this camp converts a concern into policy: the answer collapses toward centralized control. Sam Altman, before the Senate on May 16, 2023, proposed &quot;a combination of licensing and testing requirements for development and release of AI models above a threshold of capabilities.&quot; Export controls carry a we-trust-our-side-not-yours logic by construction. Leopold Aschenbrenner proposes that the United States race to a decisive lead and then dictate terms to China. And the floor of the genre sits in the literature Buterin quotes: Bostrom&#x27;s scenario in which everyone wears a &quot;freedom tag&quot; that continuously uploads encrypted video and audio for machine interpretation in real time.</p>
+
+      <p>What the center never prices is the risk that the center is the problem. Buterin lists the receipts: gain-of-function research funded by major world governments as a plausible origin of the pandemic, and the World Health Organization declining for years to acknowledge that Covid was airborne. Centralized epistemology failed in the exact scenario it was built for.</p>
+
+      <p>None of this makes them villains. It makes them predictable. Give this camp everything it asks for and the artifact it produces is a chokepoint — and a chokepoint is offense-favoring by construction, because whoever captures it can aim it. The movement most afraid of concentrated power keeps proposing to concentrate power and hoping the right people hold it.</p>
+
+      <h2>What a Build Order Looks Like on a Workbench</h2>
+
+      <p>Now the operational part, which is the reason any of this matters. Buterin&#x27;s triage for AI risk is three lines long and it is a ranked list: &quot;It hacks our computers, cyber-defense. It creates a super-plague, bio-defense. It convinces us, either to trust it, or to distrust each other, info-defense.&quot;</p>
+
+      <p>Read that as a work queue and it tells you things. A formal verification toolchain outranks a bigger model. Sandboxing and egress monitoring outrank a policy document about responsible scaling. Clean indoor air outranks another benchmark. Tooling that lets a crowd annotate a claim in public outranks another centralized moderation regime. The 2025 follow-up lists what shipped in a year under that banner: verifiable open-source vaccines, healthy indoor air, Community Notes continuing to work, prediction markets maturing as an information tool, zero-knowledge proofs in government ID and social media, open-source imaging tools with medical uses.</p>
+
+      <p>The design principle underneath is the best sentence in either essay: focus on &quot;building mecha suits for the human mind, not on creating new forms of self-sustaining intelligent life.&quot; His preference for liability at the point of use over regulation at the point of training comes from the same instinct, because liability near end usage &quot;minimizes the risk that liability will lead to people taking actions that are harmful in other ways&quot; — closed source, know-your-customer regimes, surveillance, quiet collusion to lock whole regions out.</p>
+
+      <p>Here is why this framework survives contact with people who ship, and it is not a philosophical reason. Nearly every item on that list can be built by someone who is not a frontier lab. Air filtration is a fan, a filter and arithmetic. Open vaccine protocols are a publication. Sandboxing and audit logs are a weekend and some discipline. Local models run on hardware you can carry. You cannot build a licensing regime in a hackerspace. You can build almost every defensive technology in one, publish the plans, and have ten thousand people holding it by Friday.</p>
+
+      <h2>Where We Part Company</h2>
+
+      <p>This is not a fan letter, so: two disagreements.</p>
+
+      <p>The soft pause fails its own test. Industrial hardware that will not run without three signatures a week from international bodies is a global chokepoint with better ergonomics. By the framework&#x27;s own reasoning — the center is frequently the source of risk, defense should not require handing power to central authorities — that artifact turns offense-favoring the moment anyone captures it, and the history of export controls and national-security carve-outs suggests someone will. We think the artifact is the problem, not its governance.</p>
+
+      <p>The second is the hedge on open weights. He writes that there is &quot;a high chance that the most powerful models will be closed source anyway,&quot; and builds part of the liability argument on that assumption. As a prediction it may be right. As a plan it is unacceptable, because every defense built downstream of a closed frontier is built on a landlord&#x27;s terms. If the offense-defense balance is what determines whether people stay free, the weights are defensive infrastructure and they belong in public.</p>
+
+      <p>Which is our position. Open source is not charity and not idealism; it is the rational strategy, and the game theory is not subtle. A thousand independent teams auditing an artifact will find more failure modes than a hundred employees who need the release to ship. Not communism, not socialism — bootstrapism. The people who tell you to pull yourself up by your bootstraps are standing on the bootstraps. Open source is how you get them back.</p>
+
+      <h2>Pick the Direction</h2>
+
+      <p>The goal has not changed since the first post on this site: post-scarcity, and the end of the enormous share of human suffering that exists only because the things people need are still expensive. That requires speed, and every year of delay has a body count the people asking for delay never put on their own ledger.</p>
+
+      <p>But speed alone does not pick a destination. Speed in an offense-favoring world produces a warlord, because there the cheapest way to be safe is to be the biggest threat. Speed in a defense-favoring world produces something closer to Switzerland with better tools, where being left alone is affordable. Same throttle, different sequence, completely different century.</p>
+
+      <p>That is why d/acc beats the alternatives without needing to be a theorem. e/acc says floor it and offers no map. The safety camp hands you a map with one road, and the road ends at a checkpoint. d/acc says floor it in a direction: build the shield before the sword, publish the plans, refuse to create the chokepoints every other faction keeps offering as a favor.</p>
+
+      <p>Mozi had the doctrine right twenty-four centuries ago and lost anyway. His school could rush engineers to one besieged city at a time, carrying fortification plans by cart, and when the Mohists faded the manuals sat unread for two thousand years. We can copy a defensive design to every city on Earth before dinner. That is the genuinely new variable, and it is why the build order can win this time.</p>
+
+      <p>Accelerate. Pick the direction. The only way out is through.</p>
+
+      <hr style="border: 1px solid var(--border); margin: 3rem 0;">
+
+      <p style="color: var(--text-muted); font-size: var(--font-size-sm);">
+        c4573.org builds tools for people who want to own more of their stack and depend less on digital landlords. Defense-favoring technology is the kind you can build on a bench and publish before dinner. <a href="/#tools">Browse our tools</a> or <a href="/about.html">read more about us</a>.
+      </p>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 c4573.org — tools to break the caste system</p>
+    </div>
+  </footer>
+
+  <script>
+    function setSpeed(speed) {
+      const audio = document.getElementById('blogAudio');
+      audio.playbackRate = speed;
+      document.querySelectorAll('.speed-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+    const wrapper = document.getElementById('audioWrapper');
+    const observer = new IntersectionObserver(
+      ([e]) => wrapper.classList.toggle('stuck', e.intersectionRatio < 1),
+      { threshold: [1], rootMargin: '-1px 0px 0px 0px' }
+    );
+    observer.observe(wrapper);
+  </script>
+</body>
+</html>
