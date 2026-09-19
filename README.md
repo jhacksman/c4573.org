@@ -15,10 +15,14 @@ Static site (GitHub Pages, CNAME `c4573.org`). No build step.
 3. Render audio to `audio/<slug>.mp3` (see below).
 4. Commit locally. Publishing is the boss's call.
 
-If the post has a target runtime, budget **2.4 narrated words per second** (see the 2026-09-18
-lessons): a 20-minute read is ~2,900 words, not 3,100. "Narrated words" includes the `<h1>`
-and every `<h2>`, and excludes `<h3>` — the renderer only extracts `h1`, `h2` and `p`, so
-anything written as `<h3>`, a bare `<blockquote>` or a list is silently left out of the audio.
+If the post has a target runtime, budget **2.36 narrated words per second** for a
+quote-heavy essay (see the 2026-09-18 and 2026-09-19 lessons): a 20-minute read is ~2,830
+words, not 3,100. "Narrated words" includes the `<h1>` and every `<h2>`, and excludes `<h3>`
+— the renderer only extracts `h1`, `h2` and `p`, so anything written as `<h3>`, a bare
+`<blockquote>` or a list is silently left out of the audio.
+
+Write the per-section word budget **before** the prose and measure after every draft pass.
+Counting by eye does not work; see the 2026-09-19 lessons.
 
 ## Blog audio
 
@@ -106,3 +110,42 @@ Run long renders under `screen -dmS c4573-fry ...` and read the log; don't poll.
 - **Spot-check with `--model small.en`, not `base.en`.** base.en mangled "aggression" into
   "Jian" and "weighted" into "waited" on clean audio; small.en transcribed both correctly.
   Do not re-render a segment on the strength of a base.en diff alone.
+
+### Rewrite lessons (2026-09-19, d/acc rewrite, 68 segments / 2,833 words / 19:48)
+
+- **2.36 w/s held, third measurement.** 2,833 words in 1,188 s is 2.384 w/s end to end,
+  against 2.376 and 2.357 on the two previous full renders of this essay. Planning at 2.36
+  predicted 19:59 and produced 19:48. Treat 2.36 as settled for a quote-heavy essay.
+- **Prose written to a word budget overshoots 15–20% per pass.** Landing 2,830 took four
+  measured passes: 3,730 → 3,410 → 3,180 → 2,842 → 2,833. Every one of them felt like it was
+  already at target. Write the per-section budget table *before* the prose, then run the
+  h1+h2+p counter after each pass. Estimating paragraph length by eye does not work, and the
+  error compounds in one direction.
+- **Cutting is easier by paragraph than by word.** The shaving passes recovered ~15 words per
+  section; the cuts that actually moved the number were dropping whole passages — a
+  scene-setting tour, a standalone section folded into one paragraph, a caveat about material
+  the rewrite no longer contained.
+- **Dry-run `extract_segments()` before rendering.** Two seconds, and it reports the real
+  segment count, the post-substitution word count, uncovered acronyms, `..` artifacts, leftover
+  slashed terms, and the shortest segments. Cheaper than discovering any of it 40 minutes in.
+- **Em-dash splitting can strand a one-word segment.** `Mozi — Mo Di, Master Mo — turns up…`
+  split into a 1-word clip, `Mozi`. Headings at 3–5 words render cleanly, but use commas
+  instead of em-dashes wherever a split would leave fewer than three words.
+- **The cache wipe is not theoretical.** `/tmp/dacc-has-a-build-order-fry/` held 247 segment
+  WAVs from the previous render of *different* text. Wiped before this run; the whisper diff
+  then showed no contiguous block mismatches, which is the signature a splice would leave.
+  A clean whisper diff is the only proof the wipe worked.
+- **`segments.txt` contains the kind labels** (`title`, `para`, `heading`, `dash`), which are
+  not narrated. Strip them before diffing against a transcript or they show up as dozens of
+  spurious deletions.
+- **Timing, 2 GPUs, no cold start:** phase 1 (68 segments) ~38 min, two outlier passes ~7 min,
+  45 min total for 19.8 min of audio. Batch median 2.47 w/s over the 57 segments >= 12 words.
+  16 re-rendered, 7 kept with residual pace flags — the same "that is the voice's delivery of
+  that text" pattern as the two previous posts.
+- **small.en artifacts to ignore, confirmed again** (0.9323 similarity, zero real errors):
+  homophones (compliment/complement, weighted/waited, queue/cue), British orthography from
+  Fry's accent (defence, decentralised, favouring, judgements), and proper nouns the model does
+  not know — Mozi → "mosey", Buterin → "butrin", Qin Guli → "kin ghuli", Jarzynski-Crooks →
+  "jarsinski kruchs", Yudkowsky → "yudkovsky". The `dee-ack` / `ee-ack` substitutions come back
+  as "deac" / "e aq", which confirms they fired. None of this justifies a re-render.
+- Output measured -16.45 LUFS integrated, true peak -1.69 dBFS, no internal silence >= 1.5 s.
