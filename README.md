@@ -15,6 +15,11 @@ Static site (GitHub Pages, CNAME `c4573.org`). No build step.
 3. Render audio to `audio/<slug>.mp3` (see below).
 4. Commit locally. Publishing is the boss's call.
 
+If the post has a target runtime, budget **2.4 narrated words per second** (see the 2026-09-18
+lessons): a 20-minute read is ~2,900 words, not 3,100. "Narrated words" includes the `<h1>`
+and every `<h2>`, and excludes `<h3>` — the renderer only extracts `h1`, `h2` and `p`, so
+anything written as `<h3>`, a bare `<blockquote>` or a list is silently left out of the audio.
+
 ## Blog audio
 
 Convention: single-voice narration, 44.1 kHz mono 128k MP3, `loudnorm` to -16 LUFS,
@@ -70,3 +75,24 @@ Run long renders under `screen -dmS c4573-fry ...` and read the log; don't poll.
   2,000+ word post including the outlier passes.
 - Spot-check narration with `whisper <mp3> --model base.en --output_format txt` (the
   `/opt/homebrew/bin/whisper` CLI) and diff against `/tmp/<slug>-fry/segments.txt`.
+
+### Long-post lessons (2026-09-18, d/acc, 74 segments / 3,255 words / 22:50)
+
+- **Fry's pace is text-dependent; 2.61 w/s is not a constant.** This post ran 2.38 w/s end to
+  end (3,255 words in 1,370 s) against Chicken Little's 2.61. The difference is paragraph
+  shape: quote-dense 50–100 word paragraphs sit near 2.3–2.4, while the short punchy
+  paragraphs that ran 20–33% fast in the earlier post were rarer here. Budget 2.4 w/s for
+  quote-heavy essays. Predicting 20 minutes from 3,100 words produced 22:50 instead.
+- **Em-dash splitting inflates the segment count ~20%.** 60 HTML blocks became 74 TTS
+  segments. Estimate wall time from segments, not paragraphs.
+- **Slashed names need a PRONOUNCE entry or the voice reads the slash.** Added
+  `d/acc -> dee-ack`, `e/acc -> ee-ack`, `offense/defense -> offense-defense`, plus AGI, BCE,
+  ID. Use a hyphen in the replacement, never an em-dash, or the substitution creates a
+  spurious segment break.
+- **Probe a recurring term before committing to a render.** One `POST /speak` with a test
+  sentence plus `whisper` on the WAV costs ~30 s and confirmed "dee-ack" before spending an
+  hour on 74 segments. Worth it for any term that appears dozens of times.
+- **Timing, 2 GPUs, no cold start:** phase 1 (74 segments) ~37 min, two outlier passes ~16 min,
+  53 min total for 22.8 min of audio. 14 segments re-rendered, 7 kept with residual pace flags
+  — the same "that is just the voice's delivery of that text" pattern as before.
+- Output measured -16.4 LUFS integrated, true peak -1.6 dBFS, no internal silence >= 1.5 s.
