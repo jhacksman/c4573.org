@@ -1,0 +1,13 @@
+{
+  "duration_seconds": 408.958333,
+  "width": 1920,
+  "height": 1080,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "chapters": 15,
+  "decode": "passed",
+  "caption_timing": "passed",
+  "local_download_links": "passed",
+  "integrated_loudness_lufs": -16.2,
+  "true_peak_dbfs": -1.7
+}

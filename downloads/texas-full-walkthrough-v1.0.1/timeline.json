@@ -1,0 +1,122 @@
+[
+  {
+    "chapter": 1,
+    "title": "Start from the release ZIP",
+    "start": 0,
+    "duration": 24.875,
+    "type": "terminal",
+    "speed": 0.4
+  },
+  {
+    "chapter": 2,
+    "title": "Extract and check Python",
+    "start": 24.875,
+    "duration": 28.291666666666668,
+    "type": "terminal",
+    "speed": 0.4
+  },
+  {
+    "chapter": 3,
+    "title": "Install in a virtual environment",
+    "start": 53.16666666666667,
+    "duration": 28.375,
+    "type": "terminal",
+    "speed": 0.5799001468428782
+  },
+  {
+    "chapter": 4,
+    "title": "Check the version and command help",
+    "start": 81.54166666666667,
+    "duration": 24.541666666666668,
+    "type": "terminal",
+    "speed": 0.4
+  },
+  {
+    "chapter": 5,
+    "title": "Run a live owner search",
+    "start": 106.08333333333334,
+    "duration": 27.75,
+    "type": "terminal",
+    "speed": 0.4092732732732733
+  },
+  {
+    "chapter": 6,
+    "title": "Read the exported records",
+    "start": 133.83333333333334,
+    "duration": 26.791666666666668,
+    "type": "terminal",
+    "speed": 0.4
+  },
+  {
+    "chapter": 7,
+    "title": "Compare the returned parcels",
+    "start": 160.625,
+    "duration": 27.25,
+    "type": "terminal",
+    "speed": 0.4
+  },
+  {
+    "chapter": 8,
+    "title": "Look up one exact account",
+    "start": 187.875,
+    "duration": 27.666666666666668,
+    "type": "terminal",
+    "speed": 0.4676144578313251
+  },
+  {
+    "chapter": 9,
+    "title": "Follow the exported source link",
+    "start": 215.54166666666666,
+    "duration": 23.25,
+    "type": "terminal",
+    "speed": 0.4
+  },
+  {
+    "chapter": 10,
+    "title": "Verify against the county detail page",
+    "start": 238.79166666666666,
+    "duration": 27.958333333333332,
+    "type": "browser captures",
+    "speed": 1
+  },
+  {
+    "chapter": 11,
+    "title": "Locate the parcel on the county map",
+    "start": 266.75,
+    "duration": 27.25,
+    "type": "browser captures",
+    "speed": 1
+  },
+  {
+    "chapter": 12,
+    "title": "Search the official deed index",
+    "start": 294.0,
+    "duration": 28.791666666666668,
+    "type": "browser captures",
+    "speed": 1
+  },
+  {
+    "chapter": 13,
+    "title": "Review actual indexed instruments",
+    "start": 322.7916666666667,
+    "duration": 28.541666666666668,
+    "type": "browser captures",
+    "speed": 1
+  },
+  {
+    "chapter": 14,
+    "title": "Repeat with an address query",
+    "start": 351.33333333333337,
+    "duration": 27.75,
+    "type": "terminal",
+    "speed": 0.669309309309309
+  },
+  {
+    "chapter": 15,
+    "title": "Keep the exports and recognize input errors",
+    "start": 379.08333333333337,
+    "duration": 29.875,
+    "type": "terminal",
+    "speed": 0.4
+  }
+]

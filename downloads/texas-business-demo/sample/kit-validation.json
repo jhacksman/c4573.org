@@ -1,0 +1,33 @@
+{
+  "retrieved_at_utc": "2026-09-05T00:55:49.810384+00:00",
+  "scraper": "comptroller_franchise",
+  "query": "Space Exploration",
+  "count": 5,
+  "records": [
+    {
+      "entity_name": "SPACE EXPLORATION TECHNOLOGIES CORP.",
+      "taxpayer_number": "10106276719",
+      "mailing_zip": "90250"
+    },
+    {
+      "entity_name": "SPACE EXPLORATION RESEARCH GROUP",
+      "taxpayer_number": "32002278730",
+      "mailing_zip": "75752"
+    },
+    {
+      "entity_name": "SPACE EXPLORATION TECHNOLOGIES",
+      "taxpayer_number": "32018585318",
+      "mailing_zip": null
+    },
+    {
+      "entity_name": "SPACE EXPLORATION TECHNOLOGIES CORPORATION",
+      "taxpayer_number": "32062151348",
+      "mailing_zip": null
+    },
+    {
+      "entity_name": "SPACE EXPLORATION TECHNOLOGIES CORPORATION",
+      "taxpayer_number": "32062151413",
+      "mailing_zip": null
+    }
+  ]
+}

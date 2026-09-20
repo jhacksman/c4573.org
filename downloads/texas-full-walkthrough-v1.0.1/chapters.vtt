@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:24.875
+Start from the release ZIP
+
+00:00:24.875 --> 00:00:53.167
+Extract and check Python
+
+00:00:53.167 --> 00:01:21.542
+Install in a virtual environment
+
+00:01:21.542 --> 00:01:46.083
+Check the version and command help
+
+00:01:46.083 --> 00:02:13.833
+Run a live owner search
+
+00:02:13.833 --> 00:02:40.625
+Read the exported records
+
+00:02:40.625 --> 00:03:07.875
+Compare the returned parcels
+
+00:03:07.875 --> 00:03:35.542
+Look up one exact account
+
+00:03:35.542 --> 00:03:58.792
+Follow the exported source link
+
+00:03:58.792 --> 00:04:26.750
+Verify against the county detail page
+
+00:04:26.750 --> 00:04:54.000
+Locate the parcel on the county map
+
+00:04:54.000 --> 00:05:22.792
+Search the official deed index
+
+00:05:22.792 --> 00:05:51.333
+Review actual indexed instruments
+
+00:05:51.333 --> 00:06:19.083
+Repeat with an address query
+
+00:06:19.083 --> 00:06:48.958
+Keep the exports and recognize input errors

@@ -1,0 +1,343 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.960
+Let's work through a real Cameron County property search with Texas Scraper Kit,
+
+00:00:03.960 --> 00:00:08.420
+version one point zero point one. We'll start from the release zip, install
+
+00:00:08.420 --> 00:00:12.560
+it, query the live county source, and inspect the files it produces.
+
+00:00:12.560 --> 00:00:16.060
+Then we'll follow a parcel into the official county website, locate it on
+
+00:00:16.060 --> 00:00:18.860
+the map, and search the separate deed index.
+
+00:00:18.860 --> 00:00:21.920
+The terminal commands and their output were captured from this run.
+
+00:00:21.920 --> 00:00:24.075
+Download the companion commands to follow along.
+
+00:00:24.875 --> 00:00:29.015
+First, extract the release archive and change into its folder.
+
+00:00:29.015 --> 00:00:32.795
+This walkthrough uses a Mac terminal and Python three.
+
+00:00:32.795 --> 00:00:37.195
+The version check confirms which Python interpreter will create our environment.
+
+00:00:37.195 --> 00:00:41.135
+Keep the archive and its checksum together: the previous check verified that this
+
+00:00:41.135 --> 00:00:45.375
+file matches the supplied release checksum. That checks the archive's integrity.
+
+00:00:45.375 --> 00:00:48.755
+If you have a different release, confirm its version before comparing your output
+
+00:00:48.755 --> 00:00:52.367
+with this recording, because commands and county integrations can change.
+
+00:00:53.167 --> 00:00:58.367
+Create a virtual environment inside the extracted project, then activate it.
+
+00:00:58.367 --> 00:01:01.407
+This gives the kit its own Python dependencies.
+
+00:01:01.407 --> 00:01:05.387
+The install command installs the package from this folder and downloads the dependencies
+
+00:01:05.387 --> 00:01:08.727
+it needs, so this step requires internet access.
+
+00:01:08.727 --> 00:01:11.427
+Wait for installation to finish before continuing.
+
+00:01:11.427 --> 00:01:14.627
+The environment name appears in the prompt after activation.
+
+00:01:14.627 --> 00:01:18.267
+If you open a new terminal later, return to this folder and activate
+
+00:01:18.267 --> 00:01:20.742
+the same environment again before running the kit.
+
+00:01:21.542 --> 00:01:25.822
+Now check the installed command's version, and open the help for property search.
+
+00:01:25.822 --> 00:01:27.982
+This is the actual command line interface.
+
+00:01:27.982 --> 00:01:31.882
+The county option chooses Cameron. Owner searches by name, account looks up a
+
+00:01:31.882 --> 00:01:35.502
+specific identifier, and address searches the source's address field.
+
+00:01:35.502 --> 00:01:37.882
+The limit controls how many results we request.
+
+00:01:37.882 --> 00:01:40.202
+Output writes those records to a file.
+
+00:01:40.202 --> 00:01:42.822
+You can pause here to read the available options, or copy the exact
+
+00:01:42.822 --> 00:01:45.283
+commands from the tutorial instead of retyping them.
+
+00:01:46.083 --> 00:01:51.083
+For our first query, choose Cameron County and put Space Exploration in quotes
+
+00:01:51.083 --> 00:01:55.103
+as the owner search. We ask for three records and write them to
+
+00:01:55.103 --> 00:02:00.043
+cameron dot json. This command contacts the live appraisal source; these records were
+
+00:02:00.043 --> 00:02:02.023
+not filled in by a demo script.
+
+00:02:02.023 --> 00:02:04.783
+The confirmation tells us that three results were written.
+
+00:02:04.783 --> 00:02:08.923
+Three is our demonstration limit, not a count of everything the company owns.
+
+00:02:08.923 --> 00:02:13.033
+A broader investigation would need more results and careful review of related names.
+
+00:02:13.833 --> 00:02:17.373
+Open the export with Python's built in formatting tool.
+
+00:02:17.373 --> 00:02:21.553
+Each object is a property record, with an account number, owner, address, tax
+
+00:02:21.553 --> 00:02:25.453
+year, values, and a source link. Some fields are null, and some numeric
+
+00:02:25.453 --> 00:02:30.513
+fields are zero. Don't interpret those automatically as confirmed facts about the property.
+
+00:02:30.513 --> 00:02:34.713
+The current export does not populate every detail available on the source page.
+
+00:02:34.713 --> 00:02:38.073
+Keep the raw file so you can revisit it, and verify any field
+
+00:02:38.073 --> 00:02:39.825
+that matters against the county record.
+
+00:02:40.625 --> 00:02:45.685
+This small Python command makes the three exported records easier to compare.
+
+00:02:45.685 --> 00:02:50.425
+It loads the same file and prints account, owner, address, and market value.
+
+00:02:50.425 --> 00:02:54.465
+We can see the returned parcel identifiers and the listed Space Exploration owner
+
+00:02:54.465 --> 00:02:58.005
+without scrolling through every field. This is a view of the data we
+
+00:02:58.005 --> 00:03:03.565
+just downloaded, not another network request. Market value here is an appraisal field.
+
+00:03:03.565 --> 00:03:06.165
+It does not tell us a purchase price, and the address field may
+
+00:03:06.165 --> 00:03:07.075
+be incomplete.
+
+00:03:07.875 --> 00:03:11.481
+Next, use the first account number for an exact lookup: four six zero
+
+00:03:11.481 --> 00:03:16.135
+three one two. Save that response separately as parcel dot json.
+
+00:03:16.135 --> 00:03:20.075
+This narrows our work to one record and preserves the broad search file.
+
+00:03:20.075 --> 00:03:23.275
+Inspect the legal description and the tax year along with the owner.
+
+00:03:23.275 --> 00:03:27.115
+The description identifies lot one, block one, in the Solar System Mast replat
+
+00:03:27.115 --> 00:03:31.835
+subdivision. Those identifiers will matter when checking other sources; a company name by
+
+00:03:31.835 --> 00:03:34.742
+itself does not establish that two records describe the same land.
+
+00:03:35.542 --> 00:03:39.202
+Before switching to the browser, print the parcel number, tax year, owner, and
+
+00:03:39.202 --> 00:03:41.602
+official source link from the exact lookup.
+
+00:03:41.602 --> 00:03:44.182
+That gives us a short checklist for the comparison.
+
+00:03:44.182 --> 00:03:47.262
+The link points to Cameron's property detail page for this account and the
+
+00:03:47.262 --> 00:03:50.582
+twenty twenty six tax year. Open that exact link instead of searching the
+
+00:03:50.582 --> 00:03:53.682
+web for a similar address. Keeping the account and year attached to your
+
+00:03:53.682 --> 00:03:57.222
+notes makes the result easier to reproduce and helps avoid mixing records from
+
+00:03:57.222 --> 00:03:57.992
+different years.
+
+00:03:58.792 --> 00:04:03.512
+On the official page, the account number and primary owner match our export.
+
+00:04:03.512 --> 00:04:07.312
+This is also where we can check details that the export leaves incomplete.
+
+00:04:07.312 --> 00:04:11.592
+For example, the county's land table lists acreage even though the exported acreage
+
+00:04:11.592 --> 00:04:15.052
+is zero. The page warns that twenty twenty six values are a work
+
+00:04:15.052 --> 00:04:18.292
+in progress, so don't present them as final.
+
+00:04:18.292 --> 00:04:21.312
+The appraisal page's deed history was empty when checked.
+
+00:04:21.312 --> 00:04:24.772
+That means we need the separate clerk's records for a deed search, not
+
+00:04:24.772 --> 00:04:25.950
+that no deeds exist.
+
+00:04:26.750 --> 00:04:29.950
+Open Maps and choose the county's geographic map.
+
+00:04:29.950 --> 00:04:34.350
+The close view outlines our selected parcel alongside neighboring lots.
+
+00:04:34.350 --> 00:04:39.010
+Zooming out puts that small parcel into context: the map shows nearby streets,
+
+00:04:39.010 --> 00:04:42.890
+Boca Chica Boulevard, and the Starbase area, including the Starfactory label.
+
+00:04:42.890 --> 00:04:46.010
+This is the county map with its displayed scale and attribution.
+
+00:04:46.010 --> 00:04:49.590
+It helps locate the record. It does not establish a new construction project
+
+00:04:49.590 --> 00:04:52.690
+or a recent purchase, and we haven't measured a distance to the launch
+
+00:04:52.690 --> 00:04:53.200
+site.
+
+00:04:54.000 --> 00:04:59.060
+For recorded instruments, go through Cameron County's real property and land records page.
+
+00:04:59.060 --> 00:05:03.780
+Follow its official public search link. In the property records search, enter Space
+
+00:05:03.780 --> 00:05:06.980
+Exploration and leave the index search selected.
+
+00:05:06.980 --> 00:05:10.740
+The portal searches indexed terms, so a broad company query can match different
+
+00:05:10.740 --> 00:05:14.760
+kinds of documents and different roles. Our search uses the date range displayed
+
+00:05:14.760 --> 00:05:18.260
+by the portal, through September second, twenty twenty six.
+
+00:05:18.260 --> 00:05:21.220
+This browser step is a manual follow up, separate from the kit's appraisal
+
+00:05:21.220 --> 00:05:21.992
+export.
+
+00:05:22.792 --> 00:05:26.792
+The live clerk search returned five hundred twenty five results.
+
+00:05:26.792 --> 00:05:30.892
+The table identifies the parties on each side, the document type, its recording
+
+00:05:30.892 --> 00:05:33.832
+date and number, and the legal description.
+
+00:05:33.832 --> 00:05:37.872
+The visible results include deeds and other instruments; a matching company name is
+
+00:05:37.872 --> 00:05:40.312
+not enough to call every row an acquisition.
+
+00:05:40.312 --> 00:05:43.972
+Check which party column contains the company, and compare the legal description to
+
+00:05:43.972 --> 00:05:47.692
+the parcel you are investigating. We have not established a deed match for
+
+00:05:47.692 --> 00:05:50.533
+account four six zero three one two in this walkthrough.
+
+00:05:51.333 --> 00:05:55.413
+Back in the terminal, let's repeat the workflow with an address search for
+
+00:05:55.413 --> 00:06:00.053
+Esperson. Save it to a new file so the owner query stays intact.
+
+00:06:00.053 --> 00:06:03.733
+The source returns three records, and the summary shows different owners from the
+
+00:06:03.733 --> 00:06:08.133
+company search. That is useful evidence of how broad address matching behaves.
+
+00:06:08.133 --> 00:06:11.453
+It also shows why you should inspect actual results instead of assuming that
+
+00:06:11.453 --> 00:06:14.913
+every property on a nearby street belongs to the same company.
+
+00:06:14.913 --> 00:06:18.283
+Adjust the query and review the resulting records for your own research.
+
+00:06:19.083 --> 00:06:23.003
+Finally, check that the three export files are present.
+
+00:06:23.003 --> 00:06:27.023
+Here's one simple input error to recognize: a limit of zero is rejected
+
+00:06:27.023 --> 00:06:29.743
+because the command requires at least one.
+
+00:06:29.743 --> 00:06:32.803
+Correct the argument and run your intended query.
+
+00:06:32.803 --> 00:06:36.223
+You now have a repeatable path from an installed release to live appraisal
+
+00:06:36.223 --> 00:06:40.363
+records, a saved export, and official source verification.
+
+00:06:40.363 --> 00:06:44.123
+The linked tutorial includes the exact commands, captions, and recording.
+
+00:06:44.123 --> 00:06:47.203
+Start with a small query, preserve the results, and follow the evidence before
+
+00:06:47.203 --> 00:06:48.158
+making a claim.

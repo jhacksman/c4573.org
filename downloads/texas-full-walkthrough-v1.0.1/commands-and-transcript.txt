@@ -1,0 +1,81 @@
+Texas Scraper Kit v1.0.1 — Cameron County full walkthrough
+Recorded 2026-09-04. Live data can change.
+Terminal: macOS / bash. Python 3.11+ required. Commands assume the ZIP and matching checksum are in the current directory.
+The free business sampler does not include the Cameron property command. This walkthrough uses the full kit release.
+
+EXACT RECORDED COMMANDS
+
+ls -lh texas-scraper-kit-v1.0.1.zip
+shasum -a 256 -c texas-scraper-kit-v1.0.1.zip.sha256
+
+unzip -q texas-scraper-kit-v1.0.1.zip
+cd texas-scraper-kit-v1.0.1
+python3 --version
+
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+
+texas-scrape --version
+texas-scrape property search --help
+
+texas-scrape property search --county cameron --owner "SPACE EXPLORATION" --limit 3 --output cameron.json
+
+python -m json.tool cameron.json
+
+python -c 'import json; rows=json.load(open("cameron.json")); print("ACCOUNT | OWNER | ADDRESS | MARKET VALUE"); [print(r["account_number"], r["owner_name"].strip(), r["street_address"].strip(), r["market_value"], sep=" | ") for r in rows]'
+
+texas-scrape property search --county cameron --account 460312 --limit 1 --output parcel.json
+python -m json.tool parcel.json
+
+python -c 'import json; r=json.load(open("parcel.json"))[0]; print("Parcel:", r["account_number"]); print("Tax year:", r["tax_year"]); print("Owner:", r["owner_name"].strip()); print("Official source:", r["raw_html_url"])'
+
+texas-scrape property search --county cameron --address "ESPERSON" --limit 3 --output esperson.json
+python -c 'import json; rows=json.load(open("esperson.json")); print("Returned", len(rows), "records"); [print(r["account_number"], r["owner_name"].strip(), r["street_address"].strip(), sep=" | ") for r in rows]'
+
+ls -lh cameron.json parcel.json esperson.json
+texas-scrape property search --county cameron --owner "SPACE EXPLORATION" --limit 0
+
+The final --limit 0 command deliberately demonstrates validation. Use --limit 3 for a real query.
+
+OFFICIAL BROWSER FOLLOW-UP
+https://cameron.prodigycad.com/property-detail/460312/2026
+Choose Maps > GIS Map.
+https://www.cameroncountytx.gov/county-clerk/cameron-county-clerk-real-property-land-records/
+Follow Public Access Portal - Official Public Search.
+https://cameron.tx.publicsearch.us/
+Property Records; Search Term: SPACE EXPLORATION; Search Index Only.
+Observed range: 01/01/1800 through 09/02/2026. Observed results: 525.
+This broad index search does not establish a deed match to parcel 460312.
+
+NARRATION TRANSCRIPT
+
+1. Let's work through a real Cameron County property search with Texas Scraper Kit, version one point zero point one. We'll start from the release zip, install it, query the live county source, and inspect the files it produces. Then we'll follow a parcel into the official county website, locate it on the map, and search the separate deed index. The terminal commands and their output were captured from this run. Download the companion commands to follow along.
+
+2. First, extract the release archive and change into its folder. This walkthrough uses a Mac terminal and Python three. The version check confirms which Python interpreter will create our environment. Keep the archive and its checksum together: the previous check verified that this file matches the supplied release checksum. That checks the archive's integrity. If you have a different release, confirm its version before comparing your output with this recording, because commands and county integrations can change.
+
+3. Create a virtual environment inside the extracted project, then activate it. This gives the kit its own Python dependencies. The install command installs the package from this folder and downloads the dependencies it needs, so this step requires internet access. Wait for installation to finish before continuing. The environment name appears in the prompt after activation. If you open a new terminal later, return to this folder and activate the same environment again before running the kit.
+
+4. Now check the installed command's version, and open the help for property search. This is the actual command line interface. The county option chooses Cameron. Owner searches by name, account looks up a specific identifier, and address searches the source's address field. The limit controls how many results we request. Output writes those records to a file. You can pause here to read the available options, or copy the exact commands from the tutorial instead of retyping them.
+
+5. For our first query, choose Cameron County and put Space Exploration in quotes as the owner search. We ask for three records and write them to cameron dot json. This command contacts the live appraisal source; these records were not filled in by a demo script. The confirmation tells us that three results were written. Three is our demonstration limit, not a count of everything the company owns. A broader investigation would need more results and careful review of related names.
+
+6. Open the export with Python's built in formatting tool. Each object is a property record, with an account number, owner, address, tax year, values, and a source link. Some fields are null, and some numeric fields are zero. Don't interpret those automatically as confirmed facts about the property. The current export does not populate every detail available on the source page. Keep the raw file so you can revisit it, and verify any field that matters against the county record.
+
+7. This small Python command makes the three exported records easier to compare. It loads the same file and prints account, owner, address, and market value. We can see the returned parcel identifiers and the listed Space Exploration owner without scrolling through every field. This is a view of the data we just downloaded, not another network request. Market value here is an appraisal field. It does not tell us a purchase price, and the address field may be incomplete.
+
+8. Next, use the first account number for an exact lookup: four six zero three one two. Save that response separately as parcel dot json. This narrows our work to one record and preserves the broad search file. Inspect the legal description and the tax year along with the owner. The description identifies lot one, block one, in the Solar System Mast replat subdivision. Those identifiers will matter when checking other sources; a company name by itself does not establish that two records describe the same land.
+
+9. Before switching to the browser, print the parcel number, tax year, owner, and official source link from the exact lookup. That gives us a short checklist for the comparison. The link points to Cameron's property detail page for this account and the twenty twenty six tax year. Open that exact link instead of searching the web for a similar address. Keeping the account and year attached to your notes makes the result easier to reproduce and helps avoid mixing records from different years.
+
+10. On the official page, the account number and primary owner match our export. This is also where we can check details that the export leaves incomplete. For example, the county's land table lists acreage even though the exported acreage is zero. The page warns that twenty twenty six values are a work in progress, so don't present them as final. The appraisal page's deed history was empty when checked. That means we need the separate clerk's records for a deed search, not that no deeds exist.
+
+11. Open Maps and choose the county's geographic map. The close view outlines our selected parcel alongside neighboring lots. Zooming out puts that small parcel into context: the map shows nearby streets, Boca Chica Boulevard, and the Starbase area, including the Starfactory label. This is the county map with its displayed scale and attribution. It helps locate the record. It does not establish a new construction project or a recent purchase, and we haven't measured a distance to the launch site.
+
+12. For recorded instruments, go through Cameron County's real property and land records page. Follow its official public search link. In the property records search, enter Space Exploration and leave the index search selected. The portal searches indexed terms, so a broad company query can match different kinds of documents and different roles. Our search uses the date range displayed by the portal, through September second, twenty twenty six. This browser step is a manual follow up, separate from the kit's appraisal export.
+
+13. The live clerk search returned five hundred twenty five results. The table identifies the parties on each side, the document type, its recording date and number, and the legal description. The visible results include deeds and other instruments; a matching company name is not enough to call every row an acquisition. Check which party column contains the company, and compare the legal description to the parcel you are investigating. We have not established a deed match for account four six zero three one two in this walkthrough.
+
+14. Back in the terminal, let's repeat the workflow with an address search for Esperson. Save it to a new file so the owner query stays intact. The source returns three records, and the summary shows different owners from the company search. That is useful evidence of how broad address matching behaves. It also shows why you should inspect actual results instead of assuming that every property on a nearby street belongs to the same company. Adjust the query and review the resulting records for your own research.
+
+15. Finally, check that the three export files are present. Here's one simple input error to recognize: a limit of zero is rejected because the command requires at least one. Correct the argument and run your intended query. You now have a repeatable path from an installed release to live appraisal records, a saved export, and official source verification. The linked tutorial includes the exact commands, captions, and recording. Start with a small query, preserve the results, and follow the evidence before making a claim.
