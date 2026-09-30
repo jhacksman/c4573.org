@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>c4573.org — Blog</title>
+    <link>https://c4573.org/blog/</link>
+    <description>Essays on technofeudalism, acceleration, and owning your tools.</description>
+    <language>en</language>
+    <atom:link href="https://c4573.org/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>d/acc Has a Build Order</title>
+      <link>https://c4573.org/blog/dacc-has-a-build-order.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/dacc-has-a-build-order.html</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Four camps argue about how fast while the intelligence layer gets built as rental property. Only one framework answers what to build first. Where d/acc came from, what actually backs it, and the strongest case against it.</description>
+    </item>
+    <item>
+      <title>Chicken Little Goes to Washington</title>
+      <link>https://c4573.org/blog/chicken-little-goes-to-washington.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/chicken-little-goes-to-washington.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Eliezer Yudkowsky spent years insisting that artificial intelligence would kill everyone. Bernie Sanders has now turned the fable into a federal agency, a permanent global ban, corporate dissolution, and twenty years in prison.</description>
+    </item>
+    <item>
+      <title>Research property near SpaceX’s Starbase with Texas public records</title>
+      <link>https://c4573.org/blog/spacex-starbase-property-records.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/spacex-starbase-property-records.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
+      <description>A runnable Python example, dated CSV/JSON output, and a narrated Cameron County property demo. No account or dependencies.</description>
+    </item>
+    <item>
+      <title>The Right Argument, the Wrong Messenger</title>
+      <link>https://c4573.org/blog/right-argument-wrong-messenger.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/right-argument-wrong-messenger.html</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Zuckerberg wrote the strongest open-source argument a frontier CEO has ever put on paper. It is an argument against its own author. Concentration is the risk — which is exactly why "trust me, I'll distribute it" is the danger wearing a friendly face.</description>
+    </item>
+    <item>
+      <title>Schmidt Was Right</title>
+      <link>https://c4573.org/blog/schmidt-was-right.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/schmidt-was-right.html</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+      <description>Eric Schmidt got booed for fifteen minutes at a commencement. The argument under the rocket ship line was correct. The boos mechanically produce the worst version of the transition.</description>
+    </item>
+    <item>
+      <title>The Moratorium Is a Concession Speech</title>
+      <link>https://c4573.org/blog/moratorium-concession-speech.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/moratorium-concession-speech.html</guid>
+      <pubDate>Wed, 25 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Sanders and AOC want to pause data center construction until Congress figures out AI. The intent is good. The game theory is fatal.</description>
+    </item>
+    <item>
+      <title>Software Was Never the Endpoint</title>
+      <link>https://c4573.org/blog/software-was-never-the-endpoint.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/software-was-never-the-endpoint.html</guid>
+      <pubDate>Wed, 18 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Intelligence is getting cheaper. The next step is applying it where scarcity still lives: the physical world. The only real question is who owns it when it gets there.</description>
+    </item>
+    <item>
+      <title>The Exposure Gap</title>
+      <link>https://c4573.org/blog/exposure-gap.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/exposure-gap.html</guid>
+      <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
+      <description>AI is theoretically capable of replacing 94% of tasks in Computer &amp;amp; Math jobs. It is covering 33% today. That gap is not reassurance — it is a timeline.</description>
+    </item>
+    <item>
+      <title>The Severance Protocol</title>
+      <link>https://c4573.org/blog/severance-protocol.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/severance-protocol.html</guid>
+      <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Six hundred and forty-two thousand tech workers laid off in a single year. One in four were explicitly told to "AI-driven restructuring." This is the protocol that replaces them.</description>
+    </item>
+    <item>
+      <title>The Helicopter and the Hike</title>
+      <link>https://c4573.org/blog/ai-math-terrance-tao.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/ai-math-terrance-tao.html</guid>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Terence Tao says AI is doing math now. Here's what he actually said, and why the tech press got it wrong.</description>
+    </item>
+    <item>
+      <title>Ghost GDP and the People Who Become the Ghosts</title>
+      <link>https://c4573.org/blog/ghost-gdp.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/ghost-gdp.html</guid>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
+      <description>A credible crisis scenario, translated from investor-speak into what it actually means.</description>
+    </item>
+    <item>
+      <title>The Elysium Thesis Is Right About the Problem and Wrong About the Endpoint</title>
+      <link>https://c4573.org/blog/elysium-thesis.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/elysium-thesis.html</guid>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <description>On AI, power concentration, 20-watt brains, and why science always wins.</description>
+    </item>
+    <item>
+      <title>You Can't Ban Math: AI, Data Centers, and the Fear Response</title>
+      <link>https://c4573.org/blog/cant-ban-math.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/cant-ban-math.html</guid>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Fear leads to bans. Bans lead to irrelevance. Reality requires building.</description>
+    </item>
+    <item>
+      <title>Texas Scraper Kit: 10 Verified Scrapers, 261 Beta Modules, $13.37.</title>
+      <link>https://c4573.org/blog/texas-scraper-kit-launch.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/texas-scraper-kit-launch.html</guid>
+      <pubDate>Mon, 16 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Announcing the Texas Scraper Kit — the first tool from c4573.org. Who it's for, what it does, and why it costs less than lunch.</description>
+    </item>
+    <item>
+      <title>Three Companies Control Commoditized Intelligence. Now What?</title>
+      <link>https://c4573.org/blog/three-companies.html</link>
+      <guid isPermaLink="true">https://c4573.org/blog/three-companies.html</guid>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 GMT</pubDate>
+      <description>On technofeudalism, escape velocity, and why the only way out is through.</description>
+    </item>
+  </channel>
+</rss>
