@@ -1,0 +1,31 @@
+THE PSYCHOLOGY OF DOOM
+Prepared September 30, 2026. Local draft; not published.
+
+Page: /blog/the-psychology-of-doom.html
+Audio: /audio/the-psychology-of-doom.mp3
+Hero and social image: /images/the-psychology-of-doom.jpg
+
+Search/social description:
+Why technological change feels like catastrophe, how fear becomes a toll booth, and how to build defenses people can own.
+
+Suggested announcement:
+Fear can build a useful defense. It can also build a toll booth. Our new essay examines loss aversion, status quo bias, negativity, availability, and perceived decline—and asks what a proposed response actually lets people own.
+
+Editorial grounding:
+Read all 15 preceding posts and the About page. The argument follows the archive's emphasis on ownership, open and inspectable tools, practical defenses, abundance that reaches people, and skepticism toward both doom rhetoric and corporate promises. Real displacement and control failures remain real costs. Cognitive bias is not used to dismiss risk. Optimistic forecasts face the same accountability standard.
+
+Research:
+Kahneman and Tversky (1979), Prospect Theory.
+Samuelson and Zeckhauser (1988), Status Quo Bias in Decision Making.
+Loss-aversion meta-analysis (2024), doi:10.1016/j.joep.2024.102740.
+Soroka, Fournier, and Nir (2019), Cross-national evidence of a negativity bias in psychophysiological reactions to news.
+Tversky and Kahneman (1973), Availability: A heuristic for judging frequency and probability.
+Mastroianni and Gilbert (2023), The illusion of moral decline.
+Primary-source links appear beside the claims in the article. The moral-decline finding is not generalized to every societal trend. No universal two-to-one loss-aversion coefficient is asserted. The incentives section explicitly presents an editorial argument.
+
+Assets:
+Hero artwork created with OpenAI ImageGen.
+Narration uses the site's existing local voice and renderer, with final narration text retained separately. Cached segments were reused only after an exact text match; changed segments were regenerated.
+
+Validation:
+The article preserves the existing template styling, navigation, footer, and player behavior. All local article links and assets resolve. Only the latest blog-index entry has the New badge. Final audio: 9:27, 44.1 kHz mono, 128 kbps MP3; complete decode passes. Renderer measured approximately -16.5 LUFS, with no internal silence gaps of 1.5 seconds or more. Four segments have modest pace variation after retries. Automated transcription spot checks of four new paragraphs found no major omissions; they are not a full listening review.

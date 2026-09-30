@@ -1,0 +1,175 @@
+{
+  "segments": [
+    {
+      "text": "The Psychology of Doom.",
+      "kind": "title"
+    },
+    {
+      "text": "A new tool arrives. Someone announces that it will destroy the thing that makes us human. The warning gets a microphone. The company selling access gets a valuation. The person who wants to build something useful gets told to wait.",
+      "kind": "para"
+    },
+    {
+      "text": "We have spent this blog naming the part of the A.I. transition that deserves suspicion: intelligence becoming rental property. In our first post, the problem was who owned the stack. In Ghost GDP, it was who captured the output. In Chicken Little Goes to Washington, it was what happened when a real control failure became an argument for a permanent gatekeeper.",
+      "kind": "para"
+    },
+    {
+      "text": "The same question runs underneath all three: what happens between feeling afraid and choosing a response? A warning can put a useful defense on a workbench. It can also put another lock on a door somebody else owns. Four cognitive patterns help explain why the second option can feel so much like protection.",
+      "kind": "para"
+    },
+    {
+      "text": "Loss Aversion: The Future Starts in Debt.",
+      "kind": "heading"
+    },
+    {
+      "text": "In prospect theory, Daniel Kahneman and Amos Tversky described choices in terms of gains and losses relative to a reference point. Losses can carry more weight than equivalent gains. A threatened familiar benefit may therefore feel more compelling than an unfamiliar opportunity.",
+      "kind": "para"
+    },
+    {
+      "text": "That fits technology debates remarkably well. You can picture the job, skill, or institution you might lose. The new capability has no memory attached to it yet. The loss has a face. The gain has a product demo.",
+      "kind": "para"
+    },
+    {
+      "text": "But the popular claim that losses hurt exactly twice as much is too neat. A meta-analysis of loss aversion in risky choices documents variation across contexts and methods. This is a pattern to examine, not a universal exchange rate for human feelings.",
+      "kind": "para"
+    },
+    {
+      "text": "Put the costs of delay on the same page as the costs of adoption. Ask who loses, who gains, when, and whether the people bearing the loss can share in the benefit. Calling a displaced worker biased does not pay their rent. Neither does handing their employer exclusive permission to use the capability that displaced them.",
+      "kind": "para"
+    },
+    {
+      "text": "Status Quo Bias: Familiar Is Not a Safety Certificate.",
+      "kind": "heading"
+    },
+    {
+      "text": "William Samuelson and Richard Zeckhauser's research on status quo bias found that framing an option as the existing arrangement can change how often people choose it. What is already here gets an advantage simply by occupying the default position.",
+      "kind": "para"
+    },
+    {
+      "text": "In a technology argument, the old workflow's harms often disappear into the background. The new workflow's harms become evidence against its existence. An error by a person is Tuesday; an error by a machine is a referendum on machines.",
+      "kind": "para"
+    },
+    {
+      "text": "Sometimes staying put is sensible. Switching has costs, and an untested replacement may be worse. The diagnostic question is whether familiarity is doing work that evidence should do. If both systems were proposed today, would you choose the current one?",
+      "kind": "para"
+    },
+    {
+      "text": "Try a bounded comparison: the same task, the same quality standard, and the same accounting for mistakes. Keep an exit route. A reversible trial gives you more information than a permanent argument about whether change is good. The trial should test ownership too: can you export the data, inspect the result, change the workflow, and keep operating if the vendor leaves?",
+      "kind": "para"
+    },
+    {
+      "text": "Negativity and Availability: The Headline Becomes the Odds.",
+      "kind": "heading"
+    },
+    {
+      "text": "Negativity bias helps explain why bad news grips us. Stuart Soroka, Patrick Fournier, and Lilach Nir studied physiological responses to news in seventeen countries and found an average stronger response to negative content, alongside substantial differences between individuals. That is evidence about attention and arousal, not proof that every audience prefers despair.",
+      "kind": "para"
+    },
+    {
+      "text": "A related mechanism is the availability heuristic: judging frequency or probability partly by how easily examples come to mind. A vivid failure is easy to retrieve. A thousand uneventful uses leave little trace.",
+      "kind": "para"
+    },
+    {
+      "text": "The combination is potent. Frightening examples attract attention, become easy to remember, and then feel representative. Replaying one incident can make it feel like a rising trend without adding a single observation.",
+      "kind": "para"
+    },
+    {
+      "text": "Ask for the denominator. How many attempts produced these failures? Compared with what alternative? Over what period? A failure can be serious and still be rare. A quiet success can be common and still be absent from your feed.",
+      "kind": "para"
+    },
+    {
+      "text": "Declinism: Yesterday Gets Better With Age.",
+      "kind": "heading"
+    },
+    {
+      "text": "Declinism is the conviction that the world is sliding downhill. One particularly useful piece of evidence concerns moral decline. Adam Mastroianni and Daniel Gilbert's research found a widespread, longstanding belief that people were becoming less moral, while repeated assessments of people's contemporaries did not show the corresponding deterioration.",
+      "kind": "para"
+    },
+    {
+      "text": "The authors propose a combination of biased exposure and biased memory: we encounter plenty of bad behavior today while negative memories of yesterday lose some of their force. The present faces a harsher examination than the past.",
+      "kind": "para"
+    },
+    {
+      "text": "The finding does not establish that every measure of society improves, or that every nostalgic person is mistaken. It concerns perceived morality. Extending it to every economic, environmental, or technological trend would repeat the very error we are trying to avoid.",
+      "kind": "para"
+    },
+    {
+      "text": "Compare the same measure across the same population and time span. Your childhood, your parents' stories, and today's global news feed are three different datasets.",
+      "kind": "para"
+    },
+    {
+      "text": "When Pessimism Gets a Business Model.",
+      "kind": "heading"
+    },
+    {
+      "text": "The next step is our argument about incentives, not a clinical diagnosis of anyone who disagrees with us. A frightening story can earn attention immediately. The patient work of measuring a failure rate has to wait for enough observations. If the audience rewards the warning before the forecast resolves, accuracy and success can become separate things.",
+      "kind": "para"
+    },
+    {
+      "text": "That is why pessimism can sound more serious than it is. A speaker lists everything that could fail and appears to have considered more than the person proposing a fix. But listing hazards is the beginning of engineering. Seriousness requires specifying the mechanism, testing the proposed defense, and accounting for what the defense itself costs.",
+      "kind": "para"
+    },
+    {
+      "text": "The institutional move matters more than the speaker's sincerity. A company can acknowledge a risk and propose a remedy that leaves it holding the only approved tool. A critic can oppose the company and still propose a licensing regime the company is best equipped to survive. Both routes can end at the same toll booth.",
+      "kind": "para"
+    },
+    {
+      "text": "We made the inverse case in The Right Argument, the Wrong Messenger: a promise of universal access does not distribute power when one firm retains control of the access. The glowing brochure and the warning siren deserve the same question. What does the recipient actually get to own?",
+      "kind": "para"
+    },
+    {
+      "text": "Give Predictions a Receipt.",
+      "kind": "heading"
+    },
+    {
+      "text": "These patterns do not prove that a frightening prediction is wrong. They explain why its emotional force can exceed its evidential strength. Optimistic claims deserve the same scrutiny. A cheerful demo can also become an available example, and an exciting future can hide a bill somebody else must pay.",
+      "kind": "para"
+    },
+    {
+      "text": "Here is a practical standard for both camps: write down the outcome, deadline, probability, mechanism, and evidence that would change your mind. Specify how you will recognize failure as well as success. Preserve the original forecast when you revise it.",
+      "kind": "para"
+    },
+    {
+      "text": "A deadline that quietly slides forward should change our assessment of the forecast. A warning followed by successful prevention needs a different assessment. Without a record, both can be repackaged as vindication.",
+      "kind": "para"
+    },
+    {
+      "text": "Then ask what the proposed response actually builds. Does it reduce the named harm? Does it improve the ability of ordinary people to inspect, test, repair, or leave a system? Or does it hand a permanent gatekeeper control over who gets to use the tools?",
+      "kind": "para"
+    },
+    {
+      "text": "For us, the constructive response is owned capability: open tools, inspectable systems, reproducible tests, and practical defenses people can operate themselves. Each still has to earn its keep. Openness does not magically remove risk; it changes who can investigate and respond.",
+      "kind": "para"
+    },
+    {
+      "text": "The goal is abundance that reaches people, rather than another spectacular productivity number above a locked gate. Use the best tools available today to build tools you can own tomorrow. Publish what works. Publish what fails. Give the next builder more than a prediction. Give them a working defense. The only way out is through.",
+      "kind": "para"
+    }
+  ],
+  "exact_text_reuse_indices": [
+    0,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ]
+}
