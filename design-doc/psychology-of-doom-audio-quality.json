@@ -1,12 +1,12 @@
 {
-  "pace": 2.4626564392410173,
+  "pace": 2.4246395806028835,
   "segments": {
     "0": {
       "attempts": [
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.478,
+          "dev": 0.455,
           "dur": 2.4,
           "file": "seg_00.try0.wav",
           "problems": [],
@@ -25,32 +25,32 @@
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": -0.139,
-          "dur": 13.98,
+          "cached": true,
+          "dev": -0.015,
+          "dur": 14.62,
           "file": "seg_01.try0.wav",
           "problems": [],
-          "wall": 44.0
+          "wall": 0.0
         }
       ],
-      "dur": 13.98,
+      "dur": 14.62,
       "idx": 1,
       "kept": 0,
       "ok": true,
       "problems": [],
       "rerendered": false,
-      "words": 40
+      "words": 36
     },
     "2": {
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": 0.0,
+          "cached": true,
+          "dev": -0.015,
           "dur": 24.77,
           "file": "seg_02.try0.wav",
           "problems": [],
-          "wall": 138.2
+          "wall": 0.0
         }
       ],
       "dur": 24.77,
@@ -65,28 +65,28 @@
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": -0.09,
-          "dur": 19.58,
+          "cached": true,
+          "dev": -0.085,
+          "dur": 13.58,
           "file": "seg_03.try0.wav",
           "problems": [],
-          "wall": 60.9
+          "wall": 0.0
         }
       ],
-      "dur": 19.58,
+      "dur": 13.58,
       "idx": 3,
       "kept": 0,
       "ok": true,
       "problems": [],
       "rerendered": false,
-      "words": 53
+      "words": 36
     },
     "4": {
       "attempts": [
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.492,
+          "dev": 0.469,
           "dur": 4.24,
           "file": "seg_04.try0.wav",
           "problems": [],
@@ -106,7 +106,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.035,
+          "dev": 0.02,
           "dur": 17.66,
           "file": "seg_05.try0.wav",
           "problems": [],
@@ -126,27 +126,27 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": -0.016,
-          "dur": 15.18,
+          "dev": -0.11,
+          "dur": 11.74,
           "file": "seg_06.try0.wav",
           "problems": [],
           "wall": 0.0
         }
       ],
-      "dur": 15.18,
+      "dur": 11.74,
       "idx": 6,
       "kept": 0,
       "ok": true,
       "problems": [],
       "rerendered": false,
-      "words": 38
+      "words": 32
     },
     "7": {
       "attempts": [
         {
           "attempt": 0,
           "cached": true,
-          "dev": -0.025,
+          "dev": -0.041,
           "dur": 16.62,
           "file": "seg_07.try0.wav",
           "problems": [],
@@ -165,12 +165,12 @@
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": -0.03,
+          "cached": true,
+          "dev": -0.045,
           "dur": 22.05,
           "file": "seg_08.try0.wav",
           "problems": [],
-          "wall": 114.9
+          "wall": 0.0
         }
       ],
       "dur": 22.05,
@@ -186,7 +186,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.16,
+          "dev": 0.142,
           "dur": 4.24,
           "file": "seg_09.try0.wav",
           "problems": [],
@@ -206,7 +206,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": -0.047,
+          "dev": -0.061,
           "dur": 15.1,
           "file": "seg_10.try0.wav",
           "problems": [],
@@ -226,7 +226,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": -0.016,
+          "dev": -0.031,
           "dur": 15.58,
           "file": "seg_11.try0.wav",
           "problems": [],
@@ -246,7 +246,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.092,
+          "dev": 0.075,
           "dur": 17.74,
           "file": "seg_12.try0.wav",
           "problems": [],
@@ -265,12 +265,12 @@
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": -0.058,
+          "cached": true,
+          "dev": -0.073,
           "dur": 23.33,
           "file": "seg_13.try0.wav",
           "problems": [],
-          "wall": 211.1
+          "wall": 0.0
         }
       ],
       "dur": 23.33,
@@ -286,7 +286,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.305,
+          "dev": 0.285,
           "dur": 4.24,
           "file": "seg_14.try0.wav",
           "problems": [],
@@ -306,35 +306,13 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.2,
+          "dev": 0.181,
           "dur": 25.33,
           "file": "seg_15.try0.wav",
           "problems": [
-            "PACE+20%"
+            "PACE+18%"
           ],
           "wall": 0.0
-        },
-        {
-          "attempt": 1,
-          "cached": false,
-          "dev": 0.219,
-          "dur": 25.73,
-          "file": "seg_15.try1.wav",
-          "problems": [
-            "PACE+22%"
-          ],
-          "wall": 140.1
-        },
-        {
-          "attempt": 2,
-          "cached": false,
-          "dev": 0.291,
-          "dur": 27.25,
-          "file": "seg_15.try2.wav",
-          "problems": [
-            "PACE+29%"
-          ],
-          "wall": 84.8
         }
       ],
       "dur": 25.33,
@@ -342,9 +320,9 @@
       "kept": 0,
       "ok": true,
       "problems": [
-        "PACE+20%"
+        "PACE+18%"
       ],
-      "rerendered": true,
+      "rerendered": false,
       "words": 52
     },
     "16": {
@@ -352,35 +330,13 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.175,
+          "dev": 0.156,
           "dur": 15.74,
           "file": "seg_16.try0.wav",
           "problems": [
-            "PACE+17%"
+            "PACE+16%"
           ],
           "wall": 0.0
-        },
-        {
-          "attempt": 1,
-          "cached": false,
-          "dev": 0.21,
-          "dur": 16.22,
-          "file": "seg_16.try1.wav",
-          "problems": [
-            "PACE+21%"
-          ],
-          "wall": 52.3
-        },
-        {
-          "attempt": 2,
-          "cached": false,
-          "dev": 0.192,
-          "dur": 15.98,
-          "file": "seg_16.try2.wav",
-          "problems": [
-            "PACE+19%"
-          ],
-          "wall": 50.9
         }
       ],
       "dur": 15.74,
@@ -388,9 +344,9 @@
       "kept": 0,
       "ok": true,
       "problems": [
-        "PACE+17%"
+        "PACE+16%"
       ],
-      "rerendered": true,
+      "rerendered": false,
       "words": 33
     },
     "17": {
@@ -398,7 +354,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.119,
+          "dev": 0.102,
           "dur": 14.54,
           "file": "seg_17.try0.wav",
           "problems": [],
@@ -418,7 +374,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.049,
+          "dev": 0.033,
           "dur": 16.62,
           "file": "seg_18.try0.wav",
           "problems": [],
@@ -438,7 +394,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.379,
+          "dev": 0.358,
           "dur": 3.36,
           "file": "seg_19.try0.wav",
           "problems": [],
@@ -458,53 +414,27 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.16,
-          "dur": 22.61,
+          "dev": 0.083,
+          "dur": 17.42,
           "file": "seg_20.try0.wav",
-          "problems": [
-            "PACE+16%"
-          ],
+          "problems": [],
           "wall": 0.0
-        },
-        {
-          "attempt": 1,
-          "cached": false,
-          "dev": 0.238,
-          "dur": 24.13,
-          "file": "seg_20.try1.wav",
-          "problems": [
-            "PACE+24%"
-          ],
-          "wall": 75.6
-        },
-        {
-          "attempt": 2,
-          "cached": false,
-          "dev": 0.189,
-          "dur": 23.17,
-          "file": "seg_20.try2.wav",
-          "problems": [
-            "PACE+19%"
-          ],
-          "wall": 124.6
         }
       ],
-      "dur": 22.61,
+      "dur": 17.42,
       "idx": 20,
       "kept": 0,
       "ok": true,
-      "problems": [
-        "PACE+16%"
-      ],
-      "rerendered": true,
-      "words": 48
+      "problems": [],
+      "rerendered": false,
+      "words": 39
     },
     "21": {
       "attempts": [
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.016,
+          "dev": 0.0,
           "dur": 15.26,
           "file": "seg_21.try0.wav",
           "problems": [],
@@ -524,7 +454,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.032,
+          "dev": 0.016,
           "dur": 17.18,
           "file": "seg_22.try0.wav",
           "problems": [],
@@ -544,7 +474,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.133,
+          "dev": 0.115,
           "dur": 11.5,
           "file": "seg_23.try0.wav",
           "problems": [],
@@ -563,12 +493,12 @@
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": 0.116,
+          "cached": true,
+          "dev": 0.099,
           "dur": 2.72,
           "file": "seg_24.try0.wav",
           "problems": [],
-          "wall": 122.9
+          "wall": 0.0
         }
       ],
       "dur": 2.72,
@@ -583,52 +513,52 @@
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": -0.048,
-          "dur": 21.65,
+          "cached": true,
+          "dev": -0.035,
+          "dur": 18.3,
           "file": "seg_25.try0.wav",
           "problems": [],
-          "wall": 267.4
+          "wall": 0.0
         }
       ],
-      "dur": 21.65,
+      "dur": 18.3,
       "idx": 25,
       "kept": 0,
       "ok": true,
       "problems": [],
       "rerendered": false,
-      "words": 56
+      "words": 46
     },
     "26": {
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": -0.027,
-          "dur": 21.73,
+          "cached": true,
+          "dev": 0.141,
+          "dur": 13.18,
           "file": "seg_26.try0.wav",
           "problems": [],
-          "wall": 192.1
+          "wall": 0.0
         }
       ],
-      "dur": 21.73,
+      "dur": 13.18,
       "idx": 26,
       "kept": 0,
       "ok": true,
       "problems": [],
       "rerendered": false,
-      "words": 55
+      "words": 28
     },
     "27": {
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": -0.116,
+          "cached": true,
+          "dev": -0.13,
           "dur": 19.74,
           "file": "seg_27.try0.wav",
           "problems": [],
-          "wall": 302.0
+          "wall": 0.0
         }
       ],
       "dur": 19.74,
@@ -643,12 +573,12 @@
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": -0.045,
+          "cached": true,
+          "dev": -0.059,
           "dur": 18.62,
           "file": "seg_28.try0.wav",
           "problems": [],
-          "wall": 252.2
+          "wall": 0.0
         }
       ],
       "dur": 18.62,
@@ -664,7 +594,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.724,
+          "dev": 0.697,
           "dur": 2.8,
           "file": "seg_29.try0.wav",
           "problems": [],
@@ -684,7 +614,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.024,
+          "dev": 0.008,
           "dur": 20.37,
           "file": "seg_30.try0.wav",
           "problems": [],
@@ -704,27 +634,27 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.053,
-          "dur": 17.1,
+          "dev": 0.071,
+          "dur": 14.14,
           "file": "seg_31.try0.wav",
           "problems": [],
           "wall": 0.0
         }
       ],
-      "dur": 17.1,
+      "dur": 14.14,
       "idx": 31,
       "kept": 0,
       "ok": true,
       "problems": [],
       "rerendered": false,
-      "words": 40
+      "words": 32
     },
     "32": {
       "attempts": [
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.064,
+          "dev": 0.047,
           "dur": 13.82,
           "file": "seg_32.try0.wav",
           "problems": [],
@@ -744,7 +674,7 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": -0.003,
+          "dev": -0.018,
           "dur": 18.22,
           "file": "seg_33.try0.wav",
           "problems": [],
@@ -764,66 +694,44 @@
         {
           "attempt": 0,
           "cached": true,
-          "dev": 0.152,
-          "dur": 19.18,
+          "dev": 0.384,
+          "dur": 11.42,
           "file": "seg_34.try0.wav",
           "problems": [
-            "PACE+15%"
+            "PACE+38%"
           ],
           "wall": 0.0
-        },
-        {
-          "attempt": 1,
-          "cached": false,
-          "dev": 0.262,
-          "dur": 21.01,
-          "file": "seg_34.try1.wav",
-          "problems": [
-            "PACE+26%"
-          ],
-          "wall": 119.2
-        },
-        {
-          "attempt": 2,
-          "cached": false,
-          "dev": 0.214,
-          "dur": 20.21,
-          "file": "seg_34.try2.wav",
-          "problems": [
-            "PACE+21%"
-          ],
-          "wall": 137.9
         }
       ],
-      "dur": 19.18,
+      "dur": 11.42,
       "idx": 34,
       "kept": 0,
       "ok": true,
       "problems": [
-        "PACE+15%"
+        "PACE+38%"
       ],
-      "rerendered": true,
-      "words": 41
+      "rerendered": false,
+      "words": 20
     },
     "35": {
       "attempts": [
         {
           "attempt": 0,
-          "cached": false,
-          "dev": -0.006,
-          "dur": 22.21,
+          "cached": true,
+          "dev": -0.135,
+          "dur": 14.62,
           "file": "seg_35.try0.wav",
           "problems": [],
-          "wall": 340.6
+          "wall": 0.0
         }
       ],
-      "dur": 22.21,
+      "dur": 14.62,
       "idx": 35,
       "kept": 0,
       "ok": true,
       "problems": [],
       "rerendered": false,
-      "words": 55
+      "words": 41
     }
   }
 }

@@ -1,12 +1,12 @@
 THE PSYCHOLOGY OF DOOM
-Prepared September 30, 2026. Local draft; not published.
+Prepared September 30, 2026. Publication authorized by the user.
 
 Page: /blog/the-psychology-of-doom.html
 Audio: /audio/the-psychology-of-doom.mp3
 Hero and social image: /images/the-psychology-of-doom.jpg
 
 Search/social description:
-Why technological change feels like catastrophe, how fear becomes a toll booth, and how to build defenses people can own.
+Why new technology scares us, who profits from the fear, and what we can build instead.
 
 Suggested announcement:
 Fear can build a useful defense. It can also build a toll booth. Our new essay examines loss aversion, status quo bias, negativity, availability, and perceived decline—and asks what a proposed response actually lets people own.
@@ -28,4 +28,4 @@ Hero artwork created with OpenAI ImageGen.
 Narration uses the site's existing local voice and renderer, with final narration text retained separately. Cached segments were reused only after an exact text match; changed segments were regenerated.
 
 Validation:
-The article preserves the existing template styling, navigation, footer, and player behavior. All local article links and assets resolve. Only the latest blog-index entry has the New badge. Final audio: 9:27, 44.1 kHz mono, 128 kbps MP3; complete decode passes. Renderer measured approximately -16.5 LUFS, with no internal silence gaps of 1.5 seconds or more. Four segments have modest pace variation after retries. Automated transcription spot checks of four new paragraphs found no major omissions; they are not a full listening review.
+No em dashes in the article or its new index entry. Navigation, styling, and audio-player behavior preserved. All local article links and assets resolve. Only the latest blog-index entry has the New badge. Narration source matches the final article: 1,222 words in 36 segments. Audio is about 8.7 minutes, 44.1 kHz mono, 128 kbps MP3; complete decode passes. Renderer measured -16.52 LUFS, with no internal silence gaps of 1.5 seconds or more. Three segments have slower delivery; no hard failures. Automated transcription spot checks of four revised paragraphs match the text, apart from ordinary punctuation and spelling differences.
