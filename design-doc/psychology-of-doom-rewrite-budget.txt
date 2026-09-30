@@ -1,0 +1,10 @@
+Three-section rewrite budget, set before drafting, September 30, 2026.
+Target: at least 20 minutes of finished narration, approximately 3,000 narrated words at the archive planning rate of 2.36 words/second. Measure actual audio before publishing. No silence padding or slowed playback to meet the requirement.
+
+1. Technology doomers, Socrates to AI: about 800 words.
+2. Apocalypse predictions: about 850 words. Two historical examples, 1524 flood panic and Millerites in 1844. Five modern examples, Population Bomb, Y2K, LHC, Camping, Maya calendar.
+3. Psychology, class, and an owned defense: about 1,350 words.
+Title and headings: about 30 words.
+Total planning budget: about 3,030 words.
+
+Exactly three h2 sections. Satire targets assertions, incentives, and institutional power, not a reader's dignity. The article invites readers to reconsider. Firm on facts, uncertainty, and real harms. Y2K was a real bug mitigated by work. Historical failed predictions cannot establish AI safety. Class argument concerns who bears delay and scarcity, not an invented demographic profile of AI critics. Match the archive's post-scarcity, ownership, defensive acceleration, and anti-technofeudalism ethos. No em dashes.

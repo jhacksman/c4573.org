@@ -1,737 +1,1414 @@
 {
-  "pace": 2.4246395806028835,
-  "segments": {
+  "duration_seconds": 1369.939592,
+  "runtime": "22:49",
+  "words": 3060,
+  "segments": 46,
+  "audio_sha256": "56b61f8e085996bc6ac0f69bf6519774a59703fed8cf98878d80385b0458d5cf",
+  "format": {
+    "sample_rate": 44100,
+    "channels": 1,
+    "bit_rate": 128000
+  },
+  "full_decode": "passed",
+  "loudness": {
+    "input_i": "-16.65",
+    "input_tp": "-1.92",
+    "input_lra": "3.10",
+    "input_thresh": "-26.99",
+    "output_i": "-16.02",
+    "output_tp": "-1.50",
+    "output_lra": "3.10",
+    "output_thresh": "-26.36",
+    "normalization_type": "dynamic",
+    "target_offset": "0.02"
+  },
+  "full_segment_asr_model": "Systran/faster-whisper-small.en, CPU int8",
+  "asr_similarity": 0.9886,
+  "asr": {
     "0": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.455,
-          "dur": 2.4,
-          "file": "seg_00.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 2.4,
-      "idx": 0,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 4
+      "sha256": "dfb81e9bfbefaba86e535bd57a9d6fa5cd6b187b3daff1d7f53ba654b07cd1f4",
+      "text": "The Psychology of Doom.",
+      "similarity": 1.0,
+      "differences": []
     },
     "1": {
-      "attempts": [
+      "sha256": "5a641f749d5fdc881e3c1e95cc465f60e929ccbe255a642cfaae2488ca85123d",
+      "text": "One, the new tool will ruin everything.",
+      "similarity": 0.9231,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.015,
-          "dur": 14.62,
-          "file": "seg_01.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "",
+          "heard": "one"
         }
-      ],
-      "dur": 14.62,
-      "idx": 1,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 36
+      ]
     },
     "2": {
-      "attempts": [
+      "sha256": "b81888caf842b20c42e92df1245b8ebfa0ffe6b02d379b827b646d347b0faddc",
+      "text": "The end of the world has an excellent business model, the deadline can fail, the explanation can change, and the customer can remain frightened enough to renew. Most businesses have to deliver something. This one can invoice you for a future that never arrived. Technology gives the business a fresh catalogue, writing, printing, the internet, artificial intelligence, new machinery, same announcement. has finally gone too far. Please subscribe for updates.",
+      "similarity": 0.9787,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.015,
-          "dur": 24.77,
-          "file": "seg_02.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "catalog",
+          "heard": "catalogue"
+        },
+        {
+          "expected": "humanity",
+          "heard": ""
         }
-      ],
-      "dur": 24.77,
-      "idx": 2,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 61
+      ]
     },
     "3": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.085,
-          "dur": 13.58,
-          "file": "seg_03.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 13.58,
-      "idx": 3,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 36
+      "sha256": "c8d12e362288d08eed7c00c0a4ca602f555c0905a4a511e069fc40436d79e548",
+      "text": "Start with Socrates, with one correction to the usual Internet version. In Plato's Phaedrus, Socrates recounts a story in which King Thamus criticizes writing, \"...people will rely on external marks instead of exercising memory and mistake possessing information for understanding it. This is a philosophical dialogue, not evidence that Socrates organized an anti-book pressure group. The objection is subtler than the meme, and part of it remains useful.",
+      "similarity": 1.0,
+      "differences": []
     },
     "4": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.469,
-          "dur": 4.24,
-          "file": "seg_04.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 4.24,
-      "idx": 4,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 7
+      "sha256": "7790611e6ef76c57672739b07f939309632440734d1173f2e4631c8a2d3d9e27",
+      "text": "You can copy an explanation without understanding it. A written page cannot answer your follow-up question. Those are limitations worth examining. The leap from a limitation to the ruin of the human mind is where the wheels come off. External memory also lets knowledge survive the person who learned it. Socrates' criticism reaches us because Plato wrote it down. The prosecution's case is being delivered by the defendant.",
+      "similarity": 1.0,
+      "differences": []
     },
     "5": {
-      "attempts": [
+      "sha256": "1498147e4918d4c85d121e17b1c1cb3e0c522acee9d017d82179146b67251e8d",
+      "text": "writing changes what we practice remembering. It also lets someone learn from a mind that stopped breathing centuries ago. We can inspect an argument, correct it, and hand the correction forward. The trade-off is real, the catastrophe does not follow. A tool can weaken one habit while expanding the work a person can do. The honest comparison counts both. Otherwise the diagnosis of intellectual decay becomes a complaint that nobody needs your preferred exercise anymore.",
+      "similarity": 0.9801,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.02,
-          "dur": 17.66,
-          "file": "seg_05.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "tradeoff",
+          "heard": "trade off"
         }
-      ],
-      "dur": 17.66,
-      "idx": 5,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 42
+      ]
     },
     "6": {
-      "attempts": [
+      "sha256": "56c7bcbe28435b690ef75f8c35952fb85540839b2e221b9e7b9a0e4b8f0e4dbd",
+      "text": "In 1492, Abbott Johannes Trithymius defended handwritten books in in praise of scribes. His concerns included the durability of parchment and the spiritual discipline of copying. Then his defense appeared in print in 1494. The University of Cologne's library describes the irony printing helped circulate the argument for handwriting. This wasn't a cartoon villain trying to ban every press. He valued a practice and feared what would disappear with it.",
+      "similarity": 0.9714,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.11,
-          "dur": 11.74,
-          "file": "seg_06.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "abbot",
+          "heard": "abbott"
+        },
+        {
+          "expected": "trithemius",
+          "heard": "trithymius"
         }
-      ],
-      "dur": 11.74,
-      "idx": 6,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 32
+      ]
     },
     "7": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.041,
-          "dur": 16.62,
-          "file": "seg_07.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 16.62,
-      "idx": 7,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 42
+      "sha256": "28faffa00ad9159efc17791a8e21b8f51836de189bceec961abfb0f2123a6b9f",
+      "text": "That distinction matters because institutions often confuse their method with their purpose. Preserving knowledge is a purpose. Having a monk reproduce every sentence by hand is a method. If a better method arrives, the purpose may flourish while the institution loses its position. To the person inside that institution these can feel like the same event. Civilization is in danger, announces the department whose services civilization has just learned to obtain elsewhere.",
+      "similarity": 1.0,
+      "differences": []
     },
     "8": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.045,
-          "dur": 22.05,
-          "file": "seg_08.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 22.05,
-      "idx": 8,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 56
+      "sha256": "76da2dbbf7c1db6925dfb75a2616038ec33c6a5bccd10b6b7a0f53bb5491a0ca",
+      "text": "Fast forward to 1995, Clifford Stoll's Newsweek essay about the Internet doubted visions of online commerce and newspapers being replaced by networks. His skepticism about substituting computer access for an education had substance. His dismissal of major practical uses aged rather differently. The Internet acquired problems, abuses, and powerful landlords. It also acquired the uses he doubted. A forecast can recognize a genuine weakness and still miss the trajectory completely.",
+      "similarity": 1.0,
+      "differences": []
     },
     "9": {
-      "attempts": [
+      "sha256": "73cb5f7d9bc048775ad5d476f1e0b08aec25a4d33f24519559ceeba4509163df",
+      "text": "Every new aid raises a fair question. What skill should people still learn for themselves? A calculator doesn't make arithmetic education pointless. A search engine doesn't make source criticism optional. An AI answer doesn't become true because it arrives quickly. But insisting that everyone perform every intermediate step unaided can turn education into a toll booth. We should teach the judgment required to use a tool, including when to put it down, rather than define competence as refusing help.",
+      "similarity": 0.9816,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.142,
-          "dur": 4.24,
-          "file": "seg_09.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "tollbooth",
+          "heard": "toll booth"
         }
-      ],
-      "dur": 4.24,
-      "idx": 9,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 9
+      ]
     },
     "10": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.061,
-          "dur": 15.1,
-          "file": "seg_10.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 15.1,
-      "idx": 10,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 39
+      "sha256": "78405957526c85db80f0e029e63e6ca0a40d0d1a8993941fe4e64382f8317934",
+      "text": "Now the old complaint has a new vocabulary. Artificial intelligence will make people lazy, erase understanding, and end meaningful work. Some particular uses can damage learning. Someone who delegates every difficult step may learn less. Someone who uses a system to explain, test, and challenge, their reasoning may learn more. Specify the activity and measure the result. A verdict about every human mind is a little ambitious for someone who has inspected three screenshots.",
+      "similarity": 1.0,
+      "differences": []
     },
     "11": {
-      "attempts": [
+      "sha256": "37d2630d7a3d6c4e4c0fb08985ad5587542c24f049e4db02ebd9b7e3f95a114d",
+      "text": "The common failure is treating today's limitation as tomorrow's sealing or treating a changed practice as the destruction of the goal. That failure can belong to enthusiasts too. A polished demonstration doesn't establish reliability in the helicopter and the hike. We argued for tools that extend human work while preserving judgment. The promise is useful capability. We still owe each other proof that a particular tool delivers it.",
+      "similarity": 0.9859,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.031,
-          "dur": 15.58,
-          "file": "seg_11.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "ceiling",
+          "heard": "sealing"
         }
-      ],
-      "dur": 15.58,
-      "idx": 11,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 39
+      ]
     },
     "12": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.075,
-          "dur": 17.74,
-          "file": "seg_12.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 17.74,
-      "idx": 12,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 40
+      "sha256": "a5e4f033b66dc89b3c1851c3db8f5d3024e3b744693e95968cbde304037a7224",
+      "text": "There is a practical test hiding underneath the cultural argument. Does the tool help somebody finish a real task, and can that person recognize when it fails? Compare time, error, cost, and dependence. An assistant that saves an expert effort may confuse a beginner. A system useful for drafting may be unacceptable for an irreversible decision. These distinctions give us something to improve, announcing that tools destroy thinking gives us an applause line and no specification. Engineering begins where the sweeping verdict ends.",
+      "similarity": 1.0,
+      "differences": []
     },
     "13": {
-      "attempts": [
+      "sha256": "4dedc63d40ebf9ca734b646e138ebd644164ee0b0fd1f6e8846942797c173a37",
+      "text": "Two, please consult the revised apocalypse.",
+      "similarity": 0.9091,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.073,
-          "dur": 23.33,
-          "file": "seg_13.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "",
+          "heard": "two"
         }
-      ],
-      "dur": 23.33,
-      "idx": 13,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 61
+      ]
     },
     "14": {
-      "attempts": [
+      "sha256": "a62f934a64b33dc5bee5a8b72122fc54045ba315ff65e718f601974fd354b384",
+      "text": "Technology panic has a more theatrical relative. The world ends on a date. The date lends precision to an argument that hasn't earned it. A calendar looks wonderfully authoritative beside a frightening diagram. Before we reach the modern editions, consider two older ones. The people who believed them were people with families and fears. Their dignity survives the predictions failure. The predictions claim to knowledge does not.",
+      "similarity": 0.9565,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.285,
-          "dur": 4.24,
-          "file": "seg_14.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "prediction s",
+          "heard": "predictions"
+        },
+        {
+          "expected": "prediction s",
+          "heard": "predictions"
         }
-      ],
-      "dur": 4.24,
-      "idx": 14,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 8
+      ]
     },
     "15": {
-      "attempts": [
+      "sha256": "0eec0397412ee1ceadee60066386fb608e25d5bbe27793ef2ef80b3f350c7083",
+      "text": "1524, The Flood Panic. An almanac by Johannes Stouffler and Jakub Flarm forecast major changes around planetary conjunctions in February 1524. Other astrologers turned the celestial arrangements into warnings of a great deluge. Research accompanying a surviving almanac traces the escalation and the failed flood prediction. A calculation of where planets would appear, became a claim about what water would do. Accurate arithmetic cannot rescue an invented causal bridge. The stars were arranged. The reasoning wasn't.",
+      "similarity": 0.9536,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.181,
-          "dur": 25.33,
-          "file": "seg_15.try0.wav",
-          "problems": [
-            "PACE+18%"
-          ],
-          "wall": 0.0
+          "expected": "st ffler",
+          "heard": "stouffler"
+        },
+        {
+          "expected": "jakob pflaum",
+          "heard": "jakub flarm"
         }
-      ],
-      "dur": 25.33,
-      "idx": 15,
-      "kept": 0,
-      "ok": true,
-      "problems": [
-        "PACE+18%"
-      ],
-      "rerendered": false,
-      "words": 52
+      ]
     },
     "16": {
-      "attempts": [
+      "sha256": "e84d80c97ae568d5aece9ba194d0ffcb6b9c4f5977545ecf413c21840401729c",
+      "text": "1844, the Great Disappointment. The Millerite movement settled on October 22nd for Christ's return after earlier expectations had failed. The National Museum of American Religion recounts the disappointment when that return did not occur. You don't need to mock faith to reject somebody's claim that they have solved God's appointment calendar. The human cost belongs to the the followers. The burden of explanation belongs to the people who claimed certainty.",
+      "similarity": 0.9861,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.156,
-          "dur": 15.74,
-          "file": "seg_16.try0.wav",
-          "problems": [
-            "PACE+16%"
-          ],
-          "wall": 0.0
+          "expected": "",
+          "heard": "nd"
+        },
+        {
+          "expected": "",
+          "heard": "the"
         }
-      ],
-      "dur": 15.74,
-      "idx": 16,
-      "kept": 0,
-      "ok": true,
-      "problems": [
-        "PACE+16%"
-      ],
-      "rerendered": false,
-      "words": 33
+      ]
     },
     "17": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.102,
-          "dur": 14.54,
-          "file": "seg_17.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 14.54,
-      "idx": 17,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 32
+      "sha256": "0806a86ae0fca97b4ec1d55de482e8721179efdc02f48ee5b7bf522e18d3918c",
+      "text": "Now, five major modern cases, they are different kinds of failure, and putting them in one drawer would conceal the most useful lesson. A fabricated disaster, an overconfident forecast, and a real danger successfully mitigated are different things. If we can't tell them apart, our anti-doom argument is just another sloppy product with a reassuring label.",
+      "similarity": 1.0,
+      "differences": []
     },
     "18": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.033,
-          "dur": 16.62,
-          "file": "seg_18.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 16.62,
-      "idx": 18,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 39
+      "sha256": "c40cc4e3c2af3af4aa5f43d1161ce1908b8584f85ddb3d5da7a13ca41be3392b",
+      "text": "1968, The Population Bomb. Paul Ehrlich's book forecast hundreds of millions of starvation deaths in the 1970s, despite emergency efforts. In their 2009 retrospective, Paul and Anne Ehrlich acknowledged underestimating the Green Revolution's expansion of food production. Regional famines and environmental damage were real. The forecast's fatalism still outran what happened. People improved the system the prediction treated as inadequate. The future had the impudence to include people working on it. Apparently they hadn't read the conclusion.",
+      "similarity": 1.0,
+      "differences": []
     },
     "19": {
-      "attempts": [
+      "sha256": "0219a7aa07d2cef613e4f89e7e98bd240b233b685b2a0b46c6d3972a94b7b5b2",
+      "text": "2000 Y2K. Software that stored years with two digits could mishandle the rollover from 1999 to 2000. This was a real engineering problem. Governments and businesses inspected, repaired and tested systems. The US Government Accountability Office attributed limited rollover disruptions to leadership and partnerships. Saying nothing happened, therefore the warnings were nonsense, is like thanking your smoke alarm for being a fraud because the fire department arrived. Prevention changes outcomes. That's the entire fucking point of prevention.",
+      "similarity": 0.9804,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.358,
-          "dur": 3.36,
-          "file": "seg_19.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "u s",
+          "heard": "us"
         }
-      ],
-      "dur": 3.36,
-      "idx": 19,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 6
+      ]
     },
     "20": {
-      "attempts": [
+      "sha256": "5298e5fe869adb3304b8f294bc33a8d54161d4393d3bedba3f8f65240137b4c3",
+      "text": "The mockable part of Y2K is the leap from vulnerable software to inevitable civilizational collapse. The admirable part is the work. This example cuts against the doomer and the smug spectator alike. The catastrophe wasn't inevitable, and success didn't mean there had been no problem if an AI warning produces a tested defense and prevents harm, give it credit. If it produces only a best seller, ask what actually became safer.",
+      "similarity": 0.9796,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.083,
-          "dur": 17.42,
-          "file": "seg_20.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "bestseller",
+          "heard": "best seller"
         }
-      ],
-      "dur": 17.42,
-      "idx": 20,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 39
+      ]
     },
     "21": {
-      "attempts": [
+      "sha256": "86d9db72d8ae3e4bcfb6b1dd81297c601d4b5c3e8870e7955c8c4dec3e677e0b",
+      "text": "2008, the Large Hadron Collider. Fears that particle collisions would create a black hole and swallow earth became an apocalypse story. Safety assessments reviewed the proposed mechanisms, including evidence from natural high-energy cosmic ray collisions and astronomical observations. The argument was examined rather than answered with a demand that everyone trust a lab coat, wasn't eaten. Asking for a safety case was reasonable. Treating a dramatic possibility as an established outcome wasn't.",
+      "similarity": 0.9933,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.0,
-          "dur": 15.26,
-          "file": "seg_21.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "earth",
+          "heard": ""
         }
-      ],
-      "dur": 15.26,
-      "idx": 21,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 37
+      ]
     },
     "22": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.016,
-          "dur": 17.18,
-          "file": "seg_22.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 17.18,
-      "idx": 22,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 41
+      "sha256": "339c52eae361740d7425dbe224fa964294c8512a67686c481d65c8f83176b0c6",
+      "text": "2011 Harold Camping. The broadcaster announced a May 21 rapture and an October 21 end of the world. Both dates passed. Later Camping acknowledged the predictions were wrong. Good. Changing your mind is the adult response to failed evidence. We can laugh at apocalypse arithmetic without requiring someone to remain wrong for our entertainment. The followers had already paid enough. The forecast doesn't earn immunity, but an admission deserves more respect than another recalculation.",
+      "similarity": 1.0,
+      "differences": []
     },
     "23": {
-      "attempts": [
+      "sha256": "b4c4ef5db15f8b94a393b5a4b4d8ce29c69b158bf481015875d85524c801a939",
+      "text": "2012, the Maya calendar. December 21 became a world-ending deadline attached to the end of a long count cycle. NASA explained that a calendar cycle ending did not imply the world ending. The accompanying astronomical disaster stories lacked a sound basis. The Maya weren't responsible for every modern fantasy marketed in their name. Your wall calendar runs out in December too. You buy another one. You don't board up the windows because the stationary industry has exhausted space-time.",
+      "similarity": 0.9686,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.115,
-          "dur": 11.5,
-          "file": "seg_23.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "stationery",
+          "heard": "stationary"
+        },
+        {
+          "expected": "spacetime",
+          "heard": "space time"
         }
-      ],
-      "dur": 11.5,
-      "idx": 23,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 25
+      ]
     },
     "24": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.099,
-          "dur": 2.72,
-          "file": "seg_24.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 2.72,
-      "idx": 24,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 6
+      "sha256": "5fdeefd1780e1e51ecf87bec8f4b6d11d173bd7607955a29eae86e957b681af8",
+      "text": "Somebody can have believed a bad forecast without belonging to a defective category of human. Most of us have trusted a confident person and later regretted it. A claim needs to survive examination. A reader doesn't need to survive a humiliation ritual to join the examination. We can leave an argument we inherited without losing our place among other people. Nobody should have to defend a missed apocalypse to preserve their self-respect.",
+      "similarity": 1.0,
+      "differences": []
     },
     "25": {
-      "attempts": [
+      "sha256": "9bd66627a217f5078fd421a6faa4eb9f469c7b7970377a1e4ed6fcadb22805ed",
+      "text": "The recurring problem is unearned certainty. Sometimes a forecast ignores adaptation, sometimes it invents a mechanism, sometimes it sells inevitability where engineering offers choices. These failures give us reasons to demand a better argument from the next profit. They don't prove that no catastrophe can happen. History doesn't issue safety certificates. It does provide a rather crowded complaints department for people selling the last chapter.",
+      "similarity": 0.9851,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.035,
-          "dur": 18.3,
-          "file": "seg_25.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "prophet",
+          "heard": "profit"
         }
-      ],
-      "dur": 18.3,
-      "idx": 25,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 46
+      ]
     },
     "26": {
-      "attempts": [
+      "sha256": "e2761a85135b1e9f6b0c505a7b3c12dcd16cc04e5028b6fda24bff65b101c8b5",
+      "text": "Three, why DOOM feels smart and who can afford it?",
+      "similarity": 0.9474,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.141,
-          "dur": 13.18,
-          "file": "seg_26.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "",
+          "heard": "three"
         }
-      ],
-      "dur": 13.18,
-      "idx": 26,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 28
+      ]
     },
     "27": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.13,
-          "dur": 19.74,
-          "file": "seg_27.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 19.74,
-      "idx": 27,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 55
+      "sha256": "5a1a36a77b58c9cfd6a80c190132531ed41741a887f3334ff5929e25a90d1b72",
+      "text": "Why does the same routine keep working? Because a frightening story meets normal human machinery, then gets amplified by institutions that reward attention. You don't have to be stupid. You need something worth protecting uncertainty about how to protect it. And a confident person who explains that your anxiety is evidence, that combination can catch a researcher, a mechanic, a developer, or somebody reading this paragraph and nodding a little too vigorously.",
+      "similarity": 1.0,
+      "differences": []
     },
     "28": {
-      "attempts": [
+      "sha256": "072c84c5d495a823b12daece9765b70e176919ef5a11a7bff7abfbaf82f2d9a1",
+      "text": "Loss aversion gives the threatened present an advantage in prospect theory. Kahneman and Traversky describe decisions relative to reference points with gains and losses carrying different weights. You can picture the competence, salary or role you might lose. The potential gain has no memories attached yet, the loss has a face, the gain has a slide deck and nobody pays this month's rent with a chart of aggregate welfare.",
+      "similarity": 0.9857,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.059,
-          "dur": 18.62,
-          "file": "seg_28.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "tversky",
+          "heard": "traversky"
         }
-      ],
-      "dur": 18.62,
-      "idx": 28,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 48
+      ]
     },
     "29": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.697,
-          "dur": 2.8,
-          "file": "seg_29.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 2.8,
-      "idx": 29,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 4
+      "sha256": "85e82252cd2594878b5ae392792bb331802d708aedc02a2de5143407bc0701a3",
+      "text": "A worker's loss can also be real. Calling someone biased because their employer captured the productivity gain would be obscene. We made that argument in Ghost GDP. More output doesn't automatically compensate the displaced person. An average is a wonderful place to hide a victim. The response must give people access, bargaining power, and a share of useful capability. Advertising abundance while concentrating ownership is an eviction notice with better graphics.",
+      "similarity": 1.0,
+      "differences": []
     },
     "30": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.008,
-          "dur": 20.37,
-          "file": "seg_30.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 20.37,
-      "idx": 30,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 49
+      "sha256": "043d5941e7a5470cdb29421f755b191f4662a166235d2f2b45895ac1865afad7",
+      "text": "Status quo bias gives familiarity its own vote. Samuelson and Zeckhauser found that framing an option as the existing arrangement changes how often people choose it. In public arguments old harms become scenery while new harms become indictments. A person making an error is Tuesday, a machine making one is a referendum on machines. Compare both on the same task with the same error standard and include what the old system already costs.",
+      "similarity": 1.0,
+      "differences": []
     },
     "31": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.071,
-          "dur": 14.14,
-          "file": "seg_31.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 14.14,
-      "idx": 31,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 32
+      "sha256": "4c8987e03c7de568a478fc18528ed125a87d157e7b0d7633e7c9d6042a58d4e6",
+      "text": "Negativity and availability work together. An international experiment on responses to news found stronger average physiological reactions to negative content with substantial individual variation. The availability heuristic describes judgments influenced by how easily examples come to mind. One spectacular failure circulates a thousand times, ordinary successes disappear into work. Your feed supplies vivid memories, then your brain mistakes the selection for a sample. A headline isn't a denominator.",
+      "similarity": 1.0,
+      "differences": []
     },
     "32": {
-      "attempts": [
+      "sha256": "54ed92d71cf362f6ff7cc7346853ed76bbe2f81224c9fe06050cd67628d96f3d",
+      "text": "Declanism adds an edited past. Research on the illusion of moral decline found a persistent belief that people were becoming less moral without the matching decline in repeated assessments of contemporaries. This doesn't prove every condition is improving, it exposes one-way memory and exposure-distort comparison. Yesterday has family photographs, today has a global incident feed. Also, childhood felt simpler, partly because somebody else was handling the electricity bill.",
+      "similarity": 0.9859,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.047,
-          "dur": 13.82,
-          "file": "seg_32.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "declinism",
+          "heard": "declanism"
         }
-      ],
-      "dur": 13.82,
-      "idx": 32,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 32
+      ]
     },
     "33": {
-      "attempts": [
-        {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.018,
-          "dur": 18.22,
-          "file": "seg_33.try0.wav",
-          "problems": [],
-          "wall": 0.0
-        }
-      ],
-      "dur": 18.22,
-      "idx": 33,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 45
+      "sha256": "6b821301430751b30749a91cffc7fd719a38d544a7b856ebe12a495d0c490088",
+      "text": "Then the incentives arrive. Pessimism sounds serious because it names complications. Naming them is useful. Converting them into inevitability is a separate claim. Attention can pay for the warning before reality grades it. Keep a record, outcome, probability, time window, mechanism and evidence that would change the estimate. A failed deadline, a low probability non-event and successful prevention need different evaluations. Otherwise, every result becomes another reason to renew the subscription.",
+      "similarity": 1.0,
+      "differences": []
     },
     "34": {
-      "attempts": [
+      "sha256": "da828be271d008f85b39470d0d33b7c7fa0badfc3a975602f5cd6b6158f3d0b2",
+      "text": "Now, consider the luxury of demanding that progress wait. Picture a comfortable, college-educated city resident whose food, shelter, and services reliably arrive. Other people harvest, haul, clean, repair, and lift. Their bodies absorb costs that scarcely appear in the resident's account of civilization. From that position, slowing everything can feel like prudence. a 12-hour shift, preserving everything can look like a request to keep carrying somebody else's comfort.",
+      "similarity": 0.9861,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": 0.384,
-          "dur": 11.42,
-          "file": "seg_34.try0.wav",
-          "problems": [
-            "PACE+38%"
-          ],
-          "wall": 0.0
+          "expected": "from",
+          "heard": ""
+        },
+        {
+          "expected": "twelve",
+          "heard": ""
         }
-      ],
-      "dur": 11.42,
-      "idx": 34,
-      "kept": 0,
-      "ok": true,
-      "problems": [
-        "PACE+38%"
-      ],
-      "rerendered": false,
-      "words": 20
+      ]
     },
     "35": {
-      "attempts": [
+      "sha256": "26a7e7c00390caf74223233470cbe3695033366d58f0ec025709a5e840d702f6",
+      "text": "This isn't a census of AI critics, Pew's 2025 surveys found the US public substantially more concerned about AI than the surveyed experts. Worry isn't an elite monopoly, and manual workers have every right to fear exploitation. The class question is whose costs a proposed response counts? If you have security, time and professional influence, your ability to wait doesn't establish that everyone else can afford your timetable.",
+      "similarity": 0.979,
+      "differences": [
         {
-          "attempt": 0,
-          "cached": true,
-          "dev": -0.135,
-          "dur": 14.62,
-          "file": "seg_35.try0.wav",
-          "problems": [],
-          "wall": 0.0
+          "expected": "u s",
+          "heard": "us"
         }
-      ],
-      "dur": 14.62,
-      "idx": 35,
-      "kept": 0,
-      "ok": true,
-      "problems": [],
-      "rerendered": false,
-      "words": 41
+      ]
+    },
+    "36": {
+      "sha256": "924d15fe4b28306c4ace53a8d8cbdb371216c0f16428cdda5e05263a8bbd6813",
+      "text": "A small repair shop might use cheaper intelligence to work through manuals, compare parts, translate instructions, or prepare estimates. A worker might learn a skill without paying an expensive intermediary. These are possibilities to test, not promises that software can instantly roof a house. A useful assistant could reduce some drudgery surrounding physical work. Dismissing that because it doesn't resemble your preferred intellectual life mistakes a particular career's prestige for the definition of human benefit.",
+      "similarity": 1.0,
+      "differences": []
+    },
+    "37": {
+      "sha256": "fc50dacfd531e65ea4a290fd4b1dd63c21f9195237742aa1c8deaaac52e64fd7",
+      "text": "But if the employer owns the tools and pockets the gains, the worker may get a faster production target instead of an easier life. We owe that possibility the same scrutiny. The question running through this site's archive is ownership. Can people keep, inspect, repair and leave with the capability? Cheap cognition behind a permanent payment gate can make a landlord richer while leaving everyone else's dependency intact. This needs a distribution mechanism, not applause.",
+      "similarity": 0.987,
+      "differences": [
+        {
+          "expected": "progress",
+          "heard": "this"
+        }
+      ]
+    },
+    "38": {
+      "sha256": "fea40e6b5ff686c5c38e6ac3b686d9b26724748e42e3d23995e1c277f75c8419",
+      "text": "The classist move is treating existing deprivation as an acceptable holding pattern while people with insulation settle their philosophical concerns. Put the cost of delay beside the risk of deployment. Count the hours of avoidable work, the expensive help people can't obtain, and the barriers that keep useful knowledge from becoming practical independence. Then ask who bears each risk. A proposal for safety has to protect people who aren't already safe, including from the present.",
+      "similarity": 1.0,
+      "differences": []
+    },
+    "39": {
+      "sha256": "3c6c57afa9b24e0a52cfe3e3cb5a75a5656b66dfbc810dde1817294ee2d135f3",
+      "text": "Waiting is easier when you already have alternatives. If a service becomes expensive, you can hire help. If an institution fails you, you may know whom to call. The person without those options experiences the current system differently. A blanket demand to keep capability scarce protects the familiar arrangement for people it already serves. It leaves the excluded person waiting outside a door while the people inside hold a very sophisticated conversation about doors.",
+      "similarity": 1.0,
+      "differences": []
+    },
+    "40": {
+      "sha256": "44ddbceda780baccbe35ad32d229a1c7678dfa885e419b1954bf06049d91ca6f",
+      "text": "Make the proposed restriction specific, which demonstrated hazard does it address, what activity remains available to independent builders, who can appeal an error and who can afford compliance. A costly permission system can protect an incumbent even when its author sincerely wants protection for the public. The burden is to show that the remedy improves safety without casually reserving useful capability capability for organizations rich enough to obtain permission. Good intentions don't make the bill disappear.",
+      "similarity": 0.9935,
+      "differences": [
+        {
+          "expected": "",
+          "heard": "capability"
+        }
+      ]
+    },
+    "41": {
+      "sha256": "9214599f94657eefa0ef331cc97ef65892c3fb9b4f499daf913a58722d774280",
+      "text": "and apply that demand to the abundant salesman. Who receives the cheaper service? Who gains free time? Can the independent shop compete? Or does a platform acquire another dependency? A forecast about total wealth isn't an answer. A practical route to more ownership is tools, accessible knowledge, and enforceable exits give people choices that a speech about the future cannot. Judge the result by the life it makes possible, including the person who cleans up after the conference.",
+      "similarity": 0.9873,
+      "differences": [
+        {
+          "expected": "abundance",
+          "heard": "abundant"
+        }
+      ]
+    },
+    "42": {
+      "sha256": "49ceb90c9debda455d9938917973dea17fab5f87b87548ab0bd86562ce0f2598",
+      "text": "If you recognize yourself in that comfortable position, there's a useful role available. Use your education and spare time to build defenses people can keep. Help test a system, explain its limits, document a repair, or make a tool maintainable outside your institution. You don't have to surrender your concern. Give it a job concern that produces an independently usable defense helps more than concern that appoints another permanent supervisor over everyone else's options.",
+      "similarity": 1.0,
+      "differences": []
+    },
+    "43": {
+      "sha256": "a8cbf8ffef05b576125d262df6fda82c8d1537dd057297e7527376ad9ba03176",
+      "text": "The strongest objection remains, AI could create genuinely new dangers. The UK AI Security Institute's 2025 assessment found rising capabilities in software, cyber evaluations and scientific assistance, alongside vulnerabilities in tested safeguards. It also cautioned against treating evaluations as forecasts of real-world impact. Capabilities, permissions and deployment conditions matter. Failed ancient prophecies don't settle any of that. An uncertain catastrophic risk deserves investigation. Uncertainty alone doesn't select the institution entitled to control the response.",
+      "similarity": 1.0,
+      "differences": []
+    },
+    "44": {
+      "sha256": "2ebbfc7f03a8506c6dbf81332ccfe64a15de94b1344b985490a9bbda741b2dcd",
+      "text": "Our answer is the build order in DIAC, has a build order. Identify the harm, strengthen the defence and inspect who owns the result, constrain an agent's permissions, preserve sources so claims can be checked, make consequential actions reviewable, publish reproducible tests and maintainable tools, open capability can help attackers too, a release deserves scrutiny for what it enables and what cannot be undone. Concentrated capability deserves scrutiny for who can audit, contest or escape its operator.",
+      "similarity": 0.9809,
+      "differences": [
+        {
+          "expected": "dee ack",
+          "heard": "diac"
+        }
+      ]
+    },
+    "45": {
+      "sha256": "75c87cba0546256e73cb0b95b46f444ccc000154a8317d6394c04a678001043e",
+      "text": "The destination is less scarcity and less suffering, with more people able to act for themselves. That requires judgment and engineering, including honest failures. It doesn't require a rational tribe laughing at the frightened tribe. The profit can print another date. The corporation can print another promise. Neither gives you a tool you can keep. Build the defense. Publish the plans. Let people share the gains. gains, the sun coming up buys another day to do the work.",
+      "similarity": 0.9809,
+      "differences": [
+        {
+          "expected": "prophet",
+          "heard": "profit"
+        },
+        {
+          "expected": "",
+          "heard": "gains"
+        }
+      ]
     }
-  }
+  },
+  "renderer": {
+    "pace": 2.2628951747088184,
+    "segments": {
+      "0": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.403,
+            "dur": 2.48,
+            "file": "seg_00.try0.wav",
+            "problems": [],
+            "wall": 253.8
+          }
+        ],
+        "dur": 2.48,
+        "idx": 0,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 4
+      },
+      "1": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.215,
+            "dur": 3.76,
+            "file": "seg_01.try0.wav",
+            "problems": [],
+            "wall": 341.3
+          }
+        ],
+        "dur": 3.76,
+        "idx": 1,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 7
+      },
+      "2": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.041,
+            "dur": 32.67,
+            "file": "seg_02.try0.wav",
+            "problems": [],
+            "wall": 443.7
+          }
+        ],
+        "dur": 32.67,
+        "idx": 2,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 71
+      },
+      "3": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.0,
+            "dur": 30.05,
+            "file": "seg_03.try0.wav",
+            "problems": [],
+            "wall": 329.7
+          }
+        ],
+        "dur": 30.05,
+        "idx": 3,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 68
+      },
+      "4": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.077,
+            "dur": 27.73,
+            "file": "seg_04.try0.wav",
+            "problems": [],
+            "wall": 342.4
+          }
+        ],
+        "dur": 27.73,
+        "idx": 4,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 68
+      },
+      "5": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.05,
+            "dur": 31.48,
+            "file": "seg_05.try0.wav",
+            "problems": [],
+            "wall": 442.7
+          }
+        ],
+        "dur": 31.48,
+        "idx": 5,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 75
+      },
+      "6": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.003,
+            "dur": 30.85,
+            "file": "seg_06.try0.wav",
+            "problems": [],
+            "wall": 637.4
+          }
+        ],
+        "dur": 30.85,
+        "idx": 6,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 70
+      },
+      "7": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.045,
+            "dur": 30.37,
+            "file": "seg_07.try0.wav",
+            "problems": [],
+            "wall": 540.3
+          }
+        ],
+        "dur": 30.37,
+        "idx": 7,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 72
+      },
+      "8": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.1,
+            "dur": 33.55,
+            "file": "seg_08.try0.wav",
+            "problems": [],
+            "wall": 548.7
+          }
+        ],
+        "dur": 33.55,
+        "idx": 8,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 69
+      },
+      "9": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.057,
+            "dur": 32.51,
+            "file": "seg_09.try0.wav",
+            "problems": [],
+            "wall": 741.6
+          }
+        ],
+        "dur": 32.51,
+        "idx": 9,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 78
+      },
+      "10": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.023,
+            "dur": 31.95,
+            "file": "seg_10.try0.wav",
+            "problems": [],
+            "wall": 739.9
+          }
+        ],
+        "dur": 31.95,
+        "idx": 10,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 74
+      },
+      "11": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.035,
+            "dur": 29.01,
+            "file": "seg_11.try0.wav",
+            "problems": [],
+            "wall": 639.3
+          }
+        ],
+        "dur": 29.01,
+        "idx": 11,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 68
+      },
+      "12": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.026,
+            "dur": 37.63,
+            "file": "seg_12.try0.wav",
+            "problems": [],
+            "wall": 607.6
+          }
+        ],
+        "dur": 37.63,
+        "idx": 12,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 83
+      },
+      "13": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.358,
+            "dur": 3.6,
+            "file": "seg_13.try0.wav",
+            "problems": [],
+            "wall": 421.2
+          }
+        ],
+        "dur": 3.6,
+        "idx": 13,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 6
+      },
+      "14": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.055,
+            "dur": 27.97,
+            "file": "seg_14.try0.wav",
+            "problems": [],
+            "wall": 497.0
+          }
+        ],
+        "dur": 27.97,
+        "idx": 14,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 67
+      },
+      "15": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.106,
+            "dur": 37.15,
+            "file": "seg_15.try0.wav",
+            "problems": [],
+            "wall": 637.6
+          }
+        ],
+        "dur": 37.15,
+        "idx": 15,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 76
+      },
+      "16": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.022,
+            "dur": 29.81,
+            "file": "seg_16.try0.wav",
+            "problems": [],
+            "wall": 630.9
+          }
+        ],
+        "dur": 29.81,
+        "idx": 16,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 69
+      },
+      "17": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.015,
+            "dur": 24.37,
+            "file": "seg_17.try0.wav",
+            "problems": [],
+            "wall": 471.4
+          }
+        ],
+        "dur": 24.37,
+        "idx": 17,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 56
+      },
+      "18": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.092,
+            "dur": 37.15,
+            "file": "seg_18.try0.wav",
+            "problems": [],
+            "wall": 652.9
+          }
+        ],
+        "dur": 37.15,
+        "idx": 18,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 77
+      },
+      "19": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.127,
+            "dur": 38.35,
+            "file": "seg_19.try0.wav",
+            "problems": [],
+            "wall": 485.3
+          }
+        ],
+        "dur": 38.35,
+        "idx": 19,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 77
+      },
+      "20": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.061,
+            "dur": 32.83,
+            "file": "seg_20.try0.wav",
+            "problems": [],
+            "wall": 660.8
+          }
+        ],
+        "dur": 32.83,
+        "idx": 20,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 70
+      },
+      "21": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.012,
+            "dur": 32.19,
+            "file": "seg_21.try0.wav",
+            "problems": [],
+            "wall": 495.3
+          }
+        ],
+        "dur": 32.19,
+        "idx": 21,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 72
+      },
+      "22": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.028,
+            "dur": 33.63,
+            "file": "seg_22.try0.wav",
+            "problems": [],
+            "wall": 499.8
+          }
+        ],
+        "dur": 33.63,
+        "idx": 22,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 74
+      },
+      "23": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.068,
+            "dur": 36.83,
+            "file": "seg_23.try0.wav",
+            "problems": [],
+            "wall": 673.8
+          }
+        ],
+        "dur": 36.83,
+        "idx": 23,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 78
+      },
+      "24": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.078,
+            "dur": 29.33,
+            "file": "seg_24.try0.wav",
+            "problems": [],
+            "wall": 580.7
+          }
+        ],
+        "dur": 29.33,
+        "idx": 24,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 72
+      },
+      "25": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.016,
+            "dur": 29.17,
+            "file": "seg_25.try0.wav",
+            "problems": [],
+            "wall": 583.3
+          }
+        ],
+        "dur": 29.17,
+        "idx": 25,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 65
+      },
+      "26": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.077,
+            "dur": 4.08,
+            "file": "seg_26.try0.wav",
+            "problems": [],
+            "wall": 566.4
+          }
+        ],
+        "dur": 4.08,
+        "idx": 26,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 10
+      },
+      "27": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.088,
+            "dur": 29.01,
+            "file": "seg_27.try0.wav",
+            "problems": [],
+            "wall": 596.8
+          }
+        ],
+        "dur": 29.01,
+        "idx": 27,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 72
+      },
+      "28": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.13,
+            "dur": 26.53,
+            "file": "seg_28.try0.wav",
+            "problems": [],
+            "wall": 531.8
+          }
+        ],
+        "dur": 26.53,
+        "idx": 28,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 69
+      },
+      "29": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.079,
+            "dur": 33.87,
+            "file": "seg_29.try0.wav",
+            "problems": [],
+            "wall": 584.1
+          }
+        ],
+        "dur": 33.87,
+        "idx": 29,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 71
+      },
+      "30": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.039,
+            "dur": 31.0,
+            "file": "seg_30.try0.wav",
+            "problems": [],
+            "wall": 537.0
+          }
+        ],
+        "dur": 31.0,
+        "idx": 30,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 73
+      },
+      "31": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.132,
+            "dur": 34.03,
+            "file": "seg_31.try0.wav",
+            "problems": [],
+            "wall": 590.3
+          }
+        ],
+        "dur": 34.03,
+        "idx": 31,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 68
+      },
+      "32": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.02,
+            "dur": 31.56,
+            "file": "seg_32.try0.wav",
+            "problems": [],
+            "wall": 518.9
+          }
+        ],
+        "dur": 31.56,
+        "idx": 32,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 70
+      },
+      "33": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.03,
+            "dur": 31.87,
+            "file": "seg_33.try0.wav",
+            "problems": [],
+            "wall": 585.2
+          }
+        ],
+        "dur": 31.87,
+        "idx": 33,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 70
+      },
+      "34": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.03,
+            "dur": 31.4,
+            "file": "seg_34.try0.wav",
+            "problems": [],
+            "wall": 513.9
+          }
+        ],
+        "dur": 31.4,
+        "idx": 34,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 69
+      },
+      "35": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.059,
+            "dur": 28.29,
+            "file": "seg_35.try0.wav",
+            "problems": [],
+            "wall": 582.4
+          }
+        ],
+        "dur": 28.29,
+        "idx": 35,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 68
+      },
+      "36": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.005,
+            "dur": 33.31,
+            "file": "seg_36.try0.wav",
+            "problems": [],
+            "wall": 503.8
+          }
+        ],
+        "dur": 33.31,
+        "idx": 36,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 75
+      },
+      "37": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.014,
+            "dur": 32.67,
+            "file": "seg_37.try0.wav",
+            "problems": [],
+            "wall": 595.1
+          }
+        ],
+        "dur": 32.67,
+        "idx": 37,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 75
+      },
+      "38": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.005,
+            "dur": 33.31,
+            "file": "seg_38.try0.wav",
+            "problems": [],
+            "wall": 598.3
+          }
+        ],
+        "dur": 33.31,
+        "idx": 38,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 75
+      },
+      "39": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.066,
+            "dur": 30.53,
+            "file": "seg_39.try0.wav",
+            "problems": [],
+            "wall": 600.3
+          }
+        ],
+        "dur": 30.53,
+        "idx": 39,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 74
+      },
+      "40": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.024,
+            "dur": 33.95,
+            "file": "seg_40.try0.wav",
+            "problems": [],
+            "wall": 622.6
+          }
+        ],
+        "dur": 33.95,
+        "idx": 40,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 75
+      },
+      "41": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.094,
+            "dur": 31.24,
+            "file": "seg_41.try0.wav",
+            "problems": [],
+            "wall": 622.6
+          }
+        ],
+        "dur": 31.24,
+        "idx": 41,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 78
+      },
+      "42": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.076,
+            "dur": 30.21,
+            "file": "seg_42.try0.wav",
+            "problems": [],
+            "wall": 587.5
+          }
+        ],
+        "dur": 30.21,
+        "idx": 42,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 74
+      },
+      "43": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.253,
+            "dur": 40.99,
+            "file": "seg_43.try0.wav",
+            "problems": [
+              "PACE+25%"
+            ],
+            "wall": 630.0
+          },
+          {
+            "attempt": 1,
+            "cached": false,
+            "dev": 0.217,
+            "dur": 39.79,
+            "file": "seg_43.try1.wav",
+            "problems": [
+              "PACE+22%"
+            ],
+            "wall": 70.2
+          },
+          {
+            "attempt": 2,
+            "cached": false,
+            "dev": 0.244,
+            "dur": 40.67,
+            "file": "seg_43.try2.wav",
+            "problems": [
+              "PACE+24%"
+            ],
+            "wall": 72.2
+          }
+        ],
+        "dur": 39.79,
+        "idx": 43,
+        "kept": 1,
+        "ok": true,
+        "problems": [
+          "PACE+22%"
+        ],
+        "rerendered": true,
+        "words": 74
+      },
+      "44": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": 0.028,
+            "dur": 34.99,
+            "file": "seg_44.try0.wav",
+            "problems": [],
+            "wall": 590.3
+          }
+        ],
+        "dur": 34.99,
+        "idx": 44,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 77
+      },
+      "45": {
+        "attempts": [
+          {
+            "attempt": 0,
+            "cached": false,
+            "dev": -0.122,
+            "dur": 29.89,
+            "file": "seg_45.try0.wav",
+            "problems": [],
+            "wall": 583.3
+          }
+        ],
+        "dur": 29.89,
+        "idx": 45,
+        "kept": 0,
+        "ok": true,
+        "problems": [],
+        "rerendered": false,
+        "words": 77
+      }
+    }
+  },
+  "normalization_note": "Final encode from uncompressed joined WAV with a lower limiter ceiling and 0.1 dB extra headroom to keep encoded MP3 true peak below -1.5 dBTP."
 }

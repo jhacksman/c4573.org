@@ -1,31 +1,42 @@
 THE PSYCHOLOGY OF DOOM
-Prepared September 30, 2026. Publication authorized by the user.
+Three-section replacement prepared September 30, 2026. Publication authorized by the user.
 
-Page: /blog/the-psychology-of-doom.html
-Audio: /audio/the-psychology-of-doom.mp3
+Page: https://c4573.org/blog/the-psychology-of-doom.html
+Audio: https://c4573.org/audio/the-psychology-of-doom.mp3
 Hero and social image: /images/the-psychology-of-doom.jpg
 
 Search/social description:
-Why new technology scares us, who profits from the fear, and what we can build instead.
+Technology panic, failed apocalypses, and the psychology and class interests behind doom. Build defenses people can own.
 
-Suggested announcement:
-Fear can build a useful defense. It can also build a toll booth. Our new essay examines loss aversion, status quo bias, negativity, availability, and perceived decline—and asks what a proposed response actually lets people own.
+Structure:
+1. The New Tool Will Ruin Everything: Socrates in Plato's Phaedrus, Trithemius on scribes and printing, Stoll on the internet, and present AI arguments.
+2. Please Consult the Revised Apocalypse: 1524 flood panic and Millerite expectations in 1844; then five modern cases, The Population Bomb, Y2K, LHC, Harold Camping, and Maya calendar claims.
+3. Why Doom Feels Smart, and Who Can Afford It: loss aversion, status quo, negativity and availability, declinism, forecast incentives, the distribution of delay and scarcity, practical uses for manual workers, and independently owned defenses.
 
 Editorial grounding:
-Read all 15 preceding posts and the About page. The argument follows the archive's emphasis on ownership, open and inspectable tools, practical defenses, abundance that reaches people, and skepticism toward both doom rhetoric and corporate promises. Real displacement and control failures remain real costs. Cognitive bias is not used to dismiss risk. Optimistic forecasts face the same accountability standard.
+All 15 preceding articles and the About page were read in the course of this task. This replacement carries forward the archive's post-scarcity goal, ownership, independent maintenance, practical defenses, and skepticism toward concentrated platforms and corporate promises. The class argument asks whose harms and costs are counted; it does not invent a demographic profile of AI critics. Public concern is broader than expert concern in the cited Pew surveys. Worker displacement and capture of productivity gains are real objections, addressed directly. Open release is not assumed safe. Failed historical predictions do not establish AI safety.
 
-Research:
-Kahneman and Tversky (1979), Prospect Theory.
-Samuelson and Zeckhauser (1988), Status Quo Bias in Decision Making.
-Loss-aversion meta-analysis (2024), doi:10.1016/j.joep.2024.102740.
-Soroka, Fournier, and Nir (2019), Cross-national evidence of a negativity bias in psychophysiological reactions to news.
-Tversky and Kahneman (1973), Availability: A heuristic for judging frequency and probability.
-Mastroianni and Gilbert (2023), The illusion of moral decline.
-Primary-source links appear beside the claims in the article. The moral-decline finding is not generalized to every societal trend. No universal two-to-one loss-aversion coefficient is asserted. The incentives section explicitly presents an editorial argument.
+Voice:
+Irreverent institutional satire combined with explicit mechanisms and limits. Ridicule is aimed at unearned certainty and institutional incentives; readers are invited to reconsider without accepting a degrading identity. No em dashes in the article or new metadata.
+
+Research corrections:
+Plato's writing criticism is a dialogue and a myth recounted by Socrates, not evidence of a historical anti-book campaign.
+Trithemius defended handwritten copying and parchment but also used print distribution.
+The 1524 almanac's conjunction forecast was amplified into deluge predictions by other astrologers.
+Millerite expectations settled on October 22, 1844; no unsupported ascension-robe anecdotes.
+The Ehrlich retrospective acknowledges underestimating the Green Revolution, while hunger and environmental damage remained real.
+Y2K was a real software problem addressed by remediation, not simply an imaginary scare.
+The LHC safety argument evaluated mechanisms and natural-collision and astrophysical evidence.
+Camping's later admission of error is acknowledged.
+Maya calendar rollover is distinguished from modern apocalypse marketing.
+Psychology findings are not treated as universal laws or proof that any particular concern is false.
+Inline citations accompany the factual claims.
 
 Assets:
-Hero artwork created with OpenAI ImageGen.
-Narration uses the site's existing local voice and renderer, with final narration text retained separately. Cached segments were reused only after an exact text match; changed segments were regenerated.
+The existing hero artwork and social image are retained.
+New narration uses the archive's existing single voice and renderer. Fresh indexed WAV cache for this replacement, no old clip reuse. Exact narration source and segment manifest retained.
 
-Validation:
-No em dashes in the article or its new index entry. Navigation, styling, and audio-player behavior preserved. All local article links and assets resolve. Only the latest blog-index entry has the New badge. Narration source matches the final article: 1,222 words in 36 segments. Audio is about 8.7 minutes, 44.1 kHz mono, 128 kbps MP3; complete decode passes. Renderer measured -16.52 LUFS, with no internal silence gaps of 1.5 seconds or more. Three segments have slower delivery; no hard failures. Automated transcription spot checks of four revised paragraphs match the text, apart from ordinary punctuation and spelling differences.
+Validation before publication:
+Three h2 sections; 3,060 narrated words in 46 segments. Planning budget recorded before drafting and measured after both passes.
+Markup, metadata, local links and assets, and only one New badge checked. Existing navigation, CSS, audio controls, footer structure, and player script retained.
+Finished runtime: 22:49 (1369.939592 seconds). 44.1 kHz mono 128 kbps MP3. Full decode passes; no internal gaps of 1.5 seconds or more. Full 46-clip small.en transcription comparison: 0.9886 similarity, with independent checks of recognition artifacts recorded in the audio review. Loudness: -16.65 LUFS, true peak -1.92 dBTP. One stable pacing outlier, no hard failures. Final player requests a distinct version of the replacement audio to avoid a cached short narration. Deployment verification is performed after the push.
