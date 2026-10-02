@@ -1,0 +1,22 @@
+name: RSS feed
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test RSS generation and discovery
+        run: python3 -m unittest discover -s tests -v
+      - name: Check committed feed
+        run: python3 scripts/generate_feed.py --check

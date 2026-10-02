@@ -13,7 +13,9 @@ Static site (GitHub Pages, CNAME `c4573.org`). No build step.
    `<span class="badge badge-available">New</span>`; older entries keep an empty span
    (the empty span preserves card layout).
 3. Render audio to `audio/<slug>.mp3` (see below).
-4. Commit locally. Publishing is the boss's call.
+4. Run `python3 scripts/generate_feed.py`, then
+   `python3 -m unittest discover -s tests -v`. Commit `feed.xml` with the post and index.
+5. Commit locally. Publishing is the boss's call.
 
 If the post has a target runtime, budget **2.36 narrated words per second** for a
 quote-heavy essay (see the 2026-09-18 and 2026-09-19 lessons): a 20-minute read is ~2,830
@@ -23,6 +25,33 @@ words, not 3,100. "Narrated words" includes the `<h1>` and every `<h2>`, and exc
 
 Write the per-section word budget **before** the prose and measure after every draft pass.
 Counting by eye does not work; see the 2026-09-19 lessons.
+
+## RSS feed
+
+Subscribe at **https://c4573.org/feed.xml**. The checked-in RSS 2.0 file is served
+by GitHub Pages without changing the site's deployment or adding a build step.
+Python 3.9+ is only needed when updating it; there are no third-party dependencies.
+
+```sh
+python3 scripts/generate_feed.py
+python3 scripts/generate_feed.py --check
+python3 -m unittest discover -s tests -v
+```
+
+The published cards in `blog/index.html` are the feed's source of truth: their
+headings, summaries, and displayed dates become item titles, excerpts, and dates.
+Only listed posts enter the feed. Each linked article must exist and declare its
+matching HTTPS canonical URL; that URL is also the stable RSS GUID. Keep it stable
+when editing a post. The feed includes all listed posts, sorted newest first, with
+canonical URL as the deterministic tie-breaker for same-day posts. Date-only values
+use midnight UTC (the index does not supply publication times).
+
+Excerpts match the blog listing; readers follow the article link for full text and
+audio. The generator rejects missing metadata, invalid dates, duplicate entries,
+and canonical mismatches. After adding, editing, or removing a listing, regenerate
+and commit the feed. `--check` and the RSS GitHub Actions check fail on a stale feed;
+neither writes files nor publishes the site. Keep the RSS discovery and footer
+subscription links when copying a post template.
 
 ## Blog audio
 
