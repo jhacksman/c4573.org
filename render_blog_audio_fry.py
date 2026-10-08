@@ -264,17 +264,12 @@ def render_all(segs: list[dict], work: Path) -> tuple[dict, float]:
 def work_dir(slug: str) -> Path:
     """Where the render keeps its segment WAVs.
 
-    This used to be /tmp/<slug>-fry. On 2026-10-08 the beast-of-intellectual-burden
-    render was killed twice in one morning, both times with that directory removed
-    out from under it (5/42 then 16/42 segments, no traceback either time), while a
-    render writing inside a repo came through the same window untouched. Something on
-    this host reaps /tmp subdirectories and takes the writing process with them.
-
-    The directory is not scratch. It holds the only resume state -- a re-run skips
-    segments whose seg_NN.tryN.wav already exist -- and dtfravingfinch's
-    assemble_longform_episode.py reads segments.txt and trim_NN.wav out of it to
-    build cue timings for a long-form episode VTT. Default it somewhere durable.
-    FRY_WORK_ROOT overrides the parent directory.
+    This used to be /tmp/<slug>-fry. It is not scratch: it holds the only resume
+    state -- a re-run skips segments whose seg_NN.tryN.wav already exist -- and
+    dtfravingfinch's assemble_longform_episode.py reads segments.txt and trim_NN.wav
+    out of it to build cue timings for a long-form episode VTT. A 30-60 minute render
+    should not keep its only state in a directory anything is free to clear, so the
+    default lives beside the repo. FRY_WORK_ROOT overrides the parent directory.
     """
     default_root = Path(__file__).resolve().parent / ".render"
     root = Path(os.environ.get("FRY_WORK_ROOT") or default_root).expanduser()
