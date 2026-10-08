@@ -24,6 +24,7 @@ Usage: python3 render_blog_audio_fry.py blog/<slug>.html
 """
 import html
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -260,12 +261,32 @@ def render_all(segs: list[dict], work: Path) -> tuple[dict, float]:
     return results, pace
 
 
+def work_dir(slug: str) -> Path:
+    """Where the render keeps its segment WAVs.
+
+    This used to be /tmp/<slug>-fry. On 2026-10-08 the beast-of-intellectual-burden
+    render was killed twice in one morning, both times with that directory removed
+    out from under it (5/42 then 16/42 segments, no traceback either time), while a
+    render writing inside a repo came through the same window untouched. Something on
+    this host reaps /tmp subdirectories and takes the writing process with them.
+
+    The directory is not scratch. It holds the only resume state -- a re-run skips
+    segments whose seg_NN.tryN.wav already exist -- and dtfravingfinch's
+    assemble_longform_episode.py reads segments.txt and trim_NN.wav out of it to
+    build cue timings for a long-form episode VTT. Default it somewhere durable.
+    FRY_WORK_ROOT overrides the parent directory.
+    """
+    default_root = Path(__file__).resolve().parent / ".render"
+    root = Path(os.environ.get("FRY_WORK_ROOT") or default_root).expanduser()
+    return root / f"{slug}-fry"
+
+
 def main():
     post = Path(sys.argv[1])
     slug = post.stem
     segs = extract_segments(post)
-    work = Path(f"/tmp/{slug}-fry")
-    work.mkdir(exist_ok=True)
+    work = work_dir(slug)
+    work.mkdir(parents=True, exist_ok=True)
     (work / "segments.txt").write_text("\n\n".join(f"[{s['kind']}] {s['text']}" for s in segs))
     total_words = sum(len(s["text"].split()) for s in segs)
     print(f"{len(segs)} segments, {total_words} words, expected ~{total_words/WORDS_PER_SEC/60:.1f} min",
@@ -364,7 +385,7 @@ def normalize(src: Path, mp3: Path) -> None:
 
 if __name__ == "__main__" and len(sys.argv) > 2 and sys.argv[2] == "--normalize-only":
     _post = Path(sys.argv[1])
-    normalize(Path(f"/tmp/{_post.stem}-fry/joined.wav"), _post.parent.parent / "audio" / f"{_post.stem}.mp3")
+    normalize(work_dir(_post.stem) / "joined.wav", _post.parent.parent / "audio" / f"{_post.stem}.mp3")
     sys.exit(0)
 
 
