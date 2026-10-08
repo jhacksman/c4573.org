@@ -1,0 +1,50 @@
+Beast of Intellectual Burden — word budget (written BEFORE prose, per README)
+Planning pace: 2.36 narrated words/sec. Narrated = h1 + h2 + p only.
+
+  h1 title                                      6
+  intro (3 paras)                             290
+  h2 The Diagnosis Is Half Right              310
+  h2 The Ox Was Also a Shortcut               300
+  h2 Where the Plow Analogy Breaks            310
+  h2 Name the Lords                           310
+  h2 A Ban Is a Switch Someone Else Owns      330
+  h2 What a School Could Own Instead          310
+  h2 Hot Dog or Plow                          140
+  h2 headings (7 x ~6)                         42
+  -----------------------------------------------
+  target                                    2,348  -> 16:35 at 2.36 w/s
+
+TTS constraints applied while writing:
+- No en dashes anywhere in body prose: the renderer splits segments on both
+  em dash and en dash, so "2026-27" written with an en dash would strand a
+  fragment. Spell ranges out in words.
+- Avoid acronyms with no PRONOUNCE entry: no LAUSD, no K-12, no LLM, no FERPA.
+  Write "Los Angeles Unified", "kindergarten through twelfth grade",
+  "large language model". AI / OpenAI are covered by the table.
+- "$20 a month" written as "twenty dollars a month" so the voice does not
+  read the glyph.
+- No em dash split may leave a fragment under three words.
+
+Ethos checklist (c4573-blog-ethos):
+  1 technofeudalism named literally .......... "Name the Lords" + tenancy close
+  2 lords named with numbers ................. 900M MAU, July 14 2026, June 30
+                                               2027, twenty dollars/month
+  3 hold two true things ..................... intro P2 + "Hot Dog or Plow"
+  4 no tribal mockery ........................ Riley steelmanned, never dunked
+  5 observational register ................... "We take no position on
+                                               sincerity. We observe the
+                                               structure."
+  6 incentives over intentions ............... ban section
+  7 category error ........................... ban section, stated plainly
+  8 argument vs messenger .................... Riley's floor kept, prescription
+                                               rejected
+  9 nobody is coming ......................... end of ban section
+ 10 open weights / local inference ........... "What a School Could Own Instead"
+ 11 self-stress-test ......................... "Where the Plow Analogy Breaks",
+                                               incl. we do not know where the
+                                               age line is
+ 12 closing imperative to build .............. "Buy the weights."
+ 13 self-referential canon ................... cant-ban-math, three-companies,
+                                               dacc-has-a-build-order,
+                                               the-psychology-of-doom
+ 14 voice: first person plural, declaratives
