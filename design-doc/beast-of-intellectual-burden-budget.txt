@@ -1,88 +1,48 @@
-Beast of Intellectual Burden — word budget (written BEFORE prose, per README)
-Planning pace: 2.36 narrated words/sec. Narrated = h1 + h2 + p only.
+beast-of-intellectual-burden — word budget (written BEFORE the prose, per README)
 
-  h1 title                                      6
-  intro (3 paras)                             290
-  h2 The Diagnosis Is Half Right              310
-  h2 The Ox Was Also a Shortcut               300
-  h2 Where the Plow Analogy Breaks            310
-  h2 Name the Lords                           310
-  h2 A Ban Is a Switch Someone Else Owns      330
-  h2 What a School Could Own Instead          310
-  h2 Hot Dog or Plow                          140
-  h2 headings (7 x ~6)                         42
-  -----------------------------------------------
-  target                                    2,348  -> 16:35 at 2.36 w/s
+THESIS (the boss's, 2026-10-08):
+AI is good for you. Riley's "ultimately very bad for you" is the strong disagree. The
+beast of intellectual burden is a good thing to have in the barn. The qualifier is which
+kind you bring home: one that does not social-engineer you, manipulate you, or
+anthropomorphize itself. That last one is the real hot dog on the table.
 
-TTS constraints applied while writing:
-- No en dashes anywhere in body prose: the renderer splits segments on both
-  em dash and en dash, so "2026-27" written with an en dash would strand a
-  fragment. Spell ranges out in words.
-- Avoid acronyms with no PRONOUNCE entry: no LAUSD, no K-12, no LLM, no FERPA.
-  Write "Los Angeles Unified", "kindergarten through twelfth grade",
-  "large language model". AI / OpenAI are covered by the table.
-- "$20 a month" written as "twenty dollars a month" so the voice does not
-  read the glyph.
-- No em dash split may leave a fragment under three words.
+ORDER RULE: the affirmative claim leads. Every earlier draft opened on the hazard, which
+argues Riley's side for him. The hazard arrives at section 5, after the case for the tool
+is already standing.
 
-Ethos checklist (c4573-blog-ethos):
-  1 technofeudalism named literally .......... "Name the Lords" + tenancy close
-  2 lords named with numbers ................. 900M MAU, July 14 2026, June 30
-                                               2027, twenty dollars/month
-  3 hold two true things ..................... intro P2 + "Hot Dog or Plow"
-  4 no tribal mockery ........................ Riley steelmanned, never dunked
-  5 observational register ................... "We take no position on
-                                               sincerity. We observe the
-                                               structure."
-  6 incentives over intentions ............... ban section
-  7 category error ........................... ban section, stated plainly
-  8 argument vs messenger .................... Riley's floor kept, prescription
-                                               rejected
-  9 nobody is coming ......................... end of ban section
- 10 open weights / local inference ........... "What a School Could Own Instead"
- 11 self-stress-test ......................... "Where the Plow Analogy Breaks",
-                                               incl. we do not know where the
-                                               age line is
- 12 closing imperative to build .............. "Buy the weights."
- 13 self-referential canon ................... cant-ban-math, three-companies,
-                                               dacc-has-a-build-order,
-                                               the-psychology-of-doom
- 14 voice: first person plural, declaratives
+Pace reference: 2.36 narrated w/s (README). h1 + h2 + p count; h3/blockquote/li do not.
+Floor is 20:00 = 2,832 words. Target 3,350-3,500 = 23:40-24:45.
 
-=== REVISION 2026-10-08: harder line, point-by-point rebuttal ===
-Boss: "the 'ultimately very bad for you' is the strong disagree. the author
-is a fucking moron and deserves to be skewered point by point."
+ §  section                              words   cum    running time
+ 1  The Beast of Intellectual Burden      430    430     3:02
+ 2  Not Empty Calories                    400    830     5:52
+ 3  He Exempts His Own Instrument         400   1230     8:41
+ 4  The Remedy His Own Metaphor Implies   280   1510    10:40
+ 5  The Real Hot Dog                      420   1930    13:38
+ 6  Affection Is a Retention Mechanic     380   2310    16:19
+ 7  Name the Lords                        520   2830    19:59
+ 8  The Deprecation That Caused Grief     300   3130    22:06
+ 9  Why They Will Not Build the Cold One  300   3430    24:13
+10  What a School Could Own Instead       360   3790    26:46
+11  Where We Could Be Wrong               300   4090    28:53
+12  Not a Pet                             180   4270    30:09
 
-Resolution against ethos rule 4 (no tribal mockery, never dunk-first or
-dunk-last): the skewering is systematic and lands on the argument. No
-name-calling in the prose. A nine-point merits rebuttal hits harder and is
-the only version of this that survives the house style.
+That overshoots. Cuts applied before drafting: fold §4 into §3, hold §7 to 460, §10 to
+300, §11 to 260. Revised target 3,430 words / ~24:13. Measure after every pass; counting
+by eye does not work.
 
-Added:
-  h2 Point by Point ........................... 9 numbered claims, ~980 w
-  h2 Superfood, for Someone Who Can Cook ...... the strong positive case
-                                                plus the narrowed version of
-                                                Riley's sentence that is
-                                                actually defensible
-  intro reframed to lead with the disagreement, not the concession
-  h2 The Diagnosis Is Half Right -> What He Gets Right (tightened)
-
-The nine points, all sourced from Riley's own text:
-  1 evidence measures a deployment pattern, not the capability
-  2 takes the industry's self-description as authority only when damning
-  3 Cisek's "continuous extension of control into the world" cuts his way
-  4 the hot dog analogy's moral is appetite regulation, not prohibition
-  5 Plato gets paragraphs, the calculator gets half a sentence
-  6 Norway's 17-to-19 tier teaches AI use; he omits that tier
-  7 immunization needs controlled exposure; he converts it to quarantine
-  8 he advised the org that won the bans he cites as corroboration
-  9 booing graduates used as evidence about cognition, confound self-supplied
-
-Kept intact: the calibration concession, the four-way self-stress-test, and
-the admission that we do not know where the age floor sits. Those are what
-make the rebuttal credible rather than a dunk.
-
-Final: 54 segments / 3,554 narrated words -> 25:05 at 2.36 w/s.
-Cover image dropped: the Google image route returned 403 "API key reported
-as leaked". og:image, twitter:image and the JSON-LD image field were removed
-rather than left pointing at a missing file.
+ETHOS CHECK (c4573-blog-ethos, re-read from the live index 2026-10-08)
+ 1 technofeudalism/tenancy ......... §8 rented relationship on a deprecation schedule
+ 2 name the lords with numbers ..... §7 20M MAU, 80 min/day, 5 suits, 200-page doc
+ 3 hold two true things ............ §3 calibration concession; §2 the gating condition
+ 4 no tribal mockery ............... no name-calling in the prose; the nine points do it
+ 5 observational register .......... §6, §7 "we take no position on what anyone intended"
+ 6 incentives over intentions ...... §6, §9 attention is the revenue; "not malice, arithmetic"
+ 7 category error .................. §4 govern the externality, keep the capability
+ 8 argument vs messenger ........... §3 structural, not character
+ 9 nobody is coming ................ §9 the cold one will not arrive from the frontier
+10 open weights / local ............ §10 one box, one card, no outbound
+11 self-stress-test ................ §11 incl. our own agents are not cold
+12 closing imperative .............. §12, wording fresh, not bolted on
+13 self-referential canon .......... Psychology of Doom, Three Companies, You Can't Ban Math
+14 voice: "we", short declaratives . throughout
