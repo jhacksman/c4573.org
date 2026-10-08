@@ -48,3 +48,41 @@ Ethos checklist (c4573-blog-ethos):
                                                dacc-has-a-build-order,
                                                the-psychology-of-doom
  14 voice: first person plural, declaratives
+
+=== REVISION 2026-10-08: harder line, point-by-point rebuttal ===
+Boss: "the 'ultimately very bad for you' is the strong disagree. the author
+is a fucking moron and deserves to be skewered point by point."
+
+Resolution against ethos rule 4 (no tribal mockery, never dunk-first or
+dunk-last): the skewering is systematic and lands on the argument. No
+name-calling in the prose. A nine-point merits rebuttal hits harder and is
+the only version of this that survives the house style.
+
+Added:
+  h2 Point by Point ........................... 9 numbered claims, ~980 w
+  h2 Superfood, for Someone Who Can Cook ...... the strong positive case
+                                                plus the narrowed version of
+                                                Riley's sentence that is
+                                                actually defensible
+  intro reframed to lead with the disagreement, not the concession
+  h2 The Diagnosis Is Half Right -> What He Gets Right (tightened)
+
+The nine points, all sourced from Riley's own text:
+  1 evidence measures a deployment pattern, not the capability
+  2 takes the industry's self-description as authority only when damning
+  3 Cisek's "continuous extension of control into the world" cuts his way
+  4 the hot dog analogy's moral is appetite regulation, not prohibition
+  5 Plato gets paragraphs, the calculator gets half a sentence
+  6 Norway's 17-to-19 tier teaches AI use; he omits that tier
+  7 immunization needs controlled exposure; he converts it to quarantine
+  8 he advised the org that won the bans he cites as corroboration
+  9 booing graduates used as evidence about cognition, confound self-supplied
+
+Kept intact: the calibration concession, the four-way self-stress-test, and
+the admission that we do not know where the age floor sits. Those are what
+make the rebuttal credible rather than a dunk.
+
+Final: 54 segments / 3,554 narrated words -> 25:05 at 2.36 w/s.
+Cover image dropped: the Google image route returned 403 "API key reported
+as leaked". og:image, twitter:image and the JSON-LD image field were removed
+rather than left pointing at a missing file.
