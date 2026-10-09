@@ -655,6 +655,248 @@ code {
   font-size: var(--font-size-base);
 }
 
+/* ── BLOG AUDIO PLAYER ── */
+
+/* Negative margin + matching padding so the sticky card spans the container gutter. */
+.audio-player-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin: 0 -1.25rem;
+  padding: 0 1.25rem;
+}
+
+.audio-player {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: border-radius 0.2s, border-color 0.2s;
+}
+
+.audio-player-wrapper.stuck .audio-player {
+  border-radius: 0 0 8px 8px;
+  border-color: var(--green);
+  box-shadow: 0 2px 12px rgba(0, 255, 65, 0.1);
+}
+
+.audio-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* JS off: the native chrome is the player, full width. */
+.audio-player audio {
+  width: 100%;
+  height: 36px;
+}
+
+/* JS on: audio-player.js strips `controls` and retires the native element. */
+.audio-player.ap-ready audio {
+  display: none;
+}
+
+/* Row 1: play · current · seek (flex:1) · duration · -10 · +10 · volume */
+.ap-transport {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ap-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.ap-btn:hover:not(:disabled) {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.ap-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.ap-play {
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+}
+
+.ap-time {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  min-width: 4.4ch;
+  text-align: center;
+}
+
+.ap-vol-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+/* A real <input type=range> laid over a painted track, so arrow keys work and the
+   seek bar can show buffered and played ranges at the same time. */
+.ap-range-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.ap-seek-wrap {
+  flex: 1 1 120px;
+  min-width: 90px;
+}
+
+.ap-vol-wrap {
+  flex: 0 0 70px;
+  width: 70px;
+}
+
+.ap-range-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  border-radius: 2px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.ap-range-buffered,
+.ap-range-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+}
+
+.ap-range-buffered {
+  background: var(--text-muted);
+  opacity: 0.4;
+}
+
+.ap-range-fill {
+  background: var(--green);
+}
+
+.ap-range {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.ap-range:disabled {
+  cursor: default;
+}
+
+.ap-range::-webkit-slider-runnable-track {
+  height: 20px;
+  background: transparent;
+  border: none;
+}
+
+.ap-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.ap-range::-moz-range-track {
+  height: 20px;
+  background: transparent;
+  border: none;
+}
+
+.ap-range::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.ap-range:disabled::-webkit-slider-thumb {
+  background: var(--text-muted);
+}
+
+.ap-range:disabled::-moz-range-thumb {
+  background: var(--text-muted);
+}
+
+/* Row 2: playback speed, bottom right. */
+.ap-rate-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.ap-rate-label {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.ap-rate {
+  background: var(--bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.ap-rate:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.ap-btn:focus-visible,
+.ap-range:focus-visible,
+.ap-rate:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
 /* ── RESPONSIVE ── */
 
 @media (max-width: 768px) {
@@ -707,6 +949,34 @@ code {
   .footer-links {
     flex-direction: column;
     gap: 0.75rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .audio-player {
+    padding: 0.8rem 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .ap-transport {
+    gap: 0.35rem;
+    row-gap: 0.55rem;
+  }
+
+  /* Seek takes its own full-width line above the controls; nothing overflows at 360px. */
+  .ap-seek-wrap {
+    order: -1;
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .ap-duration::before {
+    content: "/ ";
+  }
+
+  .ap-vol-wrap {
+    flex: 0 0 56px;
+    width: 56px;
   }
 }
 
