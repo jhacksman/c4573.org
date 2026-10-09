@@ -22,48 +22,6 @@
     .blog-body li { margin-bottom: 0.5rem; }
     .blog-meta { color: var(--text-muted); margin-bottom: 0.5rem; }
     .blog-title { font-size: clamp(24px, 4vw, 38px); line-height: 1.2; margin-bottom: 0.5rem; }
-
-    /* Audio Player */
-    .audio-player-wrapper {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      margin: 0 -1.25rem;
-      padding: 0 1.25rem;
-    }
-    .audio-player {
-      background: var(--surface, #1a1a2e);
-      border: 1px solid var(--border, #333);
-      border-radius: 8px;
-      padding: 1rem 1.25rem;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      transition: border-radius 0.2s, border-color 0.2s;
-    }
-    .audio-player-wrapper.stuck .audio-player {
-      border-radius: 0 0 8px 8px;
-      border-color: var(--green, #00ff41);
-      box-shadow: 0 2px 12px rgba(0, 255, 65, 0.1);
-    }
-    .audio-player audio { flex: 1; min-width: 200px; height: 36px; }
-    .speed-controls { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; flex-wrap: wrap; }
-    .speed-btn {
-      background: transparent;
-      border: 1px solid var(--border, #333);
-      color: var(--text-muted, #888);
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 0.75rem;
-      transition: all 0.15s;
-    }
-    .speed-btn:hover { border-color: var(--green, #00ff41); color: var(--green, #00ff41); }
-    .speed-btn.active { background: var(--green, #00ff41); color: var(--bg, #0d0d1a); border-color: var(--green, #00ff41); font-weight: 700; }
-    .audio-label { font-size: 0.8rem; width: 100%; margin-bottom: -0.5rem; }
   </style>
 </head>
 <body>
@@ -91,15 +49,6 @@
         <div class="audio-player">
           <div class="audio-label">🔊 Listen to this post</div>
           <audio id="blogAudio" src="../audio/ai-math-terrance-tao.mp3" preload="metadata" controls></audio>
-          <div class="speed-controls">
-            <span>Speed:</span>
-            <button class="speed-btn active" onclick="setSpeed(1)">1×</button>
-            <button class="speed-btn" onclick="setSpeed(1.25)">1.25×</button>
-            <button class="speed-btn" onclick="setSpeed(1.5)">1.5×</button>
-            <button class="speed-btn" onclick="setSpeed(2)">2×</button>
-            <button class="speed-btn" onclick="setSpeed(2.5)">2.5×</button>
-            <button class="speed-btn" onclick="setSpeed(3)">3×</button>
-          </div>
         </div>
       </div>
 
@@ -252,20 +201,7 @@
     </div>
   </footer>
 
-  <script>
-    function setSpeed(rate) {
-      const audio = document.getElementById('blogAudio');
-      audio.playbackRate = rate;
-      document.querySelectorAll('.speed-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-    }
-
-    const wrapper = document.getElementById('audioWrapper');
-    const observer = new IntersectionObserver(([e]) => {
-      wrapper.classList.toggle('stuck', e.intersectionRatio < 1);
-    }, { threshold: [1] });
-    observer.observe(wrapper);
-  </script>
+  <script src="../js/audio-player.js" defer></script>
 
 </body>
 </html>
