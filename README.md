@@ -149,3 +149,43 @@ Run long renders under `screen -dmS c4573-fry ...` and read the log; don't poll.
   "jarsinski kruchs", Yudkowsky → "yudkovsky". The `dee-ack` / `ee-ack` substitutions come back
   as "deac" / "e aq", which confirms they fired. None of this justifies a re-render.
 - Output measured -16.45 LUFS integrated, true peak -1.69 dBFS, no internal silence >= 1.5 s.
+
+### Em-dash-free prose lessons (2026-10-09, beast-of-intellectual-burden, 67 segments / 3,805 words / 24:29)
+
+- **2.36 w/s is a quote-heavy figure, not a universal one. This post ran 2.59 w/s.** 3,805 words
+  in 1,469 s end to end, with a batch median of 2.67 w/s over the 53 segments >= 12 words.
+  Planning at 2.36 predicted 26:52 and produced 24:29 — 10% short. The difference is prose
+  shape: this post has **zero `<blockquote>` and zero em-dashes**, so it is all plain
+  declarative paragraphs, which Fry reads at roughly the 2.61 w/s of Chicken Little rather than
+  the 2.36 of the quote-dense d/acc essays. Budget 2.36 w/s when the post quotes heavily and
+  ~2.6 w/s when it does not. Both figures now have three measurements behind them.
+- **No em-dashes means no segment inflation and no stranded clips.** 67 HTML blocks produced
+  exactly 67 segments (1 title, 11 headings, 55 paragraphs, 0 `dash`), against the ~20% inflation
+  the d/acc posts saw. Writing without em-dashes makes the segment count, and therefore the wall
+  time, predictable in advance — and it removes the stranded one-word-segment failure mode
+  entirely rather than having to dodge it per sentence.
+- **Consistent prose means fewer outlier passes.** Only 9 segments were flagged against the
+  median and 4 kept residual pace flags, against 14–16 flagged on each d/acc render. Phase 1
+  (67 segments) ~46 min, two outlier passes ~13 min, ~59 min total for 24.5 min of audio.
+- **`MAX_WORKERS = 12` is the real throughput limit, not the server queue.** The docstring says
+  every segment is fired at once, but the ThreadPoolExecutor holds it to 12 in flight; `GET
+  /status` showed 2 active / 10 queued for the whole run. Estimate phase 1 as
+  `segments / 12 * per-request-wall`, which was ~1.5 segments/min here. "Fire everything at
+  once" describes the intent, not the concurrency.
+- **A Roman-numeral name suffix cannot be diagnosed by probe.** `whisper small.en` normalizes
+  spoken "the Third" *back* to "III" — verified by transcribing a segment whose source text
+  literally reads "Setzer the Third" and getting "Setzer III" out. Duration cannot adjudicate it
+  either: "III", "the Third" and "eye eye eye" rendered 4.08 s, 4.16 s and 4.24 s, because the
+  em-dash padding swamps the difference. Neither README probe technique works here, so for a
+  numeral suffix in a real person's name, just add the PRONOUNCE entry. If the voice already read
+  it correctly the output is identical, so the substitution costs nothing.
+- **The `'blog-meta' in inner` guard in `extract_segments()` is dead code.** The capture regex is
+  `<(h1|h2|p)\b[^>]*>(.*?)</\1>`, so the `class="blog-meta"` attribute lands in the uncaptured
+  `[^>]*` and the test is always False. The byline is excluded *only* by the
+  `' · c4573.org' in txt` check on the rendered text. That is almost certainly how an earlier
+  post came to narrate its own byline: **any byline that does not end in ` · c4573.org` will be
+  read aloud.** Keep that exact separator in `<p class="blog-meta">`, or fix the guard to test
+  the tag attributes, before trusting that a new post opens cold.
+- Output measured -16.4 LUFS integrated, true peak -1.6 dBFS, LRA 3.1 LU, no internal silence
+  >= 1.5 s — identical to `chicken-little` and within 0.2 LU of both d/acc renders, so the
+  `alimiter` residual-gain step is stable across a 15–25 minute range.
