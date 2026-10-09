@@ -64,6 +64,11 @@ PRONOUNCE = {
     # Slashed faction names: read as the community says them, not as "d slash acc".
     r'\bd/acc\b': 'dee-ack', r'\be/acc\b': 'ee-ack',
     r'\boffense/defense\b': 'offense-defense',
+    # Roman-numeral name suffix. Probing "Setzer III" was inconclusive -- the
+    # em-dash padding swamped the duration difference between "the Third" and
+    # "eye eye eye" (4.08 s vs 4.16 s vs 4.24 s) and whisper normalizes either
+    # reading back to "III". Spell it so a real person's name cannot be mangled.
+    r'\bSetzer III\b': 'Setzer the Third',
 }
 
 
