@@ -24,10 +24,15 @@
     '<path fill="currentColor" d="M4 2.5v11l9-5.5z"/></svg>';
   var ICON_PAUSE = '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true" focusable="false">' +
     '<path fill="currentColor" d="M3.5 2.5h3.2v11H3.5zM9.3 2.5h3.2v11H9.3z"/></svg>';
-  var ICON_BACK = '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true" focusable="false">' +
-    '<path fill="currentColor" d="M8.2 3.3V1L4 4.2l4.2 3.2V5.1a3.6 3.6 0 1 1-3.6 3.6H2.9a5.3 5.3 0 1 0 5.3-5.4z"/></svg>';
-  var ICON_FWD = '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true" focusable="false">' +
-    '<path fill="currentColor" d="M7.8 3.3V1L12 4.2 7.8 7.4V5.1a3.6 3.6 0 1 0 3.6 3.6h1.7a5.3 5.3 0 1 1-5.3-5.4z"/></svg>';
+  /* The "10" sits inside the arc so the interval is readable without the aria-label. */
+  var ICON_BACK = '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" focusable="false">' +
+    '<path fill="currentColor" d="M8 3.4V1.1L4.3 4.3 8 7.4V5.1a3.7 3.7 0 1 1-3.7 3.7H2.6A5.4 5.4 0 1 0 8 3.4z"/>' +
+    '<text x="8.1" y="11.9" font-family="inherit" font-size="5.6" font-weight="700" ' +
+    'text-anchor="middle" fill="currentColor">10</text></svg>';
+  var ICON_FWD = '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" focusable="false">' +
+    '<path fill="currentColor" d="M8 3.4V1.1l3.7 3.2L8 7.4V5.1a3.7 3.7 0 1 0 3.7 3.7h1.7A5.4 5.4 0 1 1 8 3.4z"/>' +
+    '<text x="8.1" y="11.9" font-family="inherit" font-size="5.6" font-weight="700" ' +
+    'text-anchor="middle" fill="currentColor">10</text></svg>';
   var ICON_VOLUME = '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false">' +
     '<path fill="currentColor" d="M8.3 1.8 4.6 4.9H1.8v6.2h2.8l3.7 3.1zM10.6 5.1a4 4 0 0 1 0 5.8l1.1 1.2a5.6 5.6 0 0 0 0-8.2z"/></svg>';
 
@@ -312,10 +317,18 @@
     audio.addEventListener('play', function () { setPlayingIcon(true); applyRate(); });
     audio.addEventListener('pause', function () { setPlayingIcon(false); });
     audio.addEventListener('ended', function () { setPlayingIcon(false); });
-    audio.addEventListener('timeupdate', paintTime);
-    audio.addEventListener('seeked', paintTime);
-    audio.addEventListener('loadedmetadata', function () { paintTime(); applyRate(); });
+    /* `progress` can stop firing before metadata is known (a 206 server may deliver the
+     * whole file in one chunk), so the buffered bar is repainted from the time events
+     * too rather than relying on `progress` alone. */
+    audio.addEventListener('timeupdate', function () { paintTime(); paintBuffered(); });
+    audio.addEventListener('seeked', function () { paintTime(); paintBuffered(); });
+    audio.addEventListener('loadedmetadata', function () {
+      paintTime();
+      paintBuffered();
+      applyRate();
+    });
     audio.addEventListener('durationchange', paintTime);
+    audio.addEventListener('canplay', paintBuffered);
     audio.addEventListener('progress', paintBuffered);
     audio.addEventListener('volumechange', paintVolume);
     audio.addEventListener('error', markUnavailable);

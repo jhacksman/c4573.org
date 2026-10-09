@@ -873,16 +873,24 @@ code {
   font-size: 0.72rem;
 }
 
+/* Default OS select chrome renders light on this dark card, so draw the arrow. */
 .ap-rate {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-muted) 50%),
+                    linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+  background-position: calc(100% - 11px) calc(50% + 1px), calc(100% - 7px) calc(50% + 1px);
+  background-size: 4px 4px, 4px 4px;
+  background-repeat: no-repeat;
   color: var(--text-muted);
   border: 1px solid var(--border);
   border-radius: 4px;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  padding: 0.2rem 0.4rem;
+  padding: 0.25rem 1.5rem 0.25rem 0.5rem;
   cursor: pointer;
   transition: border-color 0.15s, color 0.15s;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .ap-rate:hover {
@@ -982,6 +990,13 @@ code {
 
 @media (max-width: 480px) {
   .container {
+    padding: 0 1rem;
+  }
+
+  /* The wrapper's negative margin has to match .container's padding, or the sticky
+     card hangs 0.25rem past the viewport on each side (4px of scrollWidth). */
+  .audio-player-wrapper {
+    margin: 0 -1rem;
     padding: 0 1rem;
   }
 
