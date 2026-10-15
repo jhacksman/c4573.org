@@ -16,4 +16,10 @@ Jack inspected the deployment and confirmed that MP3s are ordinary tracked files
 - Browser tests against a local Range-capable server: duration loaded as 24:14; play advanced; seeking reached 729 seconds; +10 reached 739; playback speed changed to 1.5; pause worked. Controls restored to 1× and start. At 390 px, page width equaled scroll width. Blog index links the new post first with the only New badge.
 - Persistent intermediates, full transcripts and detailed comparisons remain in ignored `.render/age-of-digital-abundance-fry/`. Summary and hashes are in `audio-verification.json`.
 
-Publication is authorized and ready. Public deployment verification will be recorded after the push.
+## Published and verified
+
+Published commit `0697525` to main; GitHub Pages build completed successfully. At 15:57 Pacific on October 15, 2026, the public article and blog index returned 200, the audio Range request returned 206, and the complete public MP3 SHA-256 matched the checked local file. The public browser loaded the 24:14 duration, played successfully and sought to 729 seconds. Playback was then paused and restored to the beginning.
+
+Public URL: https://c4573.org/blog/age-of-digital-abundance.html
+
+Proof screenshot: `/Volumes/JackPack/c4573-ethos/articles/age-of-digital-abundance/published.png`. Detailed public verification is recorded in audio-verification.json. No audio intermediates were committed; the final MP3 uses the established tracked-content delivery route.

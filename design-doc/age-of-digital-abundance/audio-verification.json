@@ -43,7 +43,19 @@
     "phone_viewport_width": 390,
     "phone_scroll_width": 390
   },
-  "public_verification": "pending publication",
+  "public_verification": {
+    "verified_at": "2026-10-15T15:57:17.441923-07:00",
+    "article_url": "https://c4573.org/blog/age-of-digital-abundance.html",
+    "article_status": 200,
+    "index_status": 200,
+    "audio_range_status": 206,
+    "content_range": "bytes 0-99/23268248",
+    "audio_sha256": "6aaf9febec0156fc98143df0f183cd620b19e189e016ea6ca26542cd69d6b925",
+    "complete_public_audio_matches_local": true,
+    "browser_playback_confirmed": true,
+    "browser_seek_time_seconds": 729,
+    "browser_duration_seconds": 1454.186122
+  },
   "targeted_second_model": {
     "model": "large-v3-turbo",
     "words_confirmed": [
