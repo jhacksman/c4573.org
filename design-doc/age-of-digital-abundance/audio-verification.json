@@ -1,0 +1,55 @@
+{
+  "voice": "stephen_fry",
+  "server": "quato",
+  "duration_seconds": 1454.186122,
+  "duration_display": "24:14",
+  "bytes": 23268248,
+  "format": {
+    "codec": "mp3",
+    "sample_rate": 44100,
+    "channels": 1,
+    "bit_rate": 128000
+  },
+  "loudness_lufs": -16.41,
+  "true_peak_dbtp": -1.57,
+  "loudness_range_lu": 3.3,
+  "internal_silences_at_least_1_5_seconds": [],
+  "segments": 75,
+  "hard_failures": [],
+  "rerendered_segments": [
+    26,
+    44,
+    55,
+    71
+  ],
+  "residual_pace_flags": {
+    "71": [
+      "PACE-19%"
+    ]
+  },
+  "transcription_model": "small.en",
+  "normalized_text_similarity": 0.9883390216154722,
+  "contiguous_missing_or_reordered_passages": false,
+  "audio_sha256": "6aaf9febec0156fc98143df0f183cd620b19e189e016ea6ca26542cd69d6b925",
+  "article_sha256": "8328ac532835ceca839d8abadbbbe4f3cc9751894133ccd18b6a7bed8b54e68d",
+  "review_method": "Full automatic transcription, mismatch review, signal measurements and browser playback controls; no claim of a human listening review.",
+  "local_browser": {
+    "duration_loaded": 1454.186122,
+    "playing_confirmed": true,
+    "seek_time": 729,
+    "after_skip_time": 739,
+    "speed_test": 1.5,
+    "pause_confirmed": true,
+    "phone_viewport_width": 390,
+    "phone_scroll_width": 390
+  },
+  "public_verification": "pending publication",
+  "targeted_second_model": {
+    "model": "large-v3-turbo",
+    "words_confirmed": [
+      "acquiring",
+      "morning"
+    ],
+    "conclusion": "Ambiguities in small.en transcript were recognition errors; both source words confirmed independently."
+  }
+}

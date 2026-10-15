@@ -1,5 +1,7 @@
 # Fry narration preparation
 
+**Update:** User authorized rendering and publication after this preparation. See PUBLISH.md for actual results. Current renderer cache is `.render/<slug>-fry/`. Its final MP3 must be committed for the established Pages deployment; the former no-audio rule has been corrected in RULES.md. The historical instructions below record Jack’s initial answer.
+
 Jack was asked in his existing Jack Hacksman — OpenClaw Chrome session on October 15, 2026, as explicitly requested by the user. He checked the repository and quato configuration and returned the following workflow. This was a technical inquiry; he did not start a render, agent, deploy or publication.
 
 ## Canonical route

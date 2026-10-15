@@ -32,10 +32,15 @@ TP -1.5 dBTP. Two renderers:
 - `render_blog_audio.py blog/<slug>.html` — macOS `say` with Ava (Premium). Local, no GPU.
 - `render_blog_audio_fry.py blog/<slug>.html` — `stephen_fry` cloned voice on the quato
   Qwen3-TTS server (`http://10.9.10.9:7849`, Swagger at `/docs`). Requires `requests`.
-  Segment WAVs and `joined.wav` land in `/tmp/<slug>-fry/`; pass `--normalize-only` to
+  Segment WAVs and `joined.wav` land in `.render/<slug>-fry/`; pass `--normalize-only` to
   redo just the loudness step from `joined.wav`.
 
 Run long renders under `screen -dmS c4573-fry ...` and read the log; don't poll.
+
+The dated lessons below describe historical cache paths. The current Fry cache is
+persistent under `.render/` (or `FRY_WORK_ROOT`), and still requires a fresh directory
+after any text change. Use `PYTHONUNBUFFERED=1` when redirecting Whisper output if
+you need visible progress; a buffered log can remain empty while transcription runs.
 
 ### quato TTS lessons (2026-09-04)
 

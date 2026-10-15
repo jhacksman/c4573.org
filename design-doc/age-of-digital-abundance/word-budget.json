@@ -1,5 +1,5 @@
 {
-  "status": "draft; no audio rendered",
+  "status": "audio rendered; see PUBLISH.md and audio-verification.json",
   "count_method": "Whitespace-delimited words in actual Fry extract_segments output, including title and headings",
   "sections": [
     {

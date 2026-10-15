@@ -14,7 +14,9 @@ site's code.
 ## Git discipline
 
 - Commit after each logical change, meaningful messages.
-- **Never commit audio.** `audio/*.mp3` is content, not source history.
+- Commit checked, final `audio/*.mp3` when publishing a post: GitHub Pages serves
+  them from `main` alongside the HTML. Do not commit segment WAVs, render caches,
+  temporary masters or other production intermediates.
 - Publishing is the boss's call. Commit locally; do not push unless told to.
 
 ## Layout of the site
@@ -69,6 +71,14 @@ Speed and volume live in `localStorage` under `c4573:audio:rate` and
 wrapped in try/catch — Safari private mode throws on `localStorage`.
 
 ## Lessons
+
+### Finished narration is part of the Pages deployment (2026-10-15)
+
+The former "Never commit audio" rule contradicted the actual deployment: existing
+MP3s, including the last three narrated posts, are ordinary tracked files on `main`.
+There is no separate audio host or upload step. A user-authorized publication must
+include its checked MP3, or its player will ship without audio. Keep production
+intermediates under the ignored `.render/` directory; publish only the final MP3.
 
 ### `python3 -m http.server` cannot test audio seeking (2026-10-09)
 

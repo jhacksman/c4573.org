@@ -60,5 +60,6 @@
   "structured_data_headline": "The Age of Digital Abundance",
   "byline_excluded": true,
   "audio_pending": true,
-  "publication_index_unchanged": true
+  "publication_index_unchanged": true,
+  "stage": "Pre-render draft snapshot; see audio-verification.json for current audio checks"
 }

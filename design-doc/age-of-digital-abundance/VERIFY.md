@@ -11,3 +11,7 @@ Structural and narration checks passed: matching title/canonical/structured data
 The blog index is unchanged and does not link the draft. No push, deployment or audio synthesis was performed. Inline links point to the researched primary evidence; automated HTTP denial from a source is not described as a broken link when its primary page was independently read through web retrieval.
 
 Editorial review distinguishes observations from forecasts, self-report from revenue loss, a working personal workflow from general productivity, and digital capability from physical abundance. The broad claim that advertising or SaaS has already collapsed was rejected by the evidence and is not stated in the draft.
+
+## Subsequent publication work
+
+The draft limitations above are historical. Audio has now been rendered and checked under the user’s publication authorization. See PUBLISH.md and audio-verification.json for the full transcript comparison, mastering measurements and successful browser player checks.
