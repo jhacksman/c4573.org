@@ -1,0 +1,59 @@
+{
+  "status": "draft; no audio rendered",
+  "count_method": "Whitespace-delimited words in actual Fry extract_segments output, including title and headings",
+  "sections": [
+    {
+      "section": "Opening (including title)",
+      "words": 217
+    },
+    {
+      "section": "The Scarcity Behind the Subscription",
+      "words": 277
+    },
+    {
+      "section": "The Customer Gets an Editor",
+      "words": 289
+    },
+    {
+      "section": "Software for One Person Is Already Software",
+      "words": 314
+    },
+    {
+      "section": "The Sale That Never Reaches the Sales Team",
+      "words": 303
+    },
+    {
+      "section": "Publish the Replacement",
+      "words": 275
+    },
+    {
+      "section": "The Companies Still Have Revenue",
+      "words": 298
+    },
+    {
+      "section": "The News Still Has to Come from Somewhere",
+      "words": 292
+    },
+    {
+      "section": "The Next Landlord Is Waiting",
+      "words": 291
+    },
+    {
+      "section": "The Work Does Not Disappear",
+      "words": 224
+    },
+    {
+      "section": "What Would Make This Argument Wrong",
+      "words": 287
+    },
+    {
+      "section": "The Abundance We Can Actually Build",
+      "words": 269
+    },
+    {
+      "section": "The Smoke Is in the Assumption",
+      "words": 171
+    }
+  ],
+  "total": 3507
+}
