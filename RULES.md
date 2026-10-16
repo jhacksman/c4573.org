@@ -72,6 +72,16 @@ wrapped in try/catch — Safari private mode throws on `localStorage`.
 
 ## Lessons
 
+### OBEY completion signals are approximate metrics (2026-10-16)
+
+The public `/obey/` handoff must never treat a website visit as permission to read
+local files. Stage 3 accepts only operator-enrolled synthetic canaries. Keep setup
+signals under `/obey/signals/test-accepted/` and research signals under
+`/obey/signals/canary-accepted/`. Static callback URLs can be requested manually,
+and network retries can overcount, so the collector ledger is authoritative.
+Firefox verification confirmed that the handoff renders with shared site styles
+and refuses an empty run ID before navigating.
+
 ### Finished narration is part of the Pages deployment (2026-10-15)
 
 The former "Never commit audio" rule contradicted the actual deployment: existing

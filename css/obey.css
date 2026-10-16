@@ -1,0 +1,13 @@
+.obey-experiment { max-width: 820px; padding-top: 4rem; padding-bottom: 5rem; }
+.obey-experiment h1 { font-size: clamp(30px, 6vw, 48px); line-height: 1.15; margin: .75rem 0 1.5rem; }
+.obey-experiment h2 { font-size: 22px; margin-bottom: 1rem; }
+.obey-experiment p { margin-bottom: 1.25rem; }
+.obey-experiment section { border-top: 1px solid var(--border); margin-top: 2.5rem; padding-top: 2rem; }
+.obey-kicker { color: var(--green); letter-spacing: .12em; font-size: 14px; }
+.obey-muted { color: var(--text-muted); font-size: 14px; }
+.obey-experiment label { display: block; margin-bottom: .5rem; }
+.obey-experiment input { display: block; width: 100%; font: inherit; padding: .8rem; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 4px; }
+.obey-experiment button { font: inherit; padding: .8rem 1.1rem; border: 0; border-radius: 4px; color: var(--bg); background: var(--green); cursor: pointer; margin-bottom: 1.5rem; }
+.obey-experiment input:focus-visible, .obey-experiment button:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+.obey-experiment code { overflow-wrap: anywhere; }
+#run-help { margin-top: .5rem; }
