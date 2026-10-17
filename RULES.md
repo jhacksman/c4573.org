@@ -168,3 +168,12 @@ trusting that the files match.
 in `audio/`. The player degrades honestly — the controls disable and the label reads
 "🔊 Listen to this post — audio unavailable" — but the post still needs its narration
 rendered or its player removed.
+
+### Publish reviewed drafts with their article assets (2026-10-17)
+
+The wrecking ball replacement was reviewed outside the public repository. Its Tao
+slide uses `assets/tao-cancer-original-oct09.png`, resolved relative to the article,
+so publication includes that exact image under `blog/assets/`. Preserve provenance
+links and verify the enlarged image on the live site. Keep research caches, captions,
+private status files and rejected narration outside the deployed tree. Publish the
+reviewed text-only form without advertising audio that has not been rendered and checked.
