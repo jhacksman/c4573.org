@@ -194,3 +194,18 @@ you need visible progress; a buffered log can remain empty while transcription r
 - Output measured -16.4 LUFS integrated, true peak -1.6 dBFS, LRA 3.1 LU, no internal silence
   >= 1.5 s — identical to `chicken-little` and within 0.2 LU of both d/acc renders, so the
   `alimiter` residual-gain step is stable across a 15–25 minute range.
+
+### Wrecking ball narration (2026-10-17, 130 segments, 6,156 spoken words)
+
+The checked Stephen Fry recording runs 43:12.6, about 2.37 words/sec including
+headings and pauses. Eighteen segments received pace retries. All 130 selected
+takes were transcribed with small.en; ambiguous words were checked with
+large-v3-turbo before deciding to replace audio. The larger model cleared several
+apparent missing or repeated words that were transcription artifacts.
+
+Two clips needed pronunciation repair: spelling HEIC as H.E.I.C. and removing the
+hyphen in diagnostic-overlay produced clear renderings without changing the
+published prose. Reassemble only from the checked selections after such repairs;
+rerunning take selection can silently discard the corrections. Keep the source
+fingerprint, selected-file hashes and both transcription reports in the ignored
+render cache. Final MP3 measured -16.41 LUFS, -1.72 dBTP, 44.1 kHz mono at 128k.
