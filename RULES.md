@@ -177,3 +177,9 @@ so publication includes that exact image under `blog/assets/`. Preserve provenan
 links and verify the enlarged image on the live site. Keep research caches, captions,
 private status files and rejected narration outside the deployed tree. Publish the
 reviewed text-only form without advertising audio that has not been rendered and checked.
+
+### Article renames update the public URL (2026-10-17)
+
+When the final title changes, align its slug, canonical, Open Graph URL, structured
+data and index link. Keep the previously published address as a static redirect with
+a visible fallback link, and verify old-link navigation in the live browser.
