@@ -183,3 +183,11 @@ reviewed text-only form without advertising audio that has not been rendered and
 When the final title changes, align its slug, canonical, Open Graph URL, structured
 data and index link. Keep the previously published address as a static redirect with
 a visible fallback link, and verify old-link navigation in the live browser.
+
+### Keep source notes out of narration (2026-10-25)
+
+The John Henry article links historical sources directly from the prose and puts
+its reference list after the first horizontal rule. The current Fry extractor
+stops at that rule, so readers retain the source notes while the narration ends
+with the article. Avoid numeric citation markers inside narrated paragraphs:
+stripping their HTML tags leaves the numbers in the spoken text.
