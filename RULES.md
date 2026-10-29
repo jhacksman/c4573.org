@@ -191,3 +191,15 @@ its reference list after the first horizontal rule. The current Fry extractor
 stops at that rule, so readers retain the source notes while the narration ends
 with the article. Avoid numeric citation markers inside narrated paragraphs:
 stripping their HTML tags leaves the numbers in the spoken text.
+
+
+### Version source downloads by exact bytes (2026-10-28)
+
+A template's fixed source download uses an immutable versioned ZIP path and the same
+whole-archive SHA256 in its loader and SHA256SUMS.txt. Changing package bytes needs a
+new reviewed version and pin. Keep research outputs and private task state outside
+the deployed tree.
+
+Safari may expand a downloaded ZIP automatically. Verify the actual expanded members
+against the prepared archive and check the raw HTTP response separately. A successful
+local-browser download verifies local delivery, not the later public deployment.
